@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cdmr:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="cdmr.war">
+      <element id="artifact" artifact-name="cdmr:war exploded" />
+    </root>
+  </artifact>
+</component>

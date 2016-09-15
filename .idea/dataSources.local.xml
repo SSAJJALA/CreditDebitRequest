@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - APPSPROD@localhost" uuid="13347100-7a19-4686-be4e-b581d92c7501">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-scope>APPSPROD:</introspection-scope>
+      <resolve-scope>APPSPROD:</resolve-scope>
+    </data-source>
+  </component>
+</project>
