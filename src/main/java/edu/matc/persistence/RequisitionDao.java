@@ -4,10 +4,12 @@ import edu.matc.entity.Requisition;
 import edu.matc.entity.User;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+import java.sql.Connection;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -47,49 +49,59 @@ public class RequisitionDao {
     /**
      * add a user
      *
-     * @param user
-     * @return the id of the inserted record
+     * @param req
+     * @return the reqID of the inserted record
      */
-    public int addUser(User user) {
-        //TODO add the user and return the id of the inserted user
+    public int addRequisition(Requisition req) {
+
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        session.save(user);
+        session.save(req);
         tx.commit();
-        Criteria criteria = session.createCriteria(User.class);
-        criteria.add(Restrictions.eq("lastName", user.getLastName()));
-        User user4 = (User) criteria.uniqueResult();
-        int id = user4.getUserid();
-        return id;
+        session.close();
+        int reqID = getLastReqID();
+        return reqID;
     }
 
-    /**
-     * delete a user by id
-     * @param id the user's id
-     */
-    public void deleteUser(int id) {
+    public int getLastReqID() {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Transaction tx = session.beginTransaction();
-        User user2 = (User) session.load(User.class,id);
-        log.info("user2:" + user2.toString());
-        //user2.setUserid(id);
-        session.delete(user2);
-        tx.commit();
-        log.info("user2 deleted");
+        String queryString = String.format("SELECT LAST_INSERT_ID() AS LAST_ID FROM REQUISITION");
+        int reqID;
+
+        Query query = session.createQuery(queryString);
+        reqID = query.getFirstResult();
+        return reqID;
 
 
     }
 
     /**
-     * Update the user
-     * @param user
+     * delete a requisition by reqID
+     * @param reqID the Req ID
      */
+    public void deleteRequisition(int reqID) {
 
-    public void updateUser(User user) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        session.update(user);
+        Requisition req = (Requisition) session.load(Requisition.class,reqID);
+        log.info("Requisition" + req.toString());
+        session.delete(req);
+        tx.commit();
+        log.info("Requisition" + reqID + "deleted.");
+
+
+    }
+
+    /**
+     * Update the requisition
+     * @param req
+     */
+
+    public void updateReq(Requisition req) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction tx = session.beginTransaction();
+        session.update(req);
         tx.commit();
 
     }
