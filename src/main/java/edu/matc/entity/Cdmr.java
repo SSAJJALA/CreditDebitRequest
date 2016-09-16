@@ -48,9 +48,27 @@ public class Cdmr {
     @Convert(converter = LocalDateAttributeConverter.class)
     private LocalDate cdmrDate;
 
+    /**
+     * No arg constructor
+     * Instantiates a new cdmr object
+     */
     public Cdmr() {
     }
 
+    /**
+     * Instantiates a new cdmr object with params
+     * @param requisitionID
+     * @param status
+     * @param custNum
+     * @param custName
+     * @param invNum
+     * @param invDate
+     * @param invAmount
+     * @param salesRepID
+     * @param salesRepName
+     * @param adjAmnt
+     * @param cdmrDate
+     */
     public Cdmr(int requisitionID, String status, int custNum, String custName, int invNum, LocalDate invDate, double invAmount, String salesRepID, String salesRepName, double adjAmnt, LocalDate cdmrDate) {
         this.requisitionID = requisitionID;
         this.status = status;
@@ -65,18 +83,35 @@ public class Cdmr {
         this.cdmrDate = cdmrDate;
     }
 
+    /**
+     * get requisition ID
+     * @return int requisition ID
+     */
     public int getRequisitionID() {
         return requisitionID;
     }
+
+    /**
+     * Set requisition ID
+     * @param requisitionID the requisition ID
+     */
 
     public void setRequisitionID(int requisitionID) {
         this.requisitionID = requisitionID;
     }
 
+    /**
+     * get status
+     * @return status
+     */
     public String getStatus() {
         return status;
     }
 
+    /**
+     * set status
+     * @param status the stattus of the requisition
+     */
     public void setStatus(String status) {
         this.status = status;
     }
