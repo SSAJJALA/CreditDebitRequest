@@ -22,6 +22,9 @@
 
         <!-- List the annotated entity class/es -->
         <mapping class="edu.matc.entity.Requisition"/>
+        <mapping class="edu.matc.entity.Customer"/>
+        <mapping class="edu.matc.entity.InvoiceHeader"/>
+        <mapping class="edu.matc.entity.Cdmr"/>
 
     </session-factory>
 

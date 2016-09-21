@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 
+
 <head >
         <!-- Fix for Iframes in IE -->
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=8" /> -->
@@ -22,6 +23,7 @@
                 .double-underline { border-bottom: 5px solid #5C8727;}
                 .single-underline { border-bottom: 2px solid #5C8727;}
                 .error{ color: red; }
+                .single-gray-overline {border-top: 2px solid #a9a9a9;}
                 h2 {font-size:16px; color:#CF4520; padding-left:15px; padding-bottom:12px; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic;}
         </style>
 </head>

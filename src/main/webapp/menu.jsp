@@ -22,6 +22,7 @@
 <body>
 
 <br/>
+<table width="100%" border="0" cellspacing="10" class="single-gray-overline"></table>
 <table width="100%" border="0" cellspacing="10" class="single-underline">
     <tr><td><h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the CDMR System</b></h2></td></tr>
     <tr style="height: 7px;"></tr>
@@ -29,38 +30,33 @@
     <tr>
         <td width="32%" height="12" nowrap="nowrap" align="left" >
             <p>&nbsp;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="../CDMR/createCDMR">Create Credit Debit Memo Request</a></p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to create a new credit/debit memo request</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="../CDMR/createCDMR">Create Credit Debit Memo Request</a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to create a new credit/debit memo request</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="32%" height="12" nowrap="nowrap" align="left">
             <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="javascript:window.location=inboxUrl;">Requests Inbox </a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to manage requests awaiting user review and/or approval</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="32%" height="12" nowrap="nowrap" align="left">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="../CDMR/cdmrSearch">Requests Search</a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to search for specific credit debit memo requests</p>
         </td>
     </tr>
 
 </table>
 
-<table width="100%" border="0" cellspacing="10" class="single-underline">
-
-    <tr>
-        <td width="32%" height="12" nowrap="nowrap" align="left">
-            <p>&nbsp;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="javascript:window.location=inboxUrl;">Requests Inbox </a></p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to manage requests awaiting user review and/or approval</p>
-        </td>
-    </tr>
-
-
-    <tr>
-        <td width="32%" height="12" nowrap="nowrap" align="left">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="../CDMR/cdmrSearch">Requests Search</a></p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to search for specific credit debit memo requests</p>
-        </td>
-    </tr>
-</table>
 
 <table width="100%" border="0" cellspacing="10" class="single-underline" >
+    <br><br>
     <tr>
         <td width="32%" height="12" nowrap="nowrap" align="left">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="../CDMR/cdmrSearch">Administration Screen</a></p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to manage the approvers</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="../CDMR/cdmrSearch">Administration Screen</a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to manage the approvers</p>
         </td>
     </tr>
 </table>

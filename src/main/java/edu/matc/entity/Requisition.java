@@ -23,7 +23,6 @@ public class Requisition {
     private int requisitionID;
 
     @Column(name="APP_ID")
-
     private int appID;
 
     @Column(name = "APP_NAME")
