@@ -1,0 +1,26 @@
+Web Services:
+    1. Customer Lookup
+    2. Invoice Lookup
+
+
+
+Requisition Services:
+
+    1. Get Requisition
+    2. Search Results
+    3. Create a Requisition
+    4. Save/Update Requisition
+
+Inbox/Task Services:
+
+    1. Get Inbox
+    2. Assign a task
+    3. Approve/Reject a task
+
+Approvals:
+
+    1. Routing logic
+
+DB services:
+
+    1. Entity and DAO services for each operation
