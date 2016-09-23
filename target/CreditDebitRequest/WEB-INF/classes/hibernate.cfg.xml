@@ -21,7 +21,12 @@
         <property name="show_sql">true</property>
 
         <!-- List the annotated entity class/es -->
-        <mapping class="edu.matc.entity.Requisition"/>
+        <mapping class="com.cdmr.entity.Requisition"/>
+        <mapping class="com.cdmr.entity.Customer"/>
+        <mapping class="com.cdmr.entity.InvoiceHeader"/>
+        <mapping class="com.cdmr.entity.InvoiceDetail"/>
+        <mapping class="com.cdmr.entity.CdmrUsers"/>
+        <mapping class="com.cdmr.entity.Cdmr"/>
 
     </session-factory>
 

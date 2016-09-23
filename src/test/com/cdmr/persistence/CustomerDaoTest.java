@@ -31,8 +31,10 @@ public class CustomerDaoTest {
 
     @Test
     public void addCustomer() throws Exception {
-
-        cust.setCustNum(1000);
+        CustomerDao custDao = new CustomerDao();
+        int custID = custDao.getMaxCustID();
+        custID++;
+        cust.setCustNum(custID);
         cust.setCustName("Experis");
         cust.setAdd1("100");
         cust.setAdd2("Manpower Place");
@@ -40,7 +42,6 @@ public class CustomerDaoTest {
         cust.setState("WI");
         cust.setZip("53212");
         cust.setPhone("414-961-1000");
-        CustomerDao custDao = new CustomerDao();
         custDao.addCustomer(cust);
         assertNotNull("addcustomer failed",custDao.getCustomer(1000));
 

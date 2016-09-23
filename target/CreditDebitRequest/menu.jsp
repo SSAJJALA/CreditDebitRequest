@@ -32,7 +32,6 @@
             <p>&nbsp;</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="../CDMR/createCDMR">Create Credit Debit Memo Request</a></p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to create a new credit/debit memo request</p>
-            <p>&nbsp;</p>
         </td>
     </tr>
     <tr>
@@ -53,10 +52,11 @@
 
 
 <table width="100%" border="0" cellspacing="10" class="single-underline" >
+    <br><br>
     <tr>
         <td width="32%" height="12" nowrap="nowrap" align="left">
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="../CDMR/cdmrSearch">Administration Screen</a></p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to manage the approvers</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to manage the approvers</p>
         </td>
     </tr>
 </table>

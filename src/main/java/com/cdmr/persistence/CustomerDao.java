@@ -2,8 +2,13 @@ package com.cdmr.persistence;
 
 import com.cdmr.entity.Customer;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,6 +86,20 @@ public class CustomerDao {
         Transaction tx = session.beginTransaction();
         session.update(cust);
         tx.commit();
+
+    }
+
+    /**
+     * get the max cust number
+     * @return cust number
+     */
+    public int getMaxCustID() {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Criteria c = session.createCriteria(Customer.class);
+        c.addOrder(Order.desc("custNum"));
+        c.setMaxResults(1);
+        Customer cust = (Customer)c.uniqueResult();
+        return cust.getCustNum();
 
     }
 
