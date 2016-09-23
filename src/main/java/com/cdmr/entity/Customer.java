@@ -36,8 +36,10 @@ public class Customer {
     @Column(name="PHONE")
     private String phone;
 
+    /**
     @OneToMany(mappedBy = "cust")
     private Set<InvoiceHeader> invoices;
+    **/
 
     /**
      * No arg constructor

@@ -26,17 +26,21 @@ public class Login extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        logger.info("In doGet() method - Info message");
+        logger.info("In doPost() method");
+        response.setContentType("text/html");
         String userName = request.getParameter("username");
         String passWord = request.getParameter("password");
+        logger.info("User:" + userName);
         ValidateUser login = new ValidateUser();
         String message = login.validate(userName, passWord);
         if (!message.equals("User authenticated")) {
+            logger.error("Login failed for the user:" + userName);
             request.setAttribute("message", message);
             RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
             dispatcher.forward(request, response);
 
         } else {
+            logger.info("User authenticated. Forwarding to CDMR application");
             RequestDispatcher dispatcher = request.getRequestDispatcher("/menu.jsp");
             dispatcher.forward(request, response);
 

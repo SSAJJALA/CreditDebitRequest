@@ -1,18 +1,19 @@
 package com.cdmr.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by Siva Sajjala on 9/19/16.
  */
 @Entity
 @Table(name = "INVOICE_DETAIL")
-public class InvoiceDetail {
+public class InvoiceDetail implements Serializable {
 
     @Id
     @Column(name = "INV_NUM")
     private int invoiceNum;
-
+/**
     @ManyToOne
     @JoinColumn(name="INV_NUM")
     private InvoiceHeader invoice;
@@ -20,6 +21,7 @@ public class InvoiceDetail {
     @ManyToOne
     @JoinColumn(name="CUST_NUM")
     private Customer cust;
+ **/
 
     @Id
     @Column(name = "CUST_NUM")

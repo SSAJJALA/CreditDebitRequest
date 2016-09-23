@@ -3,6 +3,7 @@ package com.cdmr.entity;
 import com.cdmr.util.LocalDateAttributeConverter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -12,15 +13,21 @@ import java.util.Set;
 
 @Entity
 @Table(name = "INVOICE_HEADER")
-public class InvoiceHeader {
+public class InvoiceHeader implements Serializable {
 
     @Id
     @Column(name="INV_NUM")
     private int invoiceNum;
 
+    @Id
+    @Column(name="CUST_NUM")
+    private int custNum;
+
+    /**
     @ManyToOne
     @JoinColumn(name="CUST_NUM")
     private Customer cust;
+     **/
 
     @Column(name = "INV_DATE")
     @Convert(converter = LocalDateAttributeConverter.class)
@@ -41,14 +48,17 @@ public class InvoiceHeader {
     @Column(name = "NET_AMNT")
     private Double netAmnt;
 
+    /**
     @OneToMany(mappedBy = "invoice")
     private Set<InvoiceDetail> invoiceDetails;
+    **/
 
     public InvoiceHeader() {
     }
 
-    public InvoiceHeader(int invoiceNum, LocalDate invDate, Double grossAmnt, Double allowance, Double charges, Double tax, Double netAmnt) {
+    public InvoiceHeader(int invoiceNum, int custNum, LocalDate invDate, Double grossAmnt, Double allowance, Double charges, Double tax, Double netAmnt) {
         this.invoiceNum = invoiceNum;
+        this.custNum = custNum;
         this.invDate = invDate;
         this.grossAmnt = grossAmnt;
         this.allowance = allowance;
@@ -65,6 +75,15 @@ public class InvoiceHeader {
         this.invoiceNum = invoiceNum;
     }
 
+    public int getCustNum() {
+        return custNum;
+    }
+
+    public void setCustNum(int custNum) {
+        this.custNum = custNum;
+    }
+
+    /**
     public Customer getCust() {
         return cust;
     }
@@ -72,6 +91,8 @@ public class InvoiceHeader {
     public void setCust(Customer cust) {
         this.cust = cust;
     }
+     **/
+
 
     public LocalDate getInvDate() {
         return invDate;
@@ -121,6 +142,7 @@ public class InvoiceHeader {
         this.netAmnt = netAmnt;
     }
 
+    /**
     public Set<InvoiceDetail> getInvoiceDetails() {
         return invoiceDetails;
     }
@@ -128,12 +150,13 @@ public class InvoiceHeader {
     public void setInvoiceDetails(Set<InvoiceDetail> invoiceDetails) {
         this.invoiceDetails = invoiceDetails;
     }
+     **/
 
     @Override
     public String toString() {
         return "InvoiceHeader{" +
                 "invoiceNum=" + invoiceNum +
-                ", cust=" + cust +
+                ", cust=" + custNum +
                 ", invDate=" + invDate +
                 ", grossAmnt=" + grossAmnt +
                 ", allowance=" + allowance +

@@ -39,6 +39,7 @@ public class CdmrUsersDao {
     public CdmrUsers getUser(String userID) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         CdmrUsers  user = (CdmrUsers) session.get(CdmrUsers.class, userID);
+        log.info("User:" + user.getUserID() + "fetched from the database");
         return user;
 
     }

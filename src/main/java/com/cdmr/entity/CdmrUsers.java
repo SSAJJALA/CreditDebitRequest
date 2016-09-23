@@ -17,19 +17,18 @@ public class CdmrUsers {
     @Column(name = "USER_ID")
     private String userID;
 
-    @Id
     @Column(name = "FIRST_NAME")
     private String firstName;
 
-    @Id
+
     @Column(name = "LAST_NAME")
     private String lastName;
 
-    @Id
+
     @Column(name = "PASSWORD")
     private String passWord;
 
-    @Id
+
     @Column(name = "ROLE")
     private String role;
 
