@@ -87,280 +87,283 @@
       <column id="35" parent="10" name="CDMR_DATE">
         <data-type>date|0</data-type>
       </column>
-      <key id="36" parent="10" name="PRIMARY">
+      <column id="36" parent="10" name="TYPE">
+        <data-type>varchar(1)|0</data-type>
+      </column>
+      <key id="37" parent="10" name="PRIMARY">
         <columns>REQUISITION_ID</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="37" parent="10" name="CDMR_ibfk_1">
+      <foreign-key id="38" parent="10" name="CDMR_ibfk_1">
         <columns>REQUISITION_ID</columns>
         <ref-key>~.REQUISITION.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="38" parent="11" name="REQUISITION_ID">
+      <column id="39" parent="11" name="REQUISITION_ID">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="39" parent="11" name="CUST_NUM">
+      <column id="40" parent="11" name="CUST_NUM">
         <data-type>varchar(10)|0</data-type>
       </column>
-      <column id="40" parent="11" name="REASON_CODE_DESC">
+      <column id="41" parent="11" name="REASON_CODE_DESC">
         <data-type>varchar(50)|0</data-type>
       </column>
-      <column id="41" parent="11" name="ITEM_NUM">
+      <column id="42" parent="11" name="ITEM_NUM">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="42" parent="11" name="ITEM_DESC">
+      <column id="43" parent="11" name="ITEM_DESC">
         <data-type>varchar(100)|0</data-type>
       </column>
-      <column id="43" parent="11" name="QTY_ADJ">
+      <column id="44" parent="11" name="QTY_ADJ">
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="44" parent="11" name="ALLOW_ADJ">
+      <column id="45" parent="11" name="ALLOW_ADJ">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="45" parent="11" name="CHRG_ADJ">
+      <column id="46" parent="11" name="CHRG_ADJ">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="46" parent="11" name="TAX_ADJ">
+      <column id="47" parent="11" name="TAX_ADJ">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="47" parent="11" name="CD_FLAG">
+      <column id="48" parent="11" name="CD_FLAG">
         <data-type>varchar(1)|0</data-type>
       </column>
-      <column id="48" parent="11" name="EXT_PRICE">
+      <column id="49" parent="11" name="EXT_PRICE">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="49" parent="11" name="NEW_INV_LINE_AMNT">
+      <column id="50" parent="11" name="NEW_INV_LINE_AMNT">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <key id="50" parent="11" name="PRIMARY">
+      <key id="51" parent="11" name="PRIMARY">
         <columns>REQUISITION_ID
 ITEM_NUM</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="51" parent="11" name="CDMR_ADJUSTMENTS_ibfk_1">
+      <foreign-key id="52" parent="11" name="CDMR_ADJUSTMENTS_ibfk_1">
         <columns>REQUISITION_ID</columns>
         <ref-key>~.CDMR.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>delete</cascade-delete-rule>
       </foreign-key>
-      <column id="52" parent="12" name="REQUISITION_ID">
+      <column id="53" parent="12" name="REQUISITION_ID">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="53" parent="12" name="COMMENT_ID">
+      <column id="54" parent="12" name="COMMENT_ID">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="54" parent="12" name="SEQ_ID">
+      <column id="55" parent="12" name="SEQ_ID">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="55" parent="12" name="COMMENT_TEXT">
+      <column id="56" parent="12" name="COMMENT_TEXT">
         <data-type>varchar(1000)|0</data-type>
       </column>
-      <column id="56" parent="12" name="CREATED_DATE">
+      <column id="57" parent="12" name="CREATED_DATE">
         <mandatory>1</mandatory>
         <data-type>timestamp|0</data-type>
         <default-expression>CURRENT_TIMESTAMP</default-expression>
       </column>
-      <column id="57" parent="12" name="USER_ID">
+      <column id="58" parent="12" name="USER_ID">
         <data-type>varchar(20)|0</data-type>
       </column>
-      <index id="58" parent="12" name="REQUISITION_ID">
+      <index id="59" parent="12" name="REQUISITION_ID">
         <columns>REQUISITION_ID</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="59" parent="12" name="PRIMARY">
+      <key id="60" parent="12" name="PRIMARY">
         <columns>COMMENT_ID</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="60" parent="12" name="CDMR_COMMENTS_ibfk_1">
+      <foreign-key id="61" parent="12" name="CDMR_COMMENTS_ibfk_1">
         <columns>REQUISITION_ID</columns>
         <ref-key>~.CDMR.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>delete</cascade-delete-rule>
       </foreign-key>
-      <column id="61" parent="13" name="CUST_NUM">
+      <column id="62" parent="13" name="CUST_NUM">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="62" parent="13" name="CUST_NAME">
+      <column id="63" parent="13" name="CUST_NAME">
         <data-type>varchar(100)|0</data-type>
       </column>
-      <column id="63" parent="13" name="ADDRESS_1">
+      <column id="64" parent="13" name="ADDRESS_1">
         <data-type>varchar(100)|0</data-type>
       </column>
-      <column id="64" parent="13" name="ADDRESS_2">
+      <column id="65" parent="13" name="ADDRESS_2">
         <data-type>varchar(100)|0</data-type>
       </column>
-      <column id="65" parent="13" name="CITY">
+      <column id="66" parent="13" name="CITY">
         <data-type>varchar(50)|0</data-type>
       </column>
-      <column id="66" parent="13" name="STATE">
+      <column id="67" parent="13" name="STATE">
         <data-type>varchar(50)|0</data-type>
       </column>
-      <column id="67" parent="13" name="ZIP">
+      <column id="68" parent="13" name="ZIP">
         <data-type>varchar(10)|0</data-type>
       </column>
-      <column id="68" parent="13" name="PHONE">
+      <column id="69" parent="13" name="PHONE">
         <data-type>varchar(20)|0</data-type>
       </column>
-      <key id="69" parent="13" name="PRIMARY">
+      <key id="70" parent="13" name="PRIMARY">
         <columns>CUST_NUM</columns>
         <primary>1</primary>
       </key>
-      <column id="70" parent="14" name="USER_ID">
+      <column id="71" parent="14" name="USER_ID">
         <mandatory>1</mandatory>
         <data-type>varchar(20)|0</data-type>
       </column>
-      <column id="71" parent="14" name="FIRST_NAME">
+      <column id="72" parent="14" name="FIRST_NAME">
         <mandatory>1</mandatory>
         <data-type>varchar(100)|0</data-type>
       </column>
-      <column id="72" parent="14" name="LAST_NAME">
+      <column id="73" parent="14" name="LAST_NAME">
         <mandatory>1</mandatory>
         <data-type>varchar(100)|0</data-type>
       </column>
-      <column id="73" parent="14" name="PASSWORD">
+      <column id="74" parent="14" name="PASSWORD">
         <mandatory>1</mandatory>
         <data-type>varchar(50)|0</data-type>
       </column>
-      <column id="74" parent="14" name="ROLE">
+      <column id="75" parent="14" name="ROLE">
         <mandatory>1</mandatory>
         <data-type>varchar(20)|0</data-type>
       </column>
-      <key id="75" parent="14" name="PRIMARY">
+      <key id="76" parent="14" name="PRIMARY">
         <columns>USER_ID</columns>
         <primary>1</primary>
       </key>
-      <column id="76" parent="15" name="INV_NUM">
+      <column id="77" parent="15" name="INV_NUM">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="77" parent="15" name="CUST_NUM">
+      <column id="78" parent="15" name="CUST_NUM">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="78" parent="15" name="INV_DATE">
+      <column id="79" parent="15" name="INV_DATE">
         <data-type>date|0</data-type>
       </column>
-      <column id="79" parent="15" name="GROSS_AMNT">
+      <column id="80" parent="15" name="GROSS_AMNT">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="80" parent="15" name="ALLOWANCE">
+      <column id="81" parent="15" name="ALLOWANCE">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="81" parent="15" name="CHARGES">
+      <column id="82" parent="15" name="CHARGES">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="82" parent="15" name="TAX">
+      <column id="83" parent="15" name="TAX">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="83" parent="15" name="NET_AMNT">
+      <column id="84" parent="15" name="NET_AMNT">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <index id="84" parent="15" name="INVOICE_HEADER_FK1">
+      <index id="85" parent="15" name="INVOICE_HEADER_FK1">
         <columns>CUST_NUM</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="85" parent="15" name="PRIMARY">
+      <key id="86" parent="15" name="PRIMARY">
         <columns>INV_NUM
 CUST_NUM</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="86" parent="15" name="INVOICE_HEADER_FK1">
+      <foreign-key id="87" parent="15" name="INVOICE_HEADER_FK1">
         <columns>CUST_NUM</columns>
         <ref-key>~.CUSTOMER.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="87" parent="16" name="INV_NUM">
+      <column id="88" parent="16" name="INV_NUM">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="88" parent="16" name="CUST_NUM">
+      <column id="89" parent="16" name="CUST_NUM">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="89" parent="16" name="ITEM_NUM">
+      <column id="90" parent="16" name="ITEM_NUM">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="90" parent="16" name="ITEM_DESC">
+      <column id="91" parent="16" name="ITEM_DESC">
         <data-type>varchar(100)|0</data-type>
       </column>
-      <column id="91" parent="16" name="QTY">
+      <column id="92" parent="16" name="QTY">
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="92" parent="16" name="UNIT_PRICE">
+      <column id="93" parent="16" name="UNIT_PRICE">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="93" parent="16" name="GROSS_AMNT">
+      <column id="94" parent="16" name="GROSS_AMNT">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="94" parent="16" name="ALLOWANCE">
+      <column id="95" parent="16" name="ALLOWANCE">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="95" parent="16" name="CHARGES">
+      <column id="96" parent="16" name="CHARGES">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="96" parent="16" name="TAX">
+      <column id="97" parent="16" name="TAX">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <column id="97" parent="16" name="NET_AMNT">
+      <column id="98" parent="16" name="NET_AMNT">
         <data-type>decimal(6,2)|0</data-type>
       </column>
-      <index id="98" parent="16" name="INVOICE_DETAIL_FK2">
+      <index id="99" parent="16" name="INVOICE_DETAIL_FK2">
         <columns>CUST_NUM</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="99" parent="16" name="PRIMARY">
+      <key id="100" parent="16" name="PRIMARY">
         <columns>INV_NUM
 ITEM_NUM</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="100" parent="16" name="INVOICE_DETAIL_FK1">
+      <foreign-key id="101" parent="16" name="INVOICE_DETAIL_FK1">
         <columns>INV_NUM</columns>
         <ref-key>APPSPROD.INVOICE_HEADER(INV_NUM)</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="101" parent="16" name="INVOICE_DETAIL_FK2">
+      <foreign-key id="102" parent="16" name="INVOICE_DETAIL_FK2">
         <columns>CUST_NUM</columns>
         <ref-key>~.CUSTOMER.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="102" parent="17" name="TASK_ID">
+      <column id="103" parent="17" name="TASK_ID">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="103" parent="17" name="CREATED_DATE">
+      <column id="104" parent="17" name="CREATED_DATE">
         <mandatory>1</mandatory>
         <data-type>timestamp|0</data-type>
         <default-expression>CURRENT_TIMESTAMP</default-expression>
       </column>
-      <key id="104" parent="17" name="PRIMARY">
+      <key id="105" parent="17" name="PRIMARY">
         <columns>TASK_ID</columns>
         <primary>1</primary>
       </key>
-      <column id="105" parent="18" name="TASK_ID">
+      <column id="106" parent="18" name="TASK_ID">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="106" parent="18" name="USER_ID">
+      <column id="107" parent="18" name="USER_ID">
         <mandatory>1</mandatory>
         <data-type>varchar(20)|0</data-type>
       </column>
-      <column id="107" parent="18" name="REQUISITION_ID">
+      <column id="108" parent="18" name="REQUISITION_ID">
         <data-type>int(11)|0</data-type>
       </column>
-      <key id="108" parent="18" name="PRIMARY">
+      <key id="109" parent="18" name="PRIMARY">
         <columns>TASK_ID
 USER_ID</columns>
         <primary>1</primary>

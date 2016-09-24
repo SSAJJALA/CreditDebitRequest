@@ -3,8 +3,10 @@ package com.cdmr.persistence;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.Requisition;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -86,6 +88,67 @@ public class CdmrDao {
         Transaction tx = session.beginTransaction();
         session.update(cdmr);
         tx.commit();
+
+    }
+
+    public List<Cdmr> getCdmrs(String searchOption, String operand, String value) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Criteria c = session.createCriteria(Cdmr.class);
+
+        Object searchValue = null;
+
+        if (searchOption.equals("requisitionID")) {
+            searchValue = Integer.parseInt(value);
+        } else if (searchOption.equals("cdmrDate")) {
+            searchValue = formatDate(value);
+        } else {
+            searchValue = value;
+        }
+
+        c = this.addRestrictions(c, searchOption, operand, searchValue);
+
+        /**
+        if (operand.equals("="))  {
+            c.add(Restrictions.eq(searchOption, searchValue));
+        } else if (operand.equals(">")) {
+            c.add(Restrictions.gt(searchOption, searchValue));
+        } else if (operand.equals("<")) {
+            c.add(Restrictions.lt(searchOption, searchValue));
+        } else if (operand.equals(">=")) {
+            c.add(Restrictions.ge(searchOption, searchValue));
+        } else if (operand.equals("<=")) {
+            c.add(Restrictions.le(searchOption, searchValue));
+        } else if (operand.equals("LIKE")) {
+            c.add(Restrictions.like(searchOption, searchValue));
+        } else if (operand.equals("!=")) {
+            c.add(Restrictions.ne(searchOption, searchValue));
+        }
+
+        **/
+
+        List<Cdmr> cdmrs = c.list();
+        return cdmrs;
+    }
+
+    public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
+
+        if (operand.equals("="))  {
+            tempCriteria.add(Restrictions.eq(option, value));
+        } else if (operand.equals(">")) {
+            tempCriteria.add(Restrictions.gt(option, value));
+        } else if (operand.equals("<")) {
+            tempCriteria.add(Restrictions.lt(option, value));
+        } else if (operand.equals(">=")) {
+            tempCriteria.add(Restrictions.ge(option, value));
+        } else if (operand.equals("<=")) {
+            tempCriteria.add(Restrictions.le(option, value));
+        } else if (operand.equals("LIKE")) {
+            tempCriteria.add(Restrictions.like(option, value));
+        } else if (operand.equals("!=")) {
+            tempCriteria.add(Restrictions.ne(option, value));
+        }
+
+        return tempCriteria;
 
     }
 

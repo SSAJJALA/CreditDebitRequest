@@ -48,6 +48,9 @@ public class Cdmr {
     @Convert(converter = LocalDateAttributeConverter.class)
     private LocalDate cdmrDate;
 
+    @Column(name="TYPE")
+    private String type;
+
     /**
      * No arg constructor
      * Instantiates a new cdmr object
@@ -55,21 +58,8 @@ public class Cdmr {
     public Cdmr() {
     }
 
-    /**
-     * Instantiates a new cdmr object with params
-     * @param requisitionID
-     * @param status
-     * @param custNum
-     * @param custName
-     * @param invNum
-     * @param invDate
-     * @param invAmount
-     * @param salesRepID
-     * @param salesRepName
-     * @param adjAmnt
-     * @param cdmrDate
-     */
-    public Cdmr(int requisitionID, String status, int custNum, String custName, int invNum, LocalDate invDate, double invAmount, String salesRepID, String salesRepName, double adjAmnt, LocalDate cdmrDate) {
+
+    public Cdmr(int requisitionID, String status, int custNum, String custName, int invNum, LocalDate invDate, double invAmount, String salesRepID, String salesRepName, double adjAmnt, LocalDate cdmrDate, String type) {
         this.requisitionID = requisitionID;
         this.status = status;
         this.custNum = custNum;
@@ -81,6 +71,7 @@ public class Cdmr {
         this.salesRepName = salesRepName;
         this.adjAmnt = adjAmnt;
         this.cdmrDate = cdmrDate;
+        this.type = type;
     }
 
     /**
@@ -188,6 +179,14 @@ public class Cdmr {
         this.cdmrDate = cdmrDate;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Cdmr{" +
@@ -202,6 +201,7 @@ public class Cdmr {
                 ", salesRepName='" + salesRepName + '\'' +
                 ", adjAmnt=" + adjAmnt +
                 ", cdmrDate=" + cdmrDate +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

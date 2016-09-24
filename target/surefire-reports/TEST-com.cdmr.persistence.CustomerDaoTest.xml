@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="com.cdmr.persistence.CustomerDaoTest" time="0.371" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="com.cdmr.persistence.CustomerDaoTest" time="0.343" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2016.2.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -61,8 +61,8 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="com.cdmr.persistence.CustomerDaoTest" name="updateReq" time="0"/>
-  <testcase classname="com.cdmr.persistence.CustomerDaoTest" name="getCustomer" time="0"/>
-  <testcase classname="com.cdmr.persistence.CustomerDaoTest" name="deleteCustomer" time="0"/>
-  <testcase classname="com.cdmr.persistence.CustomerDaoTest" name="addCustomer" time="0.365"/>
-  <testcase classname="com.cdmr.persistence.CustomerDaoTest" name="getAllCustomers" time="0"/>
+  <testcase classname="com.cdmr.persistence.CustomerDaoTest" name="getCustomer" time="0.002"/>
+  <testcase classname="com.cdmr.persistence.CustomerDaoTest" name="deleteCustomer" time="0.001"/>
+  <testcase classname="com.cdmr.persistence.CustomerDaoTest" name="addCustomer" time="0.326"/>
+  <testcase classname="com.cdmr.persistence.CustomerDaoTest" name="getAllCustomers" time="0.001"/>
 </testsuite>

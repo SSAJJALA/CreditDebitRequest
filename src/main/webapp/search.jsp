@@ -53,7 +53,7 @@
 
 <div class="container-fluid">
     <c:choose>
-    <c:when test="${empty search}">
+    <c:when test="${empty results}">
         <h2>No requisition found</h2>
     </c:when>
     <c:otherwise>
@@ -69,10 +69,10 @@
             <th>Adj Amnt $</th>
             <th>Status</th>
         </tr>
-        <c:forEach items="${search}" var="searchResults">
+        <c:forEach items="${results}" var="searchResults">
             <tr style="height: 7px;">
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.reqID}</td>
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.invNo}</td>
+                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.requisitionID}</td>
+                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.invoiceNum}</td>
                 <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.invAmnt}</td>
                 <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.custNo}</td>
                 <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.custName}</td>
