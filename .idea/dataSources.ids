@@ -343,27 +343,37 @@ ITEM_NUM</columns>
         <data-type>int(11)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="104" parent="17" name="CREATED_DATE">
+      <column id="104" parent="17" name="TASK_NAME">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="105" parent="17" name="TASK_STATUS">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="106" parent="17" name="CREATED_DATE">
         <mandatory>1</mandatory>
         <data-type>timestamp|0</data-type>
         <default-expression>CURRENT_TIMESTAMP</default-expression>
       </column>
-      <key id="105" parent="17" name="PRIMARY">
+      <column id="107" parent="17" name="UPDATED_DATE">
+        <data-type>timestamp|0</data-type>
+      </column>
+      <key id="108" parent="17" name="PRIMARY">
         <columns>TASK_ID</columns>
         <primary>1</primary>
       </key>
-      <column id="106" parent="18" name="TASK_ID">
+      <column id="109" parent="18" name="TASK_ID">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="107" parent="18" name="USER_ID">
+      <column id="110" parent="18" name="REQUISITION_ID">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="111" parent="18" name="USER_ID">
         <mandatory>1</mandatory>
         <data-type>varchar(20)|0</data-type>
       </column>
-      <column id="108" parent="18" name="REQUISITION_ID">
-        <data-type>int(11)|0</data-type>
-      </column>
-      <key id="109" parent="18" name="PRIMARY">
+      <key id="112" parent="18" name="PRIMARY">
         <columns>TASK_ID
 USER_ID</columns>
         <primary>1</primary>
