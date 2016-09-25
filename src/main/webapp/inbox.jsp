@@ -43,9 +43,9 @@
                     <tr style="height: 7px;">
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${inboxResults.taskID}</td>
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${inboxResults.type}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${inboxResults.action}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${inboxResults.info}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${inboxResults.application}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">Approval Required/td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">Req ID: ${inboxResults.requisitionID}|Customer: ${inboxResults.requisitionID}|Adj $: ${inboxResults.requisitionID}</td>
                     </tr>
                 </c:forEach>
 

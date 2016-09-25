@@ -27,6 +27,9 @@
         <mapping class="com.cdmr.entity.InvoiceDetail"/>
         <mapping class="com.cdmr.entity.CdmrUsers"/>
         <mapping class="com.cdmr.entity.Cdmr"/>
+        <mapping class="com.cdmr.entity.Task"/>
+        <mapping class="com.cdmr.entity.TaskAssignment"/>
+        <mapping class="com.cdmr.entity.TaskAssignmentPK"/>
 
     </session-factory>
 

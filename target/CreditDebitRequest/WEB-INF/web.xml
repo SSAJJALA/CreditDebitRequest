@@ -16,7 +16,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Entry</servlet-name>
-        <url-pattern>/com/cdmr/controller/Entry.java/entry</url-pattern>
+        <url-pattern>/entry</url-pattern>
     </servlet-mapping>
 
     <context-param>
@@ -26,13 +26,53 @@
 
 
     <servlet>
-        <servlet-name>Login</servlet-name>
+        <servlet-name>login</servlet-name>
         <servlet-class>com.cdmr.controller.Login</servlet-class>
-
     </servlet>
+
     <servlet-mapping>
-        <servlet-name>Login</servlet-name>
-        <url-pattern>/com/cdmr/controller/Entry.java/login</url-pattern>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DirectToSearch</servlet-name>
+        <servlet-class>com.cdmr.controller.DirectToSearch</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DirectToSearch</servlet-name>
+        <url-pattern>/toSearch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DirectToInbox</servlet-name>
+        <servlet-class>com.cdmr.controller.DirectToInbox</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DirectToInbox</servlet-name>
+        <url-pattern>/toInbox</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>inboxServlet</servlet-name>
+        <servlet-class>com.cdmr.controller.InboxServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>inboxServlet</servlet-name>
+        <url-pattern>/inboxServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>searchServlet</servlet-name>
+        <servlet-class>com.cdmr.controller.SearchServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>searchServlet</servlet-name>
+        <url-pattern>/searchServlet</url-pattern>
     </servlet-mapping>
 
 

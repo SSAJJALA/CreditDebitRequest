@@ -15,16 +15,16 @@
 <head>
     <meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>SOA - Login</title>
+    <title>CDMR - Login</title>
 
 </head>
 <body onload="usernameFocus()">
 <!-- Header start from here -->
 <div id="mainContainer">
 
-    <div id="panel">
+    <div style="border-bottom:1px solid #d9d9db; " id="panel">
         <div class="headerInside">
-            <div class="floatLeft"><h1 title="Reddy's Inc">SOA</h1></div>
+            <div class="floatLeft"><h1 title="Reddy's Inc">Reddy's Inc</h1></div>
         </div>
     </div>
     <!-- Header ends here -->
@@ -98,8 +98,9 @@
 
         }
     </script>
-    <%@include file="footer.jsp"%>
+
 </div>
 
+<%@include file="footer.jsp"%>
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"3586288","applicationTime":4,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"7d55d80316","transactionName":"ZwNRYUJXXxVZUUMNC15JeWZgGWYjeh9+KiIfEFpQRxlbFUgdUwECURNfQW8ZRA8XUVYXKF8BWltmX1QRFlhEFA==","agent":"","errorBeacon":"bam.nr-data.net"}</script></body>
 </html>
