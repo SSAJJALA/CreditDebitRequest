@@ -18,42 +18,42 @@
 </head>
 
 <body>
-<div class="container-fluid">
+<div id="wrapper" class="container">
+
 <table width="100%" border="0" cellspacing="10" >
     <tr><td><h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Task Inbox</b></h2></td></tr>
     <tr style="height: 7px;"></tr>
 </table>
-</div>
-<div class="container-fluid">
-    <c:choose>
-        <c:when test="${empty inbox}">
-            <h2>No tasks found</h2>
-        </c:when>
-        <c:otherwise>
-            <table width="100%" border="1" cellspacing="10" >
+    <br><br>
 
+    <div class="container-fluid" style="height: 1000px; width: 90%; border:1px solid black;">
+
+        <table width="75%" border="1" cellspacing="10" >
+
+            <tr style="height: 7px;">
+                <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Task ID</th>
+                <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Updated Date</th>
+                <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Type</th>
+                <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Action Required</th>
+                <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Info</th>
+            </tr>
+
+            <c:forEach items="${inbox}" var="inboxResults">
                 <tr style="height: 7px;">
-                    <th>Task ID</th>
-                    <th>Updated Date</th>
-                    <th>Type</th>
-                    <th>Action Required</th>
-                    <th>Info</th>
+                    <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${inboxResults.taskID}</td>
+                    <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
+                    <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${inboxResults.application}</td>
+                    <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Approval Required</td>
+                    <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Req ID: ${inboxResults.requisitionID}|Customer: ${inboxResults.requisitionID}|Adj $: ${inboxResults.requisitionID} </td>
                 </tr>
-                <c:forEach items="${inbox}" var="inboxResults">
-                    <tr style="height: 7px;">
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${inboxResults.taskID}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${inboxResults.application}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">Approval Required/td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">Req ID: ${inboxResults.requisitionID}|Customer: ${inboxResults.requisitionID}|Adj $: ${inboxResults.requisitionID}</td>
-                    </tr>
-                </c:forEach>
+            </c:forEach>
 
-            </table>
-        </c:otherwise>
-    </c:choose>
+        </table>
 
 </div>
+    <br><br><br>
+</div>
 
+<%@include file="footer.jsp"%>
 </body>
 </html>

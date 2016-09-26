@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: student
+  User: Siva Sajjala
   Date: 9/17/16
   Time: 9:30 AM
   To change this template use File | Settings | File Templates.
@@ -27,17 +27,18 @@
 
 
         <select name="searchoptions">
-            <option value="volvo">Search By</option>
-            <option value="saab">Req ID</option>
-            <option value="fiat">Customer Name</option>
-            <option value="audi">Status</option>
+            <option value="searchBy">Search By</option>
+            <option value="requisitionID">Req ID</option>
+            <option value="customerName">Customer Name</option>
+            <option value="status">Status</option>
+            <option value="all">All</option>
         </select>
         <span style="padding-left:50px"></span>
         <select name="operands">
-            <option value="volvo">Operand</option>
-            <option value="saab">=</option>
-            <option value="fiat">!=</option>
-            <option value="audi">LIKE</option>
+            <option value="operand">Operand</option>
+            <option value="=">=</option>
+            <option value="!=">!=</option>
+            <option value="like">LIKE</option>
         </select>
         <span style="padding-left:50px"></span>
         <input type="text" name="searchTerm">

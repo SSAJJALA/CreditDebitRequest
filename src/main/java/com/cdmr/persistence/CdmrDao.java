@@ -105,7 +105,10 @@ public class CdmrDao {
             searchValue = value;
         }
 
-        c = this.addRestrictions(c, searchOption, operand, searchValue);
+        if (!searchOption.equals("all")) {
+            c = this.addRestrictions(c, searchOption, operand, searchValue);
+        }
+
         List<Cdmr> cdmrs = c.list();
         return cdmrs;
     }
@@ -122,7 +125,7 @@ public class CdmrDao {
             tempCriteria.add(Restrictions.ge(option, value));
         } else if (operand.equals("<=")) {
             tempCriteria.add(Restrictions.le(option, value));
-        } else if (operand.equals("LIKE")) {
+        } else if (operand.equals("like")) {
             tempCriteria.add(Restrictions.like(option, value));
         } else if (operand.equals("!=")) {
             tempCriteria.add(Restrictions.ne(option, value));

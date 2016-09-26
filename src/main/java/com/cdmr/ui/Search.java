@@ -55,12 +55,16 @@ public class Search {
         CdmrDao cdmrs = new CdmrDao();
         List<SearchCDMR> prepareResults = null;
         String column = null;
-        if (this.getSearchFilter().equals("RequisitionID")) {
+        if (this.getSearchFilter().equals("requisitionID")) {
             column = "requisitionID";
-        } else if (this.getSearchFilter().equals("CustomerName")) {
+        } else if (this.getSearchFilter().equals("customerName")) {
             column = "custName";
-        } else if (this.getSearchFilter().equals("ReqDate")) {
+        } else if (this.getSearchFilter().equals("reqDate")) {
             column = "cdmrDate";
+        } else if (this.getSearchFilter().equals("status")) {
+            column = "status";
+        } else if (this.getSearchFilter().equals("all")) {
+            column = "";
         }
 
         List<Cdmr> searchResults = cdmrs.getCdmrs(column, this.getOperand(), this.getSearchValue());
