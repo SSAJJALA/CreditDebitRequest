@@ -24,6 +24,62 @@
                 .single-underline { border-bottom: 2px solid #5C8727;}
                 .error{ color: red; }
                 .single-gray-overline {border-top: 2px solid #a9a9a9;}
+
                 h2 {font-size:16px; color:#CF4520; padding-left:15px; padding-bottom:12px; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic;}
+
+                div.container {
+                        width: 100%;
+                        border: 1px solid gray;
+                        height: 100px;
+                }
+
+                header {
+                        padding: 1em;
+                        color: black;
+                        background-color: white;
+                        clear: left;
+                        text-align: center;
+                        border: 1px solid gray;
+                }
+
+                footer {
+                    clear: both;
+                    position: relative;
+                    z-index: 10;
+                    height: 1em;
+                    margin-top: -1em;
+                    color: black;
+                    background-color: white;
+                    clear: left;
+                    text-align: center;
+                    border: 1px solid gray;
+                }
+
+                nav {
+
+                        text-align: left;
+                        max-width: 100px;
+                        margin: 0;
+                        padding: 0.5em;
+                        border-right: 1px solid gray;
+                }
+
+                nav ul {
+                        list-style-type: none;
+                        padding: 0;
+                }
+
+                nav ul a {
+                        text-decoration: none;
+                }
+
+                html, body {
+                    height: 100%;
+                    margin: 0;
+                }
+
+                #wrapper {
+                    min-height: 100%;
+                }
         </style>
 </head>

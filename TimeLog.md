@@ -9,3 +9,7 @@ Date        Task                                            Hours       Notes
 09/15/2016  Completed the database design                   2
 09/16/2016  Worked on Wk3 exercise, JSPs and DAOs           3
 09/17/2016  Worked on building the JSPs                     2
+09/22/2016  Worked on login page                            3
+09/23/2016  Worked on creating more DAO and services        3    
+09/24/2016  Worked on search and inbox JSPs                 2
+09/25/2016  Went thru the readings for next class and also worked on styling for search JSP page    4

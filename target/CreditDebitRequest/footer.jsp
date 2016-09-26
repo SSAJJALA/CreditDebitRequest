@@ -1,5 +1,3 @@
 <!-- Footer starts from here -->
-<div class="footerInside">
-    <div class="footerTxt">&copy; MATC, Madison - All Rights Reserved.</div>
-</div>
+<footer>Copyright © Reddysinc.com</footer>
 <!-- Footer ends here -->

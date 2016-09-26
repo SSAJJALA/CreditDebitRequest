@@ -16,78 +16,78 @@
 
 </head>
 <body>
+<div id="wrapper" class="container">
 
-<form action="/search" class="single-underline">
-    <table width="100%" border="0" cellspacing="10" class="single-underline">
+<%@include file="header.jsp"%>
 
-        <tr style="height: 7px;"></tr>
+<form action="/search" >
+    <div  style="border-bottom:2px solid #5C8727">
+        <br><br>
+        <span style="padding-left:60px"></span>
 
-        <tr style="height: 7px;">
-            <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">
-                <select name="searchoptions">
-                    <option value="volvo">Search By</option>
-                    <option value="saab">Req ID</option>
-                    <option value="fiat">Customer Name</option>
-                    <option value="audi">Status</option>
-                </select>
-            </td>
-            <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">
-                <select name="operands">
-                    <option value="volvo">Operand</option>
-                    <option value="saab">=</option>
-                    <option value="fiat">!=</option>
-                    <option value="audi">LIKE</option>
-                </select>
-            </td>
-            <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">
-                <input type="text" name="searchTerm">
-            </td>
 
-        </tr>
+        <select name="searchoptions">
+            <option value="volvo">Search By</option>
+            <option value="saab">Req ID</option>
+            <option value="fiat">Customer Name</option>
+            <option value="audi">Status</option>
+        </select>
+        <span style="padding-left:50px"></span>
+        <select name="operands">
+            <option value="volvo">Operand</option>
+            <option value="saab">=</option>
+            <option value="fiat">!=</option>
+            <option value="audi">LIKE</option>
+        </select>
+        <span style="padding-left:50px"></span>
+        <input type="text" name="searchTerm">
+            <br><br><br><br>
+        <span style="padding-left:600px"></span>
 
-    </table>
-
-    <br><br><br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<input type="submit" value="Search">
+        <input type="submit" value="Search">
+        <br><br>
+    </div>
 </form>
 
-<div class="container-fluid">
-    <c:choose>
-    <c:when test="${empty results}">
-        <h2>No requisition found</h2>
-    </c:when>
-    <c:otherwise>
-    <table width="100%" border="1" cellspacing="10" >
+<br><br>
+
+<div class="container-fluid" style="height: 1000px; width: 90%; border:1px solid black;">
+
+    <table width="75%" border="1" cellspacing="10" >
 
         <tr style="height: 7px;">
-            <th>Req ID</th>
-            <th>Invoice</th>
-            <th>Inv Amnt $</th>
-            <th>Customer No</th>
-            <th>Customer Name</th>
-            <th>Req Type</th>
-            <th>Adj Amnt $</th>
-            <th>Status</th>
+            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Req ID</th>
+            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Invoice</th>
+            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Inv Amnt $</th>
+            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Customer No</th>
+            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Customer Name</th>
+            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Req Type</th>
+            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Adj Amnt $</th>
+            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Status</th>
         </tr>
         <c:forEach items="${results}" var="searchResults">
             <tr style="height: 7px;">
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.requisitionID}</td>
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.invoiceNum}</td>
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.invAmnt}</td>
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.custNo}</td>
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.custName}</td>
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.reqType}</td>
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.adjAmnt}</td>
-                <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.status}</td>
+                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.requisitionID}</td>
+                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.invoiceNum}</td>
+                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.invAmnt}</td>
+                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.custNo}</td>
+                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.custName}</td>
+                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.reqType}</td>
+                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.adjAmnt}</td>
+                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.status}</td>
 
             </tr>
         </c:forEach>
 
     </table>
-    </c:otherwise>
-    </c:choose>
+
 
 </div>
 
+<br><br><br>
+
+</div>
+
+<%@include file="footer.jsp"%>
 </body>
 </html>
