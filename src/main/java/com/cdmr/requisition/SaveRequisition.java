@@ -1,10 +1,16 @@
 package com.cdmr.requisition;
 
 import com.cdmr.Data.CDMR;
+import com.cdmr.Data.CDMRAdjustments;
 import com.cdmr.Data.Customer;
 import com.cdmr.Data.InvoiceHeader;
 import com.cdmr.entity.Cdmr;
+import com.cdmr.entity.CdmrAdjustments;
+import com.cdmr.entity.CdmrAdjustmentsPK;
+import com.cdmr.persistence.CdmrAdjustmentsDao;
 import com.cdmr.persistence.CdmrDao;
+
+import java.util.List;
 
 /**
  * Created by student on 9/26/16.
@@ -12,6 +18,7 @@ import com.cdmr.persistence.CdmrDao;
 public class SaveRequisition {
 
     private CDMR cdmr;
+    private int requisitionID;
 
     public SaveRequisition() {
     }
@@ -30,6 +37,7 @@ public class SaveRequisition {
 
     public String save() {
         this.insertCDMRHeader();
+        this.insertCDMRDetails();
 
         return "CDMR created succesfully";
 
@@ -58,11 +66,38 @@ public class SaveRequisition {
 
         //Insert CDMR header table
         CdmrDao cdmrDao = new CdmrDao();
-        cdmrDao.addCdmr(cdmrHeader);
+        int reqID = cdmrDao.addCdmr(cdmrHeader);
+        cdmr.setRequisitionID(reqID);
 
     }
 
     public void insertCDMRDetails() {
+
+        List<CDMRAdjustments> adjs = cdmr.getAdjustments();
+
+        for (CDMRAdjustments adj : adjs) {
+            CdmrAdjustmentsPK cdmrAdjpk = new CdmrAdjustmentsPK();
+            cdmrAdjpk.setRequisitionID(cdmr.getRequisitionID());
+            cdmrAdjpk.setItemNum(adj.getItemNum());
+            CdmrAdjustments cdmrAdj = new CdmrAdjustments();
+            cdmrAdj.setRequisitionItem(cdmrAdjpk);
+            cdmrAdj.setAdjQty(adj.getAdjQty());
+            cdmrAdj.setAllowanceAdj(adj.getAllowanceAdjAmnt());
+            cdmrAdj.setCdFlag(adj.getCreditDebitFlg());
+            cdmrAdj.setChargesAdj(adj.getChargeAdjAmnt());
+            cdmrAdj.setCustNum(cdmr.getCustomer().getCustNum());
+            cdmrAdj.setExtPrice(adj.getLineAdjAmnt());
+            cdmrAdj.setItemDesc(adj.getItemDesc());
+            cdmrAdj.setNewInvLineAmnt(adj.getNewInvLineTotal());
+            cdmrAdj.setReasonCode(adj.getReasonCode());
+            cdmrAdj.setTaxAdj(adj.getTaxAdjAmnt());
+
+            CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
+            adjDao.addCdmrAdj(cdmrAdj);
+
+        }
+
+
 
     }
 

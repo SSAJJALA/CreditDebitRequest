@@ -16,7 +16,6 @@ public class CDMR {
     private Double adjAmnt;
     private LocalDate cdmrDate;
     private String type;
-
     private List<CDMRAdjustments>  adjustments;
 
 
@@ -34,6 +33,7 @@ public class CDMR {
         this.cdmrDate = cdmrDate;
         this.type = type;
         this.adjustments = adjustments;
+
     }
 
     public int getRequisitionID() {
@@ -115,6 +115,8 @@ public class CDMR {
     public void setAdjustments(List<CDMRAdjustments> adjustments) {
         this.adjustments = adjustments;
     }
+
+
 
     @Override
     public String toString() {

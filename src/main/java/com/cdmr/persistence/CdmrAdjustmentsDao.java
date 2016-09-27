@@ -36,7 +36,7 @@ public class CdmrAdjustmentsDao {
      * @param requisitionID the requisition id
      * @return cdmrAdjs
      */
-    public List<CdmrAdjustments> getTask(int requisitionID) {
+    public List<CdmrAdjustments> getCdmrAdjs(int requisitionID) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         List<CdmrAdjustments>  cdmrAdjs = (List<CdmrAdjustments>) session.get(CdmrAdjustments.class, requisitionID);
         return cdmrAdjs;
@@ -49,7 +49,7 @@ public class CdmrAdjustmentsDao {
      * @param adj
      * @return the reqItem of the inserted adjustment
      */
-    public CdmrAdjustmentsPK addTask(CdmrAdjustments adj) {
+    public CdmrAdjustmentsPK addCdmrAdj(CdmrAdjustments adj) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
