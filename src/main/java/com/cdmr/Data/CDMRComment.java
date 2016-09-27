@@ -9,14 +9,16 @@ public class CDMRComment {
     private String userID;
     private int requisitionID;
     private LocalDate createdDate;
+    private String comment;
 
     public CDMRComment() {
     }
 
-    public CDMRComment(String userID, int requisitionID, LocalDate createdDate) {
+    public CDMRComment(String userID, int requisitionID, LocalDate createdDate, String comment) {
         this.userID = userID;
         this.requisitionID = requisitionID;
         this.createdDate = createdDate;
+        this.comment = comment;
     }
 
     public String getUserID() {
@@ -43,12 +45,21 @@ public class CDMRComment {
         this.createdDate = createdDate;
     }
 
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
     @Override
     public String toString() {
         return "CDMRComment{" +
                 "userID='" + userID + '\'' +
                 ", requisitionID=" + requisitionID +
                 ", createdDate=" + createdDate +
+                ", comment='" + comment + '\'' +
                 '}';
     }
 }

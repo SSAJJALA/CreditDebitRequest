@@ -1,12 +1,10 @@
 package com.cdmr.requisition;
 
-import com.cdmr.Data.CDMR;
-import com.cdmr.Data.CDMRAdjustments;
-import com.cdmr.Data.Customer;
-import com.cdmr.Data.InvoiceHeader;
+import com.cdmr.Data.*;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.CdmrAdjustments;
 import com.cdmr.entity.CdmrAdjustmentsPK;
+import com.cdmr.entity.Comment;
 import com.cdmr.persistence.CdmrAdjustmentsDao;
 import com.cdmr.persistence.CdmrDao;
 
@@ -35,11 +33,12 @@ public class SaveRequisition {
         this.cdmr = cdmr;
     }
 
-    public String save() {
+    public int save() {
         this.insertCDMRHeader();
         this.insertCDMRDetails();
+        this.insertComments();
 
-        return "CDMR created succesfully";
+        return this.requisitionID;
 
 
     }
@@ -97,7 +96,24 @@ public class SaveRequisition {
 
         }
 
+    }
 
+    public void insertComments() {
+
+        List<CDMRComment> comments = cdmr.getComments();
+
+        int count = 0;
+
+        for (CDMRComment comment : comments) {
+            count++;
+            Comment tempComment = new Comment();
+            tempComment.setRequisitionID(comment.getRequisitionID());
+            tempComment.setComment(comment.getComment());
+            tempComment.setCreatedDate(comment.getCreatedDate());
+            tempComment.setSeqID(count);
+            tempComment.setUserID(comment.getUserID());
+
+        }
 
     }
 

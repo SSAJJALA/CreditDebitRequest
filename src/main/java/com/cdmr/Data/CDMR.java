@@ -17,12 +17,13 @@ public class CDMR {
     private LocalDate cdmrDate;
     private String type;
     private List<CDMRAdjustments>  adjustments;
+    private List<CDMRComment> comments;
 
 
     public CDMR() {
     }
 
-    public CDMR(int requisitionID, Customer customer, String status, InvoiceHeader invHeader, String salesRepID, String salesRepName, Double adjAmnt, LocalDate cdmrDate, String type, List<CDMRAdjustments> adjustments) {
+    public CDMR(int requisitionID, Customer customer, String status, InvoiceHeader invHeader, String salesRepID, String salesRepName, Double adjAmnt, LocalDate cdmrDate, String type, List<CDMRAdjustments> adjustments, List<CDMRComment> comments) {
         this.requisitionID = requisitionID;
         this.customer = customer;
         this.status = status;
@@ -33,7 +34,7 @@ public class CDMR {
         this.cdmrDate = cdmrDate;
         this.type = type;
         this.adjustments = adjustments;
-
+        this.comments = comments;
     }
 
     public int getRequisitionID() {
@@ -116,7 +117,13 @@ public class CDMR {
         this.adjustments = adjustments;
     }
 
+    public List<CDMRComment> getComments() {
+        return comments;
+    }
 
+    public void setComments(List<CDMRComment> comments) {
+        this.comments = comments;
+    }
 
     @Override
     public String toString() {
@@ -131,6 +138,7 @@ public class CDMR {
                 ", cdmrDate=" + cdmrDate +
                 ", type='" + type + '\'' +
                 ", adjustments=" + adjustments +
+                ", comments=" + comments +
                 '}';
     }
 }

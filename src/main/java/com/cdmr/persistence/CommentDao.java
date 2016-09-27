@@ -1,6 +1,7 @@
 package com.cdmr.persistence;
 
 import com.cdmr.entity.Cdmr;
+import com.cdmr.entity.Comment;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -14,91 +15,91 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created by student on 9/26/16.
+ * Created by Siva Sajjala on 9/26/16.
  */
 public class CommentDao {
     private final Logger log = Logger.getLogger(this.getClass());
 
-    /** Return a list of all cdmrs
+    /** Return a list of all comments
      *
-     * @return All cdmrs
+     * @return All comments
      */
-    public List<Cdmr> getAllCdmrs() {
-        List<Cdmr> cdmrs = new ArrayList<Cdmr>();
+    public List<Comment> getAllComments() {
+        List<Comment> comments = new ArrayList<Comment>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        cdmrs = session.createCriteria(Cdmr.class).list();
-        return cdmrs;
+        comments = session.createCriteria(Comment.class).list();
+        return comments;
     }
 
     /**
-     * retrieve a cdmr given an req id
+     * retrieve a comment given an comment id
      *
-     * @param reqID the requisition id
-     * @return cdmr
+     * @param commentID the comment id
+     * @return Comments
      */
-    public Cdmr getCdmr(int reqID) {
+    public Comment getComments(int commentID) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Cdmr  cdmr = (Cdmr) session.get(Cdmr.class, reqID);
-        return cdmr;
+        Comment comment = (Comment) session.get(Comment.class, commentID);
+        return comment;
 
     }
 
     /**
-     * add a cdmr
+     * add a comment
      *
-     * @param cdmr
-     * @return the reqID of the inserted cdmr
+     * @param comment
+     * @return the commentID of the inserted comment
      */
-    public int addCdmr(Cdmr cdmr) {
+    public int addComment(Comment comment) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        session.save(cdmr);
+        session.save(comment);
         tx.commit();
         session.close();
-        int reqID = cdmr.getRequisitionID();
-        return reqID;
+        int commentID = comment.getCommentID();
+        return commentID;
     }
 
     /**
-     * delete a cdmr by reqID
-     * @param reqID the Req ID
+     * delete a comment by commentID
+     * @param commentID the comment ID
      */
-    public void deleteCdmr(int reqID) {
+    public void deleteComment(int commentID) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        Cdmr cdmr = (Cdmr) session.load(Cdmr.class,reqID);
-        log.info("CDMR:" + cdmr.toString());
-        session.delete(cdmr);
+        Comment comment = (Comment) session.load(Comment.class,commentID);
+        log.info("Comment:" + comment.toString());
+        session.delete(comment);
         tx.commit();
-        log.info("CDMR" + reqID + "deleted.");
+        log.info("Comment" + commentID + "deleted.");
 
 
     }
 
     /**
-     * Update the cdmr
-     * @param cdmr
+     * Update the comment
+     * @param comment
      */
 
-    public void updateCdmr(Cdmr cdmr) {
+    public void updateComment(Comment comment) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        session.update(cdmr);
+        session.update(comment);
         tx.commit();
 
     }
 
-    public List<Cdmr> getCdmrs(String searchOption, String operand, String value) {
+    public List<Comment> getComments(String searchOption, String operand, String value) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Criteria c = session.createCriteria(Cdmr.class);
+        Criteria c = session.createCriteria(Comment.class);
 
         Object searchValue = null;
 
         if (searchOption.equals("requisitionID")) {
             searchValue = Integer.parseInt(value);
-        } else if (searchOption.equals("cdmrDate")) {
+        } else if (searchOption.equals("createdDate")) {
             searchValue = formatDate(value);
         } else {
             searchValue = value;
@@ -108,8 +109,8 @@ public class CommentDao {
             c = this.addRestrictions(c, searchOption, operand, searchValue);
         }
 
-        List<Cdmr> cdmrs = c.list();
-        return cdmrs;
+        List<Comment> comments = c.list();
+        return comments;
     }
 
     public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
