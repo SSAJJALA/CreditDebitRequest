@@ -378,6 +378,12 @@ ITEM_NUM</columns>
 USER_ID</columns>
         <primary>1</primary>
       </key>
+      <foreign-key id="113" parent="18" name="TASK_ASSIGNMENT_TASK_TASK_ID_fk">
+        <columns>TASK_ID</columns>
+        <ref-key>~.TASK.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
     </database-model>
   </data-source>
 </component>

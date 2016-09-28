@@ -7,6 +7,7 @@ import com.cdmr.entity.CdmrAdjustmentsPK;
 import com.cdmr.entity.Comment;
 import com.cdmr.persistence.CdmrAdjustmentsDao;
 import com.cdmr.persistence.CdmrDao;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class SaveRequisition {
 
     private CDMR cdmr;
     private int requisitionID;
+    private final Logger log = Logger.getLogger(this.getClass());
 
     public SaveRequisition() {
     }
@@ -33,10 +35,16 @@ public class SaveRequisition {
         this.cdmr = cdmr;
     }
 
-    public int save() {
-        this.insertCDMRHeader();
-        this.insertCDMRDetails();
-        this.insertComments();
+    public int save() throws Exception {
+        try {
+            this.insertCDMRHeader();
+            this.insertCDMRDetails();
+            this.insertComments();
+        } catch (Exception e)   {
+            log.error("Save requisition failed for customer" + cdmr.getCustomer().getCustNum() + "-" + cdmr.getCustomer().getCustName() + "error " + e.getMessage()  );
+            log.error(e.getStackTrace());
+            throw e;
+        }
 
         return this.requisitionID;
 
