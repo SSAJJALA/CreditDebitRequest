@@ -1,6 +1,9 @@
 package com.cdmr.Task;
 
 import com.cdmr.entity.Task;
+import com.cdmr.entity.TaskAssignment;
+import com.cdmr.entity.TaskAssignmentPK;
+import com.cdmr.persistence.TaskAssignmentDao;
 import com.cdmr.persistence.TaskDao;
 
 import java.text.SimpleDateFormat;
@@ -12,7 +15,7 @@ import java.util.Date;
  */
 public class QueueTask {
 
-    private String userID;
+    private String assignToUserID;
     private String taskName;
     private int reqID;
 
@@ -20,18 +23,18 @@ public class QueueTask {
     public QueueTask() {
     }
 
-    public QueueTask(String userID, String taskName, int reqID) {
-        this.userID = userID;
+    public QueueTask(String assignToUserID, String taskName, int reqID) {
+        this.assignToUserID = assignToUserID;
         this.taskName = taskName;
         this.reqID = reqID;
     }
 
-    public String getUserID() {
-        return userID;
+    public String getAssignToUserID() {
+        return assignToUserID;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public void setAssignToUserID(String assignToUserID) {
+        this.assignToUserID = assignToUserID;
     }
 
     public String getTaskName() {
@@ -51,6 +54,8 @@ public class QueueTask {
     }
 
     public int createTask() {
+
+        //create a new task
         TaskDao taskDao = new TaskDao();
         Task taskEntity = new Task();
         taskEntity.setTaskName(this.taskName);
@@ -59,6 +64,16 @@ public class QueueTask {
         taskEntity.setCreatedDate(LocalDateTime.now());
         taskEntity.setUpdatedDate(LocalDateTime.now());
         int taskID = taskDao.addTask(taskEntity);
+
+        //insert task assignments
+        TaskAssignmentDao taskAssignDao = new TaskAssignmentDao();
+        TaskAssignment taskAssignEnt = new TaskAssignment();
+        taskAssignEnt.setRequisitionID(this.reqID);
+        TaskAssignmentPK taskAssignmentPK = new TaskAssignmentPK();
+        taskAssignmentPK.setTaskID(taskID);
+        taskAssignmentPK.setUserID(this.assignToUserID);
+        taskAssignEnt.setTaskuser(taskAssignmentPK);
+        taskAssignDao.addTask(taskAssignEnt);
         return taskID;
 
     }
