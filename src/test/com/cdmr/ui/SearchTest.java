@@ -19,7 +19,7 @@ public class SearchTest {
 
     @Before
     public void setUp() {
-        search = new Search("RequisitionID", "=", "1000");
+        search = new Search("requisitionID", "=", "1000");
     }
     @Test
     public void search() throws Exception {

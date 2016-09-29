@@ -91,7 +91,7 @@ public class CommentDao {
 
     }
 
-    public List<Comment> getComments(String searchOption, String operand, String value) {
+    public List<Comment> getCommentsWithFilter(String searchOption, String operand, String value) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(Comment.class);
 

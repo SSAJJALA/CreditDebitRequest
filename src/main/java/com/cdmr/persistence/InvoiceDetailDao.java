@@ -1,6 +1,8 @@
 package com.cdmr.persistence;
 
+import com.cdmr.entity.Filter;
 import com.cdmr.entity.InvoiceDetail;
+import com.cdmr.entity.TaskAssignment;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -92,6 +94,70 @@ public class InvoiceDetailDao {
         tx.commit();
 
     }
+
+    /**
+     * get all invoice details based on search filters
+     * @param filters filters
+     * @return List<invoiceDetails> list of invoice details
+     */
+
+    public List<InvoiceDetail> getInvoicesWithFilter(List<Filter> filters) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Criteria c = session.createCriteria(InvoiceDetail.class);
+        List<InvoiceDetail> invoiceDetails = null;
+
+        for (Filter filter : filters) {
+            String option = filter.getSearchOption();
+            String operand = filter.getOperand();
+            String value = filter.getSearchValue();
+
+            Object searchValue = null;
+
+            if (option.equals("itemNum") || option.equals("invNum")) {
+                searchValue = Integer.parseInt(value);
+            } else {
+                searchValue = value;
+            }
+
+            c = this.addRestrictions(c, option, operand, searchValue);
+
+        }
+
+        invoiceDetails = c.list();
+        return invoiceDetails;
+    }
+
+    /**
+     * Add filters to the search
+     * @param tempCriteria
+     * @param option
+     * @param operand
+     * @param value
+     * @return Criteria with added restrictions
+     */
+
+    public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
+
+        if (operand.equals("="))  {
+            tempCriteria.add(Restrictions.eq(option, value));
+        } else if (operand.equals(">")) {
+            tempCriteria.add(Restrictions.gt(option, value));
+        } else if (operand.equals("<")) {
+            tempCriteria.add(Restrictions.lt(option, value));
+        } else if (operand.equals(">=")) {
+            tempCriteria.add(Restrictions.ge(option, value));
+        } else if (operand.equals("<=")) {
+            tempCriteria.add(Restrictions.le(option, value));
+        } else if (operand.equals("LIKE")) {
+            tempCriteria.add(Restrictions.like(option, value));
+        } else if (operand.equals("!=")) {
+            tempCriteria.add(Restrictions.ne(option, value));
+        }
+
+        return tempCriteria;
+
+    }
+
 
     private LocalDate formatDate (String dob) {
 

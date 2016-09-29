@@ -33,7 +33,7 @@
                         height: 100px;
                 }
 
-                header {
+                header, footer {
                         padding: 1em;
                         color: black;
                         background-color: white;
@@ -42,18 +42,6 @@
                         border: 1px solid gray;
                 }
 
-                footer {
-                    clear: both;
-                    position: relative;
-                    z-index: 10;
-                    height: 1em;
-                    margin-top: -1em;
-                    color: black;
-                    background-color: white;
-                    clear: left;
-                    text-align: center;
-                    border: 1px solid gray;
-                }
 
                 nav {
 

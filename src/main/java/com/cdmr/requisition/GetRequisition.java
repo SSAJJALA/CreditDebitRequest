@@ -1,12 +1,13 @@
 package com.cdmr.requisition;
 
 import com.cdmr.Data.CDMR;
-import com.cdmr.entity.Cdmr;
-import com.cdmr.entity.Customer;
-import com.cdmr.entity.InvoiceHeader;
-import com.cdmr.persistence.CdmrDao;
-import com.cdmr.persistence.CustomerDao;
-import com.cdmr.persistence.InvoiceHeaderDao;
+import com.cdmr.Data.CDMRAdjustments;
+import com.cdmr.Data.CDMRComment;
+import com.cdmr.entity.*;
+import com.cdmr.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by student on 9/26/16.
@@ -120,11 +121,66 @@ public class GetRequisition {
 
     }
 
+
     public void prepareCDMRAdjs() {
+        List<CDMRAdjustments> adjsData = new ArrayList<CDMRAdjustments>();
+        CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
+        List<CdmrAdjustments> adjEntitys = adjDao.getCdmrAdjs(this.getRequisitionID());
+
+        for (CdmrAdjustments adjEntity : adjEntitys) {
+            CDMRAdjustments adjData = new CDMRAdjustments();
+            adjData.setComments(this.prepareCDMRComments());
+            adjData.setAdjQty(adjEntity.getAdjQty());
+            adjData.setAllowanceAdjAmnt(adjEntity.getAllowanceAdj());
+            adjData.setChargeAdjAmnt(adjEntity.getChargesAdj());
+            adjData.setCreditDebitFlg(adjEntity.getCdFlag());
+            adjData.setItemDesc(adjEntity.getItemDesc());
+            adjData.setItemNum(adjEntity.getItemNum());
+            adjData.setLineAdjAmnt(adjEntity.getExtPrice());
+            adjData.setNewInvLineTotal(adjEntity.getNewInvLineAmnt());
+
+            InvoiceDetailDao invDtlsDao = new InvoiceDetailDao();
+            List<Filter> filters = new ArrayList<Filter>();
+            Filter filter1 = new Filter();
+            filter1.setSearchOption("invNum");
+            filter1.setOperand("=");
+            filter1.setSearchValue(Integer.toString(cdmr.getInvHeader().getInvNum()));
+            filters.add(filter1);
+            Filter filter2 = new Filter();
+            filter2.setSearchOption("itemNum");
+            filter2.setOperand("=");
+            filter2.setSearchValue(Integer.toString(this.getRequisitionID()));
+            filters.add(filter2);
+            List<InvoiceDetail> invDetails = invDtlsDao.getInvoicesWithFilter(filters);
+            adjData.setOriginalInvLineTotal(invDetails.get(0).getNetAmnt());
+            adjData.setOriginalPrice(invDetails.get(0).getUnitPrice());
+            adjData.setOriginalQty(invDetails.get(0).getQty());
+            adjData.setReasonCode(adjEntity.getReasonCode());
+            adjData.setTaxAdjAmnt(adjEntity.getTaxAdj());
+        }
+
+        cdmr.setAdjustments(adjsData);
 
     }
 
-    public void prepareCDMRComments() {
+
+
+    public List<CDMRComment> prepareCDMRComments() {
+        List<CDMRComment> commentsData = new ArrayList<CDMRComment>();
+        CommentDao commentDao = new CommentDao();
+        List<Comment> comments = commentDao.getCommentsWithFilter("requisitionID", "=", Integer.toString(this.getRequisitionID()));
+
+        for (Comment comment : comments) {
+            CDMRComment commentData = new CDMRComment();
+            commentData.setRequisitionID(this.getRequisitionID());
+            commentData.setUserID(comment.getUserID());
+            commentData.setComment(comment.getComment());
+            commentData.setCreatedDate(comment.getCreatedDate());
+            commentsData.add(commentData);
+
+        }
+
+        return commentsData;
 
     }
 
