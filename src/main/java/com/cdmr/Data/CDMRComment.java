@@ -10,15 +10,17 @@ public class CDMRComment {
     private int requisitionID;
     private LocalDate createdDate;
     private String comment;
+    private int seqID;
 
     public CDMRComment() {
     }
 
-    public CDMRComment(String userID, int requisitionID, LocalDate createdDate, String comment) {
+    public CDMRComment(String userID, int requisitionID, LocalDate createdDate, String comment, int seqID) {
         this.userID = userID;
         this.requisitionID = requisitionID;
         this.createdDate = createdDate;
         this.comment = comment;
+        this.seqID = seqID;
     }
 
     public String getUserID() {
@@ -53,6 +55,14 @@ public class CDMRComment {
         this.comment = comment;
     }
 
+    public int getSeqID() {
+        return seqID;
+    }
+
+    public void setSeqID(int seqID) {
+        this.seqID = seqID;
+    }
+
     @Override
     public String toString() {
         return "CDMRComment{" +
@@ -60,6 +70,7 @@ public class CDMRComment {
                 ", requisitionID=" + requisitionID +
                 ", createdDate=" + createdDate +
                 ", comment='" + comment + '\'' +
+                ", seqID=" + seqID +
                 '}';
     }
 }

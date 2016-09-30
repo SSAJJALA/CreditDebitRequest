@@ -19,9 +19,8 @@ public class GetRequisition {
     private int taskID;
     private int invNum;
 
-    public GetRequisition(int requisitionID, int taskID) {
+    public GetRequisition(int requisitionID) {
         this.requisitionID = requisitionID;
-        this.taskID = taskID;
     }
 
     public CDMR getCdmr() {
@@ -176,6 +175,7 @@ public class GetRequisition {
             commentData.setUserID(comment.getUserID());
             commentData.setComment(comment.getComment());
             commentData.setCreatedDate(comment.getCreatedDate());
+            commentData.setSeqID(comment.getSeqID());
             commentsData.add(commentData);
 
         }
