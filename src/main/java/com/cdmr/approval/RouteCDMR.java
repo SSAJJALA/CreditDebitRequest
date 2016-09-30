@@ -8,6 +8,7 @@ import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.CdmrUsers;
 import com.cdmr.persistence.CdmrDao;
 import com.cdmr.persistence.CdmrUsersDao;
+import com.cdmr.requisition.UpdateRequisition;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -44,7 +45,12 @@ public class RouteCDMR {
         this.taskResponse = taskResponse;
     }
 
-    public void routeCDMR() {
+    public String routeCDMR() {
+
+        //Update CDMR comments (if any)
+        UpdateRequisition updateReq = new UpdateRequisition(cdmr);
+        updateReq.updateCDMR();
+        String message = null;
 
         if (taskResponse != null) {
             if (taskResponse.getApprovalDecesion().equals("Approved")) {
@@ -54,6 +60,7 @@ public class RouteCDMR {
 
                     //route CDMR to FM
                     int taskID = this.routeToNextApprover("FM");
+                    message = "CDMR routed to FM";
 
 
 
@@ -62,6 +69,7 @@ public class RouteCDMR {
                     this.updateTaskStatus("Complete");
                     this.updateCdmrStatus("Approved");
                     log.info("CDMR final approval received. No more routing required");
+                    message = "CDMR final approval received. No more routing required";
 
                 }
 
@@ -71,14 +79,18 @@ public class RouteCDMR {
                 this.updateTaskStatus("Completed");
                 this.updateCdmrStatus("Rejected");
                 log.info("CDMR Rejected");
+                message = "CDMR Rejected";
             }
 
         } else {
 
             //New requisition. Route to DSM
             int taskID = this.routeToNextApprover("DSM");
+            message = "CDMR routed to DSM";
 
         }
+
+        return message;
     }
 
     public void updateTaskStatus(String status) {
