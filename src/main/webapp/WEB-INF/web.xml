@@ -25,6 +25,19 @@
         <role-name>FM</role-name>
     </security-role>
 
+    <!-- Protect index.jsp -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>index</web-resource-name>
+            <url-pattern>/index.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>DSM</role-name>
+            <role-name>FM</role-name>
+            <role-name>SR</role-name>
+        </auth-constraint>
+    </security-constraint>
+
     <!-- Protect inbox.jsp -->
     <security-constraint>
         <web-resource-collection>
@@ -50,7 +63,7 @@
         </auth-constraint>
     </security-constraint>
 
-    <!-- Protect search.jsp -->
+    <!-- Protect createCDMR.jsp -->
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>createCDMR</web-resource-name>

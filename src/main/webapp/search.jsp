@@ -51,31 +51,32 @@
 </form>
 
 <br><br>
+<div class="container-fluid" style="height: 800px; width: 100%; border:1px solid black;">
+    <br><br>
 
-<div class="container-fluid" style="height: 1000px; width: 90%; border:1px solid black;">
-
-    <table width="75%" border="1" cellspacing="10" >
-
-        <tr style="height: 7px;">
-            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Req ID</th>
-            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Invoice</th>
-            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Inv Amnt $</th>
-            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Customer No</th>
-            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Customer Name</th>
-            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Req Type</th>
-            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Adj Amnt $</th>
-            <th style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Status</th>
+    <table id = "datatable" style="display:none" class="t-table" width="90%" border="1" align = "center">
+        <thead>
+        <tr>
+            <th style="text-align: center;" rowspan="1" colspan="1">Req ID</th>
+            <th style="text-align: center;" rowspan="1" colspan="1">Invoice</th>
+            <th style="text-align: center;" rowspan="1" colspan="1">Inv Amnt $</th>
+            <th style="text-align: center;" rowspan="1" colspan="1">Customer No</th>
+            <th style="text-align: center;" rowspan="1" colspan="1">Customer Name</th>
+            <th style="text-align: center;" rowspan="1" colspan="1">Req Type</th>
+            <th style="text-align: center;" rowspan="1" colspan="1">Adj Amnt $</th>
+            <th style="text-align: center;" rowspan="1" colspan="1">Status</th>
         </tr>
+        </thead>
         <c:forEach items="${results}" var="searchResults">
-            <tr style="height: 7px;">
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.requisitionID}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.invoiceNum}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.invAmnt}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.custNo}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.custName}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.reqType}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.adjAmnt}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${searchResults.status}</td>
+            <tr>
+                <td>${searchResults.requisitionID}</td>
+                <td>${searchResults.invoiceNum}</td>
+                <td>${searchResults.invAmnt}</td>
+                <td>${searchResults.custNo}</td>
+                <td>${searchResults.custName}</td>
+                <td>${searchResults.reqType}</td>
+                <td>${searchResults.adjAmnt}</td>
+                <td>${searchResults.status}</td>
 
             </tr>
         </c:forEach>
@@ -85,10 +86,10 @@
 
 </div>
 
-<br><br><br>
+<br>
 
 </div>
-<br><br>
+<br>
 <%@include file="footer.jsp"%>
 
 </body>

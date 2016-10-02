@@ -5,10 +5,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <display-name>CDMR</display-name>
-    <welcome-file-list>
-        <welcome-file>login.jsp</welcome-file>
-        <welcome-file>menu.jsp</welcome-file>
-    </welcome-file-list>
 
     <!-- Tell the server to use form-based authentication. -->
     <login-config>
@@ -28,6 +24,19 @@
     <security-role>
         <role-name>FM</role-name>
     </security-role>
+
+    <!-- Protect index.jsp -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>index</web-resource-name>
+            <url-pattern>/index.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>DSM</role-name>
+            <role-name>FM</role-name>
+            <role-name>SR</role-name>
+        </auth-constraint>
+    </security-constraint>
 
     <!-- Protect inbox.jsp -->
     <security-constraint>
@@ -54,7 +63,7 @@
         </auth-constraint>
     </security-constraint>
 
-    <!-- Protect search.jsp -->
+    <!-- Protect createCDMR.jsp -->
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>createCDMR</web-resource-name>
