@@ -20,13 +20,12 @@
     </script>
 </head>
 <body>
-
+<div id="mainContainer">
+<%@include file="header.jsp"%>
 <br/>
-<table width="100%" border="0" cellspacing="10" class="single-gray-overline"></table>
+
 <table width="100%" border="0" cellspacing="10" class="single-underline">
     <tr><td><h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the CDMR System</b></h2></td></tr>
-    <tr style="height: 7px;"></tr>
-
     <tr>
         <td width="32%" height="12" nowrap="nowrap" align="left" >
             <p>&nbsp;</p>
@@ -62,5 +61,9 @@
     </tr>
 </table>
 
+</div>
+
+<%@include file="footer.jsp"%>
 </body>
+
 </html>

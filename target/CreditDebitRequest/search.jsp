@@ -88,7 +88,8 @@
 <br><br><br>
 
 </div>
-
+<br><br>
 <%@include file="footer.jsp"%>
+
 </body>
 </html>

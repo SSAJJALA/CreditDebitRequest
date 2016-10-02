@@ -7,5 +7,11 @@
       <introspection-scope>APPSPROD:</introspection-scope>
       <resolve-scope>APPSPROD:</resolve-scope>
     </data-source>
+    <data-source name="tomcat" uuid="355a8945-a0be-4d20-a8a0-01fe0e1e4013">
+      <secret-storage>master_key</secret-storage>
+      <user-name>tomcat</user-name>
+      <introspection-scope>APPSPROD:</introspection-scope>
+      <resolve-scope>APPSPROD:</resolve-scope>
+    </data-source>
   </component>
 </project>

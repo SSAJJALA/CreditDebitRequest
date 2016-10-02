@@ -10,8 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CDMR > Home</title>
         <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script><link rel="stylesheet" href="../css/ui.daterangepicker.css" type="text/css" />
-        <link href="../css/style.css" rel="stylesheet" type="text/css" />
-        <link href="../css/jquery.css" rel="stylesheet" type="text/css" />
+        <link href="/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="/css/jquery.css" rel="stylesheet" type="text/css" />
         <link type='text/css' href='../css/basic.css' rel='stylesheet' media='screen' />
         <link href="../css/expandCollapse.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -68,6 +68,20 @@
 
                 #wrapper {
                     min-height: 100%;
+                }
+
+                .t-table {
+                        border: 1px solid black;
+                        height: 400px;
+                        border-collapse: collapse;
+
+                }
+                .t-table td {
+                        border: 1px solid black;
+                }
+                .t-table td:empty {
+                        border-left: 0;
+                        border-right: 0;
                 }
         </style>
 </head>

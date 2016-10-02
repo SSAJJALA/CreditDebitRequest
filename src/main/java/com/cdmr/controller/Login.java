@@ -41,7 +41,7 @@ public class Login extends HttpServlet {
 
         } else {
             logger.info("User authenticated. Forwarding to CDMR application");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/menu.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
             dispatcher.forward(request, response);
 
         }
