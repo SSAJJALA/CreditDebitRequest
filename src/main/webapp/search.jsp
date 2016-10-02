@@ -42,8 +42,8 @@
         </select>
         <span style="padding-left:50px"></span>
         <input type="text" name="searchTerm">
-            <br><br><br><br>
-        <span style="padding-left:600px"></span>
+            <br><br>
+        <span style="padding-left:500px"></span>
 
         <input type="submit" value="Search">
         <br><br>
