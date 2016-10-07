@@ -153,6 +153,16 @@
         <url-pattern>/searchServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DirectToCreate</servlet-name>
+        <servlet-class>com.cdmr.controller.DirectToCreate</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DirectToCreate</servlet-name>
+        <url-pattern>/toCreate</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>

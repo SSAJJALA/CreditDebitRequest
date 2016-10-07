@@ -20,7 +20,7 @@
 
 <%@include file="header.jsp"%>
 
-<form action="/search" >
+<form action="/searchServlet" >
     <div  style="border-bottom:2px solid #5C8727">
         <br><br>
         <span style="padding-left:60px"></span>
