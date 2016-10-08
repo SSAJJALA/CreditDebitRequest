@@ -1,6 +1,7 @@
 package com.cdmr.persistence;
 
 import com.cdmr.entity.InvoiceHeader;
+import com.cdmr.entity.InvoiceHeaderPK;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -31,12 +32,12 @@ public class InvoiceHeaderDao {
     /**
      * retrieve a cdmr given an req id
      *
-     * @param invNum the requisition id
+     * @param invCust the requisition id
      * @return invoiceHeader
      */
-    public InvoiceHeader getInvoiceHeader(int invNum) {
+    public InvoiceHeader getInvoiceHeader(InvoiceHeaderPK invCust) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        InvoiceHeader  invoiceHeader = (InvoiceHeader) session.get(InvoiceHeader.class, invNum);
+        InvoiceHeader  invoiceHeader = (InvoiceHeader) session.get(InvoiceHeader.class, invCust);
         return invoiceHeader;
 
     }
@@ -54,23 +55,24 @@ public class InvoiceHeaderDao {
         session.save(invoiceHeader);
         tx.commit();
         session.close();
-        int invoiceNum = invoiceHeader.getInvoiceNum();
+        InvoiceHeaderPK invCust = invoiceHeader.getInvCustomer();
+        int invoiceNum = invCust.getCustNum();
         return invoiceNum;
     }
 
     /**
      * delete a invoice header by invoiceNum
-     * @param invoiceNum the Invoice Num
+     * @param invCust
      * */
-    public void deleteInvoiceHeader(int invoiceNum) {
+    public void deleteInvoiceHeader(InvoiceHeaderPK invCust) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        InvoiceHeader invoiceHeader = (InvoiceHeader) session.load(InvoiceHeader.class,invoiceNum);
+        InvoiceHeader invoiceHeader = (InvoiceHeader) session.load(InvoiceHeader.class,invCust);
         log.info("Invoice:" + invoiceHeader.toString());
         session.delete(invoiceHeader);
         tx.commit();
-        log.info("Invoice" + invoiceNum + "deleted.");
+        log.info("Invoice" + invoiceHeader.getInvCustomer().getInvoiceNum() + "for customer" + invoiceHeader.getInvCustomer().getCustNum() + "deleted.");
 
 
     }

@@ -15,19 +15,8 @@ import java.util.Set;
 @Table(name = "INVOICE_HEADER")
 public class InvoiceHeader implements Serializable {
 
-    @Id
-    @Column(name="INV_NUM")
-    private int invoiceNum;
-
-    @Id
-    @Column(name="CUST_NUM")
-    private int custNum;
-
-    /**
-    @ManyToOne
-    @JoinColumn(name="CUST_NUM")
-    private Customer cust;
-     **/
+    @EmbeddedId
+    private InvoiceHeaderPK invCustomer;
 
     @Column(name = "INV_DATE")
     @Convert(converter = LocalDateAttributeConverter.class)
@@ -48,17 +37,12 @@ public class InvoiceHeader implements Serializable {
     @Column(name = "NET_AMNT")
     private Double netAmnt;
 
-    /**
-    @OneToMany(mappedBy = "invoice")
-    private Set<InvoiceDetail> invoiceDetails;
-    **/
 
     public InvoiceHeader() {
     }
 
-    public InvoiceHeader(int invoiceNum, int custNum, LocalDate invDate, Double grossAmnt, Double allowance, Double charges, Double tax, Double netAmnt) {
-        this.invoiceNum = invoiceNum;
-        this.custNum = custNum;
+    public InvoiceHeader(InvoiceHeaderPK invCustomer, LocalDate invDate, Double grossAmnt, Double allowance, Double charges, Double tax, Double netAmnt) {
+        this.invCustomer = invCustomer;
         this.invDate = invDate;
         this.grossAmnt = grossAmnt;
         this.allowance = allowance;
@@ -67,32 +51,13 @@ public class InvoiceHeader implements Serializable {
         this.netAmnt = netAmnt;
     }
 
-    public int getInvoiceNum() {
-        return invoiceNum;
+    public InvoiceHeaderPK getInvCustomer() {
+        return invCustomer;
     }
 
-    public void setInvoiceNum(int invoiceNum) {
-        this.invoiceNum = invoiceNum;
+    public void setInvCustomer(InvoiceHeaderPK invCustomer) {
+        this.invCustomer = invCustomer;
     }
-
-    public int getCustNum() {
-        return custNum;
-    }
-
-    public void setCustNum(int custNum) {
-        this.custNum = custNum;
-    }
-
-    /**
-    public Customer getCust() {
-        return cust;
-    }
-
-    public void setCust(Customer cust) {
-        this.cust = cust;
-    }
-     **/
-
 
     public LocalDate getInvDate() {
         return invDate;
@@ -142,21 +107,10 @@ public class InvoiceHeader implements Serializable {
         this.netAmnt = netAmnt;
     }
 
-    /**
-    public Set<InvoiceDetail> getInvoiceDetails() {
-        return invoiceDetails;
-    }
-
-    public void setInvoiceDetails(Set<InvoiceDetail> invoiceDetails) {
-        this.invoiceDetails = invoiceDetails;
-    }
-     **/
-
     @Override
     public String toString() {
         return "InvoiceHeader{" +
-                "invoiceNum=" + invoiceNum +
-                ", cust=" + custNum +
+                "invCustomer=" + invCustomer +
                 ", invDate=" + invDate +
                 ", grossAmnt=" + grossAmnt +
                 ", allowance=" + allowance +

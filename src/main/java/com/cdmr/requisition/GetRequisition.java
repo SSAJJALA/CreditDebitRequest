@@ -105,10 +105,11 @@ public class GetRequisition {
 
     public void prepareInvoiceInfo() {
         InvoiceHeaderDao invHeaderDao = new InvoiceHeaderDao();
-        InvoiceHeader invHeaderEntity = invHeaderDao.getInvoiceHeader(this.getInvNum());
+        InvoiceHeaderPK invCust = new InvoiceHeaderPK(invNum, customerNum);
+        InvoiceHeader invHeaderEntity = invHeaderDao.getInvoiceHeader(invCust);
         com.cdmr.Data.InvoiceHeader  invHeaderData = new com.cdmr.Data.InvoiceHeader();
-        invHeaderData.setInvNum(invHeaderEntity.getInvoiceNum());
-        invHeaderData.setCustNum(invHeaderEntity.getCustNum());
+        invHeaderData.setInvNum(invHeaderEntity.getInvCustomer().getInvoiceNum());
+        invHeaderData.setCustNum(invHeaderEntity.getInvCustomer().getCustNum());
         invHeaderData.setAllowanceAmnt(invHeaderEntity.getAllowance());
         invHeaderData.setChargesAmnt(invHeaderEntity.getCharges());
         invHeaderData.setGrossAmnt(invHeaderEntity.getGrossAmnt());
