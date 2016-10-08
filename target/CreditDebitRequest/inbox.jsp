@@ -12,7 +12,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
-<%@include file="header.jsp"%>
+
 <head>
     <title>My Inbox</title>
 
@@ -20,6 +20,9 @@
 
 
 <body>
+
+<div id="wrapper" class="container">
+<%@include file="header.jsp"%>
 
 <table width="100%" border="0" cellspacing="10" >
     <tr><td><h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Task Inbox</b></h2></td></tr>
@@ -41,19 +44,20 @@
         </tr>
         </thead>
         <c:forEach items="${inbox}" var="inboxResults">
-            <tr style="line-height: 1px; height: 1px;">
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${inboxResults.taskID}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${inboxResults.application}</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">Approval Required</td>
-                <td style="text-align: center;" width="10%" height="12" nowrap="nowrap" rowspan="1" colspan="1">${inboxResults.info} </td>
+            <tr >
+                <td>${inboxResults.taskID}</td>
+                <td>${inboxResults.updatedDate}</td>
+                <td>${inboxResults.application}</td>
+                <td>Approval Required</td>
+                <td>${inboxResults.info} </td>
             </tr>
         </c:forEach>
     </table>
 
 </div>
-
-</body>
-<br><br>
+    <br>
+</div>
+<br>
 <%@include file="footer.jsp"%>
+</body>
 </html>

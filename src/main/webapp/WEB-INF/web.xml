@@ -16,7 +16,7 @@
     </login-config>
 
     <security-role>
-        <role-name>SR</role-name>
+        <role-name>TM</role-name>
     </security-role>
     <security-role>
         <role-name>DSM</role-name>
@@ -34,7 +34,7 @@
         <auth-constraint>
             <role-name>DSM</role-name>
             <role-name>FM</role-name>
-            <role-name>SR</role-name>
+            <role-name>TM</role-name>
         </auth-constraint>
     </security-constraint>
 
@@ -57,7 +57,7 @@
             <url-pattern>/search.jsp</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>SR</role-name>
+            <role-name>TM</role-name>
             <role-name>DSM</role-name>
             <role-name>FM</role-name>
         </auth-constraint>
@@ -70,7 +70,7 @@
             <url-pattern>/createCDMR.jsp</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>SR</role-name>
+            <role-name>TM</role-name>
             <role-name>DSM</role-name>
         </auth-constraint>
     </security-constraint>
