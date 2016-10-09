@@ -61,7 +61,7 @@ public class InvoiceLookup {
         Filter filter1 = new Filter();
         filter1.setSearchValue(Integer.toString(this.invNum));
         filter1.setOperand("=");
-        filter1.setSearchOption("InvNum");
+        filter1.setSearchOption("invNum");
         filters.add(filter1);
 
         //Set filter2

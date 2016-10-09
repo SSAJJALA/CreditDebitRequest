@@ -122,9 +122,7 @@ public class InvoiceDetailDao {
             } else if (option.equals("itemNum")) {
                 option = "invItem.itemNum";
                 searchValue = Integer.parseInt(value);
-            }
-
-            else {
+            } else {
                 searchValue = value;
             }
 
