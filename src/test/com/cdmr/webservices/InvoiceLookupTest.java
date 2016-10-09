@@ -30,5 +30,14 @@ public class InvoiceLookupTest {
         assertEquals("Invoice header doesn't match", invHeader.getInvCustomer().getInvoiceNum(), 2345);
     }
 
+    @Test
+    public void getInvoiceDetails() throws Exception {
+
+        invoiceLookup.setCustNum(1000);
+        invoiceLookup.setInvNum(2345);
+        List<InvoiceDetail> invDetails = invoiceLookup.getInvoiceDetails();
+        //assertEquals("Invoice details doesn't match", invHeader.getInvCustomer().getInvoiceNum(), 2345);
+        assertNotNull("Invoice details doesn't exist", invDetails);
+    }
 
 }

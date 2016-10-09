@@ -1,9 +1,6 @@
 package com.cdmr.persistence;
 
-import com.cdmr.entity.Filter;
-import com.cdmr.entity.InvoiceDetail;
-import com.cdmr.entity.InvoiceDetailPK;
-import com.cdmr.entity.TaskAssignment;
+import com.cdmr.entity.*;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -17,95 +14,95 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created by Siva Sajjala on 9/21/16.
+ * Created by Siva Sajjala on 10/8/16.
  */
-public class InvoiceDetailDao {
+public class CdmrUserRolesDao {
+
     private final Logger log = Logger.getLogger(this.getClass());
 
-    /** Return a list of all invoices
+    /** Return a list of all cdmr user roles
      *
-     * @return All invoices
+     * @return All cdmr user roles
      */
-    public List<InvoiceDetail> getAllInvoiceDetails() {
-        List<InvoiceDetail> invoiceDetails = new ArrayList<InvoiceDetail>();
+    public List<CdmrUserRoles> getAllCdmrUserRoles() {
+        List<CdmrUserRoles> userRoles = new ArrayList<CdmrUserRoles>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        invoiceDetails = session.createCriteria(InvoiceDetail.class).list();
-        return invoiceDetails;
+        userRoles = session.createCriteria(CdmrUserRoles.class).list();
+        return userRoles;
     }
 
     /**
-     * retrieve a cdmr given an req id
+     * retrieve all user role by user
      *
-     * @param invItem the requisition id
-     * @return invoiceHeader
+     * @param userRole the user and role
+     * @return cdmrUserRoles
      */
-    public List<InvoiceDetail> getInvoiceDetail(InvoiceDetailPK invItem) {
-        List<InvoiceDetail> invoiceDetails = new ArrayList<InvoiceDetail>();
+    public List<CdmrUserRoles> getCdmrUserRoles(CdmrUserRolesPK userRole) {
+        List<CdmrUserRoles> userRoles = new ArrayList<CdmrUserRoles>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Criteria criteria = session.createCriteria(InvoiceDetail.class);
-        criteria.add(Restrictions.eq("invoiceNum", invItem.getInvNum()));
-        invoiceDetails = criteria.list();
-        return invoiceDetails;
-
+        Criteria criteria = session.createCriteria(CdmrUserRoles.class);
+        criteria.add(Restrictions.eq("userRoles.userID", userRole.getUserID()));
+        userRoles = criteria.list();
+        return userRoles;
     }
 
     /**
-     * add an invoiceHeader
+     * add a user role
      *
-     * @param invoiceDetail
-     * @return the invoiceNum of the inserted invoice header
+     * @param userRoles
+     * @return the user role of the inserted tcdmr user role
      */
-    public int addInvoiceDetail(InvoiceDetail invoiceDetail) {
+    public CdmrUserRolesPK addUserRole(CdmrUserRoles userRoles) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        session.save(invoiceDetail);
+        session.save(userRoles);
         tx.commit();
         session.close();
-        int invoiceNum = invoiceDetail.getInvItem().getInvNum();
-        return invoiceNum;
+        CdmrUserRolesPK userRolePK = userRoles.getUserRoles();
+        return userRolePK;
     }
 
     /**
-     * delete a invoice header by invoiceNum
-     * @param invItem the Invoice Num, item num
-     * */
-    public void deleteInvoiceDetail(InvoiceDetailPK invItem) {
+     * delete a userrole by userRole
+     * @param userRole the user ID, role
+     */
+    public void deleteUserRole(CdmrUserRolesPK userRole) {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        InvoiceDetail invoiceDetail = (InvoiceDetail) session.load(InvoiceDetail.class,invItem);
-        log.info("Invoice:" + invoiceDetail.toString());
-        session.delete(invoiceDetail);
+        CdmrUserRoles cdmrUserRoles = (CdmrUserRoles) session.load(CdmrUserRoles.class, userRole);
+        log.info("CDMR user roles:" + cdmrUserRoles.toString());
+        session.delete(cdmrUserRoles);
         tx.commit();
-        log.info("Invoice details for " + invoiceDetail.getInvItem().getInvNum() + "and item " + invoiceDetail.getInvItem().getItemNum() + " deleted.");
+        log.info("User" + cdmrUserRoles.getUserRoles().getUserID() + "with role " + cdmrUserRoles.getUserRoles().getRole() + " deleted.");
 
 
     }
 
     /**
-     * Update the invoiceHeader
-     * @param invoiceDetail
+     * Update the cdmrUserRoles
+     * @param cdmrUserRoles
      */
 
-    public void updateInvoiceDetail(InvoiceDetail invoiceDetail) {
+    public void updateUserRole(CdmrUserRoles cdmrUserRoles) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        session.update(invoiceDetail);
+        session.update(cdmrUserRoles);
         tx.commit();
 
     }
 
     /**
-     * get all invoice details based on search filters
+     * get all task assignments based on search filters
      * @param filters filters
-     * @return List<invoiceDetails> list of invoice details
+     * @return List<TaskAssignment> list of task assignments
      */
 
-    public List<InvoiceDetail> getInvoicesWithFilter(List<Filter> filters) {
+    public List<CdmrUserRoles> getUserRoles(List<Filter> filters) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Criteria c = session.createCriteria(InvoiceDetail.class);
-        List<InvoiceDetail> invoiceDetails = null;
+        Criteria c = session.createCriteria(CdmrUserRoles.class);
+        List<CdmrUserRoles> userRoles = null;
 
         for (Filter filter : filters) {
             String option = filter.getSearchOption();
@@ -114,17 +111,11 @@ public class InvoiceDetailDao {
 
             Object searchValue = null;
 
-            if (option.equals("custNum")) {
-                searchValue = Integer.parseInt(value);
-            } else if (option.equals("invNum")) {
-                option = "invItem.invNum";
-                searchValue = Integer.parseInt(value);
-            } else if (option.equals("itemNum")) {
-                option = "invItem.itemNum";
-                searchValue = Integer.parseInt(value);
-            }
-
-            else {
+            if (option.equals("userID") ) {
+                option = "userRoles.userID";
+            } else if (option.equals("role") ) {
+                option = "userRoles.role";
+            } else {
                 searchValue = value;
             }
 
@@ -132,8 +123,8 @@ public class InvoiceDetailDao {
 
         }
 
-        invoiceDetails = c.list();
-        return invoiceDetails;
+        userRoles = c.list();
+        return userRoles;
     }
 
     /**
@@ -167,6 +158,11 @@ public class InvoiceDetailDao {
 
     }
 
+    /**
+     * get date in local date format
+     * @param dob
+     * @return date in local date
+     */
 
     private LocalDate formatDate (String dob) {
 
@@ -176,5 +172,4 @@ public class InvoiceDetailDao {
         return date;
 
     }
-
 }

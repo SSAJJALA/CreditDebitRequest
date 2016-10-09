@@ -1,11 +1,10 @@
 package com.cdmr.webservices;
 
-import com.cdmr.entity.InvoiceHeader;
-import com.cdmr.entity.InvoiceDetail;
-import com.cdmr.entity.InvoiceHeaderPK;
+import com.cdmr.entity.*;
 import com.cdmr.persistence.InvoiceDetailDao;
 import com.cdmr.persistence.InvoiceHeaderDao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -56,7 +55,23 @@ public class InvoiceLookup {
     public List<InvoiceDetail> getInvoiceDetails() {
 
         InvoiceDetailDao invoiceDeailDao = new InvoiceDetailDao();
-        List<InvoiceDetail> invoiceDetails = invoiceDeailDao.getInvoiceDetail(invNum);
+        List<Filter> filters = new ArrayList<Filter>();
+
+        //Set filter1
+        Filter filter1 = new Filter();
+        filter1.setSearchValue(Integer.toString(this.invNum));
+        filter1.setOperand("=");
+        filter1.setSearchOption("InvNum");
+        filters.add(filter1);
+
+        //Set filter2
+        Filter filter2 = new Filter();
+        filter2.setSearchValue(Integer.toString(this.custNum));
+        filter2.setOperand("=");
+        filter2.setSearchOption("custNum");
+        filters.add(filter2);
+
+        List<InvoiceDetail> invoiceDetails = invoiceDeailDao.getInvoicesWithFilter(filters);
         return invoiceDetails;
     }
 

@@ -10,25 +10,11 @@ import java.io.Serializable;
 @Table(name = "INVOICE_DETAIL")
 public class InvoiceDetail implements Serializable {
 
-    @Id
-    @Column(name = "INV_NUM")
-    private int invoiceNum;
-/**
-    @ManyToOne
-    @JoinColumn(name="INV_NUM")
-    private InvoiceHeader invoice;
+    @EmbeddedId
+    private InvoiceDetailPK invItem;
 
-    @ManyToOne
-    @JoinColumn(name="CUST_NUM")
-    private Customer cust;
- **/
-
-    @Id
     @Column(name = "CUST_NUM")
     private int custNum;
-
-    @Column(name="ITEM_NUM")
-    private int itemNum;
 
     @Column(name="ITEM_DESC")
     private String itemDesc;
@@ -57,10 +43,9 @@ public class InvoiceDetail implements Serializable {
     public InvoiceDetail() {
     }
 
-    public InvoiceDetail(int invoiceNum, int custNum, int itemNum, String itemDesc, int qty, Double unitPrice, Double grossAmnt, Double allowance, Double charges, Double tax, Double netAmnt) {
-        this.invoiceNum = invoiceNum;
+    public InvoiceDetail(InvoiceDetailPK invItem, int custNum, String itemDesc, int qty, Double unitPrice, Double grossAmnt, Double allowance, Double charges, Double tax, Double netAmnt) {
+        this.invItem = invItem;
         this.custNum = custNum;
-        this.itemNum = itemNum;
         this.itemDesc = itemDesc;
         this.qty = qty;
         this.unitPrice = unitPrice;
@@ -71,12 +56,12 @@ public class InvoiceDetail implements Serializable {
         this.netAmnt = netAmnt;
     }
 
-    public int getInvoiceNum() {
-        return invoiceNum;
+    public InvoiceDetailPK getInvItem() {
+        return invItem;
     }
 
-    public void setInvoiceNum(int invoiceNum) {
-        this.invoiceNum = invoiceNum;
+    public void setInvItem(InvoiceDetailPK invItem) {
+        this.invItem = invItem;
     }
 
     public int getCustNum() {
@@ -85,14 +70,6 @@ public class InvoiceDetail implements Serializable {
 
     public void setCustNum(int custNum) {
         this.custNum = custNum;
-    }
-
-    public int getItemNum() {
-        return itemNum;
-    }
-
-    public void setItemNum(int itemNum) {
-        this.itemNum = itemNum;
     }
 
     public String getItemDesc() {

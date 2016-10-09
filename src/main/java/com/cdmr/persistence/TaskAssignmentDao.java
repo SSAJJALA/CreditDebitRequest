@@ -111,6 +111,11 @@ public class TaskAssignmentDao {
 
             if (option.equals("taskID") || option.equals("requisitionID")) {
                 searchValue = Integer.parseInt(value);
+            } else if (option.equals("taskID") ) {
+                searchValue = Integer.parseInt(value);
+                option = "taskuser.taskID";
+            } else if (option.equals("userID")) {
+                option = "taskuser.userID";
             } else {
                 searchValue = value;
             }

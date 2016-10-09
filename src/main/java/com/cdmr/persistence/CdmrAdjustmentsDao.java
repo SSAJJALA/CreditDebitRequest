@@ -108,8 +108,14 @@ public class CdmrAdjustmentsDao {
 
             Object searchValue = null;
 
-            if (option.equals("requisitionID") || option.equals("custNum") || option.equals("itemNum") ) {
+            if (option.equals("custNum") ) {
                 searchValue = Integer.parseInt(value);
+            } else if (option.equals("requisitionID") ) {
+                searchValue = Integer.parseInt(value);
+                option = "requisitionItem.requisitionID";
+            } else if (option.equals("itemNum")) {
+                searchValue = Integer.parseInt(value);
+                option = "requisitionItem.itemNum";
             } else {
                 searchValue = value;
             }
