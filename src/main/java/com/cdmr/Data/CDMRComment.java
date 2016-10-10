@@ -8,6 +8,7 @@ import java.time.LocalDate;
 public class CDMRComment {
     private String userID;
     private int requisitionID;
+    private int itemNum;
     private LocalDate createdDate;
     private String comment;
     private int seqID;
@@ -15,9 +16,10 @@ public class CDMRComment {
     public CDMRComment() {
     }
 
-    public CDMRComment(String userID, int requisitionID, LocalDate createdDate, String comment, int seqID) {
+    public CDMRComment(String userID, int requisitionID, int itemNum, LocalDate createdDate, String comment, int seqID) {
         this.userID = userID;
         this.requisitionID = requisitionID;
+        this.itemNum = itemNum;
         this.createdDate = createdDate;
         this.comment = comment;
         this.seqID = seqID;
@@ -63,11 +65,20 @@ public class CDMRComment {
         this.seqID = seqID;
     }
 
+    public int getItemNum() {
+        return itemNum;
+    }
+
+    public void setItemNum(int itemNum) {
+        this.itemNum = itemNum;
+    }
+
     @Override
     public String toString() {
         return "CDMRComment{" +
                 "userID='" + userID + '\'' +
                 ", requisitionID=" + requisitionID +
+                ", itemNum=" + itemNum +
                 ", createdDate=" + createdDate +
                 ", comment='" + comment + '\'' +
                 ", seqID=" + seqID +

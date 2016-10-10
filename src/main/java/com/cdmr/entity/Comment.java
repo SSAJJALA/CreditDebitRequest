@@ -20,6 +20,9 @@ public class Comment {
     @Column(name = "COMMENT_ID")
     private int commentID;
 
+    @Column(name = "ITEM_NUM")
+    private int itemNum;
+
     @Column(name = "SEQ_ID")
     private int seqID;
 
@@ -35,9 +38,10 @@ public class Comment {
     public Comment() {
     }
 
-    public Comment(int requisitionID, int commentID, int seqID, String comment, LocalDate createdDate, String userID) {
+    public Comment(int requisitionID, int commentID, int itemNum, int seqID, String comment, LocalDate createdDate, String userID) {
         this.requisitionID = requisitionID;
         this.commentID = commentID;
+        this.itemNum = itemNum;
         this.seqID = seqID;
         this.comment = comment;
         this.createdDate = createdDate;
@@ -92,11 +96,20 @@ public class Comment {
         this.userID = userID;
     }
 
+    public int getItemNum() {
+        return itemNum;
+    }
+
+    public void setItemNum(int itemNum) {
+        this.itemNum = itemNum;
+    }
+
     @Override
     public String toString() {
         return "Comment{" +
                 "requisitionID=" + requisitionID +
                 ", commentID=" + commentID +
+                ", itemNum=" + itemNum +
                 ", seqID=" + seqID +
                 ", comment='" + comment + '\'' +
                 ", createdDate=" + createdDate +

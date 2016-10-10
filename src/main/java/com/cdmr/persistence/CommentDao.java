@@ -97,7 +97,7 @@ public class CommentDao {
 
         Object searchValue = null;
 
-        if (searchOption.equals("requisitionID")) {
+        if (searchOption.equals("requisitionID") || searchOption.equals("itemNum")) {
             searchValue = Integer.parseInt(value);
         } else if (searchOption.equals("createdDate")) {
             searchValue = formatDate(value);

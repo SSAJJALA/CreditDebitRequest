@@ -39,7 +39,7 @@ public class SaveRequisition {
         try {
             this.insertCDMRHeader();
             this.insertCDMRDetails();
-            this.insertComments();
+
         } catch (Exception e)   {
             log.error("Save requisition failed for customer" + cdmr.getCustomer().getCustNum() + "-" + cdmr.getCustomer().getCustName() + "error " + e.getMessage()  );
             log.error(e.getStackTrace());
@@ -99,16 +99,16 @@ public class SaveRequisition {
             cdmrAdj.setReasonCode(adj.getReasonCode());
             cdmrAdj.setTaxAdj(adj.getTaxAdjAmnt());
 
+
             CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
             adjDao.addCdmrAdj(cdmrAdj);
+            this.insertComments(adj.getComments());
 
         }
 
     }
 
-    public void insertComments() {
-
-        List<CDMRComment> comments = cdmr.getComments();
+    public void insertComments(List<CDMRComment> comments) {
 
         int count = 0;
 

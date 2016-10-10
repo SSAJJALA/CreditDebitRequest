@@ -33,12 +33,12 @@ public class CdmrAdjustmentsDao {
     /**
      * retrieve all adjustments given an requisition id
      *
-     * @param requisitionID the requisition id
+     * @param requisitionItem the requisition id
      * @return cdmrAdjs
      */
-    public List<CdmrAdjustments> getCdmrAdjs(int requisitionID) {
+    public CdmrAdjustments getCdmrAdjs(CdmrAdjustmentsPK requisitionItem) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        List<CdmrAdjustments>  cdmrAdjs = (List<CdmrAdjustments>) session.get(CdmrAdjustments.class, requisitionID);
+        CdmrAdjustments  cdmrAdjs = (CdmrAdjustments) session.get(CdmrAdjustments.class, requisitionItem);
         return cdmrAdjs;
 
     }
