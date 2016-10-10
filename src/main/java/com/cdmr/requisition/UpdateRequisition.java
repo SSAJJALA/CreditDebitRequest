@@ -1,18 +1,21 @@
 package com.cdmr.requisition;
 
 import com.cdmr.Data.CDMR;
+import com.cdmr.Data.CDMRAdjustments;
 import com.cdmr.Data.CDMRComment;
 import com.cdmr.entity.Comment;
+import com.cdmr.entity.Filter;
 import com.cdmr.persistence.CommentDao;
 import com.cdmr.util.CDMRCommentSeqComparator;
 import com.cdmr.util.CommentSeqComparator;
 import org.apache.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by student on 9/29/16.
+ * Created by Siva Sajjala on 9/29/16.
  */
 public class UpdateRequisition {
     private CDMR cdmr;
@@ -34,32 +37,37 @@ public class UpdateRequisition {
     }
 
     public void updateCDMR() {
-        CommentDao commentsDao = new CommentDao();
-        List<Comment> commentsFromDB = commentsDao.getCommentsWithFilter("requisitionID", "=", Integer.toString(cdmr.getRequisitionID()));
-        List<CDMRComment> commentsFromUI = cdmr.getComments();
 
-        Collections.sort(commentsFromDB, new CommentSeqComparator());
-        Collections.sort(commentsFromUI, new CDMRCommentSeqComparator());
+        List<CDMRAdjustments> adjs = cdmr.getAdjustments();
+        for (CDMRAdjustments adj : adjs) {
 
-        //get max seq ID from db results
-        int maxSeq = 0;
-        if (commentsFromDB != null && !commentsFromDB.isEmpty()) {
-            maxSeq = commentsFromDB.get(commentsFromDB.size() - 1).getSeqID();
-        }
+            List<CDMRComment> commentsFromUI = adj.getComments();
+            int itemNum = adj.getItemNum();
+            List<Comment> commentsFromDB = getCommentsFromDB(itemNum);
 
-        for (CDMRComment tempCDMRComment : commentsFromUI) {
-            int uiseqID = tempCDMRComment.getSeqID();
-            boolean commentExists = false;
-            for (Comment tempComment : commentsFromDB) {
-                if (uiseqID == tempComment.getSeqID()) {
-                    commentExists = true;
+            Collections.sort(commentsFromDB, new CommentSeqComparator());
+            Collections.sort(commentsFromUI, new CDMRCommentSeqComparator());
+
+            //get max seq ID from db results
+            int maxSeq = 0;
+            if (commentsFromDB != null && !commentsFromDB.isEmpty()) {
+                maxSeq = commentsFromDB.get(commentsFromDB.size() - 1).getSeqID();
+            }
+
+            for (CDMRComment tempCDMRComment : commentsFromUI) {
+                int uiseqID = tempCDMRComment.getSeqID();
+                boolean commentExists = false;
+                for (Comment tempComment : commentsFromDB) {
+                    if (uiseqID == tempComment.getSeqID()) {
+                        commentExists = true;
+                    }
                 }
-            }
-            if (!commentExists) {
-                this.insertComment(tempCDMRComment, maxSeq);
-                log.info("New comment added for requisition " + cdmr.getRequisitionID());
-            }
+                if (!commentExists) {
+                    this.insertComment(tempCDMRComment, maxSeq);
+                    log.info("New comment added for requisition " + cdmr.getRequisitionID());
+                }
 
+            }
         }
 
 
@@ -73,6 +81,29 @@ public class UpdateRequisition {
         commentEntity.setComment(comment.getComment());
         commentEntity.setRequisitionID(comment.getRequisitionID());
         commentEntity.setSeqID(maxSeq);
+        commentEntity.setItemNum(comment.getItemNum());
+    }
+
+    public List<Comment> getCommentsFromDB(int itemNum) {
+        CommentDao commentsDao = new CommentDao();
+        List<Filter> filters = new ArrayList<Filter>();
+
+        //Add first filter
+        Filter filter1 = new Filter();
+        filter1.setSearchValue(Integer.toString(cdmr.getRequisitionID()));
+        filter1.setOperand("=");
+        filter1.setSearchOption("requisitionID");
+        filters.add(filter1);
+
+        //Add second filter
+        Filter filter2 = new Filter();
+        filter2.setSearchValue(Integer.toString(itemNum));
+        filter2.setOperand("=");
+        filter2.setSearchOption("itemNum");
+        filters.add(filter2);
+
+        List<Comment> commentsFromDB = commentsDao.getCommentsWithFilter(filters);
+        return commentsFromDB;
     }
 
 

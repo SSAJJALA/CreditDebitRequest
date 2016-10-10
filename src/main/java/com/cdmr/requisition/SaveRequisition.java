@@ -120,6 +120,7 @@ public class SaveRequisition {
             tempComment.setCreatedDate(comment.getCreatedDate());
             tempComment.setSeqID(count);
             tempComment.setUserID(comment.getUserID());
+            tempComment.setItemNum(comment.getItemNum());
 
         }
 

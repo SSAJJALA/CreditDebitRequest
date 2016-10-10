@@ -74,7 +74,6 @@ public class GetRequisition {
        this.prepareCustomerInfo();
        this.prepareInvoiceInfo();
        this.prepareCDMRAdjs();
-       this.prepareCDMRComments();
        return this.getCdmr();
     }
 
@@ -130,7 +129,7 @@ public class GetRequisition {
     public void prepareCDMRAdjs() {
         List<CDMRAdjustments> adjsData = new ArrayList<CDMRAdjustments>();
         CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
-        //List<CdmrAdjustments> adjEntitys = adjDao.getCdmrAdjs(this.getRequisitionID());
+
         List<Filter> filters = new ArrayList<Filter>();
         Filter filter1 = new Filter();
         filter1.setSearchOption("requisitionID");
@@ -141,7 +140,7 @@ public class GetRequisition {
 
         for (CdmrAdjustments adjEntity : adjEntitys) {
             CDMRAdjustments adjData = new CDMRAdjustments();
-            adjData.setComments(this.prepareCDMRComments());
+            adjData.setComments(this.prepareCDMRComments(this.requisitionID, adjEntity.getItemNum()));
             adjData.setAdjQty(adjEntity.getAdjQty());
             adjData.setAllowanceAdjAmnt(adjEntity.getAllowanceAdj());
             adjData.setChargeAdjAmnt(adjEntity.getChargesAdj());
@@ -177,10 +176,26 @@ public class GetRequisition {
 
 
 
-    public List<CDMRComment> prepareCDMRComments() {
+    public List<CDMRComment> prepareCDMRComments(int reqID, int itemNum) {
         List<CDMRComment> commentsData = new ArrayList<CDMRComment>();
         CommentDao commentDao = new CommentDao();
-        List<Comment> comments = commentDao.getCommentsWithFilter("requisitionID", "=", Integer.toString(this.getRequisitionID()));
+        List<Filter> filters = new ArrayList<Filter>();
+
+        //Add first filter
+        Filter filter1 = new Filter();
+        filter1.setSearchValue(Integer.toString(this.getRequisitionID()));
+        filter1.setOperand("=");
+        filter1.setSearchOption("requisitionID");
+        filters.add(filter1);
+
+        //Add second filter
+        Filter filter2 = new Filter();
+        filter2.setSearchValue(Integer.toString(this.getRequisitionID()));
+        filter2.setOperand("=");
+        filter2.setSearchOption("itemNum");
+        filters.add(filter2);
+
+        List<Comment> comments = commentDao.getCommentsWithFilter(filters);
 
         for (Comment comment : comments) {
             CDMRComment commentData = new CDMRComment();

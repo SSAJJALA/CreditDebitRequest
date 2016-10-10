@@ -2,6 +2,7 @@ package com.cdmr.persistence;
 
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.Comment;
+import com.cdmr.entity.Filter;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -91,25 +92,32 @@ public class CommentDao {
 
     }
 
-    public List<Comment> getCommentsWithFilter(String searchOption, String operand, String value) {
+    public List<Comment> getCommentsWithFilter(List<Filter> filters) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(Comment.class);
+        List<Comment> comments = null;
 
-        Object searchValue = null;
+        for (Filter filter : filters) {
+            String option = filter.getSearchOption();
+            String operand = filter.getOperand();
+            String value = filter.getSearchValue();
 
-        if (searchOption.equals("requisitionID") || searchOption.equals("itemNum")) {
-            searchValue = Integer.parseInt(value);
-        } else if (searchOption.equals("createdDate")) {
-            searchValue = formatDate(value);
-        } else {
-            searchValue = value;
+            Object searchValue = null;
+
+            if (option.equals("requisitionID") ) {
+                searchValue = Integer.parseInt(value);
+            } else if (option.equals("itemNum") ) {
+                searchValue = Integer.parseInt(value);
+
+            } else {
+                searchValue = value;
+            }
+
+            c = this.addRestrictions(c, option, operand, searchValue);
+
         }
 
-        if (!searchOption.equals("all")) {
-            c = this.addRestrictions(c, searchOption, operand, searchValue);
-        }
-
-        List<Comment> comments = c.list();
+        comments = c.list();
         return comments;
     }
 

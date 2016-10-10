@@ -26,6 +26,7 @@ public class SubmitCDMRTest {
     public void setUp() {
         submit = new SubmitCDMR();
     }
+
     @Test
     public void saveCDMR() throws Exception {
 
@@ -85,7 +86,6 @@ public class SubmitCDMRTest {
         comment.setCreatedDate(LocalDate.now());
         comment.setComment("This is a defact item. Returned by the customer");
         comment.setUserID("FD31103");
-        //comment.setRequisitionID();
         comments.add(comment);
         adj.setComments(comments);
         adjs.add(adj);
