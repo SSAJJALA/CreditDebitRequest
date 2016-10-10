@@ -30,6 +30,7 @@ public class Cdmr {
     private int invNum;
 
     @Column(name = "INV_DATE")
+    @Convert(converter = LocalDateAttributeConverter.class)
     private LocalDate invDate;
 
     @Column(name = "INV_AMNT")

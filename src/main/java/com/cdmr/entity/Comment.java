@@ -1,9 +1,9 @@
 package com.cdmr.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.cdmr.util.LocalDateAttributeConverter;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
@@ -17,6 +17,8 @@ public class Comment {
     private int requisitionID;
 
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     @Column(name = "COMMENT_ID")
     private int commentID;
 
@@ -30,6 +32,7 @@ public class Comment {
     private String comment;
 
     @Column(name = "CREATED_DATE")
+    @Convert(converter = LocalDateAttributeConverter.class)
     private LocalDate createdDate;
 
     @Column(name = "USER_ID")

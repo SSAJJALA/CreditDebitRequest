@@ -1,10 +1,12 @@
 package com.cdmr.entity;
 
 import com.cdmr.util.LocalDateAttributeConverter;
+import com.cdmr.util.LocalDateTimeAttributeConverter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * A class to represent a user.
@@ -29,12 +31,12 @@ public class Requisition {
     private String appName;
 
     @Column(name = "CREATED_DATE")
-    @Convert(converter = LocalDateAttributeConverter.class)
-    private LocalDate createdDate;
+    @Convert(converter = LocalDateTimeAttributeConverter.class)
+    private LocalDateTime createdDate;
 
     @Column(name = "UPDATED_DATE")
-    @Convert(converter = LocalDateAttributeConverter.class)
-    private LocalDate updatedDate;
+    @Convert(converter = LocalDateTimeAttributeConverter.class)
+    private LocalDateTime updatedDate;
 
     /**
      * Instantiates a new Requisition.
@@ -51,12 +53,14 @@ public class Requisition {
      * @param updatedDate the updated date
 
      */
-    public Requisition(int appID, String appName, LocalDate createdDate, LocalDate updatedDate) {
+
+    public Requisition(int appID, String appName, LocalDateTime createdDate, LocalDateTime updatedDate) {
         this.appID = appID;
         this.appName = appName;
         this.createdDate = createdDate;
         this.updatedDate = updatedDate;
     }
+
 
 
     public int getRequisitionID() {
@@ -83,22 +87,21 @@ public class Requisition {
         this.appName = appName;
     }
 
-    public LocalDate getCreatedDate() {
+    public LocalDateTime getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(LocalDate createdDate) {
+    public void setCreatedDate(LocalDateTime createdDate) {
         this.createdDate = createdDate;
     }
 
-    public LocalDate getUpdatedDate() {
+    public LocalDateTime getUpdatedDate() {
         return updatedDate;
     }
 
-    public void setUpdatedDate(LocalDate updatedDate) {
+    public void setUpdatedDate(LocalDateTime updatedDate) {
         this.updatedDate = updatedDate;
     }
-
 
     @Override
     public String toString() {

@@ -1584,3 +1584,70 @@
 2016-10-08 21:48:44,220 7790 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:COAT STAND
 2016-10-08 21:48:44,220 7790 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2357
 2016-10-08 21:48:44,220 7790 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:ALARM CLOCK
+2016-10-09 22:07:18,733 0    [main] ERROR com.cdmr.requisition.SaveRequisition  - Save requisition failed for customer1000-Experiserror null
+2016-10-09 22:07:18,772 39   [main] ERROR com.cdmr.requisition.SaveRequisition  - [Ljava.lang.StackTraceElement;@2eee9593
+2016-10-09 22:07:18,772 39   [main] INFO  com.cdmr.ui.SubmitCDMR  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 22:07:18,772 39   [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 22:17:58,394 0    [main] ERROR com.cdmr.requisition.SaveRequisition  - Save requisition failed for customer 1000 - Experiserror null
+2016-10-09 22:17:58,403 9    [main] ERROR com.cdmr.requisition.SaveRequisition  - [Ljava.lang.StackTraceElement;@290dbf45
+2016-10-09 22:17:58,404 10   [main] INFO  com.cdmr.ui.SubmitCDMR  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 22:17:58,404 10   [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 22:19:35,345 0    [main] ERROR com.cdmr.requisition.SaveRequisition  - Save requisition failed for customer 1000 - Experiserror null
+2016-10-09 22:19:35,362 17   [main] ERROR com.cdmr.requisition.SaveRequisition  - [Ljava.lang.StackTraceElement;@2eee9593
+2016-10-09 22:19:35,365 20   [main] INFO  com.cdmr.ui.SubmitCDMR  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 22:19:35,366 21   [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 22:23:27,561 0    [main] ERROR com.cdmr.requisition.SaveRequisition  - Save requisition failed for customer 1000 - Experiserror null
+2016-10-09 22:23:27,574 13   [main] ERROR com.cdmr.requisition.SaveRequisition  - [Ljava.lang.StackTraceElement;@4e41089d
+2016-10-09 22:23:27,575 14   [main] INFO  com.cdmr.ui.SubmitCDMR  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 22:23:27,575 14   [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 22:44:12,525 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-10-09 22:44:12,573 48   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-10-09 22:44:12,589 64   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-10-09 22:44:12,597 72   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-10-09 22:44:12,727 202  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-10-09 22:44:12,728 203  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-10-09 22:44:13,229 704  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-10-09 22:44:13,858 1333 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-09 22:44:13,917 1392 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD]
+2016-10-09 22:44:13,918 1393 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-10-09 22:44:13,919 1394 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-10-09 22:44:13,926 1401 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-10-09 22:44:15,361 2836 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-09 22:44:16,668 4143 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-10-09 22:44:16,669 4144 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-10-09 22:44:16,671 4146 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-09 22:44:16,671 4146 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-09 22:44:16,672 4147 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-10-09 22:44:16,673 4148 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-10-09 22:44:16,724 4199 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-10-09 22:44:16,762 4237 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-09 22:44:20,062 7537 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1292, SQLState: 22001
+2016-10-09 22:44:20,063 7538 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Data truncation: Incorrect date value: '\xAC\xED\x00\x05sr\x00\x0Djava.time.Ser\x95]\x84\xBA\x1B"H\xB2\x0C\x00\x00xpw\x07\x03\x00\x00\x07\xE0\x0A\x01x' for column 'INV_DATE' at row 1
+2016-10-09 22:44:20,068 7543 [main] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-10-09 22:44:20,071 7546 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1292, SQLState: 22007
+2016-10-09 22:44:20,071 7546 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Incorrect date value: '\xAC\xED\x00\x05sr\x00\x0Djava.time.Ser\x95]\x84\xBA\x1B"H\xB2\x0C\x00\x00xpw\x07\x03\x00\x00\x07\xE0\x0A\x01x' for column 'INV_DATE' at row 1
+2016-10-09 23:15:46,409 1893884 [main] ERROR com.cdmr.requisition.SaveRequisition  - Save requisition failed for customer 1000 - Experiserror could not execute statement
+2016-10-09 23:15:46,410 1893885 [main] ERROR com.cdmr.requisition.SaveRequisition  - [Ljava.lang.StackTraceElement;@3a627c80
+2016-10-09 23:15:46,410 1893885 [main] INFO  com.cdmr.ui.SubmitCDMR  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 23:15:46,424 1893899 [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Unable to submit the requisition. Please contact the help desk
+2016-10-09 23:17:50,231 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-10-09 23:17:50,276 45   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-10-09 23:17:50,290 59   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-10-09 23:17:50,296 65   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-10-09 23:17:50,409 178  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-10-09 23:17:50,409 178  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-10-09 23:17:50,743 512  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-10-09 23:17:51,236 1005 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-09 23:17:51,262 1031 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD]
+2016-10-09 23:17:51,264 1033 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-10-09 23:17:51,264 1033 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-10-09 23:17:51,272 1041 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-10-09 23:17:52,309 2078 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-09 23:17:53,446 3215 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-10-09 23:17:53,447 3216 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-10-09 23:17:53,449 3218 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-09 23:17:53,450 3219 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-09 23:17:53,453 3222 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-10-09 23:17:53,453 3222 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-10-09 23:17:53,525 3294 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-10-09 23:17:53,556 3325 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory

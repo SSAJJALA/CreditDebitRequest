@@ -1,14 +1,15 @@
 package com.cdmr.requisition;
 
 import com.cdmr.Data.*;
-import com.cdmr.entity.Cdmr;
-import com.cdmr.entity.CdmrAdjustments;
-import com.cdmr.entity.CdmrAdjustmentsPK;
-import com.cdmr.entity.Comment;
+import com.cdmr.Data.Customer;
+import com.cdmr.Data.InvoiceHeader;
+import com.cdmr.entity.*;
 import com.cdmr.persistence.CdmrAdjustmentsDao;
 import com.cdmr.persistence.CdmrDao;
+import com.cdmr.persistence.RequisitionDao;
 import org.apache.log4j.Logger;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -37,11 +38,12 @@ public class SaveRequisition {
 
     public int save() throws Exception {
         try {
+            requisitionID = this.insertRequisition();
             this.insertCDMRHeader();
             this.insertCDMRDetails();
 
         } catch (Exception e)   {
-            log.error("Save requisition failed for customer" + cdmr.getCustomer().getCustNum() + "-" + cdmr.getCustomer().getCustName() + "error " + e.getMessage()  );
+            log.error("Save requisition failed for customer " + cdmr.getCustomer().getCustNum() + " - " + cdmr.getCustomer().getCustName() + "error " + e.getMessage()  );
             log.error(e.getStackTrace());
             throw e;
         }
@@ -51,30 +53,42 @@ public class SaveRequisition {
 
     }
 
+    public int insertRequisition() {
+        Requisition req = new Requisition();
+        req.setAppID(1);
+        req.setAppName("CDMR");
+        req.setCreatedDate(LocalDateTime.now());
+        req.setUpdatedDate(LocalDateTime.now());
+        RequisitionDao reqDao = new RequisitionDao();
+        int reqID = reqDao.addRequisition(req);
+        cdmr.setRequisitionID(reqID);
+        return reqID;
+    }
+
     public void insertCDMRHeader() {
 
         //Prepare CDMR header details
         Cdmr cdmrHeader = new Cdmr();
-
+        cdmrHeader.setRequisitionID(cdmr.getRequisitionID());
         cdmrHeader.setAdjAmnt(cdmr.getAdjAmnt());
         cdmrHeader.setCdmrDate(cdmr.getCdmrDate());
         Customer cust = cdmr.getCustomer();
         cdmrHeader.setCustNum(cust.getCustNum());
         cdmrHeader.setCustName(cust.getCustName());
-        cdmrHeader.setSalesRepID(cdmrHeader.getSalesRepID());
-        cdmrHeader.setSalesRepName(cdmrHeader.getSalesRepName());
+        cdmrHeader.setSalesRepID(cdmr.getSalesRepID());
+        cdmrHeader.setSalesRepName(cdmr.getSalesRepName());
         cdmrHeader.setStatus("New");
-        cdmrHeader.setType(cdmrHeader.getType());
+        cdmrHeader.setType(cdmr.getType());
 
-        InvoiceHeader invHeader = new InvoiceHeader();
+        InvoiceHeader invHeader = cdmr.getInvHeader();
         cdmrHeader.setInvAmount(invHeader.getNetAmnt());
         cdmrHeader.setInvDate(invHeader.getInvDate());
         cdmrHeader.setInvNum(invHeader.getInvNum());
 
         //Insert CDMR header table
         CdmrDao cdmrDao = new CdmrDao();
-        int reqID = cdmrDao.addCdmr(cdmrHeader);
-        cdmr.setRequisitionID(reqID);
+        cdmrDao.addCdmr(cdmrHeader);
+
 
     }
 
