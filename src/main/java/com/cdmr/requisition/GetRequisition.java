@@ -140,13 +140,13 @@ public class GetRequisition {
 
         for (CdmrAdjustments adjEntity : adjEntitys) {
             CDMRAdjustments adjData = new CDMRAdjustments();
-            adjData.setComments(this.prepareCDMRComments(this.requisitionID, adjEntity.getItemNum()));
+            adjData.setComments(this.prepareCDMRComments(this.requisitionID, adjEntity.getRequisitionItem().getItemNum()));
             adjData.setAdjQty(adjEntity.getAdjQty());
             adjData.setAllowanceAdjAmnt(adjEntity.getAllowanceAdj());
             adjData.setChargeAdjAmnt(adjEntity.getChargesAdj());
             adjData.setCreditDebitFlg(adjEntity.getCdFlag());
             adjData.setItemDesc(adjEntity.getItemDesc());
-            adjData.setItemNum(adjEntity.getItemNum());
+            adjData.setItemNum(adjEntity.getRequisitionItem().getItemNum());
             adjData.setLineAdjAmnt(adjEntity.getExtPrice());
             adjData.setNewInvLineTotal(adjEntity.getNewInvLineAmnt());
 

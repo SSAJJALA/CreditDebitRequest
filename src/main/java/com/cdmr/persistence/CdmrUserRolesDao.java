@@ -110,15 +110,13 @@ public class CdmrUserRolesDao {
             String value = filter.getSearchValue();
 
             Object searchValue = null;
+            searchValue = value;
 
             if (option.equals("userID") ) {
                 option = "userRoles.userID";
             } else if (option.equals("role") ) {
                 option = "userRoles.role";
-            } else {
-                searchValue = value;
             }
-
             c = this.addRestrictions(c, option, operand, searchValue);
 
         }

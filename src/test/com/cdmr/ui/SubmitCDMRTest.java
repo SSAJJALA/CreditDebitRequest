@@ -9,6 +9,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.containsString;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,9 +84,10 @@ public class SubmitCDMRTest {
         List<CDMRComment> comments = new ArrayList<CDMRComment>();
         CDMRComment comment = new CDMRComment();
         comment.setSeqID(1);
-        comment.setCreatedDate(LocalDate.now());
+        comment.setCreatedDate(LocalDateTime.now());
         comment.setComment("This is a defact item. Returned by the customer");
         comment.setUserID("FD31103");
+        comment.setItemNum(2350);
         comments.add(comment);
         adj.setComments(comments);
         adjs.add(adj);
@@ -97,7 +99,7 @@ public class SubmitCDMRTest {
         String message = submit.saveCDMR();
         log.info (message);
 
-        assertThat("Submit CDMR failed", message, containsString("succesfully"));
+        assertThat("Submit CDMR failed", message, containsString("successfully"));
 
 
     }

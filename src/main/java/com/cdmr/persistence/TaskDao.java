@@ -9,6 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -56,10 +57,18 @@ public class TaskDao {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        session.save(task);
-        tx.commit();
-        session.close();
-        int taskID = task.getTaskID();
+        int taskID = -1;
+        try {
+            Serializable ser = session.save(task);
+            if (ser != null) {
+                taskID = (Integer) ser;
+            }
+            tx.commit();
+            session.close();
+        } catch (Exception e) {
+            throw e;
+        }
+
         return taskID;
     }
 

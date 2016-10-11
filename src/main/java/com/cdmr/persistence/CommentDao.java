@@ -9,6 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -55,10 +56,18 @@ public class CommentDao {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        session.save(comment);
-        tx.commit();
-        session.close();
-        int commentID = comment.getCommentID();
+        int commentID = -1;
+        try {
+            Serializable ser = session.save(comment);
+            if (ser != null) {
+                commentID = (Integer) ser;
+            }
+            tx.commit();
+            session.close();
+        } catch (Exception e) {
+            throw e;
+        }
+
         return commentID;
     }
 

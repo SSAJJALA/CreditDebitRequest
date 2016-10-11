@@ -1,10 +1,12 @@
 package com.cdmr.entity;
 
 import com.cdmr.util.LocalDateAttributeConverter;
+import com.cdmr.util.LocalDateTimeAttributeConverter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * Created by student on 9/26/16.
@@ -32,8 +34,8 @@ public class Comment {
     private String comment;
 
     @Column(name = "CREATED_DATE")
-    @Convert(converter = LocalDateAttributeConverter.class)
-    private LocalDate createdDate;
+    @Convert(converter = LocalDateTimeAttributeConverter.class)
+    private LocalDateTime createdDate;
 
     @Column(name = "USER_ID")
     private String userID;
@@ -41,7 +43,7 @@ public class Comment {
     public Comment() {
     }
 
-    public Comment(int requisitionID, int commentID, int itemNum, int seqID, String comment, LocalDate createdDate, String userID) {
+    public Comment(int requisitionID, int commentID, int itemNum, int seqID, String comment, LocalDateTime createdDate, String userID) {
         this.requisitionID = requisitionID;
         this.commentID = commentID;
         this.itemNum = itemNum;
@@ -83,11 +85,11 @@ public class Comment {
         this.comment = comment;
     }
 
-    public LocalDate getCreatedDate() {
+    public LocalDateTime getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(LocalDate createdDate) {
+    public void setCreatedDate(LocalDateTime createdDate) {
         this.createdDate = createdDate;
     }
 

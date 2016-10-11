@@ -17,13 +17,13 @@ public class GetInboxTest {
 
     @Before
     public void setUp() {
-        inbox = new GetInbox("SSAJJALA");
+        inbox = new GetInbox("VYU6026");
     }
 
     @Test
     public void getTasks() throws Exception {
         List<SearchInbox> myInbox =  inbox.getTasks();
-        assertNull("get inbox failed", myInbox);
+        assertNotNull("get inbox failed", myInbox);
 
     }
 

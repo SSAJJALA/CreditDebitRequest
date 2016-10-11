@@ -1,6 +1,7 @@
 package com.cdmr.entity;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -8,8 +9,8 @@ import java.util.List;
  */
 public class SearchInbox {
     private int taskID;
-    private LocalDate createdDate;
-    private LocalDate updatedDate;
+    private LocalDateTime createdDate;
+    private LocalDateTime updatedDate;
     private String application;
     private String taskName;
     private String taskStatus;
@@ -19,7 +20,7 @@ public class SearchInbox {
     public SearchInbox() {
     }
 
-    public SearchInbox(int taskID, LocalDate createdDate, LocalDate updatedDate, String application, String taskName, String taskStatus, int requisitionID, String userID) {
+    public SearchInbox(int taskID, LocalDateTime createdDate, LocalDateTime updatedDate, String application, String taskName, String taskStatus, int requisitionID, String userID) {
         this.taskID = taskID;
         this.createdDate = createdDate;
         this.updatedDate = updatedDate;
@@ -38,19 +39,19 @@ public class SearchInbox {
         this.taskID = taskID;
     }
 
-    public LocalDate getCreatedDate() {
+    public LocalDateTime getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(LocalDate createdDate) {
+    public void setCreatedDate(LocalDateTime createdDate) {
         this.createdDate = createdDate;
     }
 
-    public LocalDate getUpdatedDate() {
+    public LocalDateTime getUpdatedDate() {
         return updatedDate;
     }
 
-    public void setUpdatedDate(LocalDate updatedDate) {
+    public void setUpdatedDate(LocalDateTime updatedDate) {
         this.updatedDate = updatedDate;
     }
 

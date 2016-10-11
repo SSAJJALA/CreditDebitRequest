@@ -2,6 +2,7 @@ package com.cdmr.ui;
 
 import com.cdmr.entity.SearchInbox;
 import com.cdmr.persistence.SessionFactoryProvider;
+import com.cdmr.util.ConvertToLocalDateTime;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.SQLQuery;
@@ -69,8 +70,8 @@ public class GetInbox {
             tempInbox.setTaskID(Integer.parseInt(row[0].toString()));
             tempInbox.setTaskName(row[1].toString());
             tempInbox.setTaskStatus(row[2].toString());
-            tempInbox.setCreatedDate(formatDate(row[3].toString()));
-            tempInbox.setUpdatedDate(formatDate(row[4].toString()));
+            tempInbox.setCreatedDate(new ConvertToLocalDateTime().formatDate(row[3].toString()));
+            tempInbox.setUpdatedDate(new ConvertToLocalDateTime().formatDate(row[4].toString()));
             tempInbox.setRequisitionID(Integer.parseInt(row[5].toString()));
             tempInbox.setUserID(row[6].toString());
 
@@ -82,13 +83,5 @@ public class GetInbox {
 
     }
 
-    private LocalDate formatDate (String dob) {
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        formatter = formatter.withLocale(Locale.US);
-        LocalDate date = LocalDate.parse(dob, formatter);
-        return date;
-
-    }
 
 }

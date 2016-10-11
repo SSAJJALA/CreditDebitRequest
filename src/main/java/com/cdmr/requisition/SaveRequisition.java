@@ -6,6 +6,7 @@ import com.cdmr.Data.InvoiceHeader;
 import com.cdmr.entity.*;
 import com.cdmr.persistence.CdmrAdjustmentsDao;
 import com.cdmr.persistence.CdmrDao;
+import com.cdmr.persistence.CommentDao;
 import com.cdmr.persistence.RequisitionDao;
 import org.apache.log4j.Logger;
 
@@ -129,12 +130,16 @@ public class SaveRequisition {
         for (CDMRComment comment : comments) {
             count++;
             Comment tempComment = new Comment();
-            tempComment.setRequisitionID(comment.getRequisitionID());
+            tempComment.setRequisitionID(cdmr.getRequisitionID());
             tempComment.setComment(comment.getComment());
             tempComment.setCreatedDate(comment.getCreatedDate());
             tempComment.setSeqID(count);
             tempComment.setUserID(comment.getUserID());
             tempComment.setItemNum(comment.getItemNum());
+
+            CommentDao commentDao = new CommentDao();
+            commentDao.addComment(tempComment);
+
 
         }
 

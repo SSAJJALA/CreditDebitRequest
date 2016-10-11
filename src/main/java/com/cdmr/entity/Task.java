@@ -2,6 +2,7 @@ package com.cdmr.entity;
 
 import com.cdmr.util.LocalDateAttributeConverter;
 import com.cdmr.util.LocalDateTimeAttributeConverter;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -16,6 +17,8 @@ import java.time.LocalDateTime;
 public class Task {
 
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     @Column(name = "TASK_ID")
     private int taskID;
 
