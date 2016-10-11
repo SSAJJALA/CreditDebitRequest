@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -52,10 +53,25 @@ public class RequisitionDao {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
-        session.save(req);
-        tx.commit();
-        session.close();
-        int reqID = getLastReqID();
+        int reqID = -1;
+        try {
+            Serializable ser = session.save(req);
+            if (ser != null) {
+                reqID = (Integer) ser;
+            }
+            tx.commit();
+            session.close();
+        } catch (Exception e) {
+            throw e;
+        }
+        //session.save(req);
+        //int reqID = req.getId();
+        //String queryString = String.format("SELECT LAST_INSERT_ID() AS LAST_ID FROM Requisition");
+        //String queryString = String.format("SELECT LAST_INSERT_ID()");
+        //int reqID = (Integer) session.createQuery(queryString).uniqueResult();
+        //tx.commit();
+        //session.close();
+        //int reqID = getLastReqID();
         return reqID;
     }
 

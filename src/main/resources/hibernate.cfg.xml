@@ -30,6 +30,19 @@
         <mapping class="com.cdmr.entity.Task"/>
         <mapping class="com.cdmr.entity.TaskAssignment"/>
         <mapping class="com.cdmr.entity.TaskAssignmentPK"/>
+        <mapping class="com.cdmr.entity.CdmrAdjustments"/>
+        <mapping class="com.cdmr.entity.CdmrAdjustmentsPK"/>
+        <mapping class="com.cdmr.entity.CdmrUserRoles"/>
+        <mapping class="com.cdmr.entity.CdmrUserRolesPK"/>
+        <mapping class="com.cdmr.entity.CdmrUsers"/>
+        <mapping class="com.cdmr.entity.Comment"/>
+        <mapping class="com.cdmr.entity.Customer"/>
+        <mapping class="com.cdmr.entity.Filter"/>
+        <mapping class="com.cdmr.entity.InvoiceDetailPK"/>
+        <mapping class="com.cdmr.entity.InvoiceHeaderPK"/>
+        <mapping class="com.cdmr.entity.SearchCDMR"/>
+        <mapping class="com.cdmr.entity.SearchInbox"/>
+        <mapping class="com.cdmr.entity.TaskAssignmentPK"/>
 
     </session-factory>
 
