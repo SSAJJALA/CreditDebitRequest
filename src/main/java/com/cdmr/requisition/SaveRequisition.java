@@ -78,7 +78,7 @@ public class SaveRequisition {
         cdmrHeader.setCustName(cust.getCustName());
         cdmrHeader.setSalesRepID(cdmr.getSalesRepID());
         cdmrHeader.setSalesRepName(cdmr.getSalesRepName());
-        cdmrHeader.setStatus("New");
+        cdmrHeader.setStatus(cdmr.getStatus());
         cdmrHeader.setType(cdmr.getType());
 
         InvoiceHeader invHeader = cdmr.getInvHeader();

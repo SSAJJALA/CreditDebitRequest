@@ -32,11 +32,12 @@ public class SearchServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("In doPost() method");
+        Search searchObj = null;
         response.setContentType("text/html");
         String searchFilter = request.getParameter("searchoptions");
         String operand = request.getParameter("operands");
         String term = request.getParameter("searchTerm");
-        Search searchObj = new Search(searchFilter, operand, term);
+        searchObj = new Search(searchFilter, operand, term);
         List<SearchCDMR> results = searchObj.search();
         request.setAttribute("results", results);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/search.jsp");

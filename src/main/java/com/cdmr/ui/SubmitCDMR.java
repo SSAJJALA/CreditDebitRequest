@@ -2,8 +2,10 @@ package com.cdmr.ui;
 
 import com.cdmr.Data.CDMR;
 import com.cdmr.Task.QueueTask;
+import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.CdmrUserRoles;
 import com.cdmr.entity.Filter;
+import com.cdmr.persistence.CdmrDao;
 import com.cdmr.persistence.CdmrUserRolesDao;
 import com.cdmr.persistence.CdmrUsersDao;
 import com.cdmr.requisition.SaveRequisition;
@@ -62,6 +64,10 @@ public class SubmitCDMR {
 
         //update invoice header and detail
 
+
+        //update the CDMR status to In Progress
+        this.updateStatus();
+
         return message;
     }
 
@@ -83,6 +89,13 @@ public class SubmitCDMR {
 
         int taskID = createTask.createTask();
         return taskID;
+    }
+
+    public void updateStatus() {
+        CdmrDao cdmrDao = new CdmrDao();
+        Cdmr tempCDMR = cdmrDao.getCdmr(cdmr.getRequisitionID());
+        tempCDMR.setStatus("In Progress");
+        cdmrDao.updateCdmr(tempCDMR);
     }
 
 }

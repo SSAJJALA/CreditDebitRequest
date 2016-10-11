@@ -53,7 +53,7 @@ public class Search {
     public List<SearchCDMR> search() {
 
         CdmrDao cdmrs = new CdmrDao();
-        List<SearchCDMR> prepareResults = null;
+        List<SearchCDMR> prepareResults = new ArrayList<SearchCDMR>();
         String column = null;
         if (this.getSearchFilter().equals("requisitionID")) {
             column = "requisitionID";
