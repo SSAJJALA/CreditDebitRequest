@@ -16,11 +16,13 @@ public class SearchInbox {
     private String taskStatus;
     private int requisitionID;
     private String userID;
+    private String customerName;
+    private Double adjAmnt;
 
     public SearchInbox() {
     }
 
-    public SearchInbox(int taskID, LocalDateTime createdDate, LocalDateTime updatedDate, String application, String taskName, String taskStatus, int requisitionID, String userID) {
+    public SearchInbox(int taskID, LocalDateTime createdDate, LocalDateTime updatedDate, String application, String taskName, String taskStatus, int requisitionID, String userID, String customerName, Double adjAmnt) {
         this.taskID = taskID;
         this.createdDate = createdDate;
         this.updatedDate = updatedDate;
@@ -29,6 +31,8 @@ public class SearchInbox {
         this.taskStatus = taskStatus;
         this.requisitionID = requisitionID;
         this.userID = userID;
+        this.customerName = customerName;
+        this.adjAmnt = adjAmnt;
     }
 
     public int getTaskID() {
@@ -95,6 +99,22 @@ public class SearchInbox {
         this.taskStatus = taskStatus;
     }
 
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public Double getAdjAmnt() {
+        return adjAmnt;
+    }
+
+    public void setAdjAmnt(Double adjAmnt) {
+        this.adjAmnt = adjAmnt;
+    }
+
     @Override
     public String toString() {
         return "SearchInbox{" +
@@ -106,6 +126,8 @@ public class SearchInbox {
                 ", taskStatus='" + taskStatus + '\'' +
                 ", requisitionID=" + requisitionID +
                 ", userID='" + userID + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", adjAmnt=" + adjAmnt +
                 '}';
     }
 }

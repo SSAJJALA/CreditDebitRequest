@@ -42,9 +42,11 @@ public class GetInbox {
 
         List<SearchInbox> inboxResults = null;
         String query = "SELECT A.TASK_ID, A.TASK_NAME, A.TASK_STATUS, DATE_FORMAT(CREATED_DATE, '%Y-%m-%d %h:%m:%s') AS CREATED_DATE, DATE_FORMAT(UPDATED_DATE, '%Y-%m-%d %h:%m:%s') AS UPDATED_DATE, B.REQUISITION_ID, B.USER_ID"
-                        + " FROM TASK A, TASK_ASSIGNMENT B"
+                        + ", C.CUST_NAME, C.ADJ_AMNT"
+                        + " FROM TASK A, TASK_ASSIGNMENT B, CDMR C"
                         + " WHERE"
-                        + " A.TASK_ID = B.TASK_ID AND";
+                        + " A.TASK_ID = B.TASK_ID AND"
+                        + " B.REQUISITION_ID = C.REQUISITION_ID AND";
 
         String userID = this.getUserID();
 
@@ -75,6 +77,8 @@ public class GetInbox {
             tempInbox.setUpdatedDate(new ConvertToLocalDateTime().formatDate(row[4].toString()));
             tempInbox.setRequisitionID(Integer.parseInt(row[5].toString()));
             tempInbox.setUserID(row[6].toString());
+            tempInbox.setCustomerName(row[7].toString());
+            tempInbox.setAdjAmnt(Double.parseDouble(row[8].toString()));
 
             userInbox.add(tempInbox);
 

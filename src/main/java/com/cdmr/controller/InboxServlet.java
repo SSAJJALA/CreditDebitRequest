@@ -34,8 +34,8 @@ public class InboxServlet extends HttpServlet {
 
         logger.info("In doPost() method on inbox servlet");
         response.setContentType("text/html");
-        String user = request.getParameter("userID");
-        GetInbox inbox = new GetInbox(user);
+        String user = request.getUserPrincipal().getName();
+        GetInbox inbox = new GetInbox(user.toUpperCase());
         List<SearchInbox> inboxResults = inbox.getTasks();
         request.setAttribute("inbox", inboxResults);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/inbox.jsp");

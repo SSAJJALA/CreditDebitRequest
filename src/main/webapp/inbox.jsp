@@ -49,7 +49,8 @@
                 <td>${inboxResults.updatedDate}</td>
                 <td>${inboxResults.application}</td>
                 <td>Approval Required</td>
-                <td>${inboxResults.info} </td>
+                <c:set var="info" value="${requestScope['Req ID:'.concat({inboxResults.requisitionID}).concat('| Customer:').concat({inboxResults.customerName}).concat('| Adj Amnt:').concat({inboxResults.adjAmnt})]}" />
+                <td>${info}</td>
             </tr>
         </c:forEach>
     </table>
