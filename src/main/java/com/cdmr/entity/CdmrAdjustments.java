@@ -23,9 +23,6 @@ public class CdmrAdjustments {
     @Column(name = "REASON_CODE_DESC")
     private String reasonCode;
 
-    @Column(name = "ITEM_NUM")
-    private int itemNum;
-
     @Column(name = "ITEM_DESC")
     private String itemDesc;
 
@@ -53,11 +50,10 @@ public class CdmrAdjustments {
     public CdmrAdjustments() {
     }
 
-    public CdmrAdjustments(CdmrAdjustmentsPK requisitionItem, int custNum, String reasonCode, int itemNum, String itemDesc, int adjQty, Double allowanceAdj, Double chargesAdj, Double taxAdj, String cdFlag, Double extPrice, Double newInvLineAmnt) {
+    public CdmrAdjustments(CdmrAdjustmentsPK requisitionItem, int custNum, String reasonCode, String itemDesc, int adjQty, Double allowanceAdj, Double chargesAdj, Double taxAdj, String cdFlag, Double extPrice, Double newInvLineAmnt) {
         this.requisitionItem = requisitionItem;
         this.custNum = custNum;
         this.reasonCode = reasonCode;
-        this.itemNum = itemNum;
         this.itemDesc = itemDesc;
         this.adjQty = adjQty;
         this.allowanceAdj = allowanceAdj;
@@ -157,21 +153,12 @@ public class CdmrAdjustments {
         this.requisitionItem = requisitionItem;
     }
 
-    public int getItemNum() {
-        return itemNum;
-    }
-
-    public void setItemNum(int itemNum) {
-        this.itemNum = itemNum;
-    }
-
     @Override
     public String toString() {
         return "CdmrAdjustments{" +
                 "requisitionItem=" + requisitionItem +
                 ", custNum=" + custNum +
                 ", reasonCode='" + reasonCode + '\'' +
-                ", itemNum=" + itemNum +
                 ", itemDesc='" + itemDesc + '\'' +
                 ", adjQty=" + adjQty +
                 ", allowanceAdj=" + allowanceAdj +
