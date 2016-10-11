@@ -19,7 +19,7 @@ public class SearchTest {
 
     @Before
     public void setUp() {
-        search = new Search("requisitionID", "=", "1000");
+        search = new Search("requisitionID", "=", "10");
     }
     @Test
     public void search() throws Exception {
@@ -27,7 +27,7 @@ public class SearchTest {
         results = search.search();
         log.info("Search results:" + results);
         //assertTrue("search failed", results.size() == 0);
-        assertNull("search failed", results);
+        assertNotNull("search failed for requisition id 10", results);
 
     }
 

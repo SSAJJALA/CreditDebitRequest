@@ -11,6 +11,7 @@ import org.hibernate.Session;
 import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -40,7 +41,7 @@ public class GetInbox {
     public List<SearchInbox> getTasks() {
 
         List<SearchInbox> inboxResults = null;
-        String query = "SELECT A.TASK_ID, A.TASK_NAME, A.TASK_STATUS, A.CREATED_DATE, A.UPDATED_DATE, B.REQUISITION_ID, B.USER_ID"
+        String query = "SELECT A.TASK_ID, A.TASK_NAME, A.TASK_STATUS, DATE_FORMAT(CREATED_DATE, '%Y-%m-%d %h:%m:%s') AS CREATED_DATE, DATE_FORMAT(UPDATED_DATE, '%Y-%m-%d %h:%m:%s') AS UPDATED_DATE, B.REQUISITION_ID, B.USER_ID"
                         + " FROM TASK A, TASK_ASSIGNMENT B"
                         + " WHERE"
                         + " A.TASK_ID = B.TASK_ID AND";
@@ -56,7 +57,7 @@ public class GetInbox {
     }
 
     public List<SearchInbox> executeQuery(String sql) {
-        List<SearchInbox> userInbox = null;
+        List<SearchInbox> userInbox = new ArrayList<SearchInbox>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         SQLQuery query = session.createSQLQuery(sql);
         //query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);

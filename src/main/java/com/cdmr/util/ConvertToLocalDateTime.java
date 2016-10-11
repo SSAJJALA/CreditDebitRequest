@@ -12,7 +12,7 @@ public class ConvertToLocalDateTime {
 
     public LocalDateTime formatDate (String dateTimeString) {
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         formatter = formatter.withLocale(Locale.US);
         LocalDateTime dateTime = LocalDateTime.parse(dateTimeString, formatter);
 
