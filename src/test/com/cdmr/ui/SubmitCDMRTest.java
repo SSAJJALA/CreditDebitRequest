@@ -46,7 +46,7 @@ public class SubmitCDMRTest {
 
         cdmr.setStatus("In Progress");
         cdmr.setType("C");
-        cdmr.setAdjAmnt(100.00);
+        cdmr.setAdjAmnt(-100.00);
         cdmr.setCdmrDate(LocalDate.now());
         cdmr.setSalesRepName("Mike Helman");
         cdmr.setSalesRepID("FD31103");
@@ -77,7 +77,7 @@ public class SubmitCDMRTest {
         adj.setCreditDebitFlg("C");
         adj.setItemDesc("COAT STAND");
         adj.setItemNum(2350);
-        adj.setLineAdjAmnt(100.00);
+        adj.setLineAdjAmnt(-100.00);
         adj.setNewInvLineTotal(300.00);
         adj.setOriginalInvLineTotal(400.00);
 
@@ -85,7 +85,7 @@ public class SubmitCDMRTest {
         CDMRComment comment = new CDMRComment();
         comment.setSeqID(1);
         comment.setCreatedDate(LocalDateTime.now());
-        comment.setComment("This is a defact item. Returned by the customer");
+        comment.setComment("This is a defect item. Returned by the customer");
         comment.setUserID("FD31103");
         comment.setItemNum(2350);
         comments.add(comment);

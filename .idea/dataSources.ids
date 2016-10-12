@@ -60,7 +60,7 @@
         <data-type>int(11)|0</data-type>
       </column>
       <column id="28" parent="11" name="STATUS">
-        <data-type>varchar(10)|0</data-type>
+        <data-type>varchar(20)|0</data-type>
       </column>
       <column id="29" parent="11" name="CUST_NUM">
         <data-type>varchar(10)|0</data-type>

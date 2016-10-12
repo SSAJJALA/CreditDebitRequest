@@ -14,17 +14,17 @@
 <head>
     <title>Create CDMR</title>
 </head>
-
+<body>
 <div id="mainContainer">
     <%@include file="header.jsp"%>
 
-    <h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create Credit Debit Memo request</b></h2>
+    <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
 <form action="/submitCDMRServlet" >
-<div style="width:500px;height:100px;border:1px solid #000;">
+<div style="width:1300px;height:270px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>
-    <br><br>
+
     <table width="90%" cellpadding="4" cellspacing="0" style="height: 100px;">
         <tr>
             <td width="40%">
@@ -88,9 +88,9 @@
 
 </div>
 
-    <h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Original Invoice Line Items</b></h2>
+    <h2 style="text-indent: 18em;"><b>Original Invoice Line Items</b></h2>
 
-<div style="width:500px;height:100px;border:1px solid #000;">
+<div style="width:1300px;height:270px;border:1px solid #000;margin:0 auto;">
 
             <table id = "datatable1" style="display:none" class="t-table" width="90%" border="1" align = "center">
                 <thead>
@@ -124,9 +124,9 @@
             </table>
 </div>
 
-    <h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adjustments</b></h2>
+    <h2 style="text-indent: 18em;"><b>Adjustments</b></h2>
 
-<div style="width:500px;height:100px;border:1px solid #000;">
+<div style="width:1300px;height:150px;border:1px solid #000;margin:0 auto;">
 
              <table id = "datatable2" style="display:none" class="t-table" width="90%" border="1" align = "center">
                 <thead>
@@ -166,7 +166,8 @@
             </table>
 
 </div>
-    <span style="padding-left:500px"></span>
+    <br><br>
+    <span style="padding-left:1370px"></span>
     <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="button">
     <span style="padding-left:20px"></span>
     <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="button">
