@@ -41,8 +41,8 @@ public class GetInbox {
     public List<SearchInbox> getTasks() {
 
         List<SearchInbox> inboxResults = null;
-        String query = "SELECT A.TASK_ID, A.TASK_NAME, A.TASK_STATUS, DATE_FORMAT(CREATED_DATE, '%Y-%m-%d %h:%m:%s') AS CREATED_DATE, DATE_FORMAT(UPDATED_DATE, '%Y-%m-%d %h:%m:%s') AS UPDATED_DATE, B.REQUISITION_ID, B.USER_ID"
-                        + ", C.CUST_NAME, C.ADJ_AMNT"
+        String query = "SELECT A.TASK_ID, A.TASK_NAME, A.TASK_STATUS, DATE_FORMAT(CREATED_DATE, '%Y-%m-%d %h:%m:%s') AS CREATED_DATE, DATE_FORMAT(UPDATED_DATE, '%Y-%m-%d %h:%m:%s') AS UPDATED_DATE, B.REQUISITION_ID, B.USER_ID,"
+                        + " C.CUST_NAME, C.ADJ_AMNT"
                         + " FROM TASK A, TASK_ASSIGNMENT B, CDMR C"
                         + " WHERE"
                         + " A.TASK_ID = B.TASK_ID AND"

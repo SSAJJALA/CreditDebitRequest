@@ -1,9 +1,6 @@
 package com.cdmr.persistence;
 
-import com.cdmr.entity.Filter;
-import com.cdmr.entity.InvoiceDetail;
-import com.cdmr.entity.InvoiceDetailPK;
-import com.cdmr.entity.TaskAssignment;
+import com.cdmr.entity.*;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -39,12 +36,13 @@ public class InvoiceDetailDao {
      * @param invItem the requisition id
      * @return invoiceHeader
      */
-    public List<InvoiceDetail> getInvoiceDetail(InvoiceDetailPK invItem) {
-        List<InvoiceDetail> invoiceDetails = new ArrayList<InvoiceDetail>();
+    public InvoiceDetail getInvoiceDetail(InvoiceDetailPK invItem) {
+        //List<InvoiceDetail> invoiceDetails = new ArrayList<InvoiceDetail>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Criteria criteria = session.createCriteria(InvoiceDetail.class);
-        criteria.add(Restrictions.eq("invoiceNum", invItem.getInvNum()));
-        invoiceDetails = criteria.list();
+        InvoiceDetail invoiceDetails = (InvoiceDetail) session.get(InvoiceDetail.class, invItem);
+        //Criteria criteria = session.createCriteria(InvoiceDetail.class);
+        //criteria.add(Restrictions.eq("invoiceNum", invItem.getInvNum()));
+        //invoiceDetails = criteria.list();
         return invoiceDetails;
 
     }

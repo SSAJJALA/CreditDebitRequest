@@ -13,3 +13,14 @@ Date        Task                                            Hours       Notes
 09/23/2016  Worked on creating more DAO and services        3    
 09/24/2016  Worked on search and inbox JSPs                 2
 09/25/2016  Went thru the readings for next class and also worked on styling for search JSP page    4
+09/28/2016  Worked on customer and invoice lookup           2
+09/29/2016  Developed form based security for CDMR app      3
+09/30/2016  Added CSS style sheet for web app               1
+10/02/2016  Prepared for Presentation 1                     2 
+10/03/2016  Fixed DAOs                                      2
+10/05/2016  Spent time on completing the WK5 exercise       3
+10/06/2016  Worked on create CDMR screen                    2
+10/07/2016  Fixing the backend java services                3
+10/08/2016  Started creating the Junit test cases           4
+10/09/2016  Went thru the REST material                     2
+10/11/2016  Wrote some additional java services(update invoice) 3

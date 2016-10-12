@@ -1,13 +1,10 @@
 package com.cdmr.ui;
 
 import com.cdmr.Data.CDMR;
+import com.cdmr.Data.CDMRAdjustments;
 import com.cdmr.Task.QueueTask;
-import com.cdmr.entity.Cdmr;
-import com.cdmr.entity.CdmrUserRoles;
-import com.cdmr.entity.Filter;
-import com.cdmr.persistence.CdmrDao;
-import com.cdmr.persistence.CdmrUserRolesDao;
-import com.cdmr.persistence.CdmrUsersDao;
+import com.cdmr.entity.*;
+import com.cdmr.persistence.*;
 import com.cdmr.requisition.SaveRequisition;
 import org.apache.log4j.Logger;
 
@@ -48,6 +45,17 @@ public class SubmitCDMR {
 
                 message = "Requisition " + reqID + " submitted successfully";
                 log.info(message);
+
+                //queue DSM task
+                int taskID = this.queueTask();
+                log.info("DSM Task: " + taskID + " created successfully");
+
+                //update invoice header and detail
+                this.updateInvoice();
+
+                //update the CDMR status to In Progress
+                this.updateStatus();
+
             } else {
                 message = "Unable to submit the requisition. Please contact the help desk";
                 log.info(message);
@@ -58,15 +66,6 @@ public class SubmitCDMR {
             log.info(message);
         }
 
-        //queue DSM task
-        int taskID = this.queueTask();
-        log.info("DSM Task: " + taskID + " created successfully");
-
-        //update invoice header and detail
-
-
-        //update the CDMR status to In Progress
-        this.updateStatus();
 
         return message;
     }
@@ -96,6 +95,32 @@ public class SubmitCDMR {
         Cdmr tempCDMR = cdmrDao.getCdmr(cdmr.getRequisitionID());
         tempCDMR.setStatus("In Progress");
         cdmrDao.updateCdmr(tempCDMR);
+    }
+
+    public void updateInvoice() {
+
+        List<CDMRAdjustments> adjs = cdmr.getAdjustments();
+
+        for (CDMRAdjustments adj : adjs) {
+            InvoiceDetail tempInvDtl = new InvoiceDetail();
+            InvoiceDetailDao tempInvDtlDao = new InvoiceDetailDao();
+            InvoiceDetailPK tempInvDtlPK = new InvoiceDetailPK();
+            tempInvDtlPK.setInvNum(cdmr.getInvHeader().getInvNum());
+            tempInvDtlPK.setItemNum(adj.getItemNum());
+
+            tempInvDtl = tempInvDtlDao.getInvoiceDetail(tempInvDtlPK);
+
+            tempInvDtl.setAllowance((tempInvDtl.getAllowance() + adj.getAllowanceAdjAmnt()));
+            tempInvDtl.setCharges((tempInvDtl.getCharges() + adj.getChargeAdjAmnt()));
+            tempInvDtl.setQty((tempInvDtl.getQty() + adj.getAdjQty()));
+            tempInvDtl.setGrossAmnt((tempInvDtl.getQty() * tempInvDtl.getUnitPrice()));
+            tempInvDtl.setTax((tempInvDtl.getTax() + adj.getTaxAdjAmnt()));
+            tempInvDtl.setNetAmnt((tempInvDtl.getGrossAmnt() + tempInvDtl.getAllowance() + tempInvDtl.getCharges() + tempInvDtl.getTax()));
+
+            tempInvDtlDao.updateInvoiceDetail(tempInvDtl);
+
+        }
+
     }
 
 }
