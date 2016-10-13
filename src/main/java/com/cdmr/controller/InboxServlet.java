@@ -26,8 +26,9 @@ import java.util.List;
 )
 public class InboxServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,6 +36,7 @@ public class InboxServlet extends HttpServlet {
         logger.info("In doPost() method on inbox servlet");
         response.setContentType("text/html");
         String user = request.getUserPrincipal().getName();
+        logger.info("User id:" + user);
         GetInbox inbox = new GetInbox(user.toUpperCase());
         List<SearchInbox> inboxResults = inbox.getTasks();
         request.setAttribute("inbox", inboxResults);

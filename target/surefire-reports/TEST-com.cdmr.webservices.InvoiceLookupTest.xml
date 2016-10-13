@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.cdmr.webservices.InvoiceLookupTest" time="0.552" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.cdmr.webservices.InvoiceLookupTest" time="0.185" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2016.2.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -60,6 +60,6 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.cdmr.webservices.InvoiceLookupTest" name="getInvoiceHeader" time="0.459"/>
-  <testcase classname="com.cdmr.webservices.InvoiceLookupTest" name="getInvoiceDetails" time="0.077"/>
+  <testcase classname="com.cdmr.webservices.InvoiceLookupTest" name="getInvoiceHeader" time="0.126"/>
+  <testcase classname="com.cdmr.webservices.InvoiceLookupTest" name="getInvoiceDetails" time="0.05"/>
 </testsuite>

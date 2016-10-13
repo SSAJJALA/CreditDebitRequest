@@ -27,7 +27,7 @@ import com.cdmr.ui.Search;
 public class SearchServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
