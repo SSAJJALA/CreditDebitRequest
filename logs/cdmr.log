@@ -3087,3 +3087,116 @@ The last packet successfully received from the server was 10,722 milliseconds ag
 2016-10-16 11:42:32,752 2488 [http-nio-8080-exec-5] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
 2016-10-16 11:42:32,826 2562 [http-nio-8080-exec-5] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2016-10-16 11:42:32,854 2590 [http-nio-8080-exec-5] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-16 11:53:14,901 0    [main] INFO  com.cdmr.controller.Login  - In doPost() method
+2016-10-16 11:53:14,906 5    [main] INFO  com.cdmr.controller.Login  - User:SSAJJALA
+2016-10-16 11:53:15,373 472  [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-10-16 11:53:15,388 487  [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-10-16 11:53:15,395 494  [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-10-16 11:53:15,434 533  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-10-16 11:53:15,477 576  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-10-16 11:53:15,478 577  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-10-16 11:53:15,674 773  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-10-16 11:53:15,990 1089 [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-16 11:53:16,007 1106 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD]
+2016-10-16 11:53:16,012 1111 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-10-16 11:53:16,013 1112 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-10-16 11:53:16,016 1115 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-10-16 11:53:16,971 2070 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-16 11:53:17,577 2676 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-10-16 11:53:17,578 2677 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-10-16 11:53:17,579 2678 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-10-16 11:53:17,580 2679 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-10-16 11:53:17,588 2687 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-16 11:53:17,588 2687 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-16 11:53:17,589 2688 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-10-16 11:53:17,590 2689 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-10-16 11:53:17,592 2691 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-10-16 11:53:17,592 2691 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-10-16 11:53:17,614 2713 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-10-16 11:53:17,624 2723 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-16 11:53:18,953 4052 [main] INFO  com.cdmr.persistence.CdmrUsersDao  - User:SSAJJALAfetched from the database
+2016-10-16 11:53:18,954 4053 [main] INFO  com.cdmr.ui.ValidateUser  - User authenticated
+2016-10-16 11:53:18,954 4053 [main] INFO  com.cdmr.controller.Login  - User authenticated. Forwarding to CDMR application
+2016-10-16 11:53:18,963 4062 [main] INFO  com.cdmr.controller.InboxServletTest  - logged in user:VYU6026
+2016-10-16 11:53:18,963 4062 [main] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-10-16 11:53:18,964 4063 [main] INFO  com.cdmr.controller.InboxServlet  - User id:VYU6026
+2016-10-16 11:53:19,376 4475 [main] INFO  com.cdmr.controller.InboxServletTest  - Task ID:3
+2016-10-16 11:53:19,386 4485 [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-10-16 11:53:19,631 4730 [main] INFO  com.cdmr.controller.SearchServletTest  - Requisition:10
+2016-10-16 11:53:20,037 5136 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2350
+2016-10-16 11:53:20,038 5137 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:COAT STAND
+2016-10-16 11:53:20,038 5137 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2357
+2016-10-16 11:53:20,038 5137 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:ALARM CLOCK
+2016-10-16 11:53:20,242 5341 [main] INFO  com.cdmr.ui.SearchTest  - Search results:[com.cdmr.entity.SearchCDMR@4b672daa]
+2016-10-16 11:53:20,611 5710 [main] INFO  com.cdmr.ui.SubmitCDMR  - Requisition 24 submitted successfully
+2016-10-16 11:53:20,669 5768 [main] INFO  com.cdmr.ui.SubmitCDMR  - DSM Task: 14 created successfully
+2016-10-16 11:53:20,833 5932 [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Requisition 24 submitted successfully
+2016-10-16 12:22:54,553 0    [main] INFO  com.cdmr.controller.Login  - In doPost() method
+2016-10-16 12:22:54,557 4    [main] INFO  com.cdmr.controller.Login  - User:SSAJJALA
+2016-10-16 12:22:54,952 399  [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-10-16 12:22:54,971 418  [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-10-16 12:22:54,976 423  [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-10-16 12:22:54,982 429  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-10-16 12:22:55,035 482  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-10-16 12:22:55,037 484  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-10-16 12:22:55,251 698  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-10-16 12:22:55,533 980  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-16 12:22:55,550 997  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD]
+2016-10-16 12:22:55,554 1001 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-10-16 12:22:55,555 1002 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-10-16 12:22:55,562 1009 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-10-16 12:22:56,327 1774 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-16 12:22:57,151 2598 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-10-16 12:22:57,152 2599 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-10-16 12:22:57,153 2600 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-10-16 12:22:57,153 2600 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-10-16 12:22:57,154 2601 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-16 12:22:57,154 2601 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-16 12:22:57,154 2601 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-10-16 12:22:57,154 2601 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-10-16 12:22:57,155 2602 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-10-16 12:22:57,156 2603 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-10-16 12:22:57,172 2619 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-10-16 12:22:57,185 2632 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-10-16 12:22:58,567 4014 [main] INFO  com.cdmr.persistence.CdmrUsersDao  - User:SSAJJALAfetched from the database
+2016-10-16 12:22:58,573 4020 [main] INFO  com.cdmr.ui.ValidateUser  - User authenticated
+2016-10-16 12:22:58,573 4020 [main] INFO  com.cdmr.controller.Login  - User authenticated. Forwarding to CDMR application
+2016-10-16 12:22:58,581 4028 [main] INFO  com.cdmr.controller.InboxServletTest  - logged in user:VYU6026
+2016-10-16 12:22:58,581 4028 [main] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-10-16 12:22:58,581 4028 [main] INFO  com.cdmr.controller.InboxServlet  - User id:VYU6026
+2016-10-16 12:22:58,795 4242 [main] INFO  com.cdmr.controller.InboxServletTest  - Task ID:3
+2016-10-16 12:22:58,812 4259 [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-10-16 12:22:59,258 4705 [main] INFO  com.cdmr.controller.SearchServletTest  - Requisition:10
+2016-10-16 12:22:59,863 5310 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2350
+2016-10-16 12:22:59,866 5313 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:COAT STAND
+2016-10-16 12:22:59,866 5313 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2357
+2016-10-16 12:22:59,866 5313 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:ALARM CLOCK
+2016-10-16 12:23:00,153 5600 [main] INFO  com.cdmr.ui.SearchTest  - Search results:[com.cdmr.entity.SearchCDMR@4b672daa]
+2016-10-16 12:23:00,528 5975 [main] INFO  com.cdmr.ui.SubmitCDMR  - Requisition 25 submitted successfully
+2016-10-16 12:23:00,746 6193 [main] INFO  com.cdmr.ui.SubmitCDMR  - DSM Task: 15 created successfully
+2016-10-16 12:23:00,990 6437 [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Requisition 25 submitted successfully
+2016-10-16 12:24:22,075 0    [http-nio-8080-exec-2] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-10-16 12:24:22,100 25   [http-nio-8080-exec-2] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-10-16 12:24:22,113 38   [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-10-16 12:24:22,120 45   [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-10-16 12:24:22,214 139  [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-10-16 12:24:22,215 140  [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-10-16 12:24:22,419 344  [http-nio-8080-exec-2] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-10-16 12:24:22,749 674  [http-nio-8080-exec-2] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-10-16 12:24:22,760 685  [http-nio-8080-exec-2] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD]
+2016-10-16 12:24:22,761 686  [http-nio-8080-exec-2] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-10-16 12:24:22,762 687  [http-nio-8080-exec-2] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-10-16 12:24:22,767 692  [http-nio-8080-exec-2] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-10-16 12:24:23,411 1336 [http-nio-8080-exec-2] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-10-16 12:24:24,084 2009 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-10-16 12:24:24,085 2010 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-10-16 12:24:24,086 2011 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-10-16 12:24:24,087 2012 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-10-16 12:24:24,089 2014 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-16 12:24:24,089 2014 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-10-16 12:24:24,090 2015 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-10-16 12:24:24,090 2015 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-10-16 12:24:24,092 2017 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-10-16 12:24:24,092 2017 [http-nio-8080-exec-2] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-10-16 12:24:24,117 2042 [http-nio-8080-exec-2] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-10-16 12:24:24,133 2058 [http-nio-8080-exec-2] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
