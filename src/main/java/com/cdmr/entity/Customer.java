@@ -1,6 +1,9 @@
 package com.cdmr.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Set;
 
 /**
@@ -9,6 +12,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "CUSTOMER")
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+@XmlRootElement
 public class Customer {
 
     @Id
