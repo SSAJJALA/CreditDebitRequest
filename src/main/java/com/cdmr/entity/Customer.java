@@ -1,7 +1,7 @@
 package com.cdmr.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Set;
@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "CUSTOMER")
-@JsonInclude(JsonInclude.Include.NON_EMPTY)
+@JsonInclude(Include.NON_EMPTY)
 @XmlRootElement
 public class Customer {
 
@@ -41,10 +41,6 @@ public class Customer {
     @Column(name="PHONE")
     private String phone;
 
-    /**
-    @OneToMany(mappedBy = "cust")
-    private Set<InvoiceHeader> invoices;
-    **/
 
     /**
      * No arg constructor
