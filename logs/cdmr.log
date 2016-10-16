@@ -3273,3 +3273,6 @@ The last packet successfully received from the server was 10,722 milliseconds ag
 2016-10-16 16:54:41,494 2757 [http-nio-8080-exec-10] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
 2016-10-16 16:55:31,514 52777 [http-nio-8080-exec-8] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
 2016-10-16 16:55:45,793 67056 [http-nio-8080-exec-5] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-10-16 17:34:33,106 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer number:1000
+2016-10-16 17:34:33,120 14   [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer name:Experis
+2016-10-16 17:34:33,121 15   [main] INFO  com.cdmr.webservices.CustomerLookupConsumerTest  - Customer number: 1000

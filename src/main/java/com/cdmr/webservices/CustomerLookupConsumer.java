@@ -18,7 +18,7 @@ public class CustomerLookupConsumer {
     public Customer getCustomerApiJSON(int customerNo) throws Exception {
         Client client = ClientBuilder.newClient();
         WebTarget target =
-                client.target("http://localhost:8080//rest/customer/" + customerNo);
+                client.target("http://localhost:8080/rest/customer/" + customerNo);
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
         ObjectMapper mapper = new ObjectMapper();

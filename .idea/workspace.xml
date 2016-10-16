@@ -2,37 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest.war" afterPath="$PROJECT_DIR$/target/CreditDebitRequest.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest/WEB-INF/classes/com/cdmr/entity/Customer.class" afterPath="$PROJECT_DIR$/target/CreditDebitRequest/WEB-INF/classes/com/cdmr/entity/Customer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest/WEB-INF/classes/com/cdmr/webservices/RestApplication.class" afterPath="$PROJECT_DIR$/target/CreditDebitRequest/WEB-INF/classes/com/cdmr/webservices/RestApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cdmr/entity/Customer.class" afterPath="$PROJECT_DIR$/target/classes/com/cdmr/entity/Customer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cdmr/webservices/RestApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/cdmr/webservices/RestApplication.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.controller.InboxServletTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.controller.InboxServletTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.controller.LoginTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.controller.LoginTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.controller.SearchServletTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.controller.SearchServletTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.persistence.CdmrDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.persistence.CdmrDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.persistence.CustomerDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.persistence.CustomerDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.persistence.RequisitionDaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.persistence.RequisitionDaoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.ui.GetInboxTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.ui.GetInboxTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.ui.SearchTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.ui.SearchTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.ui.SubmitCDMRTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.ui.SubmitCDMRTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.webservices.CustomerLookupTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.webservices.CustomerLookupTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.webservices.InvoiceLookupTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cdmr.webservices.InvoiceLookupTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.controller.InboxServletTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.controller.InboxServletTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.controller.LoginTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.controller.LoginTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.controller.SearchServletTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.controller.SearchServletTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.persistence.CdmrDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.persistence.CdmrDaoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.persistence.CustomerDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.persistence.CustomerDaoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.persistence.RequisitionDaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.persistence.RequisitionDaoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.ui.GetInboxTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.ui.GetInboxTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.ui.SearchTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.ui.SearchTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.ui.SubmitCDMRTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.ui.SubmitCDMRTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.webservices.CustomerLookupTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.webservices.CustomerLookupTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.webservices.InvoiceLookupTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.cdmr.webservices.InvoiceLookupTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java" />
     </list>
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -133,11 +106,21 @@
       <file leaf-file-name="CustomerLookupConsumer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+            <state relative-caret-position="300">
+              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerLookupConsumerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -238,8 +221,8 @@
       <list>
         <option value="Jsp File" />
         <option value="CSS File" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -254,7 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/entity/CdmrUserRolesPK.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/entity/InvoiceHeaderPK.java" />
@@ -304,6 +286,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/RestApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/entity/Customer.java" />
+        <option value="$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java" />
       </list>
     </option>
@@ -614,9 +597,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.cdmr.webservices" />
       <recent name="com.cdmr.controller" />
       <recent name="com.cdmr.ui" />
-      <recent name="com.cdmr.webservices" />
       <recent name="edu.matc.persistence" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -626,7 +609,7 @@
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="TomEE Server.cdmr">
+  <component name="RunManager" selected="JUnit.CustomerLookupConsumerTest.getCustomerApiJSON">
     <configuration default="false" name="SubmitCDMRTest.saveCDMR" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -640,32 +623,6 @@
       <option name="PACKAGE_NAME" value="com.cdmr.ui" />
       <option name="MAIN_CLASS_NAME" value="com.cdmr.ui.SubmitCDMRTest" />
       <option name="METHOD_NAME" value="saveCDMR" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="SearchTest.search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.cdmr.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="cdmr" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.cdmr.ui" />
-      <option name="MAIN_CLASS_NAME" value="com.cdmr.ui.SearchTest" />
-      <option name="METHOD_NAME" value="search" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -744,6 +701,32 @@
       <option name="PACKAGE_NAME" value="com.cdmr.controller" />
       <option name="MAIN_CLASS_NAME" value="com.cdmr.controller.LoginTest" />
       <option name="METHOD_NAME" value="doPost" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CustomerLookupConsumerTest.getCustomerApiJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.cdmr.webservices.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="cdmr" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.cdmr.webservices" />
+      <option name="MAIN_CLASS_NAME" value="com.cdmr.webservices.CustomerLookupConsumerTest" />
+      <option name="METHOD_NAME" value="getCustomerApiJSON" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1176,18 +1159,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="TomEE Server.cdmr" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.SubmitCDMRTest.saveCDMR" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SearchTest.search" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SearchServletTest.doPost" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.InboxServletTest.doPost" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.LoginTest.doPost" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SearchServletTest.doPost" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.InboxServletTest.doPost" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LoginTest.doPost" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CustomerLookupConsumerTest.getCustomerApiJSON" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LoginTest.doPost" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.InboxServletTest.doPost" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SearchServletTest.doPost" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SubmitCDMRTest.saveCDMR" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SearchTest.search" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CustomerLookupConsumerTest.getCustomerApiJSON" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LoginTest.doPost" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.InboxServletTest.doPost" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SearchServletTest.doPost" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SubmitCDMRTest.saveCDMR" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -1256,13 +1239,13 @@
       <workItem from="1476534855321" duration="1781000" />
       <workItem from="1476579767985" duration="5322000" />
       <workItem from="1476634108077" duration="4189000" />
-      <workItem from="1476654252986" duration="2017000" />
+      <workItem from="1476654252986" duration="3042000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginTest_doPost - 2016.10.16 at 00h 13m 01s.xml">
-      <configuration name="LoginTest.doPost" configurationId="JUnit" />
+    <history-entry file="CustomerLookupConsumerTest_getCustomerApiJSON - 2016.10.16 at 17h 34m 33s.xml">
+      <configuration name="CustomerLookupConsumerTest.getCustomerApiJSON" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LoginTest_doPost - 2016.10.16 at 00h 20m 52s.xml">
       <configuration name="LoginTest.doPost" configurationId="JUnit" />
@@ -1293,7 +1276,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427739000" />
+    <option name="totallyTimeSpent" value="428764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1176" extended-state="6" />
@@ -1309,7 +1292,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42415985" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42415985" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5313352" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1367,25 +1350,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Task/QueueTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/750b3ad4/13347100-7a19-4686-be4e-b581d92c7501/APPSPROD.CDMR_COMMENTS">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/750b3ad4/13347100-7a19-4686-be4e-b581d92c7501/APPSPROD.CDMR_ADJUSTMENTS">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1735,6 +1699,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1789,10 +1754,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/webservices/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+        <state relative-caret-position="300">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
