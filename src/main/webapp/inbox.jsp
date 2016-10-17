@@ -50,8 +50,8 @@
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.application}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">Approval Required</td>
-                    <c:set var="info" value="${requestScope['Req ID:'.concat({inboxResults.requisitionID}).concat('| Customer:').concat({inboxResults.customerName}).concat('| Adj Amnt:').concat({inboxResults.adjAmnt})]}" />
-                    <td style="text-align: center;" rowspan="1" colspan="1">${info}</td>
+                    <c:set var="info" value="Req ID:${inboxResults.requisitionID}|Customer:${inboxResults.customerName}|Adj Amnt:${{inboxResults.adjAmnt}}" />
+                    <td style="text-align: center;" rowspan="1" colspan="1">%= info %</td>
                 </tr>
             </c:forEach>
         </table>
