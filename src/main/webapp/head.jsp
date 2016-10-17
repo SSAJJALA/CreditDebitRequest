@@ -11,9 +11,9 @@
         <title>CDMR > Home</title>
         <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script><link rel="stylesheet" href="../css/ui.daterangepicker.css" type="text/css" />
         <link href="/css/style.css" rel="stylesheet" type="text/css" />
-        <link href="/css/jquery.css" rel="stylesheet" type="text/css" />
+        <!-- <link href="/css/jquery.css" rel="stylesheet" type="text/css" />
         <link type='text/css' href='../css/basic.css' rel='stylesheet' media='screen' />
-        <link href="../css/expandCollapse.css" rel="stylesheet" type="text/css" />
+        <link href="../css/expandCollapse.css" rel="stylesheet" type="text/css" /> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
