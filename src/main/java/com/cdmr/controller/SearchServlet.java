@@ -35,8 +35,11 @@ public class SearchServlet extends HttpServlet {
         Search searchObj = null;
         response.setContentType("text/html");
         String searchFilter = request.getParameter("searchoptions");
+        logger.info("searchFilter: " + searchFilter);
         String operand = request.getParameter("operands");
+        logger.info("operand: " + operand);
         String term = request.getParameter("searchTerm");
+        logger.info("term: " + term);
         searchObj = new Search(searchFilter, operand, term);
         List<SearchCDMR> results = searchObj.search();
         request.setAttribute("results", results);

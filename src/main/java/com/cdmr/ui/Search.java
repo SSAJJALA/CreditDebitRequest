@@ -69,6 +69,7 @@ public class Search {
 
         List<Cdmr> searchResults = cdmrs.getCdmrs(column, this.getOperand(), this.getSearchValue());
 
+
         for (Cdmr cdmr:searchResults) {
             SearchCDMR tempCDMR = new SearchCDMR();
             tempCDMR.setRequisitionID(cdmr.getRequisitionID());

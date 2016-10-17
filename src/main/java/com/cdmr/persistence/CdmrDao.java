@@ -105,11 +105,16 @@ public class CdmrDao {
             searchValue = value;
         }
 
+        log.info("searchOption: " + searchOption);
+        log.info("operand: " + operand);
+        log.info("searchValue: " + searchValue);
+
         if (!searchOption.equals("all")) {
             c = this.addRestrictions(c, searchOption, operand, searchValue);
         }
 
         List<Cdmr> cdmrs = c.list();
+        log.info("cdmrs: " + cdmrs.toString());
         return cdmrs;
     }
 
