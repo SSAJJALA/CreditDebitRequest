@@ -79,6 +79,7 @@ public class GetInbox {
             tempInbox.setUserID(row[6].toString());
             tempInbox.setCustomerName(row[7].toString());
             tempInbox.setAdjAmnt(Double.parseDouble(row[8].toString()));
+            tempInbox.setApplication("CDMR");
 
             userInbox.add(tempInbox);
 

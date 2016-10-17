@@ -8,6 +8,8 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 <%@include file="head.jsp"%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -50,8 +52,17 @@
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.application}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">Approval Required</td>
-                    <c:set var="info" value="Req ID:${inboxResults.requisitionID}|Customer:${inboxResults.customerName}|Adj Amnt:${{inboxResults.adjAmnt}}" />
-                    <td style="text-align: center;" rowspan="1" colspan="1">%= info %</td>
+                    <%-- <c:set var="info" value="Req ID:${inboxResults.requisitionID}|Customer:${inboxResults.customerName}|Adj Amnt:${{inboxResults.adjAmnt}}" />
+                    <c:set var="info" value="${fn:join('Req ID:', '${inboxResults.requisitionID}')}" /> --%>
+                    <c:set var = "ReqID" value="${inboxResults.requisitionID}" />
+                    <c:set var = "CustName" value="${inboxResults.customerName}" />
+                    <c:set var = "AdjAmnt" value="${inboxResults.adjAmnt}" />
+                    <%
+                        String info = "ReqID:" + request.getParameter("ReqID") + "|Customer:" + request.getParameter("CustName") + "|Adj Amnt:" + request.getParameter("AdjAmnt");
+                    %>
+
+
+                    <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${info}"/></td>
                 </tr>
             </c:forEach>
         </table>

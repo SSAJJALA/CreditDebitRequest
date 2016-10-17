@@ -21,7 +21,7 @@
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-<form action="/submitCDMRServlet" >
+<form action="/createCDMRServlet" >
 <div style="width:1300px;height:270px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>
@@ -31,7 +31,7 @@
             <td width="40%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                     <tr><td><u><span style="font-size:15px;font-weight:bold;">Customer</span></u></td></tr>
-                    <form action="/customerLookup" >
+                    <form action="/createCDMRServlet" >
                     <tr id="tr_custDet">
                         <td width="30%">
                             <input type="text" name="customer">
@@ -52,7 +52,7 @@
             <td width="60%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                     <tr><td><u><span style="font-size:15px;font-weight:bold;">Invoice</span></u></td></tr>
-                    <form action="/invoiceLookup" >
+                    <form action="/createCDMRServlet" >
                         <tr id="tr_invoice">
                             <td width="30%">
                                 <input type="text" name="Invoice">

@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@include file="head.jsp"%>
-<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -30,36 +30,36 @@
     <tr style="height: 7px;"></tr>
 </table>
 
-<div class="container-fluid" style="height: 800px; width: 100%; border:1px solid black;">
+<div class="container-fluid" style="height: 600px; width: 100%; border:1px solid black;">
 
     <br> <br>
-
-    <table id = "datatable" style="display:none" class="t-table" width="90%" border="1" align = "center">
-        <thead>
-        <tr>
-            <th style="text-align: center;" rowspan="1" colspan="1">Task ID</th>
-            <th style="text-align: center;" rowspan="1" colspan="1">Updated Date</th>
-            <th style="text-align: center;" rowspan="1" colspan="1">Type</th>
-            <th style="text-align: center;" rowspan="1" colspan="1">Action Required</th>
-            <th style="text-align: center;" rowspan="1" colspan="1">Information</th>
-        </tr>
-        </thead>
-        <c:forEach items="${inbox}" var="inboxResults">
-            <tr >
-                <td>${inboxResults.taskID}</td>
-                <td>${inboxResults.updatedDate}</td>
-                <td>${inboxResults.application}</td>
-                <td>Approval Required</td>
-                <c:set var="info" value="${requestScope['Req ID:'.concat({inboxResults.requisitionID}).concat('| Customer:').concat({inboxResults.customerName}).concat('| Adj Amnt:').concat({inboxResults.adjAmnt})]}" />
-                <td>${info}</td>
-            </tr>
-        </c:forEach>
-    </table>
+    <c:if test="${not empty inbox}">
+        <table id = "datatable" width="90%" border="1" align = "center">
+            <thead>
+                <tr>
+                    <th style="text-align: center;" rowspan="1" colspan="1">Task ID</th>
+                    <th style="text-align: center;" rowspan="1" colspan="1">Updated Date</th>
+                    <th style="text-align: center;" rowspan="1" colspan="1">Type</th>
+                    <th style="text-align: center;" rowspan="1" colspan="1">Action Required</th>
+                    <th style="text-align: center;" rowspan="1" colspan="1">Information</th>
+                </tr>
+            </thead>
+            <c:forEach items="${inbox}" var="inboxResults">
+                <tr >
+                    <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.taskID}</td>
+                    <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
+                    <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.application}</td>
+                    <td style="text-align: center;" rowspan="1" colspan="1">Approval Required</td>
+                    <c:set var="info" value="Req ID:${inboxResults.requisitionID}|Customer:${inboxResults.customerName}|Adj Amnt:${{inboxResults.adjAmnt}}" />
+                    <td style="text-align: center;" rowspan="1" colspan="1">%= info %</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </c:if>
 
 </div>
     <br>
+    <%@include file="footer.jsp"%>
 </div>
-<br>
-<%@include file="footer.jsp"%>
 </body>
 </html>
