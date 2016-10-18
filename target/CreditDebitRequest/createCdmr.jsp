@@ -32,14 +32,14 @@
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                     <tr><td><u><span style="font-size:15px;font-weight:bold;">Customer</span></u></td></tr>
                     <form action="/createCDMRServlet" >
-                    <tr id="tr_custDet">
+                        <tr id="tr_custDet">
                         <td width="30%">
                             <input type="text" name="customer">
                         </td>
                         <td width="80%">&nbsp;&nbsp;
                             <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="button">
                         </td>
-                    </tr>
+                        </tr>
                     </form>
                     <c:if test="${customerResults.custNum !=null && customerResults.custNum !=''}">
                         <tr><td><c:out value="${customerResults.custName}"/></td></tr>
