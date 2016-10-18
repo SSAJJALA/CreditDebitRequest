@@ -62,7 +62,7 @@
                     %>
 
 
-                    <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${info}"/></td>
+                    <td style="text-align: center;" rowspan="1" colspan="1"><%= info %>></td>
                 </tr>
             </c:forEach>
         </table>

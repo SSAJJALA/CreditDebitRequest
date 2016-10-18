@@ -163,6 +163,16 @@
         <url-pattern>/toCreate</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>createCDMRServlet</servlet-name>
+        <servlet-class>com.cdmr.controller.CreateCDMRServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>createCDMRServlet</servlet-name>
+        <url-pattern>/createCDMRServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>
