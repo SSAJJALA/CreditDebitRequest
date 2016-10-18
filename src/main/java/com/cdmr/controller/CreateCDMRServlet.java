@@ -29,11 +29,19 @@ import java.util.List;
 public class CreateCDMRServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        logger.info("inside create cdmr servlet @ post");
         this.doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        logger.info("inside create cdmr servlet @ get");
+        logger.info("btn_retCust:" + request.getParameter("btn_retCust"));
+        logger.info("btn_retInv:" + request.getParameter("btn_retInv"));
+        logger.info("btn_calculate:" + request.getParameter("btn_calculate"));
+        logger.info("btn_submit:" + request.getParameter("btn_submit"));
+        logger.info("btn_cancel:" + request.getParameter("btn_cancel"));
         if (request.getParameter("btn_retCust") != null) {
+            logger.info("gettting customer details.");
 
             Customer customer = null;
             CustomerLookupConsumer customerWebService = new CustomerLookupConsumer();
@@ -44,8 +52,10 @@ public class CreateCDMRServlet extends HttpServlet {
             }
 
             request.setAttribute("customerResults", customer);
+            logger.info("customr details:" + customer.toString());
 
         } else if (request.getParameter("btn_retInv") != null) {
+            logger.info("gettting invoice details.");
 
             InvoiceLookup invoiceLookup = new InvoiceLookup();
             InvoiceHeader header = null;
@@ -58,6 +68,8 @@ public class CreateCDMRServlet extends HttpServlet {
 
             request.setAttribute("invoiceResults", header);
             request.setAttribute("search", details);
+            logger.info("invoice header:" + header.toString());
+            logger.info("invoice details:" + details.toString());
 
         } else if (request.getParameter("btn_calculate") != null) {
 
