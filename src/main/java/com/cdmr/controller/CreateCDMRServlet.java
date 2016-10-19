@@ -46,7 +46,7 @@ public class CreateCDMRServlet extends HttpServlet {
             Customer customerDtls = null;
             CustomerLookupConsumer customerWebService = new CustomerLookupConsumer();
             try {
-                customerDtls = customerWebService.getCustomerApiJSON(Integer.getInteger(request.getParameter("customer")));
+                customerDtls = customerWebService.getCustomerApiJSON(Integer.parseInt(request.getParameter("customer")));
             } catch (Exception e) {
                 e.printStackTrace();
             }

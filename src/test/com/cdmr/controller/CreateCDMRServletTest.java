@@ -28,7 +28,7 @@ public class CreateCDMRServletTest {
     @Test
     public void doGet() throws Exception {
 
-        /**
+
         request.addParameter("btn_retCust", "Search");
         request.addParameter("customer", "1000");
 
@@ -36,7 +36,7 @@ public class CreateCDMRServletTest {
 
         Customer cust = (Customer) request.getAttribute("customerResults");
         assertEquals("Customer ID doesn't match", 1000, cust.getCustNum());
-         **/
+
 
     }
 
