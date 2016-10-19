@@ -44,8 +44,8 @@
                     </form>
                     <c:if test="${customerResults.custNum !=null && customerResults.custNum !=''}">
                         <tr><td><c:out value="${customerResults.custName}"/></td></tr>
-                        <tr><td><c:out value="${customerResults.custAddr1}"/></td></tr>
-                        <tr><td><c:out value="${customerResults.custAddr2}"/></td></tr>
+                        <tr><td><c:out value="${customerResults.add1}"/></td></tr>
+                        <tr><td><c:out value="${customerResults.add2}"/></td></tr>
                         <tr><td><c:out value="${customerResults.city}"/> &nbsp;&nbsp;&nbsp;<c:out value="${customerResults.state}"/> &nbsp;&nbsp;&nbsp; <c:out value="${customerResults.zip}"/></td></tr>
                     </c:if>
                  </table>

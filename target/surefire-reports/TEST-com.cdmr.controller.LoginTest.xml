@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.cdmr.controller.LoginTest" time="1.714" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.cdmr.controller.LoginTest" time="3.226" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2016.2.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -60,5 +60,5 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.cdmr.controller.LoginTest" name="doPost" time="1.631"/>
+  <testcase classname="com.cdmr.controller.LoginTest" name="doPost" time="3.114"/>
 </testsuite>
