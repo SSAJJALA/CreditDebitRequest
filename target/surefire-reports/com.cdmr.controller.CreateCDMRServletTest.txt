@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.cdmr.controller.CreateCDMRServletTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.008 sec <<< FAILURE!
-doGet(com.cdmr.controller.CreateCDMRServletTest)  Time elapsed: 0.004 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.025 sec <<< FAILURE!
+doGet(com.cdmr.controller.CreateCDMRServletTest)  Time elapsed: 0.025 sec  <<< ERROR!
 java.lang.NullPointerException
 	at com.cdmr.controller.CreateCDMRServlet.doGet(CreateCDMRServlet.java:55)
 	at com.cdmr.controller.CreateCDMRServletTest.doGet(CreateCDMRServletTest.java:34)
