@@ -37,7 +37,8 @@
                             <input type="text" name="customer">
                         </td>
                         <td width="80%">&nbsp;&nbsp;
-                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="button">
+                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit">
+
                         </td>
                         </tr>
                     </form>
@@ -58,7 +59,7 @@
                                 <input type="text" name="Invoice">
                             </td>
                             <td width="80%">&nbsp;&nbsp;
-                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="button">
+                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit">
                             </td>
                         </tr>
                     </form>
@@ -169,11 +170,11 @@
 </div>
     <br><br>
     <span style="padding-left:1370px"></span>
-    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="button">
+    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit">
     <span style="padding-left:20px"></span>
-    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="button">
+    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit">
     <span style="padding-left:20px"></span>
-    <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="button">
+    <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
 
 </form>
 </div>

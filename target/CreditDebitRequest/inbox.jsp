@@ -58,7 +58,7 @@
                     <c:set var = "CustName" value="${inboxResults.customerName}" />
                     <c:set var = "AdjAmnt" value="${inboxResults.adjAmnt}" />
                     <%
-                        String info = "ReqID:" + (String)pageContext.getAttribute("ReqID") + "|Customer:" + (String)pageContext.getAttribute("CustName") + "|Adj Amnt:" + (String)pageContext.getAttribute("AdjAmnt");
+                        String info = "ReqID:" + pageContext.getAttribute("ReqID").toString() + "|Customer:" + pageContext.getAttribute("CustName") + "|Adj Amnt:" + pageContext.getAttribute("AdjAmnt").toString();
                     %>
 
 

@@ -43,16 +43,16 @@ public class CreateCDMRServlet extends HttpServlet {
         if (request.getParameter("btn_retCust") != null) {
             logger.info("gettting customer details.");
 
-            Customer customer = null;
+            Customer customerDtls = null;
             CustomerLookupConsumer customerWebService = new CustomerLookupConsumer();
             try {
-                customer = customerWebService.getCustomerApiJSON(Integer.getInteger(request.getParameter("customer")));
+                customerDtls = customerWebService.getCustomerApiJSON(Integer.getInteger(request.getParameter("customer")));
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-            request.setAttribute("customerResults", customer);
-            logger.info("customr details:" + customer.toString());
+            request.setAttribute("customerResults", customerDtls);
+            logger.info("customr number:" + customerDtls.getCustNum());
 
         } else if (request.getParameter("btn_retInv") != null) {
             logger.info("gettting invoice details.");

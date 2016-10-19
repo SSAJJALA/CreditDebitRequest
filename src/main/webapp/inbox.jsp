@@ -58,11 +58,11 @@
                     <c:set var = "CustName" value="${inboxResults.customerName}" />
                     <c:set var = "AdjAmnt" value="${inboxResults.adjAmnt}" />
                     <%
-                        String info = "ReqID:" + pageContext.getAttribute("ReqID").toString() + "|Customer:" + pageContext.getAttribute("CustName") + "|Adj Amnt:" + pageContext.getAttribute("AdjAmnt").toString();
+                        String info = "ReqID:" + pageContext.getAttribute("ReqID").toString() + "|Customer:" + pageContext.getAttribute("CustName") + "|Adj Amnt:$ " + pageContext.getAttribute("AdjAmnt").toString();
                     %>
 
 
-                    <td style="text-align: center;" rowspan="1" colspan="1"><%= info %>></td>
+                    <td style="text-align: center;" rowspan="1" colspan="1"><%= info %> </td>
                 </tr>
             </c:forEach>
         </table>
