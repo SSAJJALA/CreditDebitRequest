@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +41,8 @@ public class CreateCDMRServlet extends HttpServlet {
         logger.info("btn_calculate:" + request.getParameter("btn_calculate"));
         logger.info("btn_submit:" + request.getParameter("btn_submit"));
         logger.info("btn_cancel:" + request.getParameter("btn_cancel"));
+
+        HttpSession session = request.getSession();
         if (request.getParameter("btn_retCust") != null) {
             logger.info("gettting customer details.");
 
@@ -51,7 +54,8 @@ public class CreateCDMRServlet extends HttpServlet {
                 e.printStackTrace();
             }
 
-            request.setAttribute("customerResults", customerDtls);
+            //request.setAttribute("customerResults", customerDtls);
+            session.setAttribute("customerResults", customerDtls);
             logger.info("customr number:" + customerDtls.getCustNum());
 
         } else if (request.getParameter("btn_retInv") != null) {
@@ -66,8 +70,10 @@ public class CreateCDMRServlet extends HttpServlet {
             header = invoiceLookup.getInvoiceHeader();
             details = invoiceLookup.getInvoiceDetails();
 
-            request.setAttribute("invoiceResults", header);
-            request.setAttribute("search", details);
+            //request.setAttribute("invoiceResults", header);
+            //request.setAttribute("invoiceDetails", details);
+            session.setAttribute("invoiceResults", header);
+            session.setAttribute("invoiceDetails", details);
             logger.info("invoice header:" + header.toString());
             logger.info("invoice details:" + details.toString());
 
