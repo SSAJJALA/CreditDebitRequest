@@ -21,11 +21,11 @@ public class CustomerLookupConsumerTest {
 
     @Test
     public void getCustomerApiJSON() throws Exception {
-        /**
+
         Customer cust = customerLookup.getCustomerApiJSON(1000);
         log.info("Customer number: " + cust.getCustNum());
         assertEquals("Customer doesn't match", 1000, cust.getCustNum());
-         **/
+
 
     }
 
