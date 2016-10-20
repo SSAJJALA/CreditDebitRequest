@@ -73,22 +73,26 @@
                             </td>
                         </tr>
 
-                    <c:if test="${invoiceResults.invNum !=null && invoiceResults.invNum !=''}">
+                    <c:if test="${invoiceResults.invCustomer.invoiceNum !=null && invoiceResults.invCustomer.invoiceNum !=''}">
                         <tr>
                             <td>Invoice Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.invDate}"/></td>
-                            <td>Gross:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.gross}"/></td>
+                            <td>Gross:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.grossAmnt}"/></td>
                         </tr>
                         <tr>
                             <td>Line count:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.lineCount}"/></td>
                             <td>Allowance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.allowance}"/></td>
                         </tr>
                         <tr>
-                            <td>Sales Rep:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.invDate}"/></td>
+                            <td></td>
                             <td>Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.charges}"/></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.net}"/></td>
+                            <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.tax}"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.netAmnt}"/></td>
                         </tr>
                     </c:if>
                 </table>
@@ -104,7 +108,8 @@
 
 <div style="width:1300px;height:230px;border:1px solid #000;margin:0 auto;">
 
-            <table id = "datatable1" style="display:none" class="t-table" width="90%" border="1" align = "center">
+        <c:if test="${not empty invoiceDetails}">
+            <table id = "datatable1" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
                         <th style="text-align: center;" rowspan="1" colspan="1">Add/Remove</th>
@@ -121,26 +126,27 @@
                 <c:forEach items="${invoiceDetails}" var="invDtl">
                     <tr style="height: 7px;">
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1"><input type="checkbox" name="selInv" value ="selInv"></td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.item}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.invItem.itemNum}</td>
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.itemDesc}</td>
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.qty}</td>
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.unitPrice}</td>
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.allowance}</td>
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.charges}</td>
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.tax}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.invTotal}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.netAmnt}</td>
 
                     </tr>
                 </c:forEach>
 
             </table>
+        </c:if>
 </div>
 
     <h2 style="text-indent: 18em;"><b>Adjustments</b></h2>
 
-<div style="width:1300px;height:100px;border:1px solid #000;margin:0 auto;">
+    <div style="width:1300px;height:100px;border:1px solid #000;margin:0 auto;">
 
-             <table id = "datatable2" style="display:none" class="t-table" width="90%" border="1" align = "center">
+             <table id = "datatable2" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
                         <th style="text-align: center;" rowspan="1" colspan="1">Delete</th>
