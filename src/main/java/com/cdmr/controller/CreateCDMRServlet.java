@@ -66,7 +66,11 @@ public class CreateCDMRServlet extends HttpServlet {
             List<InvoiceDetail> details = new ArrayList<InvoiceDetail>();
 
             invoiceLookup.setInvNum(Integer.parseInt(request.getParameter("Invoice")));
-            invoiceLookup.setCustNum(Integer.parseInt(request.getParameter("customer")));
+
+            Customer cust1 = (Customer) session.getAttribute("customerResults");
+            logger.info("customer details inside cdmr create servlet:" + cust1.getCustNum());
+            //invoiceLookup.setCustNum(Integer.parseInt(request.getParameter("customer")));
+            invoiceLookup.setCustNum(cust1.getCustNum());
             header = invoiceLookup.getInvoiceHeader();
             details = invoiceLookup.getInvoiceDetails();
 

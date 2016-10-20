@@ -1,4 +1,6 @@
-<%--
+<%@ page import="com.cdmr.webservices.Customer" %>
+<%@ page import="com.cdmr.entity.InvoiceHeader" %>
+<%@ page import="com.cdmr.entity.InvoiceDetail" %><%--
   Created by IntelliJ IDEA.
   User: Siva Sajjala
   Date: 9/21/16
@@ -10,7 +12,15 @@
 <%@include file="head.jsp"%>
 <link href="/css/style.css" rel="stylesheet" type="text/css" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<% Customer custDetails;
+    InvoiceHeader invHeader;
+    InvoiceDetail invDetails;
+%>
+<%
+    custDetails = (Customer) request.getAttribute("customerResults");
+    invHeader = (InvoiceHeader) request.getAttribute("invoiceResults");
+    invDetails = (InvoiceDetail) request.getAttribute("invoiceDetails");
+%>
 <html>
 <head>
     <title>Create CDMR</title>
@@ -31,7 +41,7 @@
             <td width="40%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                     <tr><td><u><span style="font-size:15px;font-weight:bold;">Customer</span></u></td></tr>
-                    <form action="/createCDMRServlet" >
+
                         <tr id="tr_custDet">
                         <td width="30%">
                             <input type="text" name="customer">
@@ -41,7 +51,7 @@
 
                         </td>
                         </tr>
-                    </form>
+
                     <c:if test="${customerResults.custNum !=null && customerResults.custNum !=''}">
                         <tr><td><c:out value="${customerResults.custName}"/></td></tr>
                         <tr><td><c:out value="${customerResults.add1}"/></td></tr>
@@ -53,7 +63,7 @@
             <td width="60%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                     <tr><td><u><span style="font-size:15px;font-weight:bold;">Invoice</span></u></td></tr>
-                    <form action="/createCDMRServlet" >
+
                         <tr id="tr_invoice">
                             <td width="30%">
                                 <input type="text" name="Invoice">
@@ -62,7 +72,7 @@
                                 <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit">
                             </td>
                         </tr>
-                    </form>
+
                     <c:if test="${invoiceResults.invNum !=null && invoiceResults.invNum !=''}">
                         <tr>
                             <td>Invoice Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.invDate}"/></td>
@@ -108,17 +118,17 @@
                         <th style="text-align: center;" rowspan="1" colspan="1">Invoice Total</th>
                     </tr>
                 </thead>
-                <c:forEach items="${search}" var="searchResults">
+                <c:forEach items="${invoiceDetails}" var="invDtl">
                     <tr style="height: 7px;">
                         <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1"><input type="checkbox" name="selInv" value ="selInv"></td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.item}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.itemDesc}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.qty}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.unitPrice}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.allowance}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.charges}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.tax}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${searchResults.invTotal}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.item}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.itemDesc}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.qty}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.unitPrice}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.allowance}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.charges}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.tax}</td>
+                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.invTotal}</td>
 
                     </tr>
                 </c:forEach>
@@ -178,5 +188,6 @@
 
 </form>
 </div>
+<%@include file="footer.jsp"%>
 </body>
 </html>
