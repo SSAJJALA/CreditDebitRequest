@@ -215,7 +215,7 @@
                 var tds_chrg = $($row).find("td:nth-child(7)").text();
                 var tds_tax = $($row).find("td:nth-child(8)").text();
                 var tds_invtotal = $($row).find("td:nth-child(9)").text();
-
+                console.log("all variables are filled");
                 $('#datatable2 tbody').append('<tr>'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' +
@@ -231,6 +231,7 @@
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
                         + '</tr>');
+                console.log("table2 appended");
             }
         })
 
