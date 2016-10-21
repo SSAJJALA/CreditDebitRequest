@@ -206,24 +206,24 @@
                 console.log("inside the checked condition");
                 var $row = $(this).closest('tr').html();
                 console.log("$row" + $row);
-                var $tds_item = $row.find("td:nth-child(2)");
-                console.log("$row" + $tds_item);
-                var $tds_itemDesc = row.find("td:nth-child(3)");
-                var $tds_qty = row.find("td:nth-child(4)");
-                var $tds_uprice = row.find("td:nth-child(5)");
-                var $tds_all = row.find("td:nth-child(6)");
-                var $tds_chrg = row.find("td:nth-child(7)");
-                var $tds_tax = row.find("td:nth-child(8)");
-                var $tds_invtotal = row.find("td:nth-child(9)");
-
+                var tds_item = $($row).find("td:nth-child(2)").text();
+                console.log("tds_item" + tds_item);
+                var tds_itemDesc = $($row).find("td:nth-child(3)").text();
+                var tds_qty = $($row).find("td:nth-child(4)").text();
+                var tds_uprice = $($row).find("td:nth-child(5)").text();
+                var tds_all = $($row).find("td:nth-child(6)").text();
+                var tds_chrg = $($row).find("td:nth-child(7)").text();
+                var tds_tax = $($row).find("td:nth-child(8)").text();
+                var tds_invtotal = $($row).find("td:nth-child(9)").text();
+                console.log("all variables are filled");
                 $('#datatable2 tbody').append('<tr>'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1">' + $tds_item.text() + '</td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1">' + $tds_itemDesc.text() + '</td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1">' + $tds_qty.text() + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_itemDesc + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_qty + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1">' + $tds_uprice.text() + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_uprice + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
@@ -231,6 +231,7 @@
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
                         + '</tr>');
+                console.log("table2 appended");
             }
         })
 

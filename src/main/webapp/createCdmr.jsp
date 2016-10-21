@@ -206,9 +206,10 @@
                 console.log("inside the checked condition");
                 var $row = $(this).closest('tr').html();
                 console.log("$row" + $row);
-                var tds_item = $($row).find("td:nth-child(2)").text();
+                var tds_item = $($row).find("td:nth-child(2)").value();
                 console.log("tds_item" + tds_item);
-                var tds_itemDesc = $($row).find("td:nth-child(3)").text();
+                var tds_itemDesc = $($row).find("td:nth-child(3)").valueOf();
+                console.log("tds_item" + tds_itemDesc);
                 var tds_qty = $($row).find("td:nth-child(4)").text();
                 var tds_uprice = $($row).find("td:nth-child(5)").text();
                 var tds_all = $($row).find("td:nth-child(6)").text();
