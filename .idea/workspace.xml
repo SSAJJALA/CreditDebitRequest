@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest.war" afterPath="$PROJECT_DIR$/target/CreditDebitRequest.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest/createCdmr.jsp" afterPath="$PROJECT_DIR$/target/CreditDebitRequest/createCdmr.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest/head.jsp" afterPath="$PROJECT_DIR$/target/CreditDebitRequest/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,22 +81,22 @@
       <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="201" column="50" selection-start-line="201" selection-start-column="50" selection-end-line="201" selection-end-column="50" />
+            <state relative-caret-position="179">
+              <caret line="225" column="95" selection-start-line="225" selection-start-column="95" selection-end-line="225" selection-end-column="95" />
               <folding>
-                <marker date="1477081434177" expanded="true" signature="11285:11304" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="11434:11453" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="11548:11567" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="11666:11685" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="11779:11798" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="11888:11907" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="11997:12016" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="12113:12132" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="12203:12222" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="12293:12312" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="12383:12402" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="12492:12511" ph="..." />
-                <marker date="1477081434177" expanded="true" signature="12582:12601" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="11660:11679" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="11809:11828" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="11915:11934" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12025:12044" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12130:12149" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12239:12258" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12348:12367" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12456:12475" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12546:12565" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12636:12655" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12726:12745" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12835:12854" ph="..." />
+                <marker date="1477083163808" expanded="true" signature="12925:12944" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1283,7 +1279,7 @@
       <workItem from="1476878617696" duration="7888000" />
       <workItem from="1476915226217" duration="4748000" />
       <workItem from="1476980419502" duration="13892000" />
-      <workItem from="1477008545971" duration="24242000" />
+      <workItem from="1477008545971" duration="25809000" />
     </task>
     <servers />
   </component>
@@ -1320,7 +1316,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="510602000" />
+    <option name="totallyTimeSpent" value="512169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1830,22 +1826,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="201" column="50" selection-start-line="201" selection-start-column="50" selection-end-line="201" selection-end-column="50" />
+        <state relative-caret-position="179">
+          <caret line="225" column="95" selection-start-line="225" selection-start-column="95" selection-end-line="225" selection-end-column="95" />
           <folding>
-            <marker date="1477081434177" expanded="true" signature="11285:11304" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="11434:11453" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="11548:11567" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="11666:11685" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="11779:11798" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="11888:11907" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="11997:12016" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="12113:12132" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="12203:12222" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="12293:12312" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="12383:12402" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="12492:12511" ph="..." />
-            <marker date="1477081434177" expanded="true" signature="12582:12601" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="11660:11679" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="11809:11828" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="11915:11934" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12025:12044" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12130:12149" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12239:12258" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12348:12367" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12456:12475" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12546:12565" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12636:12655" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12726:12745" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12835:12854" ph="..." />
+            <marker date="1477083163808" expanded="true" signature="12925:12944" ph="..." />
           </folding>
         </state>
       </provider>
