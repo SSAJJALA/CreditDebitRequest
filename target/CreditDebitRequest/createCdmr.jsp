@@ -32,7 +32,7 @@
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
 <form action="/createCDMRServlet" >
-<div style="width:1300px;height:150px;border:1px solid #000;margin:0 auto;">
+<div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>
 
@@ -44,7 +44,14 @@
 
                         <tr id="tr_custDet">
                         <td width="30%">
-                            <input type="text" name="customer">
+                            <c:choose>
+                                <c:when test="${customerResults.custNum !=null && customerResults.custNum !=''}">
+                                   <input type="text" name="customer" value="<c:out value="${customerResults.custNum}"/>">
+                                </c:when>
+                                <c:otherwise>
+                                    <input type="text" name="customer">
+                                </c:otherwise>
+                            </c:choose>
                         </td>
                         <td width="80%">&nbsp;&nbsp;
                             <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit">
@@ -66,29 +73,41 @@
 
                         <tr id="tr_invoice">
                             <td width="30%">
-                                <input type="text" name="Invoice">
+                                <c:choose>
+                                    <c:when test="${invoiceResults.invCustomer.invoiceNum !=null && invoiceResults.invCustomer.invoiceNum !=''}">
+                                        <input type="text" name="Invoice" value="<c:out value="${invoiceResults.invCustomer.invoiceNum}"/>">
+                                    </c:when>
+                                    <c:otherwise>
+                                        <input type="text" name="Invoice">
+                                    </c:otherwise>
+                                </c:choose>
                             </td>
+
                             <td width="80%">&nbsp;&nbsp;
                                 <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit">
                             </td>
                         </tr>
 
-                    <c:if test="${invoiceResults.invNum !=null && invoiceResults.invNum !=''}">
+                    <c:if test="${invoiceResults.invCustomer.invoiceNum !=null && invoiceResults.invCustomer.invoiceNum !=''}">
                         <tr>
                             <td>Invoice Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.invDate}"/></td>
-                            <td>Gross:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.gross}"/></td>
+                            <td>Gross:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.grossAmnt}"/></td>
                         </tr>
                         <tr>
-                            <td>Line count:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.lineCount}"/></td>
+                            <td></td>
                             <td>Allowance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.allowance}"/></td>
                         </tr>
                         <tr>
-                            <td>Sales Rep:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.invDate}"/></td>
+                            <td></td>
                             <td>Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.charges}"/></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.net}"/></td>
+                            <td>Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.tax}"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.netAmnt}"/></td>
                         </tr>
                     </c:if>
                 </table>
@@ -103,8 +122,9 @@
     <h2 style="text-indent: 18em;"><b>Original Invoice Line Items</b></h2>
 
 <div style="width:1300px;height:230px;border:1px solid #000;margin:0 auto;">
-
-            <table id = "datatable1" style="display:none" class="t-table" width="90%" border="1" align = "center">
+        <br>
+        <c:if test="${not empty invoiceDetails}">
+            <table id = "datatable1" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
                         <th style="text-align: center;" rowspan="1" colspan="1">Add/Remove</th>
@@ -116,31 +136,33 @@
                         <th style="text-align: center;" rowspan="1" colspan="1">Charges</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Tax</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Invoice Total</th>
+
                     </tr>
                 </thead>
                 <c:forEach items="${invoiceDetails}" var="invDtl">
                     <tr style="height: 7px;">
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1"><input type="checkbox" name="selInv" value ="selInv"></td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.item}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.itemDesc}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.qty}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.unitPrice}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.allowance}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.charges}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.tax}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${invDtl.invTotal}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="selInv" value ="selInv" class="selInv"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.invItem.itemNum}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.itemDesc}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.qty}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.unitPrice}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.allowance}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.charges}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.tax}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.netAmnt}</td>
 
                     </tr>
                 </c:forEach>
 
             </table>
+        </c:if>
 </div>
 
     <h2 style="text-indent: 18em;"><b>Adjustments</b></h2>
 
-<div style="width:1300px;height:100px;border:1px solid #000;margin:0 auto;">
+    <div style="width:1300px;height:100px;border:1px solid #000;margin:0 auto;">
 
-             <table id = "datatable2" style="display:none" class="t-table" width="90%" border="1" align = "center">
+             <table id = "datatable2" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
                         <th style="text-align: center;" rowspan="1" colspan="1">Delete</th>
@@ -159,22 +181,9 @@
                         <th style="text-align: center;" rowspan="1" colspan="1">Comments</th>
                     </tr>
                 </thead>
-                <tr style="height: 7px;">
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${selectInv.item}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${selectInv.itemDesc}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${selectInv.orgQty}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1"><input type="text"></td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1"><input type="text"></td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${selectInv.orgPrice}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${selectInv.allowanceAdj}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${selectInv.chargeAdj}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${selectInv.taxAdj}</td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1"><input type="text"></td>
-                        <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1">${selectInv.lineAdj}</td>
-                    <td width="32%" height="12" nowrap="nowrap" align="left" rowspan="1" colspan="1"><input type="text"></td>
+                 <tbody>
 
-                    </tr>
+                 </tbody>
             </table>
 
 </div>
@@ -187,6 +196,39 @@
     <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
 
 </form>
+    <script>
+
+        $("#datatable1 input:checkbox.selInv").click(function() {
+            if ($(this).is(":checked")) {
+                var $row = $(this).closest('tr').html();
+                $tds_item = $row.find("td:nth-child(2)");
+                $tds_itemDesc = row.find("td:nth-child(3)");
+                $tds_qty = row.find("td:nth-child(4)");
+                $tds_uprice = row.find("td:nth-child(5)");
+                $tds_all = row.find("td:nth-child(6)");
+                $tds_chrg = row.find("td:nth-child(7)");
+                $tds_tax = row.find("td:nth-child(8)");
+                $tds_invtotal = row.find("td:nth-child(9)");
+                $('#datatable2 tbody').append('<tr>'+row+'</tr>');
+                $('#datatable2 tbody').append('<tr>'+
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + $tds_item.text() + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + $tds_itemDesc.text() + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + $tds_qty.text() + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + $tds_uprice.text() + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        + '</tr>');
+            }
+        })
+
+    </script>
 </div>
 <%@include file="footer.jsp"%>
 </body>
