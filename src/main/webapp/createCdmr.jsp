@@ -139,20 +139,22 @@
 
                     </tr>
                 </thead>
-                <c:forEach items="${invoiceDetails}" var="invDtl">
-                    <tr style="height: 7px;">
-                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="selInv" value ="selInv" class="selInv"></td>
-                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.invItem.itemNum}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.itemDesc}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.qty}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.unitPrice}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.allowance}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.charges}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.tax}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.netAmnt}</td>
+                <tbody>
+                    <c:forEach items="${invoiceDetails}" var="invDtl">
+                        <tr style="height: 7px;">
+                            <td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="selInv" value ="selInv" class="selInv"></td>
+                            <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.invItem.itemNum}</td>
+                            <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.itemDesc}</td>
+                            <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.qty}</td>
+                            <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.unitPrice}</td>
+                            <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.allowance}</td>
+                            <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.charges}</td>
+                            <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.tax}</td>
+                            <td style="text-align: center;" rowspan="1" colspan="1">${invDtl.netAmnt}</td>
 
-                    </tr>
-                </c:forEach>
+                        </tr>
+                    </c:forEach>
+                </tbody>
 
             </table>
         </c:if>
@@ -198,17 +200,21 @@
 </form>
     <script type="text/javascript">
 
-        $("#datatable1 input:checkbox.selInv").click(function() {
+        $("#datatable1 tbody input:checkbox.selInv").click(function() {
+            console.log("inside the java script");
             if ($(this).is(":checked")) {
+                console.log("inside the checked condition");
                 var $row = $(this).closest('tr').html();
-                $tds_item = $row.find("td:nth-child(2)");
-                $tds_itemDesc = row.find("td:nth-child(3)");
-                $tds_qty = row.find("td:nth-child(4)");
-                $tds_uprice = row.find("td:nth-child(5)");
-                $tds_all = row.find("td:nth-child(6)");
-                $tds_chrg = row.find("td:nth-child(7)");
-                $tds_tax = row.find("td:nth-child(8)");
-                $tds_invtotal = row.find("td:nth-child(9)");
+                console.log("$row" + $row);
+                var $tds_item = $row.find("td:nth-child(2)");
+                console.log("$row" + $tds_item);
+                var $tds_itemDesc = row.find("td:nth-child(3)");
+                var $tds_qty = row.find("td:nth-child(4)");
+                var $tds_uprice = row.find("td:nth-child(5)");
+                var $tds_all = row.find("td:nth-child(6)");
+                var $tds_chrg = row.find("td:nth-child(7)");
+                var $tds_tax = row.find("td:nth-child(8)");
+                var $tds_invtotal = row.find("td:nth-child(9)");
 
                 $('#datatable2 tbody').append('<tr>'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +

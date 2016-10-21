@@ -91,23 +91,23 @@
                     <c:if test="${invoiceResults.invCustomer.invoiceNum !=null && invoiceResults.invCustomer.invoiceNum !=''}">
                         <tr>
                             <td>Invoice Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.invDate}"/></td>
-                            <td>Gross:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.grossAmnt}"/></td>
+                            <td>Gross:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.grossAmnt}"/></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Allowance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.allowance}"/></td>
+                            <td>Allowance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${invoiceResults.allowance}"/></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.charges}"/></td>
+                            <td>Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.charges}"/></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.tax}"/></td>
+                            <td>Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.tax}"/></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.netAmnt}"/></td>
+                            <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.netAmnt}"/></td>
                         </tr>
                     </c:if>
                 </table>
@@ -161,7 +161,7 @@
     <h2 style="text-indent: 18em;"><b>Adjustments</b></h2>
 
     <div style="width:1300px;height:100px;border:1px solid #000;margin:0 auto;">
-
+             <br>
              <table id = "datatable2" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
@@ -196,7 +196,7 @@
     <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
 
 </form>
-    <script>
+    <script type="text/javascript">
 
         $("#datatable1 input:checkbox.selInv").click(function() {
             if ($(this).is(":checked")) {
@@ -209,7 +209,7 @@
                 $tds_chrg = row.find("td:nth-child(7)");
                 $tds_tax = row.find("td:nth-child(8)");
                 $tds_invtotal = row.find("td:nth-child(9)");
-                $('#datatable2 tbody').append('<tr>'+row+'</tr>');
+
                 $('#datatable2 tbody').append('<tr>'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + $tds_item.text() + '</td>' +

@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_2_1_4.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest.war" afterPath="$PROJECT_DIR$/target/CreditDebitRequest.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/cdmr_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/cdmr_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cdmr.iml" afterPath="$PROJECT_DIR$/cdmr.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/head.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest/createCdmr.jsp" afterPath="$PROJECT_DIR$/target/CreditDebitRequest/createCdmr.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest/head.jsp" afterPath="$PROJECT_DIR$/target/CreditDebitRequest/head.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="cdmr.iws" />
@@ -89,22 +85,22 @@
       <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-285">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="89">
+              <caret line="201" column="50" selection-start-line="201" selection-start-column="50" selection-end-line="201" selection-end-column="50" />
               <folding>
-                <marker date="1477075628783" expanded="true" signature="11234:11253" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="11383:11402" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="11497:11516" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="11615:11634" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="11728:11747" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="11837:11856" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="11946:11965" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="12062:12081" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="12152:12171" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="12242:12261" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="12332:12351" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="12441:12460" ph="..." />
-                <marker date="1477075628783" expanded="true" signature="12531:12550" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="11285:11304" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="11434:11453" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="11548:11567" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="11666:11685" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="11779:11798" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="11888:11907" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="11997:12016" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="12113:12132" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="12203:12222" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="12293:12312" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="12383:12402" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="12492:12511" ph="..." />
+                <marker date="1477081434177" expanded="true" signature="12582:12601" ph="..." />
               </folding>
             </state>
           </provider>
@@ -280,84 +276,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="cdmr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cdmr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: org.webjars:jquery:2.1.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-2.1.4.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cdmr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: org.webjars:jquery:2.1.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-2.1.4.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2.1.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cdmr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: org.webjars:jquery:2.1.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-2.1.4.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -567,36 +485,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cdmr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CreditDebitRequest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cdmr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webservices" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1395,7 +1283,7 @@
       <workItem from="1476878617696" duration="7888000" />
       <workItem from="1476915226217" duration="4748000" />
       <workItem from="1476980419502" duration="13892000" />
-      <workItem from="1477008545971" duration="23189000" />
+      <workItem from="1477008545971" duration="24242000" />
     </task>
     <servers />
   </component>
@@ -1432,7 +1320,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="509549000" />
+    <option name="totallyTimeSpent" value="510602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1942,22 +1830,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="89">
+          <caret line="201" column="50" selection-start-line="201" selection-start-column="50" selection-end-line="201" selection-end-column="50" />
           <folding>
-            <marker date="1477075628783" expanded="true" signature="11234:11253" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="11383:11402" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="11497:11516" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="11615:11634" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="11728:11747" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="11837:11856" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="11946:11965" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="12062:12081" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="12152:12171" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="12242:12261" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="12332:12351" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="12441:12460" ph="..." />
-            <marker date="1477075628783" expanded="true" signature="12531:12550" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="11285:11304" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="11434:11453" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="11548:11567" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="11666:11685" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="11779:11798" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="11888:11907" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="11997:12016" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="12113:12132" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="12203:12222" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="12293:12312" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="12383:12402" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="12492:12511" ph="..." />
+            <marker date="1477081434177" expanded="true" signature="12582:12601" ph="..." />
           </folding>
         </state>
       </provider>
