@@ -204,19 +204,25 @@
             console.log("inside the java script");
             if ($(this).is(":checked")) {
                 console.log("inside the checked condition");
-                var $row = $(this).closest('tr').html();
-                console.log("$row" + $row);
+                //var $row = $(this).closest('tr').html();
                 var tds_item = "";
-                tds_item = $($row).find('td:eq(2)').html();
+                var tds_itemDesc = "";
+                var tds_qty = "";
+                var tds_uprice = "";
+                tds_item = $(this).closest('tr').children('td:eq(2)').text();
                 console.log("tds_item" + tds_item);
-                var tds_itemDesc = $($row).find("td:nth-child(3)").html();
-                console.log("tds_item" + tds_itemDesc);
-                var tds_qty = $($row).find("td:nth-child(4)").html();
-                var tds_uprice = $($row).find("td:nth-child(5)").html();
-                var tds_all = $($row).find("td:nth-child(6)").html();
-                var tds_chrg = $($row).find("td:nth-child(7)").html();
-                var tds_tax = $($row).find("td:nth-child(8)").html();
-                var tds_invtotal = $($row).find("td:nth-child(9)").html();
+                //console.log("$row" + $row);
+                //var tds_item = "";
+                //tds_item = $($row).find('td:eq(2)').html();
+                //console.log("tds_item" + tds_item);
+                //var tds_itemDesc = $($row).find("td:nth-child(3)").html();
+                //console.log("tds_item" + tds_itemDesc);
+                //var tds_qty = $($row).find("td:nth-child(4)").html();
+                //var tds_uprice = $($row).find("td:nth-child(5)").html();
+                //var tds_all = $($row).find("td:nth-child(6)").html();
+                //var tds_chrg = $($row).find("td:nth-child(7)").html();
+                //var tds_tax = $($row).find("td:nth-child(8)").html();
+                //var tds_invtotal = $($row).find("td:nth-child(9)").html();
                 console.log("all variables are filled");
                 $('#datatable2 tbody').append('<tr>'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +

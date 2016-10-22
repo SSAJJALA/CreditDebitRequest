@@ -206,7 +206,8 @@
                 console.log("inside the checked condition");
                 var $row = $(this).closest('tr').html();
                 console.log("$row" + $row);
-                var tds_item = $($row).find("td:nth-child(2)").html();
+                var tds_item = "";
+                tds_item = $($row).find('td:eq(2)').html();
                 console.log("tds_item" + tds_item);
                 var tds_itemDesc = $($row).find("td:nth-child(3)").html();
                 console.log("tds_item" + tds_itemDesc);
