@@ -91,7 +91,7 @@
                     <c:if test="${invoiceResults.invCustomer.invoiceNum !=null && invoiceResults.invCustomer.invoiceNum !=''}">
                         <tr>
                             <td>Invoice Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.invDate}"/></td>
-                            <td>Gross:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.grossAmnt}"/></td>
+                            <td>Gross:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${invoiceResults.grossAmnt}"/></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -99,15 +99,15 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.charges}"/></td>
+                            <td>Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${invoiceResults.charges}"/></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.tax}"/></td>
+                            <td>Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${invoiceResults.tax}"/></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${invoiceResults.netAmnt}"/></td>
+                            <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${invoiceResults.netAmnt}"/></td>
                         </tr>
                     </c:if>
                 </table>
@@ -162,7 +162,7 @@
 
     <h2 style="text-indent: 18em;"><b>Adjustments</b></h2>
 
-    <div style="width:1300px;height:100px;border:1px solid #000;margin:0 auto;">
+    <div style="width:1300px;height:230px;border:1px solid #000;margin:0 auto;">
              <br>
              <table id = "datatable2" width="90%" border="1" align = "center">
                 <thead>
@@ -226,6 +226,7 @@
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_uprice + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
