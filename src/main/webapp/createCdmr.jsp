@@ -173,11 +173,11 @@
                         <th style="text-align: center;" rowspan="1" colspan="1">Original Qty</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Adjusted Qty</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Reason Code</th>
-                        <th style="text-align: center;" rowspan="1" colspan="1">Original Price($)</th>
+                        <th style="text-align: center;" rowspan="1" colspan="1">Original Unit Price($)</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Adjusted Price ($)</th>
-                        <th style="text-align: center;" rowspan="1" colspan="1">Allowance Adj</th>
-                        <th style="text-align: center;" rowspan="1" colspan="1">Charge Adj</th>
-                        <th style="text-align: center;" rowspan="1" colspan="1">Tax Adj</th>
+                        <th style="text-align: center;" rowspan="1" colspan="1">Allowance Adj ($)</th>
+                        <th style="text-align: center;" rowspan="1" colspan="1">Charge Adj ($)</th>
+                        <th style="text-align: center;" rowspan="1" colspan="1">Tax Adj ($)</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Credit/Debit</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Line AdjAmnt ($)</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Comments</th>
@@ -209,20 +209,14 @@
                 var tds_itemDesc = "";
                 var tds_qty = "";
                 var tds_uprice = "";
-                tds_item = $(this).closest('tr').children('td:eq(2)').text();
+                tds_item = $(this).closest('tr').children('td:eq(1)').text();
                 console.log("tds_item" + tds_item);
-                //console.log("$row" + $row);
-                //var tds_item = "";
-                //tds_item = $($row).find('td:eq(2)').html();
-                //console.log("tds_item" + tds_item);
-                //var tds_itemDesc = $($row).find("td:nth-child(3)").html();
-                //console.log("tds_item" + tds_itemDesc);
-                //var tds_qty = $($row).find("td:nth-child(4)").html();
-                //var tds_uprice = $($row).find("td:nth-child(5)").html();
-                //var tds_all = $($row).find("td:nth-child(6)").html();
-                //var tds_chrg = $($row).find("td:nth-child(7)").html();
-                //var tds_tax = $($row).find("td:nth-child(8)").html();
-                //var tds_invtotal = $($row).find("td:nth-child(9)").html();
+                tds_itemDesc = $(this).closest('tr').children('td:eq(2)').text();
+                console.log("tds_itemDesc" + tds_itemDesc);
+                tds_qty = $(this).closest('tr').children('td:eq(3)').text();
+                console.log("tds_itemDesc" + tds_qty);
+                tds_uprice = $(this).closest('tr').children('td:eq(4)').text();
+                console.log("tds_uprice" + tds_uprice);
                 console.log("all variables are filled");
                 $('#datatable2 tbody').append('<tr>'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
