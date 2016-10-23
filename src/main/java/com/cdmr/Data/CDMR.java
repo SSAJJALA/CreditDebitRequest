@@ -14,6 +14,10 @@ public class CDMR {
     private String salesRepID;
     private String salesRepName;
     private Double adjAmnt;
+    private Double adjGross;
+    private Double adjAllowance;
+    private Double adjCharges;
+    private Double adjTax;
     private LocalDate cdmrDate;
     private String type;
     private List<CDMRAdjustments>  adjustments;
@@ -23,7 +27,7 @@ public class CDMR {
     public CDMR() {
     }
 
-    public CDMR(int requisitionID, Customer customer, String status, InvoiceHeader invHeader, String salesRepID, String salesRepName, Double adjAmnt, LocalDate cdmrDate, String type, List<CDMRAdjustments> adjustments) {
+    public CDMR(int requisitionID, Customer customer, String status, InvoiceHeader invHeader, String salesRepID, String salesRepName, Double adjAmnt, Double adjGross, Double adjAllowance, Double adjCharges, Double adjTax, LocalDate cdmrDate, String type, List<CDMRAdjustments> adjustments) {
         this.requisitionID = requisitionID;
         this.customer = customer;
         this.status = status;
@@ -31,6 +35,10 @@ public class CDMR {
         this.salesRepID = salesRepID;
         this.salesRepName = salesRepName;
         this.adjAmnt = adjAmnt;
+        this.adjGross = adjGross;
+        this.adjAllowance = adjAllowance;
+        this.adjCharges = adjCharges;
+        this.adjTax = adjTax;
         this.cdmrDate = cdmrDate;
         this.type = type;
         this.adjustments = adjustments;
@@ -116,6 +124,37 @@ public class CDMR {
         this.adjustments = adjustments;
     }
 
+    public Double getAdjGross() {
+        return adjGross;
+    }
+
+    public void setAdjGross(Double adjGross) {
+        this.adjGross = adjGross;
+    }
+
+    public Double getAdjAllowance() {
+        return adjAllowance;
+    }
+
+    public void setAdjAllowance(Double adjAllowance) {
+        this.adjAllowance = adjAllowance;
+    }
+
+    public Double getAdjCharges() {
+        return adjCharges;
+    }
+
+    public void setAdjCharges(Double adjCharges) {
+        this.adjCharges = adjCharges;
+    }
+
+    public Double getAdjTax() {
+        return adjTax;
+    }
+
+    public void setAdjTax(Double adjTax) {
+        this.adjTax = adjTax;
+    }
 
     @Override
     public String toString() {
@@ -127,6 +166,10 @@ public class CDMR {
                 ", salesRepID='" + salesRepID + '\'' +
                 ", salesRepName='" + salesRepName + '\'' +
                 ", adjAmnt=" + adjAmnt +
+                ", adjGross=" + adjGross +
+                ", adjAllowance=" + adjAllowance +
+                ", adjCharges=" + adjCharges +
+                ", adjTax=" + adjTax +
                 ", cdmrDate=" + cdmrDate +
                 ", type='" + type + '\'' +
                 ", adjustments=" + adjustments +

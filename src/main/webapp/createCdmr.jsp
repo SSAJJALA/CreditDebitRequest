@@ -222,19 +222,19 @@
                 console.log("all variables are filled");
                 $('#datatable2 tbody').append('<tr class="tableRow">'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' + '<input type="hidden" name="adjItem" value=' + tds_item + '>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_itemDesc + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_qty + '</td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="reasonCode"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_uprice + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments"></td>' +
                         + '</tr>');
                 console.log("table2 appended");
             }

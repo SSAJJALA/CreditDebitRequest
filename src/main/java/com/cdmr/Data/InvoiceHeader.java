@@ -15,6 +15,7 @@ public class InvoiceHeader {
     private Double taxAmnt;
     private Double netAmnt;
 
+
     public InvoiceHeader() {
     }
 

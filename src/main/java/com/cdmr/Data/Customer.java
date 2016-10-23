@@ -9,6 +9,7 @@ public class Customer {
     private String custName;
     private String address1;
     private String address2;
+    private String city;
     private String state;
     private String zip;
     private String phone;
@@ -16,11 +17,12 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int custNum, String custName, String address1, String address2, String state, String zip, String phone) {
+    public Customer(int custNum, String custName, String address1, String address2, String city, String state, String zip, String phone) {
         this.custNum = custNum;
         this.custName = custName;
         this.address1 = address1;
         this.address2 = address2;
+        this.city = city;
         this.state = state;
         this.zip = zip;
         this.phone = phone;
@@ -82,13 +84,22 @@ public class Customer {
         this.phone = phone;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
                 "custNum=" + custNum +
-                ", custName=" + custName +
+                ", custName='" + custName + '\'' +
                 ", address1='" + address1 + '\'' +
                 ", address2='" + address2 + '\'' +
+                ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zip='" + zip + '\'' +
                 ", phone='" + phone + '\'' +

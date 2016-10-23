@@ -242,7 +242,7 @@
 
     </script>
     <script type="text/javascript">
-        $(document).ready(function () {
+
             $("#createForm").submit(function () {
                 console.log("inside form submit");
                 var tableData = [];
@@ -251,6 +251,7 @@
                         .each(function () {
                             var tableRow = {};
                             tableRow.itemId = $(this).closest('tr').children('td:eq(1)').text();
+                            console.log("submit item id:" + tableRow.itemId);
                             tableRow.itemDesc = $(this).closest('tr').children('td:eq(2)').text();
                             tableRow.itemQty = $(this).closest('tr').children('td:eq(3)').text();
                             tableRow.adjQty = $(this).closest('tr').children('td:eq(4)').text();
@@ -280,7 +281,6 @@
 
             });
 
-        });
     </script>
 </div>
 <%@include file="footer.jsp"%>

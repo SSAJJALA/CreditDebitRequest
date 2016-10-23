@@ -1,7 +1,11 @@
 package com.cdmr.controller;
 
+import com.cdmr.Data.CDMR;
+import com.cdmr.Data.CDMRAdjustments;
+import com.cdmr.Data.UiAdjData;
 import com.cdmr.entity.InvoiceDetail;
 import com.cdmr.entity.InvoiceHeader;
+import com.cdmr.ui.CalculateCDMR;
 import com.cdmr.webservices.Customer;
 import com.cdmr.webservices.CustomerLookupConsumer;
 import com.cdmr.webservices.InvoiceLookup;
@@ -69,19 +73,45 @@ public class CreateCDMRServlet extends HttpServlet {
 
             Customer cust1 = (Customer) session.getAttribute("customerResults");
             logger.info("customer details inside cdmr create servlet:" + cust1.getCustNum());
-            //invoiceLookup.setCustNum(Integer.parseInt(request.getParameter("customer")));
+
             invoiceLookup.setCustNum(cust1.getCustNum());
             header = invoiceLookup.getInvoiceHeader();
             details = invoiceLookup.getInvoiceDetails();
 
-            //request.setAttribute("invoiceResults", header);
-            //request.setAttribute("invoiceDetails", details);
             session.setAttribute("invoiceResults", header);
             session.setAttribute("invoiceDetails", details);
             logger.info("invoice header:" + header.toString());
             logger.info("invoice details:" + details.toString());
 
         } else if (request.getParameter("btn_calculate") != null) {
+            String[] adjItem = request.getParameterValues("adjItem");
+            String[] adjQty = request.getParameterValues("adjQty");
+            String[] reasonCode = request.getParameterValues("reasonCode");
+            String[] creditdebit = request.getParameterValues("creditdebit");
+            String[] comments = request.getParameterValues("comments");
+
+            List<UiAdjData> adjs = new ArrayList<UiAdjData>();
+
+            for (int i=0;i<adjItem.length;i++) {
+                UiAdjData adj = new UiAdjData();
+                adj.setAdjQty(Integer.parseInt(adjQty[i]));
+                adj.setReasonCode(reasonCode[i]);
+                adj.setComments(comments[i]);
+                adj.setCreditDebit(creditdebit[i]);
+                adj.setItemNum(Integer.parseInt(adjItem[i]));
+                adjs.add(adj);
+            }
+
+            Customer customerDtls = (Customer) session.getAttribute("customerResults");
+            InvoiceHeader header = (InvoiceHeader) session.getAttribute("invoiceResults");
+            List<InvoiceDetail> details = (List<InvoiceDetail>) session.getAttribute("invoiceDetails");
+            String user = request.getUserPrincipal().getName();
+
+            CalculateCDMR calculate = new CalculateCDMR(customerDtls, header, details, adjs, user);
+            CDMR cdmr = calculate.prepareCDMR();
+            session.setAttribute("cdmr", cdmr);
+
+
 
         } else if (request.getParameter("btn_submit") != null) {
 
