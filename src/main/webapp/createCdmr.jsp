@@ -1,6 +1,8 @@
 <%@ page import="com.cdmr.webservices.Customer" %>
 <%@ page import="com.cdmr.entity.InvoiceHeader" %>
-<%@ page import="com.cdmr.entity.InvoiceDetail" %><%--
+<%@ page import="com.cdmr.entity.InvoiceDetail" %>
+<%@ page import="com.cdmr.Data.CDMRAdjustments" %>
+<%--
   Created by IntelliJ IDEA.
   User: Siva Sajjala
   Date: 9/21/16
@@ -31,7 +33,7 @@
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-<form action="/createCDMRServlet" >
+<form id="createForm" action="/createCDMRServlet" >
 <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>
@@ -218,7 +220,7 @@
                 tds_uprice = $(this).closest('tr').children('td:eq(4)').text();
                 console.log("tds_uprice" + tds_uprice);
                 console.log("all variables are filled");
-                $('#datatable2 tbody').append('<tr>'+
+                $('#datatable2 tbody').append('<tr class="tableRow">'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_itemDesc + '</td>' +
@@ -238,6 +240,46 @@
             }
         })
 
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("createForm").submit(function (event) {
+                console.log("inside form submit");
+                var tableData = [];
+                $("#datatable2 tbody")
+                        .find(".tableRow")
+                        .each(function () {
+                            var tableRow = {};
+                            tableRow.itemId = $(this).closest('tr').children('td:eq(1)').text();
+                            tableRow.itemDesc = $(this).closest('tr').children('td:eq(2)').text();
+                            tableRow.itemQty = $(this).closest('tr').children('td:eq(3)').text();
+                            tableRow.adjQty = $(this).closest('tr').children('td:eq(4)').text();
+                            tableRow.reasonCode = $(this).closest('tr').children('td:eq(5)').text();
+                            tableRow.originalUp = $(this).closest('tr').children('td:eq(6)').text();
+                            tableRow.adjPrice = $(this).closest('tr').children('td:eq(7)').text();
+                            tableRow.allAdj = $(this).closest('tr').children('td:eq(8)').text();
+                            tableRow.chrgAdj = $(this).closest('tr').children('td:eq(9)').text();
+                            tableRow.taxAdj = $(this).closest('tr').children('td:eq(10)').text();
+                            tableRow.creditDebit = $(this).closest('tr').children('td:eq(11)').text();
+                            tableRow.lineAdjAmnt = $(this).closest('tr').children('td:eq(12)').text();
+                            tableRow.comments = $(this).closest('tr').children('td:eq(13)').text();
+                            tableData.push(tableRow);
+                        });
+
+                $.session.setAttribute("AdjData", tableData);
+                //$.post(
+                  //      "/createCDMRServlet" /*url of consuming servlet*/
+                        //{tableData: tableData}, /*data*/
+                        //function () {
+                        //    alert("Success!");
+                        //}, /*function to execute in case of success*/
+                        //"json" /* data type */
+                //);
+                event.preventDefault(); //Prevent sending form by browser
+
+            });
+
+        });
     </script>
 </div>
 <%@include file="footer.jsp"%>
