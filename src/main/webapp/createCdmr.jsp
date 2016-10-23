@@ -243,7 +243,7 @@
     </script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("createForm").submit(function (event) {
+            $("#createForm").submit(function () {
                 console.log("inside form submit");
                 var tableData = [];
                 $("#datatable2 tbody")
@@ -267,6 +267,7 @@
                         });
 
                 $.session.setAttribute("AdjData", tableData);
+                //$.session.set("AdjData", tableData);
                 //$.post(
                   //      "/createCDMRServlet" /*url of consuming servlet*/
                         //{tableData: tableData}, /*data*/
@@ -275,7 +276,7 @@
                         //}, /*function to execute in case of success*/
                         //"json" /* data type */
                 //);
-                event.preventDefault(); //Prevent sending form by browser
+                //event.preventDefault(); //Prevent sending form by browser
 
             });
 
