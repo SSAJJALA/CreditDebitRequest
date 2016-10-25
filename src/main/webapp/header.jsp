@@ -7,7 +7,7 @@
     <div class="userArea">
         <span class="floatRight">
             <img width="18" height="21" alt="User" src="/images/userIcon.png"/>
-            <strong>SSAJJALA</strong>
+            <strong><%=request.getUserPrincipal().getName()%></strong>
             (
             <a class="logOut" shape="rect" href="/logoutServlet">
                 Logout
