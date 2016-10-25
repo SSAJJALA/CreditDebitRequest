@@ -6,6 +6,7 @@ import com.cdmr.Data.UiAdjData;
 import com.cdmr.entity.InvoiceDetail;
 import com.cdmr.entity.InvoiceHeader;
 import com.cdmr.ui.CalculateCDMR;
+import com.cdmr.ui.SubmitCDMR;
 import com.cdmr.webservices.Customer;
 import com.cdmr.webservices.CustomerLookupConsumer;
 import com.cdmr.webservices.InvoiceLookup;
@@ -33,6 +34,7 @@ import java.util.List;
 )
 public class CreateCDMRServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("inside create cdmr servlet @ post");
         this.doGet(request, response);
@@ -46,6 +48,8 @@ public class CreateCDMRServlet extends HttpServlet {
         logger.info("btn_submit:" + request.getParameter("btn_submit"));
         logger.info("btn_cancel:" + request.getParameter("btn_cancel"));
 
+        String buttonAction = "";
+
         HttpSession session = request.getSession();
         if (request.getParameter("btn_retCust") != null) {
             logger.info("gettting customer details.");
@@ -58,9 +62,9 @@ public class CreateCDMRServlet extends HttpServlet {
                 e.printStackTrace();
             }
 
-            //request.setAttribute("customerResults", customerDtls);
             session.setAttribute("customerResults", customerDtls);
             logger.info("customr number:" + customerDtls.getCustNum());
+            buttonAction = "customer";
 
         } else if (request.getParameter("btn_retInv") != null) {
             logger.info("gettting invoice details.");
@@ -82,6 +86,7 @@ public class CreateCDMRServlet extends HttpServlet {
             session.setAttribute("invoiceDetails", details);
             logger.info("invoice header:" + header.toString());
             logger.info("invoice details:" + details.toString());
+            buttonAction = "invoice";
 
         } else if (request.getParameter("btn_calculate") != null) {
             String[] adjItem = request.getParameterValues("adjItem");
@@ -111,15 +116,32 @@ public class CreateCDMRServlet extends HttpServlet {
             CDMR cdmr = calculate.prepareCDMR();
             session.setAttribute("cdmr", cdmr);
 
-
+            buttonAction = "calculate";
 
         } else if (request.getParameter("btn_submit") != null) {
 
-        } else if (request.getParameter("btn_cancel") != null) {
+            CDMR cdmr = (CDMR) session.getAttribute("cdmr");
+            SubmitCDMR submit = new SubmitCDMR(cdmr);
+            String message = submit.saveCDMR();
+            request.setAttribute("message", message);
+            buttonAction = "submit";
 
+        } else if (request.getParameter("btn_cancel") != null) {
+            request.getSession().invalidate();
+            buttonAction = "cancel";
+        } else if (request.getParameter("logout") != null) {
+            request.getSession().invalidate();
+            buttonAction = "logout";
         }
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/createCdmr.jsp");
-        dispatcher.forward(request, response);
+        if (buttonAction.equals("customer") || buttonAction.equals("invoice") || buttonAction.equals("calculate") || buttonAction.equals("submit")) {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/createCdmr.jsp");
+            dispatcher.forward(request, response);
+        } else if (buttonAction.equals("cancel")){
+            response.sendRedirect("/index.jsp");
+        } else if (buttonAction.equals("logout")) {
+            response.sendRedirect("/login.jsp");
+        }
+
     }
 }

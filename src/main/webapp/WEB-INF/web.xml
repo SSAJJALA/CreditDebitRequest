@@ -173,6 +173,16 @@
         <url-pattern>/createCDMRServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>com.cdmr.controller.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>

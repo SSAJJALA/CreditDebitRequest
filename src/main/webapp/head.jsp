@@ -55,6 +55,7 @@
                 }
 
                 nav ul {
+                        text-align: left;
                         list-style-type: none;
                         padding: 0;
                 }
@@ -63,10 +64,6 @@
                         text-decoration: none;
                 }
 
-                html, body {
-                    height: 100%;
-                    margin: 0;
-                }
 
                 #wrapper {
                     min-height: 100%;
