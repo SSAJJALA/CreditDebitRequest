@@ -38,6 +38,7 @@ public class CalculateCDMRTest {
         details = new ArrayList<InvoiceDetail>();
         calculate = new CalculateCDMR();
         headerPK = new InvoiceHeaderPK();
+        adjs = new ArrayList<UiAdjData>();
     }
 
 
