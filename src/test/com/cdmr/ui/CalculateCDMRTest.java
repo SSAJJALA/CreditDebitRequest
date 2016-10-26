@@ -10,6 +10,7 @@ import com.cdmr.persistence.InvoiceDetailDao;
 import com.cdmr.persistence.InvoiceHeaderDao;
 import com.cdmr.util.ConvertToLocalDate;
 import com.cdmr.webservices.Customer;
+import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,6 +31,7 @@ public class CalculateCDMRTest {
     String userID = "VYU6026";
     List<UiAdjData> adjs = null;
     CalculateCDMR calculate = null;
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     @Before
     public void setUp() {
@@ -91,6 +93,7 @@ public class CalculateCDMRTest {
         calculate.setUserID(userID);
 
         CDMR cdmr = calculate.prepareCDMR();
+        logger.info("cdmr " + cdmr.toString());
 
         assertNotNull("calculate cdmr failed", cdmr);
 

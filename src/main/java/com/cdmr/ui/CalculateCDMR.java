@@ -123,17 +123,18 @@ public class CalculateCDMR {
 
     public void prepareInvHeader() {
 
-        com.cdmr.Data.InvoiceHeader invHeader = new com.cdmr.Data.InvoiceHeader();
-        invHeader.setCustNum(invHeader.getCustNum());
-        invHeader.setInvNum(invHeader.getInvNum());
-        invHeader.setGrossAmnt(invHeader.getGrossAmnt());
-        invHeader.setChargesAmnt(invHeader.getChargesAmnt());
-        invHeader.setAllowanceAmnt(invHeader.getAllowanceAmnt());
-        invHeader.setTaxAmnt(invHeader.getTaxAmnt());
-        invHeader.setNetAmnt(invHeader.getNetAmnt());
-        invHeader.setInvDate(invHeader.getInvDate());
+        com.cdmr.Data.InvoiceHeader header = new com.cdmr.Data.InvoiceHeader();
+        header.setCustNum(invHeader.getInvCustomer().getCustNum());
+        header.setInvNum(invHeader.getInvCustomer().getInvoiceNum());
+        header.setGrossAmnt(invHeader.getGrossAmnt());
+        header.setChargesAmnt(invHeader.getCharges());
+        header.setAllowanceAmnt(invHeader.getAllowance());
+        header.setTaxAmnt(invHeader.getTax());
+        header.setNetAmnt(invHeader.getNetAmnt());
+        header.setInvDate(invHeader.getInvDate());
 
-        cdmr.setInvHeader(invHeader);
+
+        cdmr.setInvHeader(header);
 
     }
 
