@@ -37,6 +37,54 @@ public class CalculateCDMR {
         this.userID = userID;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public InvoiceHeader getInvHeader() {
+        return invHeader;
+    }
+
+    public void setInvHeader(InvoiceHeader invHeader) {
+        this.invHeader = invHeader;
+    }
+
+    public List<InvoiceDetail> getInvDtls() {
+        return invDtls;
+    }
+
+    public void setInvDtls(List<InvoiceDetail> invDtls) {
+        this.invDtls = invDtls;
+    }
+
+    public List<UiAdjData> getAdjs() {
+        return adjs;
+    }
+
+    public void setAdjs(List<UiAdjData> adjs) {
+        this.adjs = adjs;
+    }
+
+    public CDMR getCdmr() {
+        return cdmr;
+    }
+
+    public void setCdmr(CDMR cdmr) {
+        this.cdmr = cdmr;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
     public CDMR prepareCDMR() {
         cdmr = new CDMR();
 
@@ -171,7 +219,15 @@ public class CalculateCDMR {
         }
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "CalculateCDMR{" +
+                "customer=" + customer +
+                ", invHeader=" + invHeader +
+                ", invDtls=" + invDtls +
+                ", adjs=" + adjs +
+                ", cdmr=" + cdmr +
+                ", userID='" + userID + '\'' +
+                '}';
+    }
 }
