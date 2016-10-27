@@ -99,7 +99,7 @@
 
     <context-param>
         <param-name>reasonCode</param-name>
-        <param-value>1-Defective, 2-Price Correction, 3-Returned</param-value>
+        <param-value>1-Defective, 2-Mis picked, 3-Returned</param-value>
     </context-param>
 
 

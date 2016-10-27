@@ -166,6 +166,7 @@
 
     <div style="width:1300px;height:230px;border:1px solid #000;margin:0 auto;">
              <br>
+
              <table id = "datatable2" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
@@ -186,6 +187,25 @@
                     </tr>
                 </thead>
                  <tbody>
+                    <c:if test="${not empty cdmr}">
+                        <c:forEach items="${cdmr.adjustments}" var="adjs">
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"> ${adjs.itemNum}</td><input type="hidden" name="adjItem" value=""${adjs.itemNum}">
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemDesc}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalQty}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty" value="${adjs.adjQty}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="reasonCode" value="${adjs.reasonCode}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalPrice}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.allowanceAdjAmnt}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.chargeAdjAmnt}chargeAdjAmnt</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.taxAdjAmnt}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit" value="${adjs.creditDebitFlg}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.lineAdjAmnt}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments" value="${adjs.comments(0).comment}"></td>
+                        </c:forEach>
+
+                    </c:if>
 
                  </tbody>
             </table>
@@ -220,9 +240,15 @@
                 tds_uprice = $(this).closest('tr').children('td:eq(4)').text();
                 console.log("tds_uprice" + tds_uprice);
                 console.log("all variables are filled");
+                <%
+
+                    String reasonCode = pageContext.getServletContext().getInitParameter("reasonCode");
+                    String[] codes = reasonCode.split(",");
+
+                %>
                 $('#datatable2 tbody').append('<tr class="tableRow">'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' + '<input type="hidden" name="adjItem" value=' + tds_item + '>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' + '<input type="hidden" name="adjItem" value="' + tds_item + '">' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_itemDesc + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_qty + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty"></td>' +

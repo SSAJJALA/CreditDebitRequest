@@ -95,7 +95,14 @@ public class CreateCDMRServlet extends HttpServlet {
             String[] creditdebit = request.getParameterValues("creditdebit");
             String[] comments = request.getParameterValues("comments");
 
+            logger.info("List of adjustment items: " + adjItem);
+            logger.info("List of adjustment items: " + adjQty);
+            logger.info("List of adjustment items: " + reasonCode);
+            logger.info("List of adjustment items: " + creditdebit);
+            logger.info("List of adjustment items: " + comments);
+
             List<UiAdjData> adjs = new ArrayList<UiAdjData>();
+
 
             for (int i=0;i<adjItem.length;i++) {
                 UiAdjData adj = new UiAdjData();
