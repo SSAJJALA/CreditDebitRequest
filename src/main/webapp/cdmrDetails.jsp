@@ -75,7 +75,13 @@
         </div>
         <div style="width:1300px;height:230px;border:1px solid #000;margin:0 auto;">
             <br>
-
+            <span style="padding-left:1000px"></span>
+            <input  id="btn_approve" name="btn_approve" class="btnInside" value="Approve" type="submit">
+            <span style="padding-left:20px"></span>
+            <input  id="btn_reject" name="btn_reject" class="btnInside" value="Reject" type="submit">
+            <span style="padding-left:20px"></span>
+            <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
+            <br>
             <table id = "datatable2" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
@@ -91,36 +97,27 @@
                         <th style="text-align: center;" rowspan="1" colspan="1">New Inv Total ($)</th>
                     </tr>
                 </thead>
-
-
+                <tbody>
+                    <c:forEach items="${cdmr.adjustments}" var="adjs">
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.itemNum}"/></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.itemDesc}"/></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.reasonCode}"/></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.originalPrice}"/></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.originalQty}"/></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.adjQty}"/></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.creditDebitFlg}"/></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.comments(0).comment}"/></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.lineAdjAmnt}"/></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.newInvLineTotal}"/></td>
+                    </c:forEach>
+                </tbody>
             </table>
 
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     </form>
-
-
-
-
-
-
-
-
-
 </div>
+<%@include file="footer.jsp"%>
 <body>
 
 </body>
