@@ -69,9 +69,10 @@
                     </c:if>
                  </table>
             </td>
-            <td width="60%">
+            <td width="40%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
-                    <tr><td><u><span style="font-size:15px;font-weight:bold;">Invoice</span></u></td></tr>
+                    <tr><td><u><span style="font-size:15px;font-weight:bold;">Invoice</span></u></td>
+                    </tr>
 
                         <tr id="tr_invoice">
                             <td width="30%">
@@ -112,7 +113,14 @@
                             <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${invoiceResults.netAmnt}"/></td>
                         </tr>
                     </c:if>
+                </table>
 
+            </td>
+
+            <td width="40%">
+                <table cellpadding="4" cellspacing="0" align="center" width="80%" >
+                    <tr></tr>
+                    <tr></tr>
                     <c:if test="${cdmr.adjustments !=null && cdmr.adjustments !=''}">
                         <tr>
                             <td>Adj Gross:&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjGross}"/></td>
@@ -136,6 +144,8 @@
                         </tr>
 
                     </c:if>
+
+
                 </table>
 
             </td>
