@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cdmr/ui/CalculateCDMR.class" afterPath="$PROJECT_DIR$/target/classes/com/cdmr/ui/CalculateCDMR.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
-    </list>
+    <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="" />
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,11 +53,9 @@
       <file leaf-file-name="CreateCDMRServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="613">
+              <caret line="125" column="34" selection-start-line="125" selection-start-column="34" selection-end-line="125" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,24 +63,54 @@
       <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="125" selection-end-column="24" />
+            <state relative-caret-position="363">
+              <caret line="251" column="109" selection-start-line="251" selection-start-column="109" selection-end-line="251" selection-end-column="109" />
               <folding>
-                <marker date="1477521527325" expanded="true" signature="12096:12115" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="12245:12264" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="12415:12434" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="12525:12544" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="12630:12649" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="12753:12772" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="12880:12899" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="12988:13007" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="13078:13097" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="13168:13187" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="13258:13277" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="13348:13367" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="13476:13495" ph="..." />
-                <marker date="1477521527325" expanded="true" signature="13566:13585" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="14041:14060" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="14190:14209" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="14362:14381" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="14472:14491" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="14577:14596" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="14700:14719" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="14827:14846" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="14935:14954" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="15025:15044" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="15115:15134" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="15205:15224" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="15295:15314" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="15423:15442" ph="..." />
+                <marker date="1477610167754" expanded="true" signature="15513:15532" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CDMR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMR.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="22" column="46" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CDMRAdjustments.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRAdjustments.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="38" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CDMRComment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRComment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,16 +120,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="705">
               <caret line="47" column="44" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
-              <caret line="100" column="30" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -634,6 +645,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="requisition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cdmr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CreditDebitRequest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cdmr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1357,7 +1398,7 @@
       <workItem from="1477482775582" duration="2089000" />
       <workItem from="1477512779040" duration="3063000" />
       <workItem from="1477519914695" duration="3409000" />
-      <workItem from="1477576019512" duration="1092000" />
+      <workItem from="1477576019512" duration="4017000" />
     </task>
     <servers />
   </component>
@@ -1394,11 +1435,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="557899000" />
+    <option name="totallyTimeSpent" value="560824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1543" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1410,7 +1451,7 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35168195" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24057084" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23970038" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21905379" sideWeight="0.7894737" order="0" side_tool="false" content_ui="combo" />
@@ -1469,13 +1510,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/persistence/CustomerDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/persistence/RequisitionDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1603,13 +1637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRAdjustments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/requisition/SaveRequisition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-165">
@@ -1628,13 +1655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1800,6 +1820,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="26" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1839,16 +1860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1500">
@@ -1857,25 +1868,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="125" column="34" selection-start-line="125" selection-start-column="34" selection-end-line="125" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRAdjustments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="125" selection-end-column="24" />
+        <state relative-caret-position="363">
+          <caret line="251" column="109" selection-start-line="251" selection-start-column="109" selection-end-line="251" selection-end-column="109" />
           <folding>
-            <marker date="1477521527325" expanded="true" signature="12096:12115" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="12245:12264" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="12415:12434" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="12525:12544" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="12630:12649" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="12753:12772" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="12880:12899" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="12988:13007" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="13078:13097" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="13168:13187" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="13258:13277" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="13348:13367" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="13476:13495" ph="..." />
-            <marker date="1477521527325" expanded="true" signature="13566:13585" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="14041:14060" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="14190:14209" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="14362:14381" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="14472:14491" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="14577:14596" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="14700:14719" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="14827:14846" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="14935:14954" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="15025:15044" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="15115:15134" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="15205:15224" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="15295:15314" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="15423:15442" ph="..." />
+            <marker date="1477610167754" expanded="true" signature="15513:15532" ph="..." />
           </folding>
         </state>
       </provider>
