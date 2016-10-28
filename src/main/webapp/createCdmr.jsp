@@ -271,12 +271,7 @@
                 tds_uprice = $(this).closest('tr').children('td:eq(4)').text();
                 console.log("tds_uprice" + tds_uprice);
                 console.log("all variables are filled");
-                <%
 
-                    String reasonCode = pageContext.getServletContext().getInitParameter("reasonCode");
-                    String[] codes = reasonCode.split(",");
-
-                %>
                 $('#datatable2 tbody').append('<tr class="tableRow">'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' + '<input type="hidden" name="adjItem" value="' + tds_item + '">' +
