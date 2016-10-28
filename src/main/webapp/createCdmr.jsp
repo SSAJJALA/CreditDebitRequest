@@ -112,6 +112,30 @@
                             <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${invoiceResults.netAmnt}"/></td>
                         </tr>
                     </c:if>
+
+                    <c:if test="${cdmr.adjustments !=null && cdmr.adjustments !=''}">
+                        <tr>
+                            <td>Adj Gross:&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjGross}"/></td>
+
+                        </tr>
+                        <tr>
+
+                            <td>Adj Allowance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAllowance}"/></td>
+                        </tr>
+                        <tr>
+
+                            <td>Adj Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjCharges}"/></td>
+                        </tr>
+                        <tr>
+
+                            <td>Adj Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjTax}"/></td>
+                        </tr>
+                        <tr>
+
+                            <td>Adj Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAmnt}"/></td>
+                        </tr>
+
+                    </c:if>
                 </table>
 
             </td>
@@ -194,7 +218,14 @@
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemDesc}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalQty}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty" value="${adjs.adjQty}"></td>
-                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="reasonCode" value="${adjs.reasonCode}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">
+                                <select name="reasonCode" size="1" id="reasonCode">
+                                    <option value="${adjs.reasonCode}"></option>
+                                    <option value="1-Defective">1-Defective</option>
+                                    <option value="2-Mis picked">2-Mis picked</option>
+                                    <option value="3-Returned">3-Returned</option>
+                                </select>
+                        </td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalPrice}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1"></td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.allowanceAdjAmnt}</td>
@@ -252,7 +283,15 @@
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_itemDesc + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_qty + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="reasonCode"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' +
+                            '<select name="reasonCode" size="1" id="reasonCode">' +
+                                '<option value=""></option>' +
+                                '<option value="1-Defective">1-Defective</option>' +
+                                '<option value="2-Mis picked">2-Mis picked</option>' +
+                                '<option value="3-Returned">3-Returned</option>' +
+
+                            '</select>' +
+                        '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_uprice + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
