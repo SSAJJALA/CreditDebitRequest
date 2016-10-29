@@ -1,8 +1,10 @@
 package com.cdmr.ui;
 
 import com.cdmr.Data.CDMR;
+import com.cdmr.entity.Task;
 import com.cdmr.entity.TaskAssignment;
 import com.cdmr.persistence.TaskAssignmentDao;
+import com.cdmr.persistence.TaskDao;
 import com.cdmr.requisition.GetRequisition;
 import org.apache.log4j.Logger;
 
@@ -72,5 +74,12 @@ public class GetCDMRDetails {
         cdmr = getRequisition.getCdmr();
         return cdmr;
 
+    }
+
+    public Task getTaskDetails(int taskID) {
+        Task task = null;
+        TaskDao taskdao = new TaskDao();
+        task = taskdao.getTask(taskID);
+        return task;
     }
 }

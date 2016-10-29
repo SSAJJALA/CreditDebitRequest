@@ -183,6 +183,26 @@
         <url-pattern>/logoutServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>directToDetails</servlet-name>
+        <servlet-class>com.cdmr.controller.DirectToDetails</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>directToDetails</servlet-name>
+        <url-pattern>/directToDetails</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cdmrDetailsServlet</servlet-name>
+        <servlet-class>com.cdmr.controller.CDMRDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>cdmrDetailsServlet</servlet-name>
+        <url-pattern>/cdmrDetailsServlet</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>

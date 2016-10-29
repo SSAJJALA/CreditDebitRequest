@@ -33,7 +33,7 @@
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-<form id="createForm" action="/createCDMRServlet" >
+<form id="createForm" action="/createCDMRServlet" method="post">
 <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>
