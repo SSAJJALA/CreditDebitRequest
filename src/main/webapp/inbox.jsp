@@ -48,7 +48,7 @@
             </thead>
             <c:forEach items="${inbox}" var="inboxResults">
                 <tr >
-                    <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.taskID}</td>
+                    <td style="text-align: center;" rowspan="1" colspan="1"><a href="/directToDetails?taskID=${inboxResults.taskID}">${inboxResults.taskID}</a></td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.application}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">Approval Required</td>
