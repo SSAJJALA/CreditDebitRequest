@@ -70,7 +70,7 @@
             </thead>
             <c:forEach items="${results}" var="searchResults">
                 <tr>
-                    <td style="text-align: center;" rowspan="1" colspan="1">${searchResults.requisitionID}</td>
+                    <td style="text-align: center;" rowspan="1" colspan="1"><a href="/directToDetails?reqID=${searchResults.requisitionID}">${searchResults.requisitionID}</a></td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${searchResults.invoiceNum}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${searchResults.invAmnt}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${searchResults.custNo}</td>

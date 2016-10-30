@@ -5,6 +5,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <display-name>CDMR</display-name>
+    <context-param>
+        <param-name>reasonCode</param-name>
+        <param-value>1-Defective, 2-Mis picked, 3-Returned</param-value>
+    </context-param>
 
     <!-- Tell the server to use form-based authentication. -->
     <login-config>
@@ -14,16 +18,6 @@
             <form-error-page>/failedLogin.jsp</form-error-page>
         </form-login-config>
     </login-config>
-
-    <security-role>
-        <role-name>TM</role-name>
-    </security-role>
-    <security-role>
-        <role-name>DSM</role-name>
-    </security-role>
-    <security-role>
-        <role-name>FM</role-name>
-    </security-role>
 
     <!-- Protect index.jsp -->
     <security-constraint>
@@ -84,6 +78,7 @@
         <auth-constraint>
             <role-name>FM</role-name>
             <role-name>DSM</role-name>
+            <role-name>TM</role-name>
         </auth-constraint>
     </security-constraint>
 
@@ -96,12 +91,6 @@
         <servlet-name>Entry</servlet-name>
         <url-pattern>/entry</url-pattern>
     </servlet-mapping>
-
-    <context-param>
-        <param-name>reasonCode</param-name>
-        <param-value>1-Defective, 2-Mis picked, 3-Returned</param-value>
-    </context-param>
-
 
     <servlet>
         <servlet-name>login</servlet-name>

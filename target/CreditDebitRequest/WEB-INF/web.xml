@@ -99,7 +99,7 @@
 
     <context-param>
         <param-name>reasonCode</param-name>
-        <param-value>1-Defective, 2-Price Correction, 3-Returned</param-value>
+        <param-value>1-Defective, 2-Mis picked, 3-Returned</param-value>
     </context-param>
 
 
@@ -171,6 +171,36 @@
     <servlet-mapping>
         <servlet-name>createCDMRServlet</servlet-name>
         <url-pattern>/createCDMRServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>com.cdmr.controller.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>directToDetails</servlet-name>
+        <servlet-class>com.cdmr.controller.DirectToDetails</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>directToDetails</servlet-name>
+        <url-pattern>/directToDetails</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cdmrDetailsServlet</servlet-name>
+        <servlet-class>com.cdmr.controller.CDMRDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>cdmrDetailsServlet</servlet-name>
+        <url-pattern>/cdmrDetailsServlet</url-pattern>
     </servlet-mapping>
 
 

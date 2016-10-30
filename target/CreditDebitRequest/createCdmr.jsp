@@ -33,7 +33,7 @@
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-<form id="createForm" action="/createCDMRServlet" >
+<form id="createForm" action="/createCDMRServlet" method="post">
 <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>
@@ -69,9 +69,10 @@
                     </c:if>
                  </table>
             </td>
-            <td width="60%">
+            <td width="40%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
-                    <tr><td><u><span style="font-size:15px;font-weight:bold;">Invoice</span></u></td></tr>
+                    <tr><td><u><span style="font-size:15px;font-weight:bold;">Invoice</span></u></td>
+                    </tr>
 
                         <tr id="tr_invoice">
                             <td width="30%">
@@ -112,6 +113,39 @@
                             <td>Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${invoiceResults.netAmnt}"/></td>
                         </tr>
                     </c:if>
+                </table>
+
+            </td>
+
+            <td width="40%">
+                <table cellpadding="4" cellspacing="0" align="center" width="80%" >
+                    <tr></tr>
+                    <tr></tr>
+                    <c:if test="${cdmr.adjustments !=null && cdmr.adjustments !=''}">
+                        <tr>
+                            <td>Adj Gross:&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjGross}"/></td>
+
+                        </tr>
+                        <tr>
+
+                            <td>Adj Allowance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAllowance}"/></td>
+                        </tr>
+                        <tr>
+
+                            <td>Adj Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjCharges}"/></td>
+                        </tr>
+                        <tr>
+
+                            <td>Adj Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjTax}"/></td>
+                        </tr>
+                        <tr>
+
+                            <td>Adj Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAmnt}"/></td>
+                        </tr>
+
+                    </c:if>
+
+
                 </table>
 
             </td>
@@ -166,6 +200,7 @@
 
     <div style="width:1300px;height:230px;border:1px solid #000;margin:0 auto;">
              <br>
+
              <table id = "datatable2" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
@@ -186,6 +221,32 @@
                     </tr>
                 </thead>
                  <tbody>
+                    <c:if test="${not empty cdmr}">
+                        <c:forEach items="${cdmr.adjustments}" var="adjs">
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"> ${adjs.itemNum}</td><input type="hidden" name="adjItem" value=""${adjs.itemNum}">
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemDesc}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalQty}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty" value="${adjs.adjQty}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">
+                                <select name="reasonCode" size="1" id="reasonCode">
+                                    <option value="${adjs.reasonCode}"></option>
+                                    <option value="1-Defective">1-Defective</option>
+                                    <option value="2-Mis picked">2-Mis picked</option>
+                                    <option value="3-Returned">3-Returned</option>
+                                </select>
+                        </td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalPrice}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.allowanceAdjAmnt}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.chargeAdjAmnt}chargeAdjAmnt</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.taxAdjAmnt}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit" value="${adjs.creditDebitFlg}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.lineAdjAmnt}</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments" value="${adjs.comments(0).comment}"></td>
+                        </c:forEach>
+
+                    </c:if>
 
                  </tbody>
             </table>
@@ -220,21 +281,30 @@
                 tds_uprice = $(this).closest('tr').children('td:eq(4)').text();
                 console.log("tds_uprice" + tds_uprice);
                 console.log("all variables are filled");
+
                 $('#datatable2 tbody').append('<tr class="tableRow">'+
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' + '<input type="hidden" name="adjItem" value="' + tds_item + '">' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_itemDesc + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_qty + '</td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' +
+                            '<select name="reasonCode" size="1" id="reasonCode">' +
+                                '<option value=""></option>' +
+                                '<option value="1-Defective">1-Defective</option>' +
+                                '<option value="2-Mis picked">2-Mis picked</option>' +
+                                '<option value="3-Returned">3-Returned</option>' +
+
+                            '</select>' +
+                        '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_uprice + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments"></td>' +
                         + '</tr>');
                 console.log("table2 appended");
             }
