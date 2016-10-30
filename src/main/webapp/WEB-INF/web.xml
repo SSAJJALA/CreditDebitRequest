@@ -5,10 +5,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <display-name>CDMR</display-name>
-    <context-param>
-        <param-name>reasonCode</param-name>
-        <param-value>1-Defective, 2-Mis picked, 3-Returned</param-value>
-    </context-param>
+
+    <security-role>
+        <role-name>TM</role-name>
+    </security-role>
+    <security-role>
+        <role-name>DSM</role-name>
+    </security-role>
+    <security-role>
+        <role-name>FM</role-name>
+    </security-role>
+
 
     <!-- Tell the server to use form-based authentication. -->
     <login-config>
@@ -66,19 +73,6 @@
         <auth-constraint>
             <role-name>TM</role-name>
             <role-name>DSM</role-name>
-        </auth-constraint>
-    </security-constraint>
-
-    <!-- Protect cdmrDetails.jsp -->
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>cdmrDetails.jsp</web-resource-name>
-            <url-pattern>/cdmrDetails.jsp</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>FM</role-name>
-            <role-name>DSM</role-name>
-            <role-name>TM</role-name>
         </auth-constraint>
     </security-constraint>
 
@@ -161,37 +155,6 @@
         <servlet-name>createCDMRServlet</servlet-name>
         <url-pattern>/createCDMRServlet</url-pattern>
     </servlet-mapping>
-
-    <servlet>
-        <servlet-name>logoutServlet</servlet-name>
-        <servlet-class>com.cdmr.controller.LogoutServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>logoutServlet</servlet-name>
-        <url-pattern>/logoutServlet</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>directToDetails</servlet-name>
-        <servlet-class>com.cdmr.controller.DirectToDetails</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>directToDetails</servlet-name>
-        <url-pattern>/directToDetails</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>cdmrDetailsServlet</servlet-name>
-        <servlet-class>com.cdmr.controller.CDMRDetailsServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>cdmrDetailsServlet</servlet-name>
-        <url-pattern>/cdmrDetailsServlet</url-pattern>
-    </servlet-mapping>
-
 
 
 </web-app>

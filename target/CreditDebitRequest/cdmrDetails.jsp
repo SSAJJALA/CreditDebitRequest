@@ -75,7 +75,7 @@
         </div>
         <div style="width:1300px;height:230px;border:1px solid #000;margin:0 auto;">
             <br>
-                <c:if test="${not empty taskDetails}">
+            <c:if test="${not empty taskDetails}">
                 <span style="padding-left:1000px"></span>
                 <input  id="btn_approve" name="btn_approve" class="btnInside" value="Approve" type="submit">
                 <span style="padding-left:20px"></span>
