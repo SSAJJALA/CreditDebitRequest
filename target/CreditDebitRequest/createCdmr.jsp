@@ -14,15 +14,7 @@
 <%@include file="head.jsp"%>
 <link href="/css/style.css" rel="stylesheet" type="text/css" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% Customer custDetails;
-    InvoiceHeader invHeader;
-    InvoiceDetail invDetails;
-%>
-<%
-    custDetails = (Customer) request.getAttribute("customerResults");
-    invHeader = (InvoiceHeader) request.getAttribute("invoiceResults");
-    invDetails = (InvoiceDetail) request.getAttribute("invoiceDetails");
-%>
+
 <html>
 <head>
     <title>Create CDMR</title>
@@ -311,47 +303,7 @@
         })
 
     </script>
-    <script type="text/javascript">
 
-            $("#createForm").submit(function () {
-                console.log("inside form submit");
-                var tableData = [];
-                $("#datatable2 tbody")
-                        .find(".tableRow")
-                        .each(function () {
-                            var tableRow = {};
-                            tableRow.itemId = $(this).closest('tr').children('td:eq(1)').text();
-                            console.log("submit item id:" + tableRow.itemId);
-                            tableRow.itemDesc = $(this).closest('tr').children('td:eq(2)').text();
-                            tableRow.itemQty = $(this).closest('tr').children('td:eq(3)').text();
-                            tableRow.adjQty = $(this).closest('tr').children('td:eq(4)').text();
-                            tableRow.reasonCode = $(this).closest('tr').children('td:eq(5)').text();
-                            tableRow.originalUp = $(this).closest('tr').children('td:eq(6)').text();
-                            tableRow.adjPrice = $(this).closest('tr').children('td:eq(7)').text();
-                            tableRow.allAdj = $(this).closest('tr').children('td:eq(8)').text();
-                            tableRow.chrgAdj = $(this).closest('tr').children('td:eq(9)').text();
-                            tableRow.taxAdj = $(this).closest('tr').children('td:eq(10)').text();
-                            tableRow.creditDebit = $(this).closest('tr').children('td:eq(11)').text();
-                            tableRow.lineAdjAmnt = $(this).closest('tr').children('td:eq(12)').text();
-                            tableRow.comments = $(this).closest('tr').children('td:eq(13)').text();
-                            tableData.push(tableRow);
-                        });
-
-                $.session.setAttribute("AdjData", tableData);
-                //$.session.set("AdjData", tableData);
-                //$.post(
-                  //      "/createCDMRServlet" /*url of consuming servlet*/
-                        //{tableData: tableData}, /*data*/
-                        //function () {
-                        //    alert("Success!");
-                        //}, /*function to execute in case of success*/
-                        //"json" /* data type */
-                //);
-                //event.preventDefault(); //Prevent sending form by browser
-
-            });
-
-    </script>
 </div>
 <%@include file="footer.jsp"%>
 </body>

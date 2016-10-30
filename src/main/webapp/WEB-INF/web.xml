@@ -16,66 +16,6 @@
         <role-name>FM</role-name>
     </security-role>
 
-
-    <!-- Tell the server to use form-based authentication. -->
-    <login-config>
-        <auth-method>FORM</auth-method>
-        <form-login-config>
-            <form-login-page>/login.jsp</form-login-page>
-            <form-error-page>/failedLogin.jsp</form-error-page>
-        </form-login-config>
-    </login-config>
-
-    <!-- Protect index.jsp -->
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>index</web-resource-name>
-            <url-pattern>/index.jsp</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>DSM</role-name>
-            <role-name>FM</role-name>
-            <role-name>TM</role-name>
-        </auth-constraint>
-    </security-constraint>
-
-    <!-- Protect inbox.jsp -->
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>inbox</web-resource-name>
-            <url-pattern>/inbox.jsp</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>DSM</role-name>
-            <role-name>FM</role-name>
-        </auth-constraint>
-    </security-constraint>
-
-    <!-- Protect search.jsp -->
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>search</web-resource-name>
-            <url-pattern>/search.jsp</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>TM</role-name>
-            <role-name>DSM</role-name>
-            <role-name>FM</role-name>
-        </auth-constraint>
-    </security-constraint>
-
-    <!-- Protect createCDMR.jsp -->
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>createCDMR</web-resource-name>
-            <url-pattern>/createCDMR.jsp</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>TM</role-name>
-            <role-name>DSM</role-name>
-        </auth-constraint>
-    </security-constraint>
-
     <servlet>
         <servlet-name>Entry</servlet-name>
         <servlet-class>com.cdmr.controller.Entry</servlet-class>
