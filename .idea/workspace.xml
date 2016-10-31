@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
     </list>
@@ -61,23 +60,23 @@
       <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1725">
-              <caret line="229" column="69" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="69" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <marker date="1477874492617" expanded="true" signature="15503:15522" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="15652:15671" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="15824:15843" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="15934:15953" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="16039:16058" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="16162:16181" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="16726:16745" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="16834:16853" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="16924:16943" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="17014:17033" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="17104:17123" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="17194:17213" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="17322:17341" ph="..." />
-                <marker date="1477874492617" expanded="true" signature="17412:17431" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="15485:15504" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="15634:15653" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="15806:15825" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="15916:15935" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="16021:16040" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="16144:16163" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="16708:16727" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="16816:16835" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="16906:16925" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="16996:17015" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="17086:17105" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="17176:17195" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="17304:17323" ph="..." />
+                <marker date="1477942695854" expanded="true" signature="17394:17413" ph="..." />
               </folding>
             </state>
           </provider>
@@ -86,8 +85,8 @@
       <file leaf-file-name="cdmr.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logs/cdmr.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="6623" column="116" selection-start-line="6623" selection-start-column="100" selection-end-line="6623" selection-end-column="116" />
+            <state relative-caret-position="-43136">
+              <caret line="6765" column="115" selection-start-line="6623" selection-start-column="100" selection-end-line="6623" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -1268,7 +1267,7 @@
       <workItem from="1477661940027" duration="5170000" />
       <workItem from="1477744124632" duration="12858000" />
       <workItem from="1477845404428" duration="9951000" />
-      <workItem from="1477859566733" duration="9855000" />
+      <workItem from="1477859566733" duration="12565000" />
     </task>
     <servers />
   </component>
@@ -1305,7 +1304,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="605574000" />
+    <option name="totallyTimeSpent" value="608284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1313,14 +1312,14 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36187562" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36187562" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4464832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4464832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29153925" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1776,31 +1775,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/cdmr.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="6623" column="116" selection-start-line="6623" selection-start-column="100" selection-end-line="6623" selection-end-column="116" />
+        <state relative-caret-position="-43136">
+          <caret line="6765" column="115" selection-start-line="6623" selection-start-column="100" selection-end-line="6623" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="229" column="69" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="69" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <marker date="1477874492617" expanded="true" signature="15503:15522" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="15652:15671" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="15824:15843" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="15934:15953" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="16039:16058" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="16162:16181" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="16726:16745" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="16834:16853" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="16924:16943" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="17014:17033" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="17104:17123" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="17194:17213" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="17322:17341" ph="..." />
-            <marker date="1477874492617" expanded="true" signature="17412:17431" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="15485:15504" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="15634:15653" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="15806:15825" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="15916:15935" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="16021:16040" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="16144:16163" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="16708:16727" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="16816:16835" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="16906:16925" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="16996:17015" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="17086:17105" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="17176:17195" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="17304:17323" ph="..." />
+            <marker date="1477942695854" expanded="true" signature="17394:17413" ph="..." />
           </folding>
         </state>
       </provider>

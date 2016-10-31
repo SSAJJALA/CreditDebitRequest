@@ -14,6 +14,7 @@
 <%@include file="head.jsp"%>
 <link href="/css/style.css" rel="stylesheet" type="text/css" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page buffer="16kb" autoFlush="true" %>
 
 <% Customer custDetails;
     InvoiceHeader invHeader;
@@ -40,7 +41,7 @@
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>
 
-    <table width="90%" cellpadding="4" cellspacing="0" style="height: 100px;">
+    <table width="90%" cellpadding="4" cellspacing="0" style="height: 110px;">
         <tr>
             <td width="40%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
@@ -121,28 +122,21 @@
 
             <td width="20%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
-                    <tr></tr>
-                    <tr></tr>
                     <c:if test="${cdmr.adjustments !=null && cdmr.adjustments !=''}">
                         <tr>
                             <td>Adj Gross:&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjGross}"/></td>
-
                         </tr>
                         <tr>
-
                             <td>Adj Allowance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAllowance}"/></td>
                         </tr>
                         <tr>
-
                             <td>Adj Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjCharges}"/></td>
                         </tr>
                         <tr>
-
                             <td>Adj Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjTax}"/></td>
                         </tr>
                         <tr>
-
-                            <td>Adj Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAmnt}"/></td>
+                            <td>Adj Net:<c:out value="${cdmr.adjAmnt}"/></td>
                         </tr>
 
                     </c:if>
