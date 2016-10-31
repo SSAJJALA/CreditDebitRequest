@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java" />
     </list>
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,56 +58,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
               <folding>
-                <marker date="1477872758926" expanded="true" signature="15595:15614" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="15744:15763" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="15916:15935" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="16026:16045" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="16131:16150" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="16254:16273" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="16818:16837" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="16926:16945" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="17016:17035" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="17106:17125" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="17196:17215" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="17286:17305" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="17414:17433" ph="..." />
-                <marker date="1477872758926" expanded="true" signature="17504:17523" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="15587:15606" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="15736:15755" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="15908:15927" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="16018:16037" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="16123:16142" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="16246:16265" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="16810:16829" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="16918:16937" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="17008:17027" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="17098:17117" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="17188:17207" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="17278:17297" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="17406:17425" ph="..." />
+                <marker date="1477872993114" expanded="true" signature="17496:17515" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirectToDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/DirectToDetails.java">
+      <file leaf-file-name="cdmr.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logs/cdmr.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="33" column="66" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="66" />
+            <state relative-caret-position="226">
+              <caret line="6555" column="124" selection-start-line="6555" selection-start-column="100" selection-end-line="6555" selection-end-column="124" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inbox.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/inbox.jsp">
+      <file leaf-file-name="CreateCDMRServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="50" column="159" selection-start-line="50" selection-start-column="76" selection-end-line="50" selection-end-column="159" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/search.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="84" column="11" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="11" />
+            <state relative-caret-position="327">
+              <caret line="129" column="12" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -115,8 +106,8 @@
       <file leaf-file-name="CDMR.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="225">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -186,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/controller/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/src/test/com/cdmr/ui/CalculateCDMRTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/ui/CalculateCDMR.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/ui/GetCDMRDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/controller/DirectToDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/controller/CDMRDetailsServlet.java" />
@@ -196,6 +186,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java" />
       </list>
     </option>
   </component>
@@ -1277,7 +1268,7 @@
       <workItem from="1477661940027" duration="5170000" />
       <workItem from="1477744124632" duration="12858000" />
       <workItem from="1477845404428" duration="9951000" />
-      <workItem from="1477859566733" duration="8283000" />
+      <workItem from="1477859566733" duration="9195000" />
     </task>
     <servers />
   </component>
@@ -1314,7 +1305,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="604002000" />
+    <option name="totallyTimeSpent" value="604914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1329,12 +1320,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38735983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5259939" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29153925" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16747183" sideWeight="0.7821159" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16425121" sideWeight="0.7821159" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18572195" sideWeight="0.21788414" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2071927" sideWeight="0.4897436" order="7" side_tool="false" content_ui="tabs" />
@@ -1389,13 +1380,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/persistence/InvoiceDetailDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="116" column="44" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/750b3ad4/13347100-7a19-4686-be4e-b581d92c7501/APPSPROD.INVOICE_DETAIL">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1750,26 +1734,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/inbox.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="50" column="159" selection-start-line="50" selection-start-column="76" selection-end-line="50" selection-end-column="159" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="127" column="64" selection-start-line="127" selection-start-column="64" selection-end-line="127" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -1790,26 +1758,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logs/cdmr.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="6555" column="124" selection-start-line="6555" selection-start-column="100" selection-end-line="6555" selection-end-column="124" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding>
-            <marker date="1477872758926" expanded="true" signature="15595:15614" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="15744:15763" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="15916:15935" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="16026:16045" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="16131:16150" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="16254:16273" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="16818:16837" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="16926:16945" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="17016:17035" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="17106:17125" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="17196:17215" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="17286:17305" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="17414:17433" ph="..." />
-            <marker date="1477872758926" expanded="true" signature="17504:17523" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="15587:15606" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="15736:15755" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="15908:15927" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="16018:16037" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="16123:16142" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="16246:16265" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="16810:16829" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="16918:16937" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="17008:17027" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="17098:17117" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="17188:17207" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="17278:17297" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="17406:17425" ph="..." />
+            <marker date="1477872993114" expanded="true" signature="17496:17515" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="129" column="12" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -96,9 +96,9 @@ public class CreateCDMRServlet extends HttpServlet {
             String[] comments = request.getParameterValues("comments");
 
             logger.info("List of adjustment items: " + adjItem);
-            logger.info("List of adjustment items: " + adjQty);
-            logger.info("List of adjustment items: " + reasonCode);
-            logger.info("List of adjustment items: " + creditdebit);
+            logger.info("List of adjustment qtys: " + adjQty);
+            logger.info("List of adjustment reason codes: " + reasonCode);
+            logger.info("List of adjustment credit/debit: " + creditdebit);
             logger.info("List of adjustment items: " + comments);
 
             List<UiAdjData> adjs = new ArrayList<UiAdjData>();
@@ -121,7 +121,14 @@ public class CreateCDMRServlet extends HttpServlet {
 
             CalculateCDMR calculate = new CalculateCDMR(customerDtls, header, details, adjs, user);
             CDMR cdmr = calculate.prepareCDMR();
+            logger.info("cdmr gross:" + cdmr.getAdjGross());
+            logger.info("cdmr allowance:" + cdmr.getAdjAllowance());
+            logger.info("cdmr charges:" + cdmr.getAdjCharges());
+            logger.info("cdmr taxes:" + cdmr.getAdjTax());
+            logger.info("cdmr net:" + cdmr.getAdjAmnt());
+
             session.setAttribute("cdmr", cdmr);
+
 
             buttonAction = "calculate";
 

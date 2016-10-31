@@ -15,6 +15,16 @@
 <link href="/css/style.css" rel="stylesheet" type="text/css" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<% Customer custDetails;
+    InvoiceHeader invHeader;
+    InvoiceDetail invDetails;
+%>
+<%
+    custDetails = (Customer) request.getAttribute("customerResults");
+    invHeader = (InvoiceHeader) request.getAttribute("invoiceResults");
+    invDetails = (InvoiceDetail) request.getAttribute("invoiceDetails");
+%>
+
 <html>
 <head>
     <title>Create CDMR</title>
@@ -108,7 +118,7 @@
                 </table>
 
             </td>
-<%--
+
             <td width="20%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                     <tr></tr>
@@ -141,7 +151,7 @@
                 </table>
 
             </td>
---%>
+
         </tr>
         </table>
 
