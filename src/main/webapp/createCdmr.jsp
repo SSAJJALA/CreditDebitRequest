@@ -239,7 +239,7 @@
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.taxAdjAmnt}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit" value="${adjs.creditDebitFlg}"></td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.lineAdjAmnt}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments" value="${adjs.comments(0).comment}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments" value="${adjs.comments[0].comment}"></td>
                         </c:forEach>
 
                     </c:if>
