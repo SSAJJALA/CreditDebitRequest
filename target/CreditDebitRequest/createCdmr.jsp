@@ -108,8 +108,8 @@
                 </table>
 
             </td>
-
-            <td width="40%">
+<%--
+            <td width="20%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                     <tr></tr>
                     <tr></tr>
@@ -141,7 +141,7 @@
                 </table>
 
             </td>
-
+--%>
         </tr>
         </table>
 
