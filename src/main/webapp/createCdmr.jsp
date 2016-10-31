@@ -126,23 +126,18 @@
                     <c:if test="${cdmr.adjustments !=null && cdmr.adjustments !=''}">
                         <tr>
                             <td>Adj Gross:&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjGross}"/></td>
-
                         </tr>
                         <tr>
-
                             <td>Adj Allowance:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAllowance}"/></td>
                         </tr>
                         <tr>
-
                             <td>Adj Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjCharges}"/></td>
                         </tr>
                         <tr>
-
                             <td>Adj Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjTax}"/></td>
                         </tr>
                         <tr>
-
-                            <td>Adj Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAmnt}"/></td>
+                            <td>Adj Net:<c:out value="${cdmr.adjAmnt}"/></td>
                         </tr>
 
                     </c:if>
