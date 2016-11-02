@@ -28,7 +28,7 @@ Date        Task                                            Hours       Notes
 10/29/2016  Worked on individual project                    2
 10/30/2016  Worked on creating the CDMR details screen      2
 11/01/2016  Worked on fixing the JSP load issue             3
-11/02/2016  Worked on 
+11/02/2016  Worked on calculate and submit functions        4
 11/03/2016  Worked on preparing my second presentation on wM server     2
 
 
