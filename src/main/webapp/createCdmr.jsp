@@ -122,6 +122,8 @@
 
             <td width="20%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
+                    <tr></tr>
+                    <tr></tr>
                     <c:if test="${cdmr.adjustments !=null && cdmr.adjustments !=''}">
                         <tr>
                             <td>Adj Gross:&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjGross}"/></td>
@@ -136,7 +138,7 @@
                             <td>Adj Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjTax}"/></td>
                         </tr>
                         <tr>
-                            <td>Adj Net:<c:out value="${cdmr.adjAmnt}"/></td>
+                            <td>Adj Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAmnt}"/></td>
                         </tr>
 
                     </c:if>
