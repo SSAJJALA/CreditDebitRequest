@@ -106,10 +106,15 @@ public class CreateCDMRServlet extends HttpServlet {
 
             for (int i=0;i<adjItem.length;i++) {
                 UiAdjData adj = new UiAdjData();
+                logger.info("Adj Qty:" + adjQty[i]);
                 adj.setAdjQty(Integer.parseInt(adjQty[i]));
+                logger.info("Reason Code:" + reasonCode[i]);
                 adj.setReasonCode(reasonCode[i]);
+                logger.info("Comments:" + comments[i]);
                 adj.setComments(comments[i]);
+                logger.info("Credit/Debit:" + creditdebit[i]);
                 adj.setCreditDebit(creditdebit[i]);
+                logger.info("Adj Item:" + adjItem[i]);
                 adj.setItemNum(Integer.parseInt(adjItem[i]));
                 adjs.add(adj);
             }

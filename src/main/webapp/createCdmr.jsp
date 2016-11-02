@@ -237,7 +237,13 @@
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.allowanceAdjAmnt}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.chargeAdjAmnt}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.taxAdjAmnt}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit" value="${adjs.creditDebitFlg}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">
+                                <select name="creditDebit" size="1" id="creditDebit">
+                                    <option selected >${adjs.creditDebitFlg}</option>
+                                    <option value="Credit">Credit</option>
+                                    <option value="Debit">Debit</option>
+                                </select>
+                        </td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.lineAdjAmnt}</td>
                             <%
                                 String commentInfo = "";
@@ -307,7 +313,13 @@
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' +
+                                '<select name="creditDebit" size="1" id="creditDebit">' +
+                                '<option value=""></option>' +
+                                '<option value="Credit">Credit</option>' +
+                                '<option value="Debit">Debit</option>' +
+
+                                '</select>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments"></td>' +
                         + '</tr>');
