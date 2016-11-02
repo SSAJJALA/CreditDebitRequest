@@ -239,7 +239,16 @@
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.taxAdjAmnt}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit" value="${adjs.creditDebitFlg}"></td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.lineAdjAmnt}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments" value="${adjs.comments[0].comment}"></td>
+                            <%
+                                String commentInfo = "";
+                            %>
+                            <c:forEach items="${adjs.comments}" var="comment">
+                                <c:set var = "commentCon" value="${comment.comment}" />
+                                <%
+                                    commentInfo = commentInfo + pageContext.getAttribute("commentCon").toString();
+                                %>
+                            </c:forEach>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments" value="<%= commentInfo%>"></td>
                         </c:forEach>
 
                     </c:if>
