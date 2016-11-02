@@ -24,3 +24,11 @@ Date        Task                                            Hours       Notes
 10/08/2016  Started creating the Junit test cases           4
 10/09/2016  Went thru the REST material                     2
 10/11/2016  Wrote some additional java services(update invoice) 3
+
+10/29/2016  Worked on individual project                    2
+10/30/2016  Worked on creating the CDMR details screen      2
+11/01/2016  Worked on fixing the JSP load issue             3
+11/02/2016  Worked on 
+11/03/2016  Worked on preparing my second presentation on wM server     2
+
+
