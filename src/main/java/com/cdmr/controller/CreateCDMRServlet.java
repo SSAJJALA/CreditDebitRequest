@@ -92,7 +92,7 @@ public class CreateCDMRServlet extends HttpServlet {
             String[] adjItem = request.getParameterValues("adjItem");
             String[] adjQty = request.getParameterValues("adjQty");
             String[] reasonCode = request.getParameterValues("reasonCode");
-            String[] creditdebit = request.getParameterValues("creditdebit");
+            String[] creditdebit = request.getParameterValues("creditDebit");
             String[] comments = request.getParameterValues("comments");
 
             logger.info("List of adjustment items: " + adjItem);

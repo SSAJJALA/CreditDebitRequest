@@ -122,6 +122,8 @@
 
             <td width="20%">
                 <table cellpadding="4" cellspacing="0" align="center" width="80%" >
+                    <tr></tr>
+                    <tr></tr>
                     <c:if test="${cdmr.adjustments !=null && cdmr.adjustments !=''}">
                         <tr>
                             <td>Adj Gross:&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjGross}"/></td>
@@ -136,7 +138,7 @@
                             <td>Adj Tax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjTax}"/></td>
                         </tr>
                         <tr>
-                            <td>Adj Net:<c:out value="${cdmr.adjAmnt}"/></td>
+                            <td>Adj Net:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$&nbsp;<c:out value="${cdmr.adjAmnt}"/></td>
                         </tr>
 
                     </c:if>
@@ -226,7 +228,7 @@
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty" value="${adjs.adjQty}"></td>
                         <td style="text-align: center;" rowspan="1" colspan="1">
                                 <select name="reasonCode" size="1" id="reasonCode">
-                                    <option value="${adjs.reasonCode}"></option>
+                                    <option selected >${adjs.reasonCode}</option>
                                     <option value="1-Defective">1-Defective</option>
                                     <option value="2-Mis picked">2-Mis picked</option>
                                     <option value="3-Returned">3-Returned</option>
@@ -235,9 +237,15 @@
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalPrice}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1"></td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.allowanceAdjAmnt}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.chargeAdjAmnt}chargeAdjAmnt</td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.chargeAdjAmnt}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.taxAdjAmnt}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit" value="${adjs.creditDebitFlg}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1">
+                                <select name="creditDebit" size="1" id="creditDebit">
+                                    <option selected >${adjs.creditDebitFlg}</option>
+                                    <option value="Credit">Credit</option>
+                                    <option value="Debit">Debit</option>
+                                </select>
+                        </td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.lineAdjAmnt}</td>
                             <%
                                 String commentInfo = "";
@@ -307,7 +315,13 @@
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="creditdebit"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1">' +
+                                '<select name="creditDebit" size="1" id="creditDebit">' +
+                                '<option value=""></option>' +
+                                '<option value="Credit">Credit</option>' +
+                                '<option value="Debit">Debit</option>' +
+
+                                '</select>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments"></td>' +
                         + '</tr>');
@@ -318,6 +332,8 @@
     </script>
 
 </div>
+<br>
+<br>
 <%@include file="footer.jsp"%>
 </body>
 </html>
