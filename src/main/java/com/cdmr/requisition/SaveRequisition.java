@@ -79,7 +79,12 @@ public class SaveRequisition {
         cdmrHeader.setSalesRepID(cdmr.getSalesRepID());
         cdmrHeader.setSalesRepName(cdmr.getSalesRepName());
         cdmrHeader.setStatus(cdmr.getStatus());
-        cdmrHeader.setType(cdmr.getType());
+
+        if (cdmr.getType().equals("Credit")) {
+            cdmrHeader.setType("C");
+        } else {
+            cdmrHeader.setType("D");
+        }
 
         InvoiceHeader invHeader = cdmr.getInvHeader();
         cdmrHeader.setInvAmount(invHeader.getNetAmnt());
@@ -105,7 +110,12 @@ public class SaveRequisition {
             cdmrAdj.setRequisitionItem(cdmrAdjpk);
             cdmrAdj.setAdjQty(adj.getAdjQty());
             cdmrAdj.setAllowanceAdj(adj.getAllowanceAdjAmnt());
-            cdmrAdj.setCdFlag(adj.getCreditDebitFlg());
+            if (adj.getAllowanceAdjAmnt().equals("Credit")) {
+                cdmrAdj.setCdFlag("C");
+            } else {
+                cdmrAdj.setCdFlag("D");
+            }
+
             cdmrAdj.setChargesAdj(adj.getChargeAdjAmnt());
             cdmrAdj.setCustNum(cdmr.getCustomer().getCustNum());
             cdmrAdj.setExtPrice(adj.getLineAdjAmnt());
