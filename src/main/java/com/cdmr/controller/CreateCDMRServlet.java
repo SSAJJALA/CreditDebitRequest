@@ -146,7 +146,11 @@ public class CreateCDMRServlet extends HttpServlet {
             buttonAction = "submit";
 
         } else if (request.getParameter("btn_cancel") != null) {
-            request.getSession().invalidate();
+            //request.getSession().invalidate();
+            session.removeAttribute("cdmr");
+            session.removeAttribute("customerResults");
+            session.removeAttribute("invoiceResults");
+            session.removeAttribute("invoiceDetails");
             buttonAction = "cancel";
         } else if (request.getParameter("logout") != null) {
             request.getSession().invalidate();
