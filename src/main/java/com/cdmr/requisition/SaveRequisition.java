@@ -110,7 +110,7 @@ public class SaveRequisition {
             cdmrAdj.setRequisitionItem(cdmrAdjpk);
             cdmrAdj.setAdjQty(adj.getAdjQty());
             cdmrAdj.setAllowanceAdj(adj.getAllowanceAdjAmnt());
-            if (adj.getAllowanceAdjAmnt().equals("Credit")) {
+            if (adj.getCreditDebitFlg().equals("Credit")) {
                 cdmrAdj.setCdFlag("C");
             } else {
                 cdmrAdj.setCdFlag("D");

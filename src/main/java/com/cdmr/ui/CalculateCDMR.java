@@ -117,6 +117,7 @@ public class CalculateCDMR {
         cust.setPhone(customer.getPhone());
         cust.setState(customer.getState());
         cust.setZip(customer.getZip());
+        cust.setCustName(customer.getCustName());
 
         cdmr.setCustomer(cust);
     }
