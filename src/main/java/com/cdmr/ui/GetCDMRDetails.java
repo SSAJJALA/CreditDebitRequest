@@ -89,7 +89,7 @@ public class GetCDMRDetails {
 
     }
 
-    public Task getTaskDetails(int taskID) {
+    public Task getTaskDetails() {
         Task task = null;
         TaskDao taskdao = new TaskDao();
         task = taskdao.getTask(taskID);

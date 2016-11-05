@@ -1,6 +1,7 @@
 package com.cdmr.ui;
 
 import com.cdmr.Data.CDMR;
+import com.cdmr.entity.Task;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,15 +18,23 @@ public class GetCDMRDetailsTest {
 
     @Before
     public void setUp() {
-        getCDMR = new GetCDMRDetails(58,0,"VYU6026");
+        getCDMR = new GetCDMRDetails(0,47,"VYU6026");
     }
 
 
     @Test
-    public void getCDMR() throws Exception {
+    public void getCDMRTest() throws Exception {
         CDMR cdmr = getCDMR.getCDMR();
         assertNotNull("get cdmr details failed", cdmr);
 
     }
+
+    @Test
+    public void getTaskDetailsTest() throws Exception {
+        Task task = getCDMR.getTaskDetails();
+        assertNotNull("get cdmr details failed", task);
+
+    }
+
 
 }
