@@ -130,13 +130,13 @@ public class GetRequisition {
         List<CDMRAdjustments> adjsData = new ArrayList<CDMRAdjustments>();
         CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
 
-        List<Filter> filters = new ArrayList<Filter>();
-        Filter filter1 = new Filter();
-        filter1.setSearchOption("requisitionID");
-        filter1.setOperand("=");
-        filter1.setSearchValue(String.valueOf(this.getRequisitionID()));
-        filters.add(filter1);
-        List<CdmrAdjustments> adjEntitys = adjDao.getCdmrAdjs(filters);
+        List<Filter> reqFilter = new ArrayList<Filter>();
+        Filter reqTempFilter = new Filter();
+        reqTempFilter.setSearchOption("requisitionID");
+        reqTempFilter.setOperand("=");
+        reqTempFilter.setSearchValue(String.valueOf(this.getRequisitionID()));
+        reqFilter.add(reqTempFilter);
+        List<CdmrAdjustments> adjEntitys = adjDao.getCdmrAdjs(reqFilter);
 
         for (CdmrAdjustments adjEntity : adjEntitys) {
             CDMRAdjustments adjData = new CDMRAdjustments();
@@ -151,18 +151,18 @@ public class GetRequisition {
             adjData.setNewInvLineTotal(adjEntity.getNewInvLineAmnt());
 
             InvoiceDetailDao invDtlsDao = new InvoiceDetailDao();
-            List<Filter> filters1 = new ArrayList<Filter>();
-            Filter filter2 = new Filter();
-            filter2.setSearchOption("invNum");
-            filter2.setOperand("=");
-            filter2.setSearchValue(Integer.toString(cdmr.getInvHeader().getInvNum()));
-            filters1.add(filter2);
-            Filter filter3 = new Filter();
-            filter3.setSearchOption("itemNum");
-            filter3.setOperand("=");
-            filter3.setSearchValue(Integer.toString(this.getRequisitionID()));
-            filters1.add(filter3);
-            List<InvoiceDetail> invDetails = invDtlsDao.getInvoicesWithFilter(filters1);
+            List<Filter> invItemFilter = new ArrayList<Filter>();
+            Filter invFilter = new Filter();
+            invFilter.setSearchOption("invNum");
+            invFilter.setOperand("=");
+            invFilter.setSearchValue(Integer.toString(cdmr.getInvHeader().getInvNum()));
+            invItemFilter.add(invFilter);
+            Filter itemFilter = new Filter();
+            itemFilter.setSearchOption("itemNum");
+            itemFilter.setOperand("=");
+            itemFilter.setSearchValue(Integer.toString(adjEntity.getRequisitionItem().getItemNum()));
+            invItemFilter.add(itemFilter);
+            List<InvoiceDetail> invDetails = invDtlsDao.getInvoicesWithFilter(invItemFilter);
             adjData.setOriginalInvLineTotal(invDetails.get(0).getNetAmnt());
             adjData.setOriginalPrice(invDetails.get(0).getUnitPrice());
             adjData.setOriginalQty(invDetails.get(0).getQty());
