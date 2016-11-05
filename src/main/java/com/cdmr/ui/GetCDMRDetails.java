@@ -84,8 +84,7 @@ public class GetCDMRDetails {
 
         CDMR cdmr = null;
         GetRequisition getRequisition = new GetRequisition(reqID);
-        getRequisition.getRequisition();
-        cdmr = getRequisition.getCdmr();
+        cdmr = getRequisition.getRequisition();
         return cdmr;
 
     }

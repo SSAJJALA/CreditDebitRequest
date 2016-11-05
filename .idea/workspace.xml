@@ -61,6 +61,20 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - APPSPROD@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="CDMR_ADJUSTMENTS" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -71,8 +85,8 @@
       <file leaf-file-name="cdmr.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logs/cdmr.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-43082">
-              <caret line="7292" column="111" selection-start-line="7227" selection-start-column="94" selection-end-line="7227" selection-end-column="118" />
+            <state relative-caret-position="-42707">
+              <caret line="7317" column="111" selection-start-line="7227" selection-start-column="94" selection-end-line="7227" selection-end-column="118" />
               <folding />
             </state>
           </provider>
@@ -142,6 +156,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GetRequisition.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/requisition/GetRequisition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="152" column="65" selection-start-line="152" selection-start-column="65" selection-end-line="152" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GetInboxTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/ui/GetInboxTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -175,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/entity/Task.java" />
         <option value="$PROJECT_DIR$/src/test/com/cdmr/ui/GetInboxTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/util/ConvertToLocalDate.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/13347100-7a19-4686-be4e-b581d92c7501/console.sql" />
@@ -226,6 +249,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/persistence/TaskAssignmentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/ui/GetCDMRDetails.java" />
         <option value="$PROJECT_DIR$/src/test/com/cdmr/ui/GetCDMRDetailsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/requisition/GetRequisition.java" />
       </list>
     </option>
   </component>
@@ -1405,14 +1429,11 @@
       <workItem from="1478113484887" duration="1213000" />
       <workItem from="1478124126001" duration="5035000" />
       <workItem from="1478220448002" duration="1233000" />
-      <workItem from="1478266522695" duration="13003000" />
+      <workItem from="1478266522695" duration="14464000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CalculateCDMRTest_prepareCDMR - 2016.10.26 at 15h 53m 31s.xml">
-      <configuration name="CalculateCDMRTest.prepareCDMR" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CalculateCDMRTest_prepareCDMR - 2016.10.26 at 15h 57m 41s.xml">
       <configuration name="CalculateCDMRTest.prepareCDMR" configurationId="JUnit" />
     </history-entry>
@@ -1437,16 +1458,19 @@
     <history-entry file="CustomerLookupConsumerTest_getCustomerApiJSON - 2016.10.19 at 15h 53m 30s.xml">
       <configuration name="CustomerLookupConsumerTest.getCustomerApiJSON" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GetCDMRDetailsTest_getCDMR - 2016.11.04 at 19h 38m 25s.xml">
+      <configuration name="GetCDMRDetailsTest.getCDMR" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="SubmitCDMRTest_saveCDMR - 2016.10.12 at 15h 18m 17s.xml">
       <configuration name="SubmitCDMRTest.saveCDMR" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="637965000" />
+    <option name="totallyTimeSpent" value="639426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1459,7 +1483,7 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43323138" sideWeight="0.49811727" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29051986" sideWeight="0.49811727" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29051986" sideWeight="0.49811727" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16961889" sideWeight="0.7821159" order="0" side_tool="false" content_ui="combo" />
@@ -1496,7 +1520,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdmr/requisition/GetRequisition.java</url>
+          <line>129</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1509,13 +1541,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/TaskResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/ui/CompleteTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1900,8 +1925,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/cdmr.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43082">
-          <caret line="7292" column="111" selection-start-line="7227" selection-start-column="94" selection-end-line="7227" selection-end-column="118" />
+        <state relative-caret-position="-42707">
+          <caret line="7317" column="111" selection-start-line="7227" selection-start-column="94" selection-end-line="7227" selection-end-column="118" />
           <folding />
         </state>
       </provider>
@@ -1997,6 +2022,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="27" column="5" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/requisition/GetRequisition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="152" column="65" selection-start-line="152" selection-start-column="65" selection-end-line="152" selection-end-column="65" />
           <folding />
         </state>
       </provider>

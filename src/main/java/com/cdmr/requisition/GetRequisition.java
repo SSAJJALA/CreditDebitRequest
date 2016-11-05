@@ -168,8 +168,12 @@ public class GetRequisition {
             adjData.setOriginalQty(invDetails.get(0).getQty());
             adjData.setReasonCode(adjEntity.getReasonCode());
             adjData.setTaxAdjAmnt(adjEntity.getTaxAdj());
+
+            //add adjustment to adjsData
+            adjsData.add(adjData);
         }
 
+        //set cdmr adjustments
         cdmr.setAdjustments(adjsData);
 
     }
