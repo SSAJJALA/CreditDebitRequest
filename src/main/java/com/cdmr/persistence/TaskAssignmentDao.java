@@ -34,12 +34,12 @@ public class TaskAssignmentDao {
     /**
      * retrieve all tasks given an task id
      *
-     * @param taskID the task id
+     * @param taskUser the task id, user id
      * @return tasks
      */
-    public List<TaskAssignment> getTask(int taskID) {
+    public List<TaskAssignment> getTask(TaskAssignmentPK taskUser) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        List<TaskAssignment>  tasks = (List<TaskAssignment>) session.get(TaskAssignment.class, taskID);
+        List<TaskAssignment>  tasks = (List<TaskAssignment>) session.get(TaskAssignment.class, taskUser);
         return tasks;
 
     }

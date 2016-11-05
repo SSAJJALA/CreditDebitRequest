@@ -3,6 +3,7 @@ package com.cdmr.ui;
 import com.cdmr.Data.CDMR;
 import com.cdmr.entity.Task;
 import com.cdmr.entity.TaskAssignment;
+import com.cdmr.entity.TaskAssignmentPK;
 import com.cdmr.persistence.TaskAssignmentDao;
 import com.cdmr.persistence.TaskDao;
 import com.cdmr.requisition.GetRequisition;
@@ -17,14 +18,24 @@ public class GetCDMRDetails {
 
     private int reqID;
     private int taskID;
+    private String userID;
     private final Logger log = Logger.getLogger(this.getClass());
 
     public GetCDMRDetails() {
     }
 
-    public GetCDMRDetails(int reqID, int taskID) {
+    public GetCDMRDetails(int reqID, int taskID, String userID) {
         this.reqID = reqID;
         this.taskID = taskID;
+        this.userID = userID;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public int getReqID() {
@@ -54,7 +65,10 @@ public class GetCDMRDetails {
         } else if (taskID != 0) {
 
             TaskAssignmentDao taskAssignmentDao = new TaskAssignmentDao();
-            List<TaskAssignment> taskAssignments = taskAssignmentDao.getTask(taskID);
+            TaskAssignmentPK taskAssignmentPK = new TaskAssignmentPK();
+            taskAssignmentPK.setUserID(this.getUserID());
+            taskAssignmentPK.setTaskID(this.getTaskID());
+            List<TaskAssignment> taskAssignments = taskAssignmentDao.getTask(taskAssignmentPK);
             this.reqID = taskAssignments.get(0).getRequisitionID();
             cdmr = this.getCDMRUsingReqID(reqID);
 

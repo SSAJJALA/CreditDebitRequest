@@ -28,7 +28,7 @@ public class DirectToDetails extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-
+        String userID = request.getUserPrincipal().getName();
         int taskID = 0;
         int ReqID = 0;
         if (!request.getParameter("taskID").isEmpty()) {
@@ -37,7 +37,7 @@ public class DirectToDetails extends HttpServlet {
             ReqID = Integer.parseInt(request.getParameter("reqID"));
         }
 
-        GetCDMRDetails details = new GetCDMRDetails(ReqID, taskID);
+        GetCDMRDetails details = new GetCDMRDetails(ReqID, taskID, userID);
         if (taskID != 0) {
             CDMR cdmr = details.getCDMR();
             Task tak = details.getTaskDetails(taskID);
