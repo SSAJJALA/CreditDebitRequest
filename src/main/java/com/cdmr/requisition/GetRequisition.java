@@ -187,14 +187,14 @@ public class GetRequisition {
 
         //Add first filter
         Filter filter1 = new Filter();
-        filter1.setSearchValue(Integer.toString(this.getRequisitionID()));
+        filter1.setSearchValue(Integer.toString(reqID));
         filter1.setOperand("=");
         filter1.setSearchOption("requisitionID");
         filters.add(filter1);
 
         //Add second filter
         Filter filter2 = new Filter();
-        filter2.setSearchValue(Integer.toString(this.getRequisitionID()));
+        filter2.setSearchValue(Integer.toString(itemNum));
         filter2.setOperand("=");
         filter2.setSearchOption("itemNum");
         filters.add(filter2);
