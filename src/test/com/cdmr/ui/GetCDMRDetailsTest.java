@@ -17,7 +17,7 @@ public class GetCDMRDetailsTest {
 
     @Before
     public void setUp() {
-        getCDMR = new GetCDMRDetails(0,47,"VYU6026");
+        getCDMR = new GetCDMRDetails(58,0,"VYU6026");
     }
 
 
