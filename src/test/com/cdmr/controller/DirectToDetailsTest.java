@@ -2,7 +2,6 @@ package com.cdmr.controller;
 
 import com.cdmr.Data.CDMR;
 import com.cdmr.entity.Task;
-import com.cdmr.webservices.Customer;
 import com.sun.security.auth.UserPrincipal;
 import org.apache.log4j.Logger;
 import org.junit.Before;
@@ -39,9 +38,10 @@ public class DirectToDetailsTest {
 
         servlet.doGet(request, response);
 
-        CDMR cdmr = (CDMR) request.getAttribute("cdmr");
         Task task = (Task) request.getAttribute("taskDetails");
-        assertNotNull("cdmr is null:", cdmr);
+        CDMR cdmrData = (CDMR) request.getAttribute("cdmr");
+
+        assertNotNull("cdmr is null:", cdmrData);
         assertNotNull("task is null:", task);
 
     }
