@@ -40,7 +40,7 @@ public class DirectToDetails extends HttpServlet {
         GetCDMRDetails details = new GetCDMRDetails(ReqID, taskID, userID);
         if (taskID != 0) {
             CDMR cdmr = details.getCDMR();
-            Task tak = details.getTaskDetails(taskID);
+            Task tak = details.getTaskDetails();
             request.setAttribute("cdmr", "cdmr");
             request.setAttribute("taskDetails", "task");
         } else if (ReqID != 0) {
