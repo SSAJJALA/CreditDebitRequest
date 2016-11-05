@@ -37,9 +37,9 @@ public class TaskAssignmentDao {
      * @param taskUser the task id, user id
      * @return tasks
      */
-    public List<TaskAssignment> getTask(TaskAssignmentPK taskUser) {
+    public TaskAssignment getTask(TaskAssignmentPK taskUser) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        List<TaskAssignment>  tasks = (List<TaskAssignment>) session.get(TaskAssignment.class, taskUser);
+        TaskAssignment  tasks = (TaskAssignment) session.get(TaskAssignment.class, taskUser);
         return tasks;
 
     }

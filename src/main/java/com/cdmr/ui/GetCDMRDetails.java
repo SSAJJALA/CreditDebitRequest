@@ -68,8 +68,8 @@ public class GetCDMRDetails {
             TaskAssignmentPK taskAssignmentPK = new TaskAssignmentPK();
             taskAssignmentPK.setUserID(this.getUserID());
             taskAssignmentPK.setTaskID(this.getTaskID());
-            List<TaskAssignment> taskAssignments = taskAssignmentDao.getTask(taskAssignmentPK);
-            this.reqID = taskAssignments.get(0).getRequisitionID();
+            TaskAssignment taskAssignments = taskAssignmentDao.getTask(taskAssignmentPK);
+            this.reqID = taskAssignments.getRequisitionID();
             cdmr = this.getCDMRUsingReqID(reqID);
 
         } else {
