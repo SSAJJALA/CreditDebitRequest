@@ -32,8 +32,8 @@ public class DirectToDetailsTest {
     @Test
     public void doGet() throws Exception {
 
-        request.addParameter("taskID", "47");
-        Principal user = new UserPrincipal("VYU6026");
+        request.addParameter("taskID", "48");
+        Principal user = new UserPrincipal("SSAJJALA");
         request.setUserPrincipal(user);
 
         servlet.doGet(request, response);
