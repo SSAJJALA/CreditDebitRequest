@@ -38,7 +38,7 @@ public class CDMRDetailsServletTest {
         request.setAttribute("cdmr", cdmr);
         request.setAttribute("taskDetails", task);
         request.setParameter("btn_approve", "btn_approve");
-        Principal user = new UserPrincipal("VYU6026");
+        Principal user = new UserPrincipal("SSAJJALA");
         request.setUserPrincipal(user);
 
         servlet.doGet(request, response);
