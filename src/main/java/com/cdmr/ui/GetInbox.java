@@ -50,7 +50,8 @@ public class GetInbox {
 
         String userID = this.getUserID();
 
-        query = query + " B.USER_ID =" + " '" + userID + "'";
+        query = query + " B.USER_ID =" + " '" + userID + "'" + " AND";
+        query = query + " A.TASK_STATUS = 'Active'";
 
         inboxResults = this.executeQuery(query);
 
