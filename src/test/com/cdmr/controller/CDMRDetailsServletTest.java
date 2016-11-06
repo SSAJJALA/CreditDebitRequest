@@ -3,11 +3,14 @@ package com.cdmr.controller;
 import com.cdmr.Data.CDMR;
 import com.cdmr.entity.Task;
 import com.cdmr.ui.GetCDMRDetails;
+import com.sun.security.auth.UserPrincipal;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+
+import java.security.Principal;
 
 import static org.junit.Assert.*;
 
@@ -35,6 +38,8 @@ public class CDMRDetailsServletTest {
         request.setAttribute("cdmr", cdmr);
         request.setAttribute("taskDetails", task);
         request.setParameter("btn_approve", "btn_approve");
+        Principal user = new UserPrincipal("VYU6026");
+        request.setUserPrincipal(user);
 
         servlet.doGet(request, response);
 
