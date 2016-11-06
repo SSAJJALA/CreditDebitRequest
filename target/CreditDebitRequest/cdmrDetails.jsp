@@ -9,6 +9,7 @@
 <%@include file="head.jsp"%>
 <link href="/css/style.css" rel="stylesheet" type="text/css" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page buffer="16kb" autoFlush="true" %>
 <html>
 <head>
     <title>CDMR Details</title>
@@ -27,18 +28,16 @@
             <table width="90%" cellpadding="4" cellspacing="0" style="height: 100px;">
 
                 <tr>
-                    <td width="40%">
+                    <td width="30%">
                         <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                             <tr><td><u><span style="font-size:15px;font-weight:bold;">Customer</span></u></td></tr>
                             <tr><td>Customer Number: &nbsp; <c:out value="${cdmr.customer.custNum}"/></td></tr>
                             <tr><td><c:out value="${cdmr.customer.custName}"/></td></tr>
                             <tr><td><c:out value="${cdmr.customer.address1}"/> &nbsp; <c:out value="${cdmr.customer.address2}"/></td></tr>
-                            <tr><td><c:out value="${cdmr.customer.city}"/>, &nbsp; <c:out value="${cdmr.customer.state}"/></td></tr>&nbsp;<c:out value="${cdmr.customer.zip}"/>
-
-
+                            <tr><td><c:out value="${cdmr.customer.city}"/>, &nbsp; <c:out value="${cdmr.customer.state}"/>&nbsp;<c:out value="${cdmr.customer.zip}"/></td></tr>
                         </table>
                     </td>
-                    <td width="50%">
+                    <td width="40%">
                         <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                             <tr><td><u><span style="font-size:15px;font-weight:bold;">Invoice</span></u></td></tr>
                             <tr>
@@ -63,7 +62,7 @@
                             </tr>
                         </table>
                     </td>
-                    <td width="10%">
+                    <td width="30%">
                         <table cellpadding="4" cellspacing="0" align="center" width="80%" >
                             <tr><td><u><span style="font-size:15px;font-weight:bold;">Credit Debit Request</span></u></td></tr>
                             <tr><td>Created On: &nbsp;&nbsp; <c:out value="${cdmr.cdmrDate}"/></td></tr>
@@ -83,8 +82,8 @@
             </c:if>
             <span style="padding-left:20px"></span>
             <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
-            <br>
-            <table id = "datatable2" width="90%" border="1" align = "center">
+            <br><br>
+            <table id = "datatable1" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
                         <th style="text-align: center;" rowspan="1" colspan="1">Item</th>
@@ -108,7 +107,16 @@
                         <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.originalQty}"/></td>
                         <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.adjQty}"/></td>
                         <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.creditDebitFlg}"/></td>
-                        <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.comments(0).comment}"/></td>
+                        <%
+                            String commentInfo = "";
+                        %>
+                        <c:forEach items="${adjs.comments}" var="comment">
+                            <c:set var = "commentCon" value="${comment.comment}" />
+                            <%
+                                commentInfo = commentInfo + pageContext.getAttribute("commentCon").toString();
+                            %>
+                        </c:forEach>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments" value="<%= commentInfo%>"></td>
                         <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.lineAdjAmnt}"/></td>
                         <td style="text-align: center;" rowspan="1" colspan="1"><c:out value="${adjs.newInvLineTotal}"/></td>
                     </c:forEach>
