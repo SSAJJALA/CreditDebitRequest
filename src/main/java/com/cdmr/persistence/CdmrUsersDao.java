@@ -96,7 +96,7 @@ public class CdmrUsersDao {
 
     public List<CdmrUsers> getCdmrUsersWithFilters(String searchOption, String operand, String value) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Criteria c = session.createCriteria(Cdmr.class);
+        Criteria c = session.createCriteria(CdmrUsers.class);
 
         if (!searchOption.equals("all")) {
             c = this.addRestrictions(c, searchOption, operand, value);
