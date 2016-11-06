@@ -32,7 +32,7 @@ public class CDMRDetailsServletTest {
     }
     @Test
     public void doGet() throws Exception {
-        GetCDMRDetails details = new GetCDMRDetails(0, 47, "VYU6026");
+        GetCDMRDetails details = new GetCDMRDetails(0, 48, "SSAJJALA");
         CDMR cdmr = details.getCDMR();
         Task task = details.getTaskDetails();
         request.setAttribute("cdmr", cdmr);
