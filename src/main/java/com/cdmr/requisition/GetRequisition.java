@@ -98,6 +98,7 @@ public class GetRequisition {
         com.cdmr.Data.Customer custData = new com.cdmr.Data.Customer();
         custData.setAddress1(custEntity.getAdd1());
         custData.setAddress2(custEntity.getAdd2());
+        custData.setCity(custEntity.getCity());
         custData.setCustName(custEntity.getCustName());
         custData.setCustNum(custEntity.getCustNum());
         custData.setPhone(custEntity.getPhone());
