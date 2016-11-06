@@ -127,6 +127,7 @@
 
     </form>
 </div>
+<br><br>
 <%@include file="footer.jsp"%>
 <body>
 
