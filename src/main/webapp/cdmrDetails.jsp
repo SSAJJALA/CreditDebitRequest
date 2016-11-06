@@ -83,7 +83,7 @@
             <span style="padding-left:20px"></span>
             <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
             <br><br>
-            <table id = "datatable2" width="90%" border="1" align = "center">
+            <table id = "datatable1" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
                         <th style="text-align: center;" rowspan="1" colspan="1">Item</th>
