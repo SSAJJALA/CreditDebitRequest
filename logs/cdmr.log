@@ -21689,3 +21689,11 @@ The last packet successfully received from the server was 10,722 milliseconds ag
 2016-11-06 19:15:59,375 1548 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDao  - operand: =
 2016-11-06 19:15:59,375 1548 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDao  - searchValue: 59
 2016-11-06 19:15:59,434 1607 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDao  - cdmrs: [Cdmr{requisitionID=59, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-06, type='C'}]
+2016-11-06 19:19:22,287 204460 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ post
+2016-11-06 19:19:22,287 204460 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-11-06 19:19:22,288 204461 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CDMRDetailsServlet  - Exiting cdmr request
+2016-11-06 19:19:25,127 207300 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-11-06 19:19:25,127 207300 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - User id:VYU6026
+2016-11-06 19:19:50,160 232333 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ post
+2016-11-06 19:19:50,161 232334 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-11-06 19:19:50,161 232334 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CDMRDetailsServlet  - Approving the cdmr request

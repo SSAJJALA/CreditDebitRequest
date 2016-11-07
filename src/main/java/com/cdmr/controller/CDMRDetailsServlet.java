@@ -66,9 +66,11 @@ public class CDMRDetailsServlet extends HttpServlet {
     public String completeTaskAction(HttpServletRequest request, HttpServletResponse response, String buttonAction) {
         CDMR cdmr = (CDMR)request.getAttribute("cdmr");
         Task task = (Task) request.getAttribute("taskDetails");
+        logger.info("Task object from cdmr details servlet:" + task.toString());
         TaskResponse taskResponse = new TaskResponse();
         taskResponse.setApprovalDecesion(buttonAction);
         taskResponse.setApproverID(request.getUserPrincipal().getName());
+        logger.info("task id from cdmr details servlet:" + task.getTaskID());
         taskResponse.setTaskID(task.getTaskID());
         taskResponse.setTaskName(task.getTaskName());
         CompleteTask completeTask = new CompleteTask(taskResponse, cdmr);
