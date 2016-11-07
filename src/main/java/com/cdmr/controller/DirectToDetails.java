@@ -29,11 +29,13 @@ public class DirectToDetails extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         String userID = request.getUserPrincipal().getName();
+        String taskIDString = request.getParameter("taskID");
+        String reqIDString = request.getParameter("reqID");
         int taskID = 0;
         int ReqID = 0;
-        if (!request.getParameter("taskID").isEmpty()) {
+        if (taskIDString != null) {
             taskID = Integer.parseInt(request.getParameter("taskID"));
-        } else if (!request.getParameter("reqID").isEmpty()) {
+        } else if (reqIDString != null) {
             ReqID = Integer.parseInt(request.getParameter("reqID"));
         }
 
