@@ -14,6 +14,7 @@
 <head>
     <title>CDMR Details</title>
 </head>
+<body>
 <div id="mainContainer">
 
     <%@include file="header.jsp"%>
@@ -131,7 +132,6 @@
 </div>
 <br><br>
 <%@include file="footer.jsp"%>
-<body>
 
 </body>
 </html>

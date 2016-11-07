@@ -28,6 +28,8 @@ public class DirectToDetails extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
+        HttpSession session = request.getSession();
+
         String userID = request.getUserPrincipal().getName();
         String taskIDString = request.getParameter("taskID");
         String reqIDString = request.getParameter("reqID");
@@ -43,11 +45,14 @@ public class DirectToDetails extends HttpServlet {
         if (taskID != 0) {
             CDMR cdmr = details.getCDMR();
             Task task = details.getTaskDetails();
-            request.setAttribute("cdmr", cdmr);
-            request.setAttribute("taskDetails", task);
+            //request.setAttribute("cdmr", cdmr);
+            //request.setAttribute("taskDetails", task);
+            session.setAttribute("cdmr", cdmr);
+            session.setAttribute("taskDetails", task);
         } else if (ReqID != 0) {
             CDMR cdmr = details.getCDMR();
-            request.setAttribute("cdmr", cdmr);
+            //request.setAttribute("cdmr", cdmr);
+            session.setAttribute("cdmr", cdmr);
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher("/cdmrDetails.jsp");
         dispatcher.forward(request, response);

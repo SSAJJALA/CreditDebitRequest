@@ -26,6 +26,7 @@ import java.io.IOException;
 public class CDMRDetailsServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("inside create cdmr details servlet @ post");
         this.doGet(request, response);
@@ -35,22 +36,28 @@ public class CDMRDetailsServlet extends HttpServlet {
         logger.info("inside create cdmr details servlet @ get");
 
         String buttonAction = "";
+        HttpSession session = request.getSession();
 
 
         if (request.getParameter("btn_approve") != null) {
             logger.info("Approving the cdmr request");
             buttonAction = "Approved";
-            String message = this.completeTaskAction(request, response, buttonAction);
-            request.setAttribute("message", message);
+            String message = this.completeTaskAction(request, response, buttonAction, session);
+            //request.setAttribute("message", message);
+            session.setAttribute("message", message);
 
         } else if (request.getParameter("btn_reject") != null) {
             logger.info("Rejecting the cdmr request");
             buttonAction = "Rejected";
-            String message = this.completeTaskAction(request, response, buttonAction);
-            request.setAttribute("message", message);
+            String message = this.completeTaskAction(request, response, buttonAction, session);
+            //request.setAttribute("message", message);
+            session.setAttribute("message", message);
 
         } else if (request.getParameter("btn_exit") != null) {
             logger.info("Exiting cdmr request");
+            session.removeAttribute("cdmr");
+            session.removeAttribute("taskDetails");
+            session.removeAttribute("message");
             buttonAction = "Exit";
         }
 
@@ -63,9 +70,12 @@ public class CDMRDetailsServlet extends HttpServlet {
 
     }
 
-    public String completeTaskAction(HttpServletRequest request, HttpServletResponse response, String buttonAction) {
-        CDMR cdmr = (CDMR)request.getAttribute("cdmr");
-        Task task = (Task) request.getAttribute("taskDetails");
+    public String completeTaskAction(HttpServletRequest request, HttpServletResponse response, String buttonAction, HttpSession session) {
+        logger.info("inside completeTaskAction from cdmr details servlet");
+        //CDMR cdmr = (CDMR)request.getAttribute("cdmr");
+        //Task task = (Task) request.getAttribute("taskDetails");
+        CDMR cdmr = (CDMR)session.getAttribute("cdmr");
+        Task task = (Task) session.getAttribute("taskDetails");
         logger.info("Task object from cdmr details servlet:" + task.toString());
         TaskResponse taskResponse = new TaskResponse();
         taskResponse.setApprovalDecesion(buttonAction);
