@@ -74,13 +74,15 @@
         </div>
         <div style="width:1300px;height:230px;border:1px solid #000;margin:0 auto;">
             <br>
-            <c:if test="${not empty taskDetails}">
                 <span style="padding-left:1000px"></span>
+            <c:if test="${not empty taskDetails}">
                 <input  id="btn_approve" name="btn_approve" class="btnInside" value="Approve" type="submit">
+            </c:if>
                 <span style="padding-left:20px"></span>
+            <c:if test="${not empty taskDetails}">
                 <input  id="btn_reject" name="btn_reject" class="btnInside" value="Reject" type="submit">
             </c:if>
-            <span style="padding-left:20px"></span>
+                <span style="padding-left:20px"></span>
             <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
             <br><br>
             <table id = "datatable1" width="90%" border="1" align = "center">

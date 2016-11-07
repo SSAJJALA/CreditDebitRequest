@@ -21656,3 +21656,36 @@ The last packet successfully received from the server was 10,722 milliseconds ag
 2016-11-06 18:03:26,390 765888 [http-nio-8080-exec-8] INFO  com.cdmr.persistence.CdmrDao  - operand: =
 2016-11-06 18:03:26,390 765888 [http-nio-8080-exec-8] INFO  com.cdmr.persistence.CdmrDao  - searchValue: 59
 2016-11-06 18:03:26,404 765902 [http-nio-8080-exec-8] INFO  com.cdmr.persistence.CdmrDao  - cdmrs: [Cdmr{requisitionID=59, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-06, type='C'}]
+2016-11-06 19:15:57,827 0    [http-nio-8080-exec-4] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-11-06 19:15:57,829 2    [http-nio-8080-exec-4] INFO  com.cdmr.controller.SearchServlet  - searchFilter: requisitionID
+2016-11-06 19:15:57,829 2    [http-nio-8080-exec-4] INFO  com.cdmr.controller.SearchServlet  - operand: =
+2016-11-06 19:15:57,829 2    [http-nio-8080-exec-4] INFO  com.cdmr.controller.SearchServlet  - term: 59
+2016-11-06 19:15:57,973 146  [http-nio-8080-exec-4] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-11-06 19:15:57,980 153  [http-nio-8080-exec-4] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-11-06 19:15:57,984 157  [http-nio-8080-exec-4] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-11-06 19:15:57,986 159  [http-nio-8080-exec-4] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-11-06 19:15:58,016 189  [http-nio-8080-exec-4] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-11-06 19:15:58,016 189  [http-nio-8080-exec-4] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-11-06 19:15:58,080 253  [http-nio-8080-exec-4] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-11-06 19:15:58,207 380  [http-nio-8080-exec-4] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-11-06 19:15:58,211 384  [http-nio-8080-exec-4] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD]
+2016-11-06 19:15:58,211 384  [http-nio-8080-exec-4] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-11-06 19:15:58,211 384  [http-nio-8080-exec-4] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-11-06 19:15:58,212 385  [http-nio-8080-exec-4] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-11-06 19:15:58,543 716  [http-nio-8080-exec-4] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-06 19:15:58,909 1082 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-11-06 19:15:58,909 1082 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-11-06 19:15:58,910 1083 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-11-06 19:15:58,910 1083 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-11-06 19:15:58,910 1083 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-11-06 19:15:58,910 1083 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-11-06 19:15:58,910 1083 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-11-06 19:15:58,910 1083 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-11-06 19:15:58,910 1083 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-11-06 19:15:58,910 1083 [http-nio-8080-exec-4] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-11-06 19:15:58,921 1094 [http-nio-8080-exec-4] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-06 19:15:58,926 1099 [http-nio-8080-exec-4] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-06 19:15:59,375 1548 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDao  - searchOption: requisitionID
+2016-11-06 19:15:59,375 1548 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDao  - operand: =
+2016-11-06 19:15:59,375 1548 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDao  - searchValue: 59
+2016-11-06 19:15:59,434 1607 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDao  - cdmrs: [Cdmr{requisitionID=59, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-06, type='C'}]
