@@ -82,5 +82,17 @@
                         border-left: 0;
                         border-right: 0;
                 }
+
+                #pop {
+                        height: 280px;
+                        width: 470px;
+                        position: fixed;
+                        bottom: 50%;
+                        right: 50%;
+                        border: 2px solid;
+                        padding: 10px;
+                        background: white;
+                        border-radius: 9px;
+                }
         </style>
 </head>

@@ -59,12 +59,18 @@ public class CDMRDetailsServlet extends HttpServlet {
             session.removeAttribute("taskDetails");
             session.removeAttribute("message");
             buttonAction = "Exit";
+        } else if (request.getParameter("btn_message") != null) {
+            logger.info("directing to index page");
+            session.removeAttribute("cdmr");
+            session.removeAttribute("taskDetails");
+            session.removeAttribute("message");
+            buttonAction = "Message";
         }
 
         if (buttonAction.equals("Approved") || buttonAction.equals("Rejected")) {
             RequestDispatcher dispatcher = request.getRequestDispatcher("/cdmrDetails.jsp");
             dispatcher.forward(request, response);
-        } else if (buttonAction.equals("Exit")){
+        } else if (buttonAction.equals("Exit") || buttonAction.equals("Message")){
             response.sendRedirect("/index.jsp");
         }
 

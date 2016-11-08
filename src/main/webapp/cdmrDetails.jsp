@@ -128,6 +128,13 @@
 
         </div>
 
+        <c:if test="${not empty message}">
+            <div id="pop">
+                <c:out value="${message}"/>
+                <input  id="btn_message" name="btn_message" class="btnMessage" value="OK" type="submit">
+            </div>
+        </c:if>
+
     </form>
 
     <script type="text/javascript">
