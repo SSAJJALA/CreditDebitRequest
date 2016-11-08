@@ -128,23 +128,34 @@
 
         </div>
 
+        <c:if test="${not empty message}">
+            <div id="pop">
+                <c:out value="${message}"/>
+                <br>
+                <span style="padding-left:100px"></span>
+                <input  id="btn_message" name="btn_message" class="btnMessage" value="OK" type="submit">
+            </div>
+        </c:if>
+
     </form>
 
+    <!--
     <script type="text/javascript">
         var msg = '<%=session.getAttribute("message")%>';
         if (msg != "null") {
             function alertName() {
                 alert(msg);
-                session.removeAttribute("cdmr");
-                session.removeAttribute("taskDetails");
-                session.removeAttribute("message");
-                window.location = '/index.jsp';
+                request.getSession().removeAttribute("cdmr");
+                request.getSession().removeAttribute("taskDetails");
+                request.getSession().removeAttribute("message");
+                window.location = 'index.jsp';
             }
         }
     </script>
+    -->
 </div>
 <br><br>
 <%@include file="footer.jsp"%>
-<script type = "text/javascript"> window.onload = alertName(); </script>
+<!--<script type = "text/javascript"> window.onload = alertName(); </script> -->
 </body>
 </html>

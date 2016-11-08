@@ -32,19 +32,34 @@ public class SearchServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("In doPost() method");
-        Search searchObj = null;
         response.setContentType("text/html");
-        String searchFilter = request.getParameter("searchoptions");
-        logger.info("searchFilter: " + searchFilter);
-        String operand = request.getParameter("operands");
-        logger.info("operand: " + operand);
-        String term = request.getParameter("searchTerm");
-        logger.info("term: " + term);
-        searchObj = new Search(searchFilter, operand, term);
-        List<SearchCDMR> results = searchObj.search();
-        request.setAttribute("results", results);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/search.jsp");
-        dispatcher.forward(request, response);
+        String buttonAction = "";
+
+        if (request.getParameter("btn_search") != null) {
+            Search searchObj = null;
+            String searchFilter = request.getParameter("searchoptions");
+            logger.info("searchFilter: " + searchFilter);
+            String operand = request.getParameter("operands");
+            logger.info("operand: " + operand);
+            String term = request.getParameter("searchTerm");
+            logger.info("term: " + term);
+            searchObj = new Search(searchFilter, operand, term);
+            List<SearchCDMR> results = searchObj.search();
+            request.setAttribute("results", results);
+            buttonAction = "Search";
+        } else if (request.getParameter("btn_exit") != null) {
+            logger.info("directing to index page");
+            request.removeAttribute("results");
+            buttonAction = "Exit";
+        }
+
+        if (buttonAction.equals("Search")) {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/cdmrDetails.jsp");
+            dispatcher.forward(request, response);
+        } else if (buttonAction.equals("Exit")){
+            response.sendRedirect("/index.jsp");
+        }
+
 
     }
 }

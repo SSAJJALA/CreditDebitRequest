@@ -34,7 +34,10 @@
 
 <div class="container-fluid" style="height: 600px; width: 100%; border:1px solid black;">
 
-    <br> <br>
+    <br>
+    <span style="padding-left:1040px"></span>
+    <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
+    <br>
     <c:if test="${not empty inbox}">
         <table id = "datatable" width="90%" border="1" align = "center">
             <thead>
