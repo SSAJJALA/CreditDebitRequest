@@ -135,10 +135,10 @@
         if (msg != "null") {
             function alertName() {
                 alert(msg);
-                session.removeAttribute("cdmr");
-                session.removeAttribute("taskDetails");
-                session.removeAttribute("message");
-                window.location = '/index.jsp';
+                request.getSession().removeAttribute("cdmr");
+                request.getSession().removeAttribute("taskDetails");
+                request.getSession().removeAttribute("message");
+                window.location = 'index.jsp';
             }
         }
     </script>

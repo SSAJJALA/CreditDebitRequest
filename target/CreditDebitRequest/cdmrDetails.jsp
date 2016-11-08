@@ -14,6 +14,7 @@
 <head>
     <title>CDMR Details</title>
 </head>
+<body>
 <div id="mainContainer">
 
     <%@include file="header.jsp"%>
@@ -128,10 +129,22 @@
         </div>
 
     </form>
+
+    <script type="text/javascript">
+        var msg = '<%=session.getAttribute("message")%>';
+        if (msg != "null") {
+            function alertName() {
+                alert(msg);
+                session.removeAttribute("cdmr");
+                session.removeAttribute("taskDetails");
+                session.removeAttribute("message");
+                window.location = '/index.jsp';
+            }
+        }
+    </script>
 </div>
 <br><br>
 <%@include file="footer.jsp"%>
-<body>
-
+<script type = "text/javascript"> window.onload = alertName(); </script>
 </body>
 </html>
