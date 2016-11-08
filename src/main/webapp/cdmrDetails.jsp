@@ -137,6 +137,7 @@
 
     </form>
 
+    <!--
     <script type="text/javascript">
         var msg = '<%=session.getAttribute("message")%>';
         if (msg != "null") {
@@ -149,9 +150,10 @@
             }
         }
     </script>
+    -->
 </div>
 <br><br>
 <%@include file="footer.jsp"%>
-<script type = "text/javascript"> window.onload = alertName(); </script>
+<!--<script type = "text/javascript"> window.onload = alertName(); </script> -->
 </body>
 </html>
