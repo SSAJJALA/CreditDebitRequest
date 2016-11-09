@@ -42,10 +42,12 @@
         </select>
         <span style="padding-left:50px"></span>
         <input type="text" name="searchTerm">
+        <span style="padding-left:700px"></span>
+        <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
             <br><br>
         <span style="padding-left:500px"></span>
 
-        <input type="submit" value="Search">
+        <input id="btn_search" name="btn_search" class="btnInside" type="submit" value="Search">
         <br><br>
     </div>
 </form>

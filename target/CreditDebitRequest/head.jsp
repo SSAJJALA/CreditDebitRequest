@@ -84,15 +84,18 @@
                 }
 
                 #pop {
-                        height: 280px;
-                        width: 470px;
+                        height: 100px;
+                        width: 500px;
                         position: fixed;
                         bottom: 50%;
                         right: 50%;
                         border: 2px solid;
                         padding: 10px;
-                        background: white;
+                        background: green;
                         border-radius: 9px;
+                }
+                p.thick {
+                        font-weight: bold;
                 }
         </style>
 </head>

@@ -30,5 +30,9 @@ Date        Task                                            Hours       Notes
 11/01/2016  Worked on fixing the JSP load issue             3
 11/02/2016  Worked on calculate and submit functions        4
 11/03/2016  Worked on preparing my second presentation on wM server     2
+11/04/2016  Worked on CDMR details screen development       3
+11/05/2016  completed the last UI screen for my individual project  3
+11/06/2016  Added email consumer service for team project   1
+11/08/2016  Tested Approve functionality for CDMR           2git
 
 

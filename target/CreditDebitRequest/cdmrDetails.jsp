@@ -130,7 +130,8 @@
 
         <c:if test="${not empty message}">
             <div id="pop">
-                <c:out value="${message}"/>
+                <br>
+                <p class="thick"><c:out value="${message}"/></p>
                 <br>
                 <span style="padding-left:100px"></span>
                 <input  id="btn_message" name="btn_message" class="btnMessage" value="OK" type="submit">
