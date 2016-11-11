@@ -265,6 +265,17 @@
             </table>
 
 </div>
+
+    <c:if test="${not empty message}">
+        <div id="pop">
+            <br>
+            <p class="thick"><c:out value="${message}"/></p>
+            <br>
+            <span style="padding-left:100px"></span>
+            <input  id="btn_message" name="btn_message" class="btnMessage" value="OK" type="submit">
+        </div>
+    </c:if>
+
     <br>
     <span style="padding-left:1000px"></span>
     <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit">
@@ -272,6 +283,8 @@
     <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit">
     <span style="padding-left:20px"></span>
     <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
+    <span style="padding-left:20px"></span>
+    <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
 
 </form>
     <script type="text/javascript">
