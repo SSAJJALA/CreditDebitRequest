@@ -54,7 +54,7 @@ public class SearchServlet extends HttpServlet {
         }
 
         if (buttonAction.equals("Search")) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/cdmrDetails.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/search.jsp");
             dispatcher.forward(request, response);
         } else if (buttonAction.equals("Exit")){
             response.sendRedirect("/index.jsp");
