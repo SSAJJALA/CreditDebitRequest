@@ -20,7 +20,7 @@ import java.io.IOException;
  */
 @WebServlet(
         name = "cdmrDetailsServlet",
-        urlPatterns = {"/cdmrDetailsServlet"}
+        urlPatterns = {"/cdmr/cdmrDetailsServlet"}
 
 )
 public class CDMRDetailsServlet extends HttpServlet {

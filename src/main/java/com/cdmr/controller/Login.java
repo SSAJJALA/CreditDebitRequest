@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 @WebServlet(
         name = "login",
-        urlPatterns = {"/login"}
+        urlPatterns = {"/cdmr/login"}
 
 )
 public class Login extends HttpServlet {

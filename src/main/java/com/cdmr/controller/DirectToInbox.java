@@ -14,7 +14,7 @@ import java.io.IOException;
  * Created by Siva Sajjala on 9/24/16.
  */
 @WebServlet(name = "DirectToInbox",
-        urlPatterns = {"/toInbox"}
+        urlPatterns = {"/cdmr/toInbox"}
 )
 public class DirectToInbox extends HttpServlet {
 

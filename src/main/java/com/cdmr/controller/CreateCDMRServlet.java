@@ -29,7 +29,7 @@ import java.util.List;
 
 @WebServlet(
         name = "createCDMRServlet",
-        urlPatterns = {"/createCDMRServlet"}
+        urlPatterns = {"/cdmr/createCDMRServlet"}
 
 )
 public class CreateCDMRServlet extends HttpServlet {

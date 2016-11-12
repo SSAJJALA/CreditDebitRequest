@@ -21,7 +21,7 @@ import com.cdmr.ui.Search;
 
 @WebServlet(
         name = "searchServlet",
-        urlPatterns = {"/searchServlet"}
+        urlPatterns = {"/cdmr/searchServlet"}
 
 )
 public class SearchServlet extends HttpServlet {

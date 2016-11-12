@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 @WebServlet(
         name = "logoutServlet",
-        urlPatterns = {"/logoutServlet"}
+        urlPatterns = {"/cdmr/logoutServlet"}
 
 )
 public class LogoutServlet extends HttpServlet {
