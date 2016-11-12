@@ -23,7 +23,7 @@
 
     <form id="createForm" action="/cdmr/cdmrDetailsServlet" method="post">
         <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
-            <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Requisition # ${cdmr.requisitionID}</i>
+            <p width="100%" border="0" cellspacing="10" class="single-underline" style="font-size:15px;font-weight:bold;">&nbsp;<i>Requisition # ${cdmr.requisitionID}</i>
             </p>
 
             <table width="90%" cellpadding="4" cellspacing="0" style="height: 100px;">
