@@ -35,13 +35,28 @@ public class InboxServlet extends HttpServlet {
 
         logger.info("In doPost() method on inbox servlet");
         response.setContentType("text/html");
-        String user = request.getUserPrincipal().getName();
-        logger.info("User id:" + user);
-        GetInbox inbox = new GetInbox(user.toUpperCase());
-        List<SearchInbox> inboxResults = inbox.getTasks();
-        request.setAttribute("inbox", inboxResults);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/inbox.jsp");
-        dispatcher.forward(request, response);
+        String buttonAction = "";
+
+        if (request.getParameter("btn_exit") != null) {
+            logger.info("directing to index page");
+            request.removeAttribute("inbox");
+            buttonAction = "Exit";
+
+        } else {
+            String user = request.getUserPrincipal().getName();
+            logger.info("User id:" + user);
+            GetInbox inbox = new GetInbox(user.toUpperCase());
+            List<SearchInbox> inboxResults = inbox.getTasks();
+            request.setAttribute("inbox", inboxResults);
+        }
+
+        if (buttonAction.equals("Exit")) {
+            response.sendRedirect("/index.jsp");
+        } else {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/inbox.jsp");
+            dispatcher.forward(request, response);
+        }
+
 
     }
 }

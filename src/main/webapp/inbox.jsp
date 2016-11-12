@@ -34,8 +34,9 @@
 
 <div class="container-fluid" style="height: 600px; width: 100%; border:1px solid black;">
 
+    <form action="/cdmr/inboxServlet" >
     <br>
-    <span style="padding-left:1040px"></span>
+    <span style="padding-left:1150px"></span>
     <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
     <br>
     <c:if test="${not empty inbox}">
@@ -55,21 +56,19 @@
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.application}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">Approval Required</td>
-                    <%-- <c:set var="info" value="Req ID:${inboxResults.requisitionID}|Customer:${inboxResults.customerName}|Adj Amnt:${{inboxResults.adjAmnt}}" />
-                    <c:set var="info" value="${fn:join('Req ID:', '${inboxResults.requisitionID}')}" /> --%>
                     <c:set var = "ReqID" value="${inboxResults.requisitionID}" />
                     <c:set var = "CustName" value="${inboxResults.customerName}" />
                     <c:set var = "AdjAmnt" value="${inboxResults.adjAmnt}" />
                     <%
                         String info = "ReqID:" + pageContext.getAttribute("ReqID").toString() + "|Customer:" + pageContext.getAttribute("CustName") + "|Adj Amnt:$ " + pageContext.getAttribute("AdjAmnt").toString();
                     %>
-
-
                     <td style="text-align: center;" rowspan="1" colspan="1"><%= info %> </td>
                 </tr>
             </c:forEach>
         </table>
     </c:if>
+
+    </form>
 
 </div>
     <br>

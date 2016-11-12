@@ -20,7 +20,7 @@
 
 <%@include file="header.jsp"%>
 
-<form action="/searchServlet" >
+<form action="/cdmr/searchServlet" >
     <div  style="border-bottom:2px solid #5C8727">
         <br><br>
         <span style="padding-left:60px"></span>
@@ -72,7 +72,7 @@
             </thead>
             <c:forEach items="${results}" var="searchResults">
                 <tr>
-                    <td style="text-align: center;" rowspan="1" colspan="1"><a href="/directToDetails?reqID=${searchResults.requisitionID}">${searchResults.requisitionID}</a></td>
+                    <td style="text-align: center;" rowspan="1" colspan="1"><a href="/cdmr/directToDetails?reqID=${searchResults.requisitionID}">${searchResults.requisitionID}</a></td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${searchResults.invoiceNum}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${searchResults.invAmnt}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${searchResults.custNo}</td>
