@@ -197,3 +197,32 @@
 2016-11-12 16:59:32,501 2534804 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ post
 2016-11-12 16:59:32,501 2534804 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
 2016-11-12 16:59:32,501 2534804 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CDMRDetailsServlet  - directing to index page
+2016-11-12 17:53:53,783 5796086 [http-nio-8080-exec-1] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-11-12 17:54:23,126 5825429 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-12 17:54:23,126 5825429 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-12 17:54:23,126 5825429 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:null
+2016-11-12 17:54:23,126 5825429 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-11-12 17:54:23,126 5825429 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-12 17:54:23,126 5825429 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-12 17:54:23,126 5825429 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-12 17:54:23,126 5825429 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - Exiting the cdmr create page
+2016-11-12 17:55:02,711 5865014 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-11-12 17:55:02,712 5865015 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - User id:SSAJJALA
+2016-11-12 17:55:13,171 5875474 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ post
+2016-11-12 17:55:13,171 5875474 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-11-12 17:55:13,171 5875474 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CDMRDetailsServlet  - Rejecting the cdmr request
+2016-11-12 17:55:13,171 5875474 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside completeTaskAction from cdmr details servlet
+2016-11-12 17:55:13,171 5875474 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CDMRDetailsServlet  - Task object from cdmr details servlet:Task{taskID=51, taskName='FM Approval', taskStatus='Active', createdDate=2016-11-12T16:56:50, updatedDate=2016-11-12T16:56:50}
+2016-11-12 17:55:13,171 5875474 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CDMRDetailsServlet  - task id from cdmr details servlet:51
+2016-11-12 17:55:13,270 5875573 [http-nio-8080-exec-1] INFO  com.cdmr.approval.RouteCDMR  - CDMR Rejected
+2016-11-12 17:55:16,453 5878756 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ post
+2016-11-12 17:55:16,453 5878756 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-11-12 17:55:16,453 5878756 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CDMRDetailsServlet  - directing to index page
+2016-11-12 17:55:48,859 5911162 [http-nio-8080-exec-5] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-11-12 17:55:48,860 5911163 [http-nio-8080-exec-5] INFO  com.cdmr.controller.SearchServlet  - searchFilter: status
+2016-11-12 17:55:48,860 5911163 [http-nio-8080-exec-5] INFO  com.cdmr.controller.SearchServlet  - operand: =
+2016-11-12 17:55:48,860 5911163 [http-nio-8080-exec-5] INFO  com.cdmr.controller.SearchServlet  - term: Rejected
+2016-11-12 17:55:48,860 5911163 [http-nio-8080-exec-5] INFO  com.cdmr.persistence.CdmrDao  - searchOption: status
+2016-11-12 17:55:48,860 5911163 [http-nio-8080-exec-5] INFO  com.cdmr.persistence.CdmrDao  - operand: =
+2016-11-12 17:55:48,860 5911163 [http-nio-8080-exec-5] INFO  com.cdmr.persistence.CdmrDao  - searchValue: Rejected
+2016-11-12 17:55:48,865 5911168 [http-nio-8080-exec-5] INFO  com.cdmr.persistence.CdmrDao  - cdmrs: [Cdmr{requisitionID=57, status='Rejected', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=0.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-04, type='C'}]

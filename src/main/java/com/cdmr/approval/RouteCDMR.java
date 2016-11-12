@@ -76,7 +76,7 @@ public class RouteCDMR {
 
             } else if (taskResponse.getApprovalDecesion().equals("Rejected")) {
 
-                this.updateTaskStatus("Completed");
+                this.updateTaskStatus("Complete");
                 this.updateCdmrStatus("Rejected");
                 log.info("CDMR Rejected");
                 message = "CDMR Rejected";
