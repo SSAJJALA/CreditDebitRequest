@@ -17,7 +17,7 @@
     %>
     <span style="padding-left:1000px">
     <c:if test="${not empty user}">
-        <div class="userArea">
+        <div class="topcorner">
             <img width="18" height="21" alt="User" src="/images/userIcon.png"/>
             <strong><c:out value="${user}"/></strong>
             (

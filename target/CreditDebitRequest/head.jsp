@@ -98,5 +98,11 @@
                         font-weight: bold;
                         font-size: 10px;
                 }
+
+                .topcorner{
+                    position:absolute;
+                    top:0;
+                    right:0;
+                }
         </style>
 </head>
