@@ -105,7 +105,7 @@
                     right:20px;
                 }
 
-                div.loginDiv {
+                div.loginDivision {
                     top: 50%;
                     left: 50%;
                     width:30em;
@@ -115,6 +115,15 @@
                     border: 3px solid #8AC007;;
                     background-color: rgba(207, 193, 255, 0);
                     position:fixed;
+                }
+
+                div.absolute {
+                    position: absolute;
+                    top: 100px;
+                    left:150px;
+                    width: 200px;
+                    height: 100px;
+
                 }
 
         </style>
