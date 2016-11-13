@@ -104,5 +104,18 @@
                     top:20px;
                     right:20px;
                 }
+
+                div.loginDiv {
+                    top: 50%;
+                    left: 50%;
+                    width:30em;
+                    height:18em;
+                    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+                    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+                    border: 3px solid #8AC007;;
+                    background-color: rgba(207, 193, 255, 0);
+                    position:fixed;
+                }
+
         </style>
 </head>

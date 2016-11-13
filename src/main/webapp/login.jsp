@@ -32,9 +32,9 @@
                         <div class="loginForm">
                             <FORM ACTION="j_security_check" METHOD="POST">
                                 <TABLE>
-                                    <TR><TD>User name: <INPUT TYPE="TEXT" NAME="j_username">
-                                    <TR><TD>Password: <INPUT TYPE="PASSWORD" NAME="j_password">
-                                    <TR><TH><INPUT TYPE="SUBMIT" VALUE="Log In">
+                                    <TR><TD>User name: <INPUT TYPE="TEXT" NAME="j_username"> </TD></TR>
+                                    <TR><TD>Password:  <INPUT TYPE="PASSWORD" NAME="j_password"> </TD></TR>
+                                    <TR><TD><span style="padding-left:20px"></span><INPUT TYPE="SUBMIT" VALUE="Log In"></TD></TR>
                                 </TABLE>
                             </FORM>
                         </div>
