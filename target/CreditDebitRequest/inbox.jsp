@@ -24,7 +24,8 @@
 
 <body>
 
-<div id="wrapper" class="container">
+<!--<div id="wrapper" class="container">-->
+<div id="mainContainer">
 <%@include file="header.jsp"%>
 
 <table width="100%" border="0" cellspacing="10" >

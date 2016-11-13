@@ -101,7 +101,7 @@
 
                 .topcorner{
                     position:absolute;
-                    top:0;
+                    top:20px;
                     right:0;
                 }
         </style>

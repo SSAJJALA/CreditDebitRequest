@@ -39,7 +39,7 @@
     <br>
     <span style="padding-left:1150px"></span>
     <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
-    <br>
+    <br><br>
     <c:if test="${not empty inbox}">
         <table id = "datatable" width="90%" border="1" align = "center">
             <thead>

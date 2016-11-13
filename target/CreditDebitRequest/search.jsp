@@ -16,7 +16,8 @@
 
 </head>
 <body>
-<div id="wrapper" class="container">
+<!--<div id="wrapper" class="container">-->
+<div id="mainContainer">
 
 <%@include file="header.jsp"%>
 
