@@ -26,7 +26,7 @@ public class DirectToInbox extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/inbox.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/inbox.jsp");
         dispatcher.forward(request, response);
     }
 }

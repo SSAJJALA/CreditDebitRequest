@@ -18,7 +18,7 @@
     <span style="padding-left:1000px">
     <c:if test="${not empty user}">
         <div class="topcorner">
-            <img width="18" height="21" alt="User" src="/images/userIcon.png"/>
+            <img width="18" height="21" alt="User" src="${pageContext.request.contextPath}/images/userIcon.png"/>
             <strong><c:out value="${user}"/></strong>
             (
             <a class="logOut" shape="rect" href="${pageContext.request.contextPath}/logoutServlet">
