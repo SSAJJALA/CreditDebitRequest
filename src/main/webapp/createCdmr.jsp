@@ -13,7 +13,7 @@
 
 <%@include file="head.jsp"%>
 
-<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page buffer="16kb" autoFlush="true" %>
