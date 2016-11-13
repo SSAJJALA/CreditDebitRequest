@@ -102,7 +102,7 @@
                 .topcorner{
                     position:absolute;
                     top:20px;
-                    right:0;
+                    right:20px;
                 }
         </style>
 </head>
