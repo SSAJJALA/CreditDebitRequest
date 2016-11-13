@@ -106,7 +106,7 @@
                 }
 
                 div.loginDivision {
-                    top: 50%;
+                    top: 30%;
                     left: 50%;
                     width:30em;
                     height:18em;
@@ -120,7 +120,7 @@
                 div.absolute {
                     position: absolute;
                     top: 100px;
-                    left:150px;
+                    left:80px;
                     width: 200px;
                     height: 100px;
 

@@ -21,6 +21,7 @@
 
     <%@include file="header.jsp"%>
     <br><br><br>
+    <!--
     <div class="containerInside">
         <div class="SearchResultBox">
             <div>
@@ -32,9 +33,9 @@
                         <div class="loginForm">
                             <FORM ACTION="j_security_check" METHOD="POST">
                                 <TABLE>
-                                    <TR><TD>User name: <INPUT TYPE="TEXT" NAME="j_username">
-                                    <TR><TD>Password: <INPUT TYPE="PASSWORD" NAME="j_password">
-                                    <TR><TH><INPUT TYPE="SUBMIT" VALUE="Log In">
+                                    <TR><TD>User name: <INPUT TYPE="TEXT" NAME="j_username"> </TD></TR>
+                                    <TR><TD>Password:  <INPUT TYPE="PASSWORD" NAME="j_password"> </TD></TR>
+                                    <TR><TD><span style="padding-left:20px"></span><INPUT TYPE="SUBMIT" VALUE="Log In"></TD></TR>
                                 </TABLE>
                             </FORM>
                         </div>
@@ -46,6 +47,24 @@
 
         <div class="clear"></div>
     </div>
+    -->
+
+    <div class="loginDivision">
+        <div style="border-bottom:1px solid #d9d9db; ">
+            <h2><i><font color="#8b0000">CDMR LOGIN</font></i></h2>
+        </div>
+        <br><br>
+        <div class="absolute">
+            <FORM ACTION="j_security_check" METHOD="POST">
+                <TABLE>
+                    <TR><TD>User name: <INPUT TYPE="TEXT" NAME="j_username"> </TD></TR>
+                    <TR><TD>Password:  <INPUT TYPE="PASSWORD" NAME="j_password"> </TD></TR>
+                    <TR><TD><span style="padding-left:60px"></span><INPUT TYPE="SUBMIT" VALUE="Log In"></TD></TR>
+                </TABLE>
+            </FORM>
+        </div>
+    </div>
+
     <script>
         function usernameFocus(){
             document.getElementById('username').focus();
