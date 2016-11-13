@@ -15,11 +15,9 @@
             request.setAttribute("user", userName);
         }
     %>
-    %>
+    <span style="padding-left:1000px">
     <c:if test="${not empty user}">
-        <span style="padding-left:100px"></span>
         <div class="userArea">
-        <span class="floatRight">
             <img width="18" height="21" alt="User" src="/images/userIcon.png"/>
             <strong><c:out value="${user}"/></strong>
             (
@@ -27,7 +25,6 @@
                 Logout
             </a>
             )
-        </span>
         </div>
     </c:if>
 </header>
