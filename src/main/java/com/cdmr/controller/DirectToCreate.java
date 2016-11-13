@@ -14,7 +14,7 @@ import java.io.IOException;
  * Created by student on 10/2/16.
  */
 @WebServlet(name = "DirectToCreate",
-        urlPatterns = {"/cdmr/toCreate"}
+        urlPatterns = {"/toCreate"}
 )
 public class DirectToCreate extends HttpServlet {
 

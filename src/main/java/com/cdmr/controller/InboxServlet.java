@@ -21,7 +21,7 @@ import java.util.List;
 
 @WebServlet(
         name = "inboxServlet",
-        urlPatterns = {"/cdmr/inboxServlet"}
+        urlPatterns = {"/inboxServlet"}
 
 )
 public class InboxServlet extends HttpServlet {

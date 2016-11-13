@@ -14,7 +14,7 @@ import java.io.IOException;
  * Created by student on 9/24/16.
  */
 @WebServlet(name = "DirectToSearch",
-        urlPatterns = {"/cdmr/toSearch"}
+        urlPatterns = {"/toSearch"}
 )
 public class DirectToSearch extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());

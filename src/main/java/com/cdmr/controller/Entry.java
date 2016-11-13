@@ -14,7 +14,7 @@ import java.io.IOException;
  * Created by student on 9/22/16.
  */
 @WebServlet(name = "Entry",
-        urlPatterns = {"/cdmr/entry"}
+        urlPatterns = {"/entry"}
         )
 public class Entry extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());

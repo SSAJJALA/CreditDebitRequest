@@ -18,7 +18,7 @@ import java.io.IOException;
  * Created by student on 10/29/16.
  */
 @WebServlet(name = "directToDetails",
-        urlPatterns = {"/cdmr/directToDetails"}
+        urlPatterns = {"/directToDetails"}
 )
 public class DirectToDetails extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());

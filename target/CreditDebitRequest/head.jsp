@@ -120,7 +120,7 @@
                 div.absolute {
                     position: absolute;
                     top: 100px;
-                    left:80px;
+                    left:95px;
                     width: 200px;
                     height: 100px;
 
