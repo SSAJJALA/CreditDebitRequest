@@ -35,7 +35,7 @@
 
 <div class="container-fluid" style="height: 600px; width: 100%; border:1px solid black;">
 
-    <form action="/cdmr/inboxServlet" >
+    <form action="${pageContext.request.contextPath}/inboxServlet" >
     <br>
     <span style="padding-left:1150px"></span>
     <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
@@ -53,7 +53,7 @@
             </thead>
             <c:forEach items="${inbox}" var="inboxResults">
                 <tr >
-                    <td style="text-align: center;" rowspan="1" colspan="1"><a href="/cdmr/directToDetails?taskID=${inboxResults.taskID}">${inboxResults.taskID}</a></td>
+                    <td style="text-align: center;" rowspan="1" colspan="1"><a href="${pageContext.request.contextPath}/directToDetails?taskID=${inboxResults.taskID}">${inboxResults.taskID}</a></td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.updatedDate}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">${inboxResults.application}</td>
                     <td style="text-align: center;" rowspan="1" colspan="1">Approval Required</td>
