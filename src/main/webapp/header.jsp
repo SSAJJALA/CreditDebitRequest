@@ -7,12 +7,21 @@
     <nav>
         <ul>Reddy's Inc</ul>
     </nav>
-    <c:if test="${not empty getName(request)}">
+    <%
+        String userName = null;
+        Principal user = request.getUserPrincipal();
+        if (user != null) {
+            userName = user.getName();
+            request.setAttribute("user", userName);
+        }
+    %>
+    %>
+    <c:if test="${not empty user}">
         <span style="padding-left:100px"></span>
         <div class="userArea">
         <span class="floatRight">
             <img width="18" height="21" alt="User" src="/images/userIcon.png"/>
-            <strong><%=getName(request)%></strong>
+            <strong><c:out value="${user}"/></strong>
             (
             <a class="logOut" shape="rect" href="/cdmr/logoutServlet">
                 Logout
@@ -23,13 +32,3 @@
     </c:if>
 </header>
 <!-- Header ends here -->
-<%!
-    private String getName(HttpServletRequest request) {
-        Principal user = request.getUserPrincipal();
-        if (user != null) {
-            return user.getName();
-        }
-
-        return ""; // or return null
-    }
-%>
