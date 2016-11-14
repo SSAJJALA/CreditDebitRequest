@@ -13,7 +13,7 @@
 
 <%@include file="head.jsp"%>
 
-<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page buffer="16kb" autoFlush="true" %>
@@ -38,7 +38,7 @@
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-<form id="createForm" action="/cdmr/createCDMRServlet" method="post">
+<form id="createForm" action="${pageContext.request.contextPath}/createCDMRServlet" method="post">
 <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>

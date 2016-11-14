@@ -51,9 +51,11 @@ public class InboxServlet extends HttpServlet {
         }
 
         if (buttonAction.equals("Exit")) {
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
+            logger.info("inbox servlet context:" + request.getContextPath());
+            response.sendRedirect("index.jsp");
         } else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/inbox.jsp");
+            logger.info("inbox servlet context:" + request.getContextPath());
+            RequestDispatcher dispatcher = request.getRequestDispatcher("inbox.jsp");
             dispatcher.forward(request, response);
         }
 

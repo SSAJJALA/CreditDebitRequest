@@ -176,15 +176,19 @@ public class CreateCDMRServlet extends HttpServlet {
 
 
         if (buttonAction.equals("customer") || buttonAction.equals("invoice") || buttonAction.equals("calculate") || buttonAction.equals("submit")) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/createCdmr.jsp");
+            logger.info("create servlet context:" + request.getContextPath());
+            RequestDispatcher dispatcher = request.getRequestDispatcher("createCdmr.jsp");
             dispatcher.forward(request, response);
         } else if (buttonAction.equals("cancel")){
-            RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/createCdmr.jsp");
+            logger.info("create servlet context:" + request.getContextPath());
+            RequestDispatcher dispatcher = request.getRequestDispatcher("createCdmr.jsp");
             dispatcher.forward(request, response);
         } else if (buttonAction.equals("logout")) {
-            response.sendRedirect("/login.jsp");
+            logger.info("create servlet context:" + request.getContextPath());
+            response.sendRedirect("login.jsp");
         } else if (buttonAction.equals("Exit") || buttonAction.equals("Message")) {
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
+            logger.info("create servlet context:" + request.getContextPath());
+            response.sendRedirect("index.jsp");
         }
 
 

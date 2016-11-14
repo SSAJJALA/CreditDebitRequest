@@ -27,6 +27,7 @@ public class LogoutServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getSession().invalidate();
-        response.sendRedirect(request.getContextPath() + "/index.jsp");
+        logger.info("logout servlet context:" + request.getContextPath());
+        response.sendRedirect("index.jsp");
     }
 }

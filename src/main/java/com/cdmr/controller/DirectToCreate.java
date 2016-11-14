@@ -26,7 +26,8 @@ public class DirectToCreate extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/createCdmr.jsp");
+        logger.info("direct to create servlet context:" + request.getContextPath());
+        RequestDispatcher dispatcher = request.getRequestDispatcher("createCdmr.jsp");
         dispatcher.forward(request, response);
     }
 }

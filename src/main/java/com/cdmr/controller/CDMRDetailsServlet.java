@@ -68,10 +68,12 @@ public class CDMRDetailsServlet extends HttpServlet {
         }
 
         if (buttonAction.equals("Approved") || buttonAction.equals("Rejected")) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/cdmrDetails.jsp");
+            logger.info("Details servlet context:" + request.getContextPath());
+            RequestDispatcher dispatcher = request.getRequestDispatcher( "cdmrDetails.jsp");
             dispatcher.forward(request, response);
         } else if (buttonAction.equals("Exit") || buttonAction.equals("Message")){
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
+            logger.info("Details servlet context:" + request.getContextPath());
+            response.sendRedirect("index.jsp");
         }
 
     }

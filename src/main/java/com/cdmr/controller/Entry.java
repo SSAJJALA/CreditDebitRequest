@@ -26,7 +26,8 @@ public class Entry extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/login.jsp");
+        logger.info("entry servlet context:" + request.getContextPath());
+        RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
         dispatcher.forward(request, response);
     }
 }

@@ -26,7 +26,8 @@ public class DirectToSearch extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/search.jsp");
+        logger.info("direct to search servlet context:" + request.getContextPath());
+        RequestDispatcher dispatcher = request.getRequestDispatcher("search.jsp");
         dispatcher.forward(request, response);
     }
 }

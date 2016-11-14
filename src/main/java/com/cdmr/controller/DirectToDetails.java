@@ -54,7 +54,8 @@ public class DirectToDetails extends HttpServlet {
             //request.setAttribute("cdmr", cdmr);
             session.setAttribute("cdmr", cdmr);
         }
-        RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/cdmrDetails.jsp");
+        logger.info("direct to details servlet context:" + request.getContextPath());
+        RequestDispatcher dispatcher = request.getRequestDispatcher("cdmrDetails.jsp");
         dispatcher.forward(request, response);
     }
 }

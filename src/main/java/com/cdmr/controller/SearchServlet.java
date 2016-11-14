@@ -54,10 +54,12 @@ public class SearchServlet extends HttpServlet {
         }
 
         if (buttonAction.equals("Search")) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/search.jsp");
+            logger.info("search servlet context:" + request.getContextPath());
+            RequestDispatcher dispatcher = request.getRequestDispatcher("search.jsp");
             dispatcher.forward(request, response);
         } else if (buttonAction.equals("Exit")){
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
+            logger.info("search servlet context:" + request.getContextPath());
+            response.sendRedirect("index.jsp");
         }
 
 

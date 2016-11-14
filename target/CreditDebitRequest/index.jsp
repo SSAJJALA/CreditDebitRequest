@@ -8,7 +8,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@include file="head.jsp"%>
-<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
@@ -30,20 +30,20 @@
     <tr>
         <td width="32%" height="12" nowrap="nowrap" align="left" >
             <p>&nbsp;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="/cdmr/toCreate">Create Credit Debit Memo Request</a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="${pageContext.request.contextPath}/toCreate">Create Credit Debit Memo Request</a></p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to create a new credit/debit memo request</p>
         </td>
     </tr>
     <tr>
         <td width="32%" height="12" nowrap="nowrap" align="left">
             <p>&nbsp;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="/cdmr/inboxServlet">Requests Inbox </a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="${pageContext.request.contextPath}/inboxServlet">Requests Inbox </a></p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to manage requests awaiting user review and/or approval</p>
         </td>
     </tr>
     <tr>
         <td width="32%" height="12" nowrap="nowrap" align="left">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="/cdmr/toSearch">Requests Search</a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="${pageContext.request.contextPath}/toSearch">Requests Search</a></p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to search for specific credit debit memo requests</p>
         </td>
     </tr>
@@ -56,7 +56,7 @@
     <br><br>
     <tr>
         <td width="32%" height="12" nowrap="nowrap" align="left">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="/cdmr/toAdmin">Administration Screen</a></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="homePage" href="${pageContext.request.contextPath}/toAdmin">Administration Screen</a></p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link to manage the approvers</p>
         </td>
     </tr>

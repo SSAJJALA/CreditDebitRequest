@@ -36,12 +36,14 @@ public class Login extends HttpServlet {
         if (!message.equals("User authenticated")) {
             logger.error("Login failed for the user:" + userName);
             request.setAttribute("message", message);
-            RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/login.jsp");
+            logger.info("login servlet context:" + request.getContextPath());
+            RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
 
         } else {
             logger.info("User authenticated. Forwarding to CDMR application");
-            RequestDispatcher dispatcher = request.getRequestDispatcher(request.getContextPath() + "/index.jsp");
+            logger.info("login servlet context:" + request.getContextPath());
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request, response);
 
         }

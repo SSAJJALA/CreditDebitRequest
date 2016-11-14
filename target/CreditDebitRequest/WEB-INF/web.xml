@@ -95,7 +95,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Entry</servlet-name>
-        <url-pattern>/cdmr/entry</url-pattern>
+        <url-pattern>/entry</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -105,7 +105,7 @@
 
     <servlet-mapping>
         <servlet-name>login</servlet-name>
-        <url-pattern>/cdmr/login</url-pattern>
+        <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -115,7 +115,7 @@
 
     <servlet-mapping>
         <servlet-name>DirectToSearch</servlet-name>
-        <url-pattern>/cdmr/toSearch</url-pattern>
+        <url-pattern>/toSearch</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -125,7 +125,7 @@
 
     <servlet-mapping>
         <servlet-name>DirectToInbox</servlet-name>
-        <url-pattern>/cdmr/toInbox</url-pattern>
+        <url-pattern>/toInbox</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -135,7 +135,7 @@
 
     <servlet-mapping>
         <servlet-name>inboxServlet</servlet-name>
-        <url-pattern>/cdmr/inboxServlet</url-pattern>
+        <url-pattern>/inboxServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -145,7 +145,7 @@
 
     <servlet-mapping>
         <servlet-name>searchServlet</servlet-name>
-        <url-pattern>/cdmr/searchServlet</url-pattern>
+        <url-pattern>/searchServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -155,7 +155,7 @@
 
     <servlet-mapping>
         <servlet-name>DirectToCreate</servlet-name>
-        <url-pattern>/cdmr/toCreate</url-pattern>
+        <url-pattern>/toCreate</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -165,7 +165,7 @@
 
     <servlet-mapping>
         <servlet-name>createCDMRServlet</servlet-name>
-        <url-pattern>/cdmr/createCDMRServlet</url-pattern>
+        <url-pattern>/createCDMRServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -175,7 +175,7 @@
 
     <servlet-mapping>
         <servlet-name>logoutServlet</servlet-name>
-        <url-pattern>/cdmr/logoutServlet</url-pattern>
+        <url-pattern>/logoutServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -185,7 +185,7 @@
 
     <servlet-mapping>
         <servlet-name>directToDetails</servlet-name>
-        <url-pattern>/cdmr/directToDetails</url-pattern>
+        <url-pattern>/directToDetails</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -195,7 +195,7 @@
 
     <servlet-mapping>
         <servlet-name>cdmrDetailsServlet</servlet-name>
-        <url-pattern>/cdmr/cdmrDetailsServlet</url-pattern>
+        <url-pattern>/cdmrDetailsServlet</url-pattern>
     </servlet-mapping>
 
 
