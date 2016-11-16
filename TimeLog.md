@@ -33,6 +33,13 @@ Date        Task                                            Hours       Notes
 11/04/2016  Worked on CDMR details screen development       3
 11/05/2016  completed the last UI screen for my individual project  3
 11/06/2016  Added email consumer service for team project   1
-11/08/2016  Tested Approve functionality for CDMR           2git
+11/08/2016  Tested Approve functionality for CDMR           2
+11/09/2016  Set up my ind. project on digital ocean         4
+11/10/2016  Fixed the code to read the context path from properties     2
+11/12/2016  Fixed the RAM issue on digital ocean            3
+11/13/2016  Built the reject functionality for CDMR project 2
+11/14/2016  Worked on testing the email client              2
+11/15/206   Fixed the team project code to work on digital ocean    4
+
 
 
