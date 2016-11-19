@@ -6,7 +6,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by student on 10/15/16.
+ * RestApplication class to define the rest API path and hosts all web services
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-25
  */
 
 

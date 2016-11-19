@@ -3,6 +3,13 @@ package com.cdmr.webservices;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
 
+/**
+ * Customer data object that holds all the customer information. This is used for mapping the JSON response from customer lookup web service.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-10-15
+ */
 @Generated("com.robohorse.robopojogenerator")
 public class Customer{
 	@JsonProperty("zip")

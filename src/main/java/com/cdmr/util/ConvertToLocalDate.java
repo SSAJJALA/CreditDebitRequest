@@ -5,10 +5,19 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 /**
- * Created by student on 10/9/16.
+ * ConvertToLocalDate converts a string date to local date format.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-10-09
  */
 public class ConvertToLocalDate {
 
+    /**
+     * Method to convert string date to LocalDate
+     * @param dob
+     * @return LocalDate local date
+     */
     public LocalDate formatDate (String dob) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");

@@ -11,13 +11,22 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Created by student on 10/16/16.
+ * CustomerLookupConsumer is the web service client to call customer lookup rest web service. This gets the customer details and map it to Customer object.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-10-16
  */
 public class CustomerLookupConsumer {
     private final Logger log = Logger.getLogger(this.getClass());
     private Properties properties;
 
-
+    /**
+     * Main method to invoke the REST API CustomerLookup
+     * @param customerNo
+     * @return Customer data object
+     * @throws Exception
+     */
     public Customer getCustomerApiJSON(int customerNo) throws Exception {
         properties = new Properties();
 

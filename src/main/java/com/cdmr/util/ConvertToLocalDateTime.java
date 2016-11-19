@@ -6,10 +6,19 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 /**
- * Created by student on 10/10/16.
+ * ConvertToLocalDateTime converts a string date to local datetime format.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-10-10
  */
 public class ConvertToLocalDateTime {
 
+    /**
+     * Method to convert string date to LocalDateTime
+     * @param dateTimeString
+     * @return LocalDateTime local date and time
+     */
     public LocalDateTime formatDate (String dateTimeString) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");

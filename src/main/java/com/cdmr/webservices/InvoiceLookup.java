@@ -8,7 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Siva Sajjala on 9/20/16.
+ * InvoiceLookup is the class to fetch invoice details
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-20
  */
 public class InvoiceLookup {
 
@@ -16,11 +20,17 @@ public class InvoiceLookup {
 
     private int custNum;
 
-
+    /**
+     * No arg constructor
+     */
     public InvoiceLookup() {
     }
 
-
+    /**
+     * Arg constructor
+     * @param invNum invoice number
+     * @param custNum customer number
+     */
     public InvoiceLookup(int invNum, int custNum) {
         this.invNum = invNum;
         this.custNum = custNum;
@@ -42,6 +52,10 @@ public class InvoiceLookup {
         this.custNum = custNum;
     }
 
+    /**
+     * Method to get invoice header details
+     * @return InvoiceHeader invoice header
+     */
     public InvoiceHeader getInvoiceHeader() {
 
         InvoiceHeaderPK invCust = new InvoiceHeaderPK();
@@ -52,6 +66,10 @@ public class InvoiceLookup {
         return invoice;
     }
 
+    /**
+     * Get invoice details
+     * @return List<InvoiceDetail> List of invoice details
+     */
     public List<InvoiceDetail> getInvoiceDetails() {
 
         InvoiceDetailDao invoiceDeailDao = new InvoiceDetailDao();

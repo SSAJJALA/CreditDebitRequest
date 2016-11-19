@@ -9,7 +9,11 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 /**
- * Created by Siva Sajjala on 9/18/16.
+ * CustomerLookup is the REST web service API to get the customer details from database. Response can be in XML or JSON type. Customer num is the rest input.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-18
  */
 @Path("/customer")
 public class CustomerLookup {
