@@ -119,6 +119,7 @@ public class CdmrUsersDao {
         } else if (operand.equals("<=")) {
             tempCriteria.add(Restrictions.le(option, value));
         } else if (operand.equals("like")) {
+            value = "%"+value+"%";
             tempCriteria.add(Restrictions.like(option, value));
         } else if (operand.equals("!=")) {
             tempCriteria.add(Restrictions.ne(option, value));
