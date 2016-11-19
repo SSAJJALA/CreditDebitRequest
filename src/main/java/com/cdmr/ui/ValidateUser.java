@@ -5,12 +5,22 @@ import com.cdmr.persistence.CdmrUsersDao;
 import org.apache.log4j.Logger;
 
 /**
- * Created by student on 9/22/16.
+ * ValidateUser validates whether a user is valid or not before assigning a task.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-22
  */
 public class ValidateUser {
 
     private final Logger logger = Logger.getLogger(this.getClass());
 
+    /**
+     * method to validate the user
+     * @param userID
+     * @param passWord
+     * @return string message
+     */
     public String validate(String userID, String passWord) {
         String message = null;
         CdmrUsersDao userDao = new CdmrUsersDao();

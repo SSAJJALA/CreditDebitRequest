@@ -5,17 +5,29 @@ import com.cdmr.requisition.UpdateRequisition;
 import org.apache.log4j.Logger;
 
 /**
- * Created by Siva Sajjala on 9/30/16.
+ * RouteCDMR program is the routing engine for CDMR application. This class identifies the next approver and assigns the task in the approver's inbox.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-30
  */
 public class UpdateCDMRDetails {
 
     public CDMR cdmr;
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * arg constructor
+     * @param cdmr
+     */
     public UpdateCDMRDetails(CDMR cdmr) {
         this.cdmr = cdmr;
     }
 
+    /**
+     * update cdmr details
+     * @return string message
+     */
     public String updateCDMR() {
         UpdateRequisition update = new UpdateRequisition(cdmr);
         update.updateCDMR();
