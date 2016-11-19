@@ -17,27 +17,50 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * Created by student on 9/24/16.
+ * GetInbox get the inbox results that are awaiting approval from the user
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-24
  */
 public class GetInbox {
     private String userID;
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * No arg constructor
+     */
     public GetInbox() {
     }
 
+    /**
+     * arg constructor
+     * @param userID
+     */
     public GetInbox(String userID) {
         this.userID = userID;
     }
 
+    /**
+     * get user id
+     * @return userID
+     */
     public String getUserID() {
         return userID;
     }
 
+    /**
+     * sets user id
+     * @param userID
+     */
     public void setUserID(String userID) {
         this.userID = userID;
     }
 
+    /**
+     * Main method to fetch all tasks that are waiting for that user and in active status
+     * @return List<SearchInbox>
+     */
     public List<SearchInbox> getTasks() {
 
         List<SearchInbox> inboxResults = null;
@@ -59,6 +82,11 @@ public class GetInbox {
 
     }
 
+    /**
+     * method to execute the query
+     * @param sql string
+     * @return List<SearchInbox>
+     */
     public List<SearchInbox> executeQuery(String sql) {
         List<SearchInbox> userInbox = new ArrayList<SearchInbox>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();

@@ -14,37 +14,69 @@ import org.apache.log4j.Logger;
 import java.util.List;
 
 /**
- * Created by student on 9/26/16.
+ * RouteCDMR program is the routing engine for CDMR application. This class identifies the next approver and assigns the task in the approver's inbox.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-26
  */
 public class RouteCDMR {
     private CDMR cdmr;
     private TaskResponse taskResponse;
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * No arg constructor
+     */
     public RouteCDMR() {
     }
 
+    /**
+     * constructor with args cdmr, taskResponse
+     * @param cdmr object that contains the information of the cdmr details
+     * @param taskResponse approvers's task response document
+     */
     public RouteCDMR(CDMR cdmr, TaskResponse taskResponse) {
         this.cdmr = cdmr;
         this.taskResponse = taskResponse;
     }
 
+    /**
+     * get the cdmr document
+     * @return cdmr
+     */
     public CDMR getCdmr() {
         return cdmr;
     }
 
+    /**
+     * set the cdmr document
+     * @param cdmr cdmr data
+     */
     public void setCdmr(CDMR cdmr) {
         this.cdmr = cdmr;
     }
 
+    /**
+     * get the task response
+     * @return TaskResponse
+     */
     public TaskResponse getTaskResponse() {
         return taskResponse;
     }
 
+    /**
+     * set the task response
+     * @param taskResponse task response document
+     */
     public void setTaskResponse(TaskResponse taskResponse) {
         this.taskResponse = taskResponse;
     }
 
+    /**
+     * Main routing logic that takes care of approvals, rejections and next routing.
+     * @return message string response
+     */
     public String routeCDMR() {
 
         //Update CDMR comments (if any)
@@ -93,6 +125,10 @@ public class RouteCDMR {
         return message;
     }
 
+    /**
+     * Method to update te task status to complete
+     * @param status task approval status
+     */
     public void updateTaskStatus(String status) {
 
         //complete the task
@@ -100,6 +136,10 @@ public class RouteCDMR {
         updateTask.updateTask();
     }
 
+    /**
+     * Update CDMR status to approved, rejected, in progress
+     * @param status cdmr status
+     */
     public void updateCdmrStatus(String status) {
 
         //update the CDMR status
@@ -111,6 +151,11 @@ public class RouteCDMR {
 
     }
 
+    /**
+     * Method routes to next approver based on the previous approver and approval decesion
+     * @param role role of the user
+     * @return taskID of the next approver
+     */
     public int routeToNextApprover(String role) {
 
         //Route the cdmr to next approver

@@ -12,7 +12,11 @@ import org.apache.log4j.Logger;
 import java.util.List;
 
 /**
- * Created by student on 9/30/16.
+ * GetCDMRDetails class gets the cdmr document from database
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-30
  */
 public class GetCDMRDetails {
 
@@ -21,39 +25,76 @@ public class GetCDMRDetails {
     private String userID;
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * No arg constructor
+     */
     public GetCDMRDetails() {
     }
 
+    /**
+     * arg constructor
+     * @param reqID
+     * @param taskID
+     * @param userID
+     */
     public GetCDMRDetails(int reqID, int taskID, String userID) {
         this.reqID = reqID;
         this.taskID = taskID;
         this.userID = userID;
     }
 
+    /**
+     * get user
+     * @return userID
+     */
     public String getUserID() {
         return userID;
     }
 
+    /**
+     * set user id
+     * @param userID
+     */
     public void setUserID(String userID) {
         this.userID = userID;
     }
 
+    /**
+     * get requisition id
+     * @return reqID
+     */
     public int getReqID() {
         return reqID;
     }
 
+    /**
+     * set Req id
+     * @param reqID
+     */
     public void setReqID(int reqID) {
         this.reqID = reqID;
     }
 
+    /**
+     * get task id
+     * @return taskID
+     */
     public int getTaskID() {
         return taskID;
     }
 
+    /**
+     * set task id
+     * @param taskID
+     */
     public void setTaskID(int taskID) {
         this.taskID = taskID;
     }
 
+    /**
+     * Main method to prepare the cdmr details
+     * @return CDMR
+     */
     public CDMR getCDMR() {
 
         CDMR cdmr = null;
@@ -79,7 +120,11 @@ public class GetCDMRDetails {
         return cdmr;
     }
 
-
+    /**
+     * get requisition using a requisition id
+     * @param reqID
+     * @return CDMR
+     */
     public CDMR getCDMRUsingReqID(int reqID) {
 
         CDMR cdmr = null;
@@ -89,6 +134,10 @@ public class GetCDMRDetails {
 
     }
 
+    /**
+     * get task details
+     * @return Task
+     */
     public Task getTaskDetails() {
         Task task = null;
         TaskDao taskdao = new TaskDao();

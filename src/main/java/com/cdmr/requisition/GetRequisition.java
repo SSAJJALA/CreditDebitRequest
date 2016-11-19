@@ -10,8 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by student on 9/26/16.
+ * GetRequisition prepares the cdmr requisition details based on requisition ID.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-26
  */
+
 public class GetRequisition {
     private CDMR cdmr;
     private int requisitionID;
@@ -19,55 +24,104 @@ public class GetRequisition {
     private int taskID;
     private int invNum;
 
+    /**
+     * No arg constructor
+     */
     public GetRequisition() {
     }
 
-
-
+    /**
+     * Constructor with args
+     * @param requisitionID requisition ID
+     */
     public GetRequisition(int requisitionID) {
         this.requisitionID = requisitionID;
     }
 
+    /**
+     * get CDMR
+     * @return CDMR
+     */
     public CDMR getCdmr() {
         return cdmr;
     }
 
+    /**
+     * ser CDMR
+     * @param cdmr
+     */
     public void setCdmr(CDMR cdmr) {
         this.cdmr = cdmr;
     }
 
+    /**
+     * get requisition id
+     * @return requisitionID
+     */
     public int getRequisitionID() {
         return requisitionID;
     }
 
+    /**
+     * set requisition ID
+     * @param requisitionID
+     */
     public void setRequisitionID(int requisitionID) {
         this.requisitionID = requisitionID;
     }
 
+    /**
+     * get task id
+     * @return taskID
+     */
     public int getTaskID() {
         return taskID;
     }
 
+    /**
+     * set task id
+     * @param taskID
+     */
     public void setTaskID(int taskID) {
         this.taskID = taskID;
     }
 
+    /**
+     * get customer number
+     * @return customerNum
+     */
     public int getCustomerNum() {
         return customerNum;
     }
 
+    /**
+     * set customer number
+     * @param customerNum
+     */
     public void setCustomerNum(int customerNum) {
         this.customerNum = customerNum;
     }
 
+    /**
+     * get invoice number
+     * @return invNum
+     */
     public int getInvNum() {
         return invNum;
     }
 
+    /**
+     * set invoice number
+     * @param invNum
+     */
     public void setInvNum(int invNum) {
         this.invNum = invNum;
     }
 
+    /**
+     * Main method to prepare the requisition details
+     * @return CDMR
+     */
     public CDMR getRequisition() {
 
        this.prepareCDMRHeader();
@@ -77,6 +131,9 @@ public class GetRequisition {
        return this.getCdmr();
     }
 
+    /**
+     * Prepares the header
+     */
     public void prepareCDMRHeader() {
         CdmrDao cdmrHeaderDao = new CdmrDao();
         Cdmr cdmrHeader = cdmrHeaderDao.getCdmr(this.getRequisitionID());
@@ -92,6 +149,9 @@ public class GetRequisition {
         this.setInvNum(cdmrHeader.getInvNum());
     }
 
+    /**
+     * Prepares the customer information
+     */
     public void prepareCustomerInfo() {
         CustomerDao customerDao = new CustomerDao() ;
         Customer custEntity = customerDao.getCustomer(this.getCustomerNum());
@@ -108,6 +168,9 @@ public class GetRequisition {
 
     }
 
+    /**
+     * Prepares the cdmr invoice information
+     */
     public void prepareInvoiceInfo() {
         InvoiceHeaderDao invHeaderDao = new InvoiceHeaderDao();
         InvoiceHeaderPK invCust = new InvoiceHeaderPK(invNum, customerNum);
@@ -126,7 +189,9 @@ public class GetRequisition {
 
     }
 
-
+    /**
+     * Prepare the adjustment details
+     */
     public void prepareCDMRAdjs() {
         List<CDMRAdjustments> adjsData = new ArrayList<CDMRAdjustments>();
         CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
@@ -180,7 +245,12 @@ public class GetRequisition {
     }
 
 
-
+    /**
+     * Prapare comments
+     * @param reqID requisition ID
+     * @param itemNum product number
+     * @return list of comments
+     */
     public List<CDMRComment> prepareCDMRComments(int reqID, int itemNum) {
         List<CDMRComment> commentsData = new ArrayList<CDMRComment>();
         CommentDao commentDao = new CommentDao();

@@ -14,7 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by student on 10/23/16.
+ * CalculateCDMR calculates the cdmr amount based on the adjustment qty and unit price of the item.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-10-23
  */
 public class CalculateCDMR {
 
@@ -25,9 +29,20 @@ public class CalculateCDMR {
     private CDMR cdmr = null;
     private String userID;
 
+    /**
+     * No arg constructor
+     */
     public CalculateCDMR() {
     }
 
+    /**
+     * Constructor with args
+     * @param customer
+     * @param invHeader
+     * @param invDtls
+     * @param adjs
+     * @param userID
+     */
     public CalculateCDMR(Customer customer, InvoiceHeader invHeader, List<InvoiceDetail> invDtls, List<UiAdjData> adjs, String userID) {
         this.customer = customer;
         this.invHeader = invHeader;
@@ -85,6 +100,10 @@ public class CalculateCDMR {
         this.userID = userID;
     }
 
+    /**
+     * main method to prepare the cdmr details
+     * @return CDMR document
+     */
     public CDMR prepareCDMR() {
         cdmr = new CDMR();
 
@@ -108,6 +127,9 @@ public class CalculateCDMR {
         return cdmr;
     }
 
+    /**
+     * method to prepare customer details
+     */
     public void prepareCustomer() {
         com.cdmr.Data.Customer cust = new com.cdmr.Data.Customer();
         cust.setAddress1(customer.getAdd1());
@@ -122,6 +144,9 @@ public class CalculateCDMR {
         cdmr.setCustomer(cust);
     }
 
+    /**
+     * method to prepare invoice header
+     */
     public void prepareInvHeader() {
 
         com.cdmr.Data.InvoiceHeader header = new com.cdmr.Data.InvoiceHeader();
@@ -139,6 +164,9 @@ public class CalculateCDMR {
 
     }
 
+    /**
+     * method to prepare adjustments
+     */
     public void prepareAdjustments() {
         List<CDMRAdjustments> requiredAdjs = new ArrayList<CDMRAdjustments>();
 
@@ -190,6 +218,9 @@ public class CalculateCDMR {
 
     }
 
+    /**
+     * method to prepare header
+     */
     public void prepareHeader() {
 
         List<CDMRAdjustments> adjs = cdmr.getAdjustments();

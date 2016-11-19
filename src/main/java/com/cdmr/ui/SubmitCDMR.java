@@ -12,27 +12,50 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Siva Sajjala on 9/29/16.
+ * SubmitCDMR service to file a new CDMR for approval. This saves all details of the requisition to database and also routes the request first approver.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-29
  */
 public class SubmitCDMR {
     private CDMR cdmr;
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * No arg constructor
+     */
     public SubmitCDMR() {
     }
 
+    /**
+     * arg constructor
+     * @param cdmr
+     */
     public SubmitCDMR(CDMR cdmr) {
         this.cdmr = cdmr;
     }
 
+    /**
+     * get cdmr details
+     * @return CDMR
+     */
     public CDMR getCdmr() {
         return cdmr;
     }
 
+    /**
+     * set cdmr
+     * @param cdmr
+     */
     public void setCdmr(CDMR cdmr) {
         this.cdmr = cdmr;
     }
 
+    /**
+     * save cdmr to database
+     * @return string message
+     */
     public String saveCDMR() {
         String message = null;
         SaveRequisition save = new SaveRequisition(cdmr);
@@ -70,6 +93,10 @@ public class SubmitCDMR {
         return message;
     }
 
+    /**
+     * create task for the approver
+     * @return task id
+     */
     public int queueTask() {
         QueueTask createTask = new QueueTask();
         createTask.setTaskName("DSM Approval");
@@ -90,6 +117,9 @@ public class SubmitCDMR {
         return taskID;
     }
 
+    /**
+     * update status
+     */
     public void updateStatus() {
         CdmrDao cdmrDao = new CdmrDao();
         Cdmr tempCDMR = cdmrDao.getCdmr(cdmr.getRequisitionID());
@@ -97,6 +127,9 @@ public class SubmitCDMR {
         cdmrDao.updateCdmr(tempCDMR);
     }
 
+    /**
+     * Update invoice
+     */
     public void updateInvoice() {
 
         List<CDMRAdjustments> adjs = cdmr.getAdjustments();

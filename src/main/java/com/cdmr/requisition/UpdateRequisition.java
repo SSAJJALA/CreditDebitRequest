@@ -15,27 +15,49 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by Siva Sajjala on 9/29/16.
+ * updateRequisition class updates a CDMR requisition to the database.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-29
  */
 public class UpdateRequisition {
     private CDMR cdmr;
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * No arg constructor
+     */
     public UpdateRequisition() {
     }
 
+    /**
+     * constructor with arg
+     * @param cdmr cdmr document
+     */
     public UpdateRequisition(CDMR cdmr) {
         this.cdmr = cdmr;
     }
 
+    /**
+     * get cdmr
+     * @return CDMR
+     */
     public CDMR getCdmr() {
         return cdmr;
     }
 
+    /**
+     * set CDMR
+     * @param cdmr cdmr
+     */
     public void setCdmr(CDMR cdmr) {
         this.cdmr = cdmr;
     }
 
+    /**
+     * Main maethod to update the cdmr
+     */
     public void updateCDMR() {
 
         List<CDMRAdjustments> adjs = cdmr.getAdjustments();
@@ -73,6 +95,11 @@ public class UpdateRequisition {
 
     }
 
+    /**
+     * insert comments
+     * @param comment comment
+     * @param maxSeq maxSeq
+     */
     public void insertComment(CDMRComment comment, int maxSeq) {
         maxSeq ++;
         Comment commentEntity = new Comment();
@@ -84,6 +111,11 @@ public class UpdateRequisition {
         commentEntity.setItemNum(comment.getItemNum());
     }
 
+    /**
+     * get comments
+     * @param itemNum product number
+     * @return list of comments
+     */
     public List<Comment> getCommentsFromDB(int itemNum) {
         CommentDao commentsDao = new CommentDao();
         List<Filter> filters = new ArrayList<Filter>();

@@ -11,7 +11,11 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
- * Created by student on 9/29/16.
+ * QueueTask generates the task ID for approval
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-29
  */
 public class QueueTask {
 
@@ -19,40 +23,76 @@ public class QueueTask {
     private String taskName;
     private int reqID;
 
-
+    /**
+     * No arg constructor
+     */
     public QueueTask() {
     }
 
+    /**
+     * Constructor with args
+     * @param assignToUserID assignToUserID
+     * @param taskName taskName
+     * @param reqID reqID
+     */
     public QueueTask(String assignToUserID, String taskName, int reqID) {
         this.assignToUserID = assignToUserID;
         this.taskName = taskName;
         this.reqID = reqID;
     }
 
+    /**
+     * get assign to user id
+     * @return assignToUserID
+     */
     public String getAssignToUserID() {
         return assignToUserID;
     }
 
+    /**
+     * set assign to user id
+     * @param assignToUserID
+     */
     public void setAssignToUserID(String assignToUserID) {
         this.assignToUserID = assignToUserID;
     }
 
+    /**
+     * get task name
+     * @return taskName
+     */
     public String getTaskName() {
         return taskName;
     }
 
+    /**
+     * set the task name
+     * @param taskName
+     */
     public void setTaskName(String taskName) {
         this.taskName = taskName;
     }
 
+    /**
+     * get requisition ID
+     * @return reqID
+     */
     public int getReqID() {
         return reqID;
     }
 
+    /**
+     * set requisition id
+     * @param reqID
+     */
     public void setReqID(int reqID) {
         this.reqID = reqID;
     }
 
+    /**
+     * creates the task
+     * @return task ID
+     */
     public int createTask() {
 
         //create a new task

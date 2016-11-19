@@ -14,7 +14,11 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * Created by student on 9/26/16.
+ * SaveRequisition class save a CDMR requisition to the database.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-26
  */
 public class SaveRequisition {
 
@@ -22,21 +26,41 @@ public class SaveRequisition {
     private int requisitionID;
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * No arg constructor
+     */
     public SaveRequisition() {
     }
 
+    /**
+     * constructor with arg
+     * @param cdmr cdmr document
+     */
     public SaveRequisition(CDMR cdmr) {
         this.cdmr = cdmr;
     }
 
+    /**
+     * get cdmr
+     * @return cdmr
+     */
     public CDMR getCdmr() {
         return cdmr;
     }
 
+    /**
+     * set cdmr
+     * @param cdmr
+     */
     public void setCdmr(CDMR cdmr) {
         this.cdmr = cdmr;
     }
 
+    /**
+     * Methods to save a requisition
+     * @return requisition id
+     * @throws Exception
+     */
     public int save() throws Exception {
         try {
             requisitionID = this.insertRequisition();
@@ -54,6 +78,10 @@ public class SaveRequisition {
 
     }
 
+    /**
+     * inserts requisition table
+     * @return requisition id
+     */
     public int insertRequisition() {
         Requisition req = new Requisition();
         req.setAppID(1);
@@ -66,6 +94,9 @@ public class SaveRequisition {
         return reqID;
     }
 
+    /**
+     * inserts cdmr header details
+     */
     public void insertCDMRHeader() {
 
         //Prepare CDMR header details
@@ -97,6 +128,10 @@ public class SaveRequisition {
 
 
     }
+
+    /**
+     * inserts cdmr details
+     */
 
     public void insertCDMRDetails() {
 
@@ -133,6 +168,10 @@ public class SaveRequisition {
 
     }
 
+    /**
+     * inserts comments to comment table
+     * @param comments
+     */
     public void insertComments(List<CDMRComment> comments) {
 
         int count = 0;

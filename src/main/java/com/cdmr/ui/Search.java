@@ -8,7 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by student on 9/23/16.
+ * Search programs based on filter criteria.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-23
  */
 public class Search {
     private String searchFilter;
@@ -17,39 +21,76 @@ public class Search {
 
     List<SearchCDMR> searchResults = new ArrayList<SearchCDMR>();
 
+    /**
+     * No arg constructor
+     */
     public Search() {
     }
 
+    /**
+     * arg constructor
+     * @param searchFilter
+     * @param operand
+     * @param searchValue
+     */
     public Search(String searchFilter, String operand, String searchValue) {
         this.searchFilter = searchFilter;
         this.operand = operand;
         this.searchValue = searchValue;
     }
 
+    /**
+     * get search filter
+     * @return searchFilter
+     */
     public String getSearchFilter() {
         return searchFilter;
     }
 
+    /**
+     * set search filter
+     * @param searchFilter
+     */
     public void setSearchFilter(String searchFilter) {
         this.searchFilter = searchFilter;
     }
 
+    /**
+     * get operand
+     * @return operand
+     */
     public String getOperand() {
         return operand;
     }
 
+    /**
+     * set operand
+     * @param operand
+     */
     public void setOperand(String operand) {
         this.operand = operand;
     }
 
+    /**
+     * get search value
+     * @return searchValue
+     */
     public String getSearchValue() {
         return searchValue;
     }
 
+    /**
+     * set search value
+     * @param searchValue
+     */
     public void setSearchValue(String searchValue) {
         this.searchValue = searchValue;
     }
 
+    /**
+     * main search method that brings back the cdmrs based on search criteria
+     * @return List<SearchCDMR>
+     */
     public List<SearchCDMR> search() {
 
         CdmrDao cdmrs = new CdmrDao();
