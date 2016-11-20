@@ -16,7 +16,11 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by Siva Sajjala on 9/24/16.
+ * InboxServlet controller servlet for inbox.jsp page. Gets the cdmr details for a task (on click) and directs to details page.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-24
  */
 
 @WebServlet(
@@ -27,10 +31,24 @@ import java.util.List;
 public class InboxServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
+    /**
+     * Method for post
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);
     }
 
+    /**
+     * Method for get
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         logger.info("In doPost() method on inbox servlet");

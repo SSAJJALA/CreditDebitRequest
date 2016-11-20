@@ -11,7 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Siva Sajjala on 9/24/16.
+ * DirectToInbox controller servlet fto direct to to cdmr inbox page
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-24
  */
 @WebServlet(name = "DirectToInbox",
         urlPatterns = {"/toInbox"}
@@ -19,10 +23,25 @@ import java.io.IOException;
 public class DirectToInbox extends HttpServlet {
 
     private final Logger logger = Logger.getLogger(this.getClass());
+
+    /**
+     * Method for post
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
+    /**
+     * Method for get
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");

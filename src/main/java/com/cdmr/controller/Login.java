@@ -12,7 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by student on 9/22/16.
+ * Login controller servlet. Authenticates user name and password.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-22
  */
 @WebServlet(
         name = "login",
@@ -21,10 +25,25 @@ import java.io.IOException;
 )
 public class Login extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+
+    /**
+     * Method for post
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request,response);
     }
 
+    /**
+     * Method for get
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("In doPost() method");
         response.setContentType("text/html");

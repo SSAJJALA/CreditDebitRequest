@@ -11,7 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by student on 9/22/16.
+ * Entry controller servlet to direct to to cdmr login page
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-09-22
  */
 @WebServlet(name = "Entry",
         urlPatterns = {"/entry"}
@@ -19,10 +23,24 @@ import java.io.IOException;
 public class Entry extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
+    /**
+     * Method for post
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
+    /**
+     * Method for get
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");

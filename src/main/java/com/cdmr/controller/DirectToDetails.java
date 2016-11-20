@@ -15,17 +15,36 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Created by student on 10/29/16.
+ * DirectToDetails controller servlet fto direct to to cdmr details page
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-10-20
  */
 @WebServlet(name = "directToDetails",
         urlPatterns = {"/directToDetails"}
 )
 public class DirectToDetails extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+
+    /**
+     * Method for post
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request, response);
     }
 
+    /**
+     * Method for get
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         HttpSession session = request.getSession();

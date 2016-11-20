@@ -16,7 +16,11 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Created by student on 10/29/16.
+ * CDMRDetailsServlet controller servlet for cdmrDetails.jsp page. Take care of approvals and rejections from UI
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-10-29
  */
 @WebServlet(
         name = "cdmrDetailsServlet",
@@ -26,12 +30,25 @@ import java.io.IOException;
 public class CDMRDetailsServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
-
+    /**
+     * Method for post
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("inside create cdmr details servlet @ post");
         this.doGet(request, response);
     }
 
+    /**
+     * Method for get
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("inside create cdmr details servlet @ get");
 
@@ -80,8 +97,6 @@ public class CDMRDetailsServlet extends HttpServlet {
 
     public String completeTaskAction(HttpServletRequest request, HttpServletResponse response, String buttonAction, HttpSession session) {
         logger.info("inside completeTaskAction from cdmr details servlet");
-        //CDMR cdmr = (CDMR)request.getAttribute("cdmr");
-        //Task task = (Task) request.getAttribute("taskDetails");
         CDMR cdmr = (CDMR)session.getAttribute("cdmr");
         Task task = (Task) session.getAttribute("taskDetails");
         logger.info("Task object from cdmr details servlet:" + task.toString());

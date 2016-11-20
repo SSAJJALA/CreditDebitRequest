@@ -24,7 +24,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Siva Sajjala on 10/17/16.
+ * CreateCDMRServlet controller servlet for createCdmr.jsp page. Takes care of customer lookup, invoice lookup, submit and calculate action buttons from UI.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-10-17
  */
 
 @WebServlet(
@@ -35,11 +39,25 @@ import java.util.List;
 public class CreateCDMRServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
+    /**
+     * Method for post
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("inside create cdmr servlet @ post");
         this.doGet(request, response);
     }
 
+    /**
+     * Method for get
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @throws ServletException servlet exception
+     * @throws IOException IO Exception
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("inside create cdmr servlet @ get");
         logger.info("btn_retCust:" + request.getParameter("btn_retCust"));
