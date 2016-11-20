@@ -68,7 +68,7 @@ public class InvoiceLookup {
 
     /**
      * Get invoice details
-     * @return List<InvoiceDetail> List of invoice details
+     * @return InvoiceDetail List of invoice details
      */
     public List<InvoiceDetail> getInvoiceDetails() {
 

@@ -94,7 +94,7 @@ public class TaskAssignmentDao {
     /**
      * get all task assignments based on search filters
      * @param filters filters
-     * @return List<TaskAssignment> list of task assignments
+     * @return TaskAssignment list of task assignments
      */
 
     public List<TaskAssignment> getTasks(List<Filter> filters) {

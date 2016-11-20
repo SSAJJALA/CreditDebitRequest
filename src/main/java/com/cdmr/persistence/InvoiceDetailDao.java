@@ -97,7 +97,7 @@ public class InvoiceDetailDao {
     /**
      * get all invoice details based on search filters
      * @param filters filters
-     * @return List<invoiceDetails> list of invoice details
+     * @return invoiceDetails list of invoice details
      */
 
     public List<InvoiceDetail> getInvoicesWithFilter(List<Filter> filters) {

@@ -59,7 +59,7 @@ public class GetInbox {
 
     /**
      * Main method to fetch all tasks that are waiting for that user and in active status
-     * @return List<SearchInbox>
+     * @return SearchInbox list of inbox tasks
      */
     public List<SearchInbox> getTasks() {
 
@@ -85,7 +85,7 @@ public class GetInbox {
     /**
      * method to execute the query
      * @param sql string
-     * @return List<SearchInbox>
+     * @return SearchInbox list of inbox items
      */
     public List<SearchInbox> executeQuery(String sql) {
         List<SearchInbox> userInbox = new ArrayList<SearchInbox>();

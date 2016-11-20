@@ -89,7 +89,7 @@ public class Search {
 
     /**
      * main search method that brings back the cdmrs based on search criteria
-     * @return List<SearchCDMR>
+     * @return SearchCDMR List of CDMRs
      */
     public List<SearchCDMR> search() {
 
