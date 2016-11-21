@@ -280,9 +280,9 @@
 
     <br>
     <span style="padding-left:1000px"></span>
-    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit" onsubmit="return checkcalculate()">
+    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit" onsubmit="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
-    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit" onsubmit="return checksubmit()">
+    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit" onsubmit="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
     <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
     <span style="padding-left:20px"></span>
