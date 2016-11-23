@@ -38,7 +38,7 @@
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-<form id="createForm" action="${pageContext.request.contextPath}/createCDMRServlet" method="post">
+<form id="createForm" name="createCDMR" action="${pageContext.request.contextPath}/createCDMRServlet" method="post">
 <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>
@@ -53,15 +53,15 @@
                         <td width="30%">
                             <c:choose>
                                 <c:when test="${customerResults.custNum !=null && customerResults.custNum !=''}">
-                                   <input type="text" name="customer" value="<c:out value="${customerResults.custNum}"/>">
+                                   <input type="text" id="customer" name="customer" value="<c:out value="${customerResults.custNum}"/>">
                                 </c:when>
                                 <c:otherwise>
-                                    <input type="text" name="customer">
+                                    <input type="text" id="customer" name="customer">
                                 </c:otherwise>
                             </c:choose>
                         </td>
                         <td width="80%">&nbsp;&nbsp;
-                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit">
+                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit" onsubmit="return checkcustomer()">
 
                         </td>
                         </tr>
@@ -83,16 +83,16 @@
                             <td width="30%">
                                 <c:choose>
                                     <c:when test="${invoiceResults.invCustomer.invoiceNum !=null && invoiceResults.invCustomer.invoiceNum !=''}">
-                                        <input type="text" name="Invoice" value="<c:out value="${invoiceResults.invCustomer.invoiceNum}"/>">
+                                        <input type="text" id="Invoice" name="Invoice" value="<c:out value="${invoiceResults.invCustomer.invoiceNum}"/>">
                                     </c:when>
                                     <c:otherwise>
-                                        <input type="text" name="Invoice">
+                                        <input type="text" id="Invoice" name="Invoice">
                                     </c:otherwise>
                                 </c:choose>
                             </td>
 
                             <td width="80%">&nbsp;&nbsp;
-                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit">
+                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit" onsubmit="return checkinvoice()">
                             </td>
                         </tr>
 
@@ -227,7 +227,7 @@
                         <td style="text-align: center;" rowspan="1" colspan="1"> ${adjs.itemNum}</td><input type="hidden" name="adjItem" value=""${adjs.itemNum}">
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemDesc}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalQty}</td>
-                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty" value="${adjs.adjQty}"></td>
+                        <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" id="adjQty" name="adjQty" value="${adjs.adjQty}"></td>
                         <td style="text-align: center;" rowspan="1" colspan="1">
                                 <select name="reasonCode" size="1" id="reasonCode">
                                     <option selected >${adjs.reasonCode}</option>
@@ -280,15 +280,17 @@
 
     <br>
     <span style="padding-left:1000px"></span>
-    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit">
+    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit" onsubmit="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
-    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit">
+    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit" onsubmit="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
     <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
     <span style="padding-left:20px"></span>
     <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
 
 </form>
+    <script src="non-empty.js"></script>
+
     <script type="text/javascript">
 
         $("#datatable1 tbody input:checkbox.selInv").click(function() {
@@ -315,7 +317,7 @@
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' + '<input type="hidden" name="adjItem" value="' + tds_item + '">' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_itemDesc + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_qty + '</td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="adjQty"></td>' +
+                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="text" id="adjQty" name="adjQty"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' +
                             '<select name="reasonCode" size="1" id="reasonCode">' +
                                 '<option value=""></option>' +

@@ -792,3 +792,12 @@
 2016-11-19 22:37:32,708 7209698 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice header:InvoiceHeader{invCustomer=InvoiceHeaderPK{invoiceNum=2345, custNum=1000}, invDate=2016-10-01, grossAmnt=5050.0, allowance=0.0, charges=0.0, tax=0.0, netAmnt=5050.0}
 2016-11-19 22:37:32,708 7209698 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice details:[com.cdmr.entity.InvoiceDetail@4106753e, com.cdmr.entity.InvoiceDetail@54aa220a]
 2016-11-19 22:37:32,709 7209699 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-23 09:22:32,267 0    [http-nio-8080-exec-3] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
+2016-11-23 09:22:35,376 3109 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-23 09:22:35,378 3111 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-23 09:22:35,378 3111 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:Search
+2016-11-23 09:22:35,378 3111 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-11-23 09:22:35,378 3111 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-23 09:22:35,378 3111 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-23 09:22:35,378 3111 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-23 09:22:35,378 3111 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.

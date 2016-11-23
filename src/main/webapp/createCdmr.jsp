@@ -61,7 +61,7 @@
                             </c:choose>
                         </td>
                         <td width="80%">&nbsp;&nbsp;
-                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit" onsubmit="return checkcustomer()">
+                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit" onclick="return checkcustomer()">
 
                         </td>
                         </tr>
@@ -92,7 +92,7 @@
                             </td>
 
                             <td width="80%">&nbsp;&nbsp;
-                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit" onsubmit="return checkinvoice()">
+                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit" onclick="return checkinvoice()">
                             </td>
                         </tr>
 
@@ -280,16 +280,18 @@
 
     <br>
     <span style="padding-left:1000px"></span>
-    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit" onsubmit="return checkCalcSubmit()">
+    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit" onclick="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
-    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit" onsubmit="return checkCalcSubmit()">
+    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit" onclick="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
     <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
     <span style="padding-left:20px"></span>
     <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
 
 </form>
-    <script src="non-empty.js"></script>
+
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/validate.js"></script>
+
 
     <script type="text/javascript">
 
