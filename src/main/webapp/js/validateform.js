@@ -5,6 +5,7 @@
 
 function checkform() {
 
+    console.log("inside validate form java script");
     if (document.getElementById("btn_retCust").valueOf() != null ) {
         console.log("inside check customer script");
         //var cust = document.forms["createCDMR"]["customer"].value();
