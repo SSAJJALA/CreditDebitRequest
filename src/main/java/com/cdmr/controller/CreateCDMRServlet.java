@@ -104,12 +104,21 @@ public class CreateCDMRServlet extends HttpServlet {
 
             invoiceLookup.setCustNum(cust1.getCustNum());
             header = invoiceLookup.getInvoiceHeader();
-            details = invoiceLookup.getInvoiceDetails();
+            if (header == null) {
+                request.setAttribute("message", "Invoice not found");
+            } else {
+                details = invoiceLookup.getInvoiceDetails();
+                if (details == null) {
+                    request.setAttribute("message", "Invalid invoice. Invoice details not found");
+                } else {
+                    session.setAttribute("invoiceResults", header);
+                    session.setAttribute("invoiceDetails", details);
+                    logger.info("invoice header:" + header.toString());
+                    logger.info("invoice details:" + details.toString());
+                }
 
-            session.setAttribute("invoiceResults", header);
-            session.setAttribute("invoiceDetails", details);
-            logger.info("invoice header:" + header.toString());
-            logger.info("invoice details:" + details.toString());
+            }
+
             buttonAction = "invoice";
 
         } else if (request.getParameter("btn_calculate") != null) {
