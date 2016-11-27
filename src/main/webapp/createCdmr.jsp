@@ -63,7 +63,7 @@
                             </c:choose>
                         </td>
                         <td width="80%">&nbsp;&nbsp;
-                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit" onClick="checkform(this.form)">
+                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit" onclick="return checkcustomer()">
 
                         </td>
                         </tr>
@@ -94,7 +94,7 @@
                             </td>
 
                             <td width="80%">&nbsp;&nbsp;
-                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit">
+                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit" onclick="return checkinvoice()">
                             </td>
                         </tr>
 
@@ -282,9 +282,9 @@
 
     <br>
     <span style="padding-left:1000px"></span>
-    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit">
+    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit" onclick="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
-    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit">
+    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit" onclick="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
     <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
     <span style="padding-left:20px"></span>

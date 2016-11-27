@@ -4,12 +4,19 @@
  */
 
 function checkform(form) {
-    alert("inside validate form java script");
     console.log("inside validate form java script");
+    alert("inside validate form java script");
     var buttonCust = form.btn_retCust.value;
     console.log("buttonCust:" + buttonCust);
 
+    if (document.createCDMR.customer.value == '') {
+        alert("please enter valid customer number");
+        return false;
+    } else {
+        return true;
+    }
 
+/**
     //if (document.getElementById("btn_retCust").valueOf() != null ) {
     if (buttonCust != "" && buttonCust != null) {
         console.log("inside check customer script");
@@ -57,4 +64,5 @@ function checkform(form) {
             return true;
         }
     }
+    **/
 }

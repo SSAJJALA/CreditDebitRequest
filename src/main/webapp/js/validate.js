@@ -6,9 +6,10 @@
 function checkcustomer() {
     console.log("inside check customer script");
     //var cust = document.forms["createCDMR"]["customer"].value();
-    var cust = document.getElementById("customer").valueOf();
+    //var cust = document.getElementById("customer").valueOf();
+    var cust = document.getElementById("createForm").elements.namedItem("customer").value;
     console.log("customer:" + cust);
-    if(cust == "") {
+    if(cust == '') {
         alert("please enter valid customer number");
         return false;
     } else {
@@ -17,9 +18,12 @@ function checkcustomer() {
 }
 
 function checkinvoice() {
+    console.log("inside check invoice script");
     //var inv = document.forms["createCDMR"]["Invoice"].value();
-    var inv = document.getElementById("Invoice").valueOf();
-    if(inv == "") {
+    //var inv = document.getElementById("Invoice").valueOf();
+    var inv = document.getElementById("createForm").elements.namedItem("Invoice").value;
+    console.log("invoice:" + inv);
+    if(inv == '') {
         alert("please enter valid invoice number");
         return false;
     } else {
