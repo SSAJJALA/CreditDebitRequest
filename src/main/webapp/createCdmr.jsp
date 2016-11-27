@@ -39,7 +39,7 @@
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-<form id="createForm" name="createCDMR" action="${pageContext.request.contextPath}/createCDMRServlet" method="post" onsubmit="return checkform(this.form)">
+<form id="createForm" name="createCDMR" action="${pageContext.request.contextPath}/createCDMRServlet" method="post">
 
 <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
@@ -63,7 +63,7 @@
                             </c:choose>
                         </td>
                         <td width="80%">&nbsp;&nbsp;
-                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit">
+                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit" onClick="checkform(this.form)">
 
                         </td>
                         </tr>

@@ -31,7 +31,6 @@
 <html>
 <head>
     <title>Create CDMR</title>
-    <script LANGUAGE="JavaScript" src="js/validateform.js"></script>
 </head>
 <body>
 

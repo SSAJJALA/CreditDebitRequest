@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CDMR > Home</title>
         <!-- <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script><link rel="stylesheet" href="../css/ui.daterangepicker.css" type="text/css" /> -->
-
+        <script LANGUAGE="JavaScript" src="js/validateform.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <!-- <link href="/css/style.css" rel="stylesheet" type="text/css" />
         <link href="/css/jquery.css" rel="stylesheet" type="text/css" />

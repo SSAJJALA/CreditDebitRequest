@@ -71,27 +71,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+            <state relative-caret-position="360">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
-                <marker date="1480222324355" expanded="true" signature="17140:17159" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="17289:17308" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="17461:17480" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="17571:17590" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="17676:17695" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="17811:17830" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="18375:18394" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="18483:18502" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="18573:18592" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="18663:18682" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="18753:18772" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="18843:18862" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="19276:19295" ph="..." />
-                <marker date="1480222324355" expanded="true" signature="19366:19385" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="17071:17090" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="17220:17239" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="17392:17411" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="17502:17521" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="17607:17626" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="17742:17761" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="18306:18325" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="18414:18433" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="18504:18523" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="18594:18613" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="18684:18703" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="18774:18793" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="19207:19226" ph="..." />
+                <marker date="1480222620673" expanded="true" signature="19297:19316" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/head.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/logs/cdmr.log" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/persistence/CdmrDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/approval/RouteCDMR.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/requisition/GetRequisition.java" />
@@ -201,6 +210,7 @@
         <option value="$PROJECT_DIR$/src/test/com/cdmr/webservices/InvoiceLookupTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/validateform.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/head.jsp" />
       </list>
     </option>
   </component>
@@ -1231,7 +1241,7 @@
       <workItem from="1479913736161" duration="6129000" />
       <workItem from="1479943127107" duration="1193000" />
       <workItem from="1480134305725" duration="918000" />
-      <workItem from="1480186468223" duration="9982000" />
+      <workItem from="1480186468223" duration="10219000" />
     </task>
     <servers />
   </component>
@@ -1268,7 +1278,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="794802000" />
+    <option name="totallyTimeSpent" value="795039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1352,18 +1362,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/750b3ad4/13347100-7a19-4686-be4e-b581d92c7501/APPSPROD.CUSTOMER">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/persistence/CdmrDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
@@ -1721,24 +1719,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        <state relative-caret-position="360">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <marker date="1480222324355" expanded="true" signature="17140:17159" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="17289:17308" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="17461:17480" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="17571:17590" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="17676:17695" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="17811:17830" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="18375:18394" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="18483:18502" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="18573:18592" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="18663:18682" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="18753:18772" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="18843:18862" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="19276:19295" ph="..." />
-            <marker date="1480222324355" expanded="true" signature="19366:19385" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="17071:17090" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="17220:17239" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="17392:17411" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="17502:17521" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="17607:17626" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="17742:17761" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="18306:18325" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="18414:18433" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="18504:18523" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="18594:18613" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="18684:18703" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="18774:18793" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="19207:19226" ph="..." />
+            <marker date="1480222620673" expanded="true" signature="19297:19316" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>

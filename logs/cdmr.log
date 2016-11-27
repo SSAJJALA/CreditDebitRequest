@@ -1207,3 +1207,23 @@
 2016-11-26 22:54:19,453 9659 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - directing to index page
 2016-11-26 22:54:19,453 9659 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
 2016-11-26 22:54:23,905 14111 [http-nio-8080-exec-3] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
+2016-11-26 22:58:25,504 0    [http-nio-8080-exec-10] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
+2016-11-26 22:58:27,060 1556 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-26 22:58:27,061 1557 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-26 22:58:27,061 1557 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:Search
+2016-11-26 22:58:27,061 1557 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-11-26 22:58:27,061 1557 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-26 22:58:27,061 1557 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-26 22:58:27,061 1557 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-26 22:58:27,061 1557 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-11-26 22:58:27,063 1559 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-26 22:58:28,665 3161 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-26 22:58:28,665 3161 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-26 22:58:28,665 3161 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:null
+2016-11-26 22:58:28,666 3162 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-11-26 22:58:28,666 3162 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-26 22:58:28,666 3162 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-26 22:58:28,666 3162 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-26 22:58:28,666 3162 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CreateCDMRServlet  - directing to index page
+2016-11-26 22:58:28,666 3162 [http-nio-8080-exec-2] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-26 22:58:31,375 5871 [http-nio-8080-exec-4] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
