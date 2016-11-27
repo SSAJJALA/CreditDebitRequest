@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java" afterPath="$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java" />
     </list>
     <ignored path="cdmr.iws" />
@@ -101,21 +102,22 @@
       <file leaf-file-name="CreateCDMRScript.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="404">
+              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#776#777#0" expanded="true" />
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#767#768#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="62" column="78" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="78" />
+            <state relative-caret-position="165">
+              <caret line="32" column="184" selection-start-line="32" selection-start-column="152" selection-end-line="32" selection-end-column="184" />
               <folding />
             </state>
           </provider>
@@ -1181,7 +1183,7 @@
       <workItem from="1479943127107" duration="1193000" />
       <workItem from="1480134305725" duration="918000" />
       <workItem from="1480186468223" duration="10846000" />
-      <workItem from="1480223467225" duration="10801000" />
+      <workItem from="1480223467225" duration="11646000" />
     </task>
     <servers />
   </component>
@@ -1189,8 +1191,8 @@
     <history-entry file="CreateCDMRScript_testCreateCDMR - 2016.11.27 at 17h 03m 30s.xml">
       <configuration name="CreateCDMRScript.testCreateCDMR" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CustomerLookupConsumerTest_getCustomerApiJSON - 2016.11.26 at 20h 05m 47s.xml">
-      <configuration name="CustomerLookupConsumerTest.getCustomerApiJSON" configurationId="JUnit" />
+    <history-entry file="CreateCDMRScript_testCreateCDMR - 2016.11.27 at 17h 23m 53s.xml">
+      <configuration name="CreateCDMRScript.testCreateCDMR" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CustomerLookupConsumerTest_getCustomerApiJSON - 2016.11.26 at 20h 26m 42s.xml">
       <configuration name="CustomerLookupConsumerTest.getCustomerApiJSON" configurationId="JUnit" />
@@ -1218,7 +1220,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="806467000" />
+    <option name="totallyTimeSpent" value="807312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1302,13 +1304,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/persistence/CustomerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/persistence/InvoiceHeaderDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-457">
@@ -1678,13 +1673,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="32" column="184" selection-start-line="32" selection-start-column="152" selection-end-line="32" selection-end-column="184" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="404">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
           </folding>
         </state>
       </provider>

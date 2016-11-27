@@ -17,7 +17,7 @@ public class CreateCDMRScript {
     public static void openBrowser() {
         System.setProperty("webdriver.gecko.driver", "/home/student/Documents/EnterpriseRepos/CreditDebitRequest/CreditDebitRequest/lib/geckodriver");
         driver = new FirefoxDriver();
-        driver.get("http://localhost:8080/toCreate");
+        driver.get("http://localhost:8080");
         driver.manage().window().maximize();
     }
 
@@ -28,9 +28,11 @@ public class CreateCDMRScript {
 
     @Test
     public void testCreateCDMR() throws InterruptedException {
-        driver.findElement(By.name("j_username")).sendKeys("VYU6026");
-        driver.findElement(By.name("j_password")).sendKeys("Stoney@2016");
+        driver.findElement(By.linkText("Create Credit Debit Memo Request")).click();
         Thread.sleep(5000);
+        //driver.findElement(By.name("j_username")).sendKeys("VYU6026");
+        //driver.findElement(By.name("j_password")).sendKeys("Stoney@2016");
+        //Thread.sleep(5000);
 
         driver.findElement(By.id("customer")).sendKeys("1000");
         driver.findElement(By.id("btn_retCust")).click();
