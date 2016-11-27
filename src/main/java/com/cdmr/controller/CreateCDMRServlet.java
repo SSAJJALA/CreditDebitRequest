@@ -80,9 +80,15 @@ public class CreateCDMRServlet extends HttpServlet {
                 e.printStackTrace();
             }
 
-            session.setAttribute("customerResults", customerDtls);
-            logger.info("customr number:" + customerDtls.getCustNum());
+            if (customerDtls.getCustNum() > 0){
+                session.setAttribute("customerResults", customerDtls);
+                logger.info("customr number:" + customerDtls.getCustNum());
+            } else {
+                request.setAttribute("message", "Customer not found");
+            }
+
             buttonAction = "customer";
+
 
         } else if (request.getParameter("btn_retInv") != null) {
             logger.info("gettting invoice details.");

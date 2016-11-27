@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/CreditDebitRequest/non-empty.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest.war" afterPath="$PROJECT_DIR$/target/CreditDebitRequest.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest/createCdmr.jsp" afterPath="$PROJECT_DIR$/target/CreditDebitRequest/createCdmr.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java" afterPath="$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java" />
     </list>
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,27 +75,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="85" column="66" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
+            <state relative-caret-position="4272">
+              <caret line="300" column="29" selection-start-line="300" selection-start-column="29" selection-end-line="300" selection-end-column="29" />
               <folding>
-                <marker date="1479921020896" expanded="true" signature="17267:17286" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="17416:17435" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="17588:17607" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="17698:17717" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="17803:17822" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="17938:17957" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="18502:18521" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="18610:18629" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="18700:18719" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="18790:18809" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="18880:18899" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="18970:18989" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="19403:19422" ph="..." />
-                <marker date="1479921020896" expanded="true" signature="19493:19512" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="18740:18759" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="18889:18908" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="19061:19080" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="19171:19190" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="19276:19295" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="19411:19430" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="19975:19994" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="20083:20102" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="20173:20192" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="20263:20282" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="20353:20372" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="20443:20462" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="20876:20895" ph="..." />
+                <marker date="1480211396260" expanded="true" signature="20966:20985" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerLookupConsumerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerLookupConsumer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,8 +123,8 @@
       <file leaf-file-name="validate.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+            <state relative-caret-position="479">
+              <caret line="84" column="1" selection-start-line="65" selection-start-column="0" selection-end-line="84" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -137,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/cdmr.properties" />
         <option value="$PROJECT_DIR$/TimeLog.md" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/logs/cdmr.log" />
@@ -164,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/util/GetLocalDateTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/util/LocalDateTimeAttributeConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookup.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/RestApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/InvoiceLookup.java" />
@@ -186,8 +201,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/controller/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/controller/SearchServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/non-empty.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/validate.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
+        <option value="$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java" />
       </list>
     </option>
   </component>
@@ -276,6 +293,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cdmr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cdmr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CreditDebitRequest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cdmr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -427,33 +478,7 @@
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="TomEE Server.cdmr">
-    <configuration default="false" name="GetCDMRDetailsTest.getCDMR" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.cdmr.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="cdmr" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.cdmr.ui" />
-      <option name="MAIN_CLASS_NAME" value="com.cdmr.ui.GetCDMRDetailsTest" />
-      <option name="METHOD_NAME" value="getCDMR" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.CustomerLookupConsumerTest.getCustomerApiJSON">
     <configuration default="false" name="GetCDMRDetailsTest.getTaskDetailsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -545,6 +570,32 @@
       <option name="PACKAGE_NAME" value="com.cdmr.controller" />
       <option name="MAIN_CLASS_NAME" value="com.cdmr.controller.InboxServletTest" />
       <option name="METHOD_NAME" value="doPost" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CustomerLookupConsumerTest.getCustomerApiJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.cdmr.webservices.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="cdmr" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.cdmr.webservices" />
+      <option name="MAIN_CLASS_NAME" value="com.cdmr.webservices.CustomerLookupConsumerTest" />
+      <option name="METHOD_NAME" value="getCustomerApiJSON" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -994,19 +1045,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="TomEE Server.cdmr" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.GetCDMRDetailsTest.getCDMR" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GetCDMRDetailsTest.getTaskDetailsTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DirectToDetailsTest.doGet" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CDMRDetailsServletTest.doGet" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.InboxServletTest.doPost" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GetCDMRDetailsTest.getTaskDetailsTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DirectToDetailsTest.doGet" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CDMRDetailsServletTest.doGet" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.InboxServletTest.doPost" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CustomerLookupConsumerTest.getCustomerApiJSON" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CDMRDetailsServletTest.doGet" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DirectToDetailsTest.doGet" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.InboxServletTest.doPost" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.GetCDMRDetailsTest.getTaskDetailsTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.GetCDMRDetailsTest.getCDMR" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CustomerLookupConsumerTest.getCustomerApiJSON" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CDMRDetailsServletTest.doGet" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DirectToDetailsTest.doGet" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InboxServletTest.doPost" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.GetCDMRDetailsTest.getTaskDetailsTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -1124,22 +1175,22 @@
       <workItem from="1479913736161" duration="6129000" />
       <workItem from="1479943127107" duration="1193000" />
       <workItem from="1480134305725" duration="918000" />
-      <workItem from="1480186468223" duration="1201000" />
+      <workItem from="1480186468223" duration="2940000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CDMRDetailsServletTest_doGet - 2016.11.06 at 07h 14m 59s.xml">
-      <configuration name="CDMRDetailsServletTest.doGet" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CDMRDetailsServletTest_doGet - 2016.11.06 at 10h 57m 37s.xml">
-      <configuration name="CDMRDetailsServletTest.doGet" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CDMRDetailsServletTest_doGet - 2016.11.06 at 10h 57m 39s.xml">
       <configuration name="CDMRDetailsServletTest.doGet" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CDMRDetailsServletTest_doGet - 2016.11.06 at 17h 28m 46s.xml">
       <configuration name="CDMRDetailsServletTest.doGet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerLookupConsumerTest_getCustomerApiJSON - 2016.11.26 at 20h 05m 44s.xml">
+      <configuration name="CustomerLookupConsumerTest.getCustomerApiJSON" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerLookupConsumerTest_getCustomerApiJSON - 2016.11.26 at 20h 05m 47s.xml">
+      <configuration name="CustomerLookupConsumerTest.getCustomerApiJSON" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DirectToDetailsTest_doGet - 2016.11.05 at 17h 21m 48s.xml">
       <configuration name="DirectToDetailsTest.doGet" configurationId="JUnit" />
@@ -1161,7 +1212,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="786021000" />
+    <option name="totallyTimeSpent" value="787760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1169,33 +1220,33 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35779816" sideWeight="0.7875202" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.505618" sideWeight="0.50421256" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32459426" sideWeight="0.49578744" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32415903" sideWeight="0.49578744" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43820226" sideWeight="0.49811727" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43730888" sideWeight="0.49811727" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15566291" sideWeight="0.7821159" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2635534" sideWeight="0.7821159" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18572195" sideWeight="0.21788414" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14707461" sideWeight="0.4897436" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14707461" sideWeight="0.4897436" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32415903" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32415903" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35830212" sideWeight="0.7875202" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27218935" sideWeight="0.5102564" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258595" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1228,11 +1279,17 @@
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="37" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1245,20 +1302,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="86" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/ui/SubmitCDMR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/ui/UpdateCDMRDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1415,13 +1458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="8" column="79" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="18" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1599,32 +1635,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="479">
+          <caret line="84" column="1" selection-start-line="65" selection-start-column="0" selection-end-line="84" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="85" column="66" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
+        <state relative-caret-position="4272">
+          <caret line="300" column="29" selection-start-line="300" selection-start-column="29" selection-end-line="300" selection-end-column="29" />
           <folding>
-            <marker date="1479921020896" expanded="true" signature="17267:17286" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="17416:17435" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="17588:17607" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="17698:17717" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="17803:17822" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="17938:17957" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="18502:18521" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="18610:18629" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="18700:18719" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="18790:18809" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="18880:18899" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="18970:18989" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="19403:19422" ph="..." />
-            <marker date="1479921020896" expanded="true" signature="19493:19512" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="18740:18759" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="18889:18908" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="19061:19080" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="19171:19190" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="19276:19295" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="19411:19430" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="19975:19994" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="20083:20102" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="20173:20192" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="20263:20282" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="20353:20372" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="20443:20462" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="20876:20895" ph="..." />
+            <marker date="1480211396260" expanded="true" signature="20966:20985" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/webservices/CustomerLookupConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

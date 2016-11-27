@@ -29,6 +29,7 @@ public class CustomerLookupConsumer {
      */
     public Customer getCustomerApiJSON(int customerNo) throws Exception {
         properties = new Properties();
+        Customer result = null;
 
         try {
             properties.load (this.getClass().getResourceAsStream("/cdmr.properties"));
@@ -44,10 +45,15 @@ public class CustomerLookupConsumer {
                 client.target(properties.getProperty("customerLookupURL") + customerNo);
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
-        ObjectMapper mapper = new ObjectMapper();
-        Customer result = mapper.readValue(response, Customer.class);
-        log.info("customer number:" + result.getCustNum());
-        log.info("customer name:" + result.getCustName());
+        if (!response.equals(null) && !response.equals("")) {
+            ObjectMapper mapper = new ObjectMapper();
+            result = mapper.readValue(response, Customer.class);
+            log.info("customer number:" + result.getCustNum());
+            log.info("customer name:" + result.getCustName());
+        } else {
+            log.info("customer not found: " + customerNo);
+        }
+
         return result;
     }
 }
