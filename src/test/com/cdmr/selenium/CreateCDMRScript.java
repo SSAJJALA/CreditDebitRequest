@@ -15,7 +15,7 @@ public class CreateCDMRScript {
 
     @BeforeClass
     public static void openBrowser() {
-        //System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "/home/student/Documents/EnterpriseRepos/CreditDebitRequest/CreditDebitRequest/lib/geckodriver");
         driver = new FirefoxDriver();
         driver.get("http://localhost:8080/toCreate");
         driver.manage().window().maximize();
