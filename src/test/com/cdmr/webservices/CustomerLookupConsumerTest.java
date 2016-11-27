@@ -21,9 +21,9 @@ public class CustomerLookupConsumerTest {
 
     @Test
     public void getCustomerApiJSON() throws Exception {
-
-        Customer cust = customerLookup.getCustomerApiJSON(1);
-        if (cust.equals(null)) {
+        Customer cust = null;
+        cust = customerLookup.getCustomerApiJSON(1);
+        if (cust == null) {
             log.info("Customer number not found");
             assertNull("Customer fetch failed", cust);
         } else {

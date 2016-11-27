@@ -987,3 +987,5 @@
 2016-11-26 20:01:36,037 105713 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
 2016-11-26 20:01:36,037 105713 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
 2016-11-26 20:27:29,905 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
+2016-11-26 20:31:13,036 1    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
+2016-11-26 20:32:19,431 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
