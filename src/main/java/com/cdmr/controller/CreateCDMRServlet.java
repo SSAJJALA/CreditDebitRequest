@@ -80,11 +80,11 @@ public class CreateCDMRServlet extends HttpServlet {
                 e.printStackTrace();
             }
 
-            if (customerDtls.getCustNum() > 0){
+            if (customerDtls == null){
+                request.setAttribute("message", "Customer not found");
+            } else {
                 session.setAttribute("customerResults", customerDtls);
                 logger.info("customr number:" + customerDtls.getCustNum());
-            } else {
-                request.setAttribute("message", "Customer not found");
             }
 
             buttonAction = "customer";

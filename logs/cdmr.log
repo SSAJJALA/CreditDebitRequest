@@ -989,3 +989,5 @@
 2016-11-26 20:27:29,905 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
 2016-11-26 20:31:13,036 1    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
 2016-11-26 20:32:19,431 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
+2016-11-26 20:34:19,294 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
+2016-11-26 20:34:22,837 3543 [main] INFO  com.cdmr.webservices.CustomerLookupConsumerTest  - Customer number not found
