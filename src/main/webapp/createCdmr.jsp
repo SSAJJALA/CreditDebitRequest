@@ -38,7 +38,8 @@
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-<form id="createForm" name="createCDMR" action="${pageContext.request.contextPath}/createCDMRServlet" method="post">
+    <script type="text/javascript" src="js/validateform.js.js"></script>
+<form id="createForm" name="createCDMR" action="${pageContext.request.contextPath}/createCDMRServlet" method="post" onSubmit="return checkform()">
 <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>
@@ -61,7 +62,7 @@
                             </c:choose>
                         </td>
                         <td width="80%">&nbsp;&nbsp;
-                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit" onclick="return checkcustomer()">
+                            <input  id="btn_retCust" name="btn_retCust" class="btnInside" value="Search" type="submit">
 
                         </td>
                         </tr>
@@ -92,7 +93,7 @@
                             </td>
 
                             <td width="80%">&nbsp;&nbsp;
-                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit" onclick="return checkinvoice()">
+                                <input  id="btn_retInv" name="btn_retInv" class="btnInside" value="Search" type="submit">
                             </td>
                         </tr>
 
@@ -280,62 +281,15 @@
 
     <br>
     <span style="padding-left:1000px"></span>
-    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit" onclick="return checkCalcSubmit()">
+    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit">
     <span style="padding-left:20px"></span>
-    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit" onclick="return checkCalcSubmit()">
+    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit">
     <span style="padding-left:20px"></span>
     <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
     <span style="padding-left:20px"></span>
     <input  id="btn_exit" name="btn_exit" class="btnInside" value="Exit" type="submit">
 
 </form>
-
-    <script type="text/javascript">
-        function checkcustomer() {
-            console.log("inside check customer script");
-            //var cust = document.forms["createCDMR"]["customer"].value();
-            var cust = document.getElementById("customer").valueOf();
-            console.log("customer:" + cust);
-            if(cust == "") {
-                alert("please enter valid customer number");
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function checkinvoice() {
-            //var inv = document.forms["createCDMR"]["Invoice"].value();
-            var inv = document.getElementById("Invoice").valueOf();
-            if(inv == "") {
-                alert("please enter valid invoice number");
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function checkCalcSubmit() {
-            var table = document.getElementById("datatable2").rows;
-            var fault = "false";
-            for (i=0;i<table.length;i++) {
-                var adjQty = table[i].cells[4].innerHTML;
-                var creditDebitFlg = table[i].cells[11].innerHTML;
-                if (adjQty == "" || creditDebitFlg == "") {
-                    fault = "true";
-                    break;
-                }
-
-            }
-
-            if (fault = "true") {
-                alert("please enter valid adjustment qty/credit debit flag");
-                return false;
-            } else {
-                return true;
-            }
-        }
-    </script>
 
 
     <script type="text/javascript">
