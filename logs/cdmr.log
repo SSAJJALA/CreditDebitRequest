@@ -991,3 +991,24 @@
 2016-11-26 20:32:19,431 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
 2016-11-26 20:34:19,294 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
 2016-11-26 20:34:22,837 3543 [main] INFO  com.cdmr.webservices.CustomerLookupConsumerTest  - Customer number not found
+2016-11-26 20:37:56,561 2286237 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-26 20:37:56,561 2286237 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-26 20:37:56,561 2286237 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:Search
+2016-11-26 20:37:56,561 2286237 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-11-26 20:37:56,561 2286237 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-26 20:37:56,561 2286237 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-26 20:37:56,561 2286237 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-26 20:37:56,563 2286239 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-11-26 20:37:56,596 2286272 [http-nio-8080-exec-4] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer number:1000
+2016-11-26 20:37:56,597 2286273 [http-nio-8080-exec-4] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer name:Experis
+2016-11-26 20:37:56,597 2286273 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - customr number:1000
+2016-11-26 20:37:56,597 2286273 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-26 20:38:01,279 2290955 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-26 20:38:01,279 2290955 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-26 20:38:01,279 2290955 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:null
+2016-11-26 20:38:01,280 2290956 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:Search
+2016-11-26 20:38:01,280 2290956 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-26 20:38:01,280 2290956 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-26 20:38:01,280 2290956 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-26 20:38:01,280 2290956 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting invoice details.
+2016-11-26 20:38:01,280 2290956 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - customer details inside cdmr create servlet:1000

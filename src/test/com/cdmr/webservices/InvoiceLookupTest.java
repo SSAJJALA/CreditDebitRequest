@@ -27,9 +27,9 @@ public class InvoiceLookupTest {
     public void getInvoiceHeader() throws Exception {
 
         invoiceLookup.setCustNum(1000);
-        invoiceLookup.setInvNum(2345);
+        invoiceLookup.setInvNum(1);
         InvoiceHeader invHeader = invoiceLookup.getInvoiceHeader();
-        assertEquals("Invoice header doesn't match", invHeader.getInvCustomer().getInvoiceNum(), 2345);
+        assertEquals("Invoice header doesn't match", invHeader.getInvCustomer().getInvoiceNum(), 1);
     }
 
     @Test
