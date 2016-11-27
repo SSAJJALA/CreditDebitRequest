@@ -40,18 +40,26 @@ public class InvoiceLookupTest {
 
     @Test
     public void getInvoiceDetails() throws Exception {
-
+        List<InvoiceDetail> invDetails = null;
         invoiceLookup.setCustNum(1000);
         invoiceLookup.setInvNum(2345);
-        List<InvoiceDetail> invDetails = invoiceLookup.getInvoiceDetails();
-        for (InvoiceDetail invoiceDetail : invDetails) {
-            System.out.println("Item NUm:" + invoiceDetail.getInvItem().getItemNum());
-            log.info("Item Num:" + invoiceDetail.getInvItem().getItemNum());
-            System.out.println("Item Desc:" + invoiceDetail.getItemDesc());
-            log.info("Item desc:" + invoiceDetail.getItemDesc());
+        invDetails = invoiceLookup.getInvoiceDetails();
+
+        if (invDetails == null) {
+            log.info("Invoice details not found");
+            assertNull("Invoice fetch failed", invDetails);
+        } else {
+            for (InvoiceDetail invoiceDetail : invDetails) {
+                System.out.println("Item NUm:" + invoiceDetail.getInvItem().getItemNum());
+                log.info("Item Num:" + invoiceDetail.getInvItem().getItemNum());
+                System.out.println("Item Desc:" + invoiceDetail.getItemDesc());
+                log.info("Item desc:" + invoiceDetail.getItemDesc());
+            }
+
+            assertNotNull("Invoice details doesn't exist", invDetails);
+
         }
 
-        assertNotNull("Invoice details doesn't exist", invDetails);
     }
 
 }
