@@ -28,12 +28,16 @@ public class CreateCDMRScript {
 
     @Test
     public void testCreateCDMR() throws InterruptedException {
+        //login to the cdmr app
+        driver.findElement(By.name("j_username")).sendKeys("VYU6026");
+        driver.findElement(By.name("j_password")).sendKeys("Stoney@2016");
+        Thread.sleep(5000);
+
+        //click on create cdmr link on index (main menu) page
         driver.findElement(By.linkText("Create Credit Debit Memo Request")).click();
         Thread.sleep(5000);
-        //driver.findElement(By.name("j_username")).sendKeys("VYU6026");
-        //driver.findElement(By.name("j_password")).sendKeys("Stoney@2016");
-        //Thread.sleep(5000);
 
+        //Submit the new CDMR request from create CDMR form
         driver.findElement(By.id("customer")).sendKeys("1000");
         driver.findElement(By.id("btn_retCust")).click();
         Thread.sleep(5000);

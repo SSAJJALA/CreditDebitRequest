@@ -4,10 +4,7 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java" afterPath="$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java" />
-    </list>
+    <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="" />
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,7 +99,7 @@
       <file leaf-file-name="CreateCDMRScript.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
+            <state relative-caret-position="510">
               <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1183,7 +1180,7 @@
       <workItem from="1479943127107" duration="1193000" />
       <workItem from="1480134305725" duration="918000" />
       <workItem from="1480186468223" duration="10846000" />
-      <workItem from="1480223467225" duration="11646000" />
+      <workItem from="1480223467225" duration="11675000" />
     </task>
     <servers />
   </component>
@@ -1220,7 +1217,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="807312000" />
+    <option name="totallyTimeSpent" value="807341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1237,7 +1234,7 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27319062" sideWeight="0.49578744" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43730888" sideWeight="0.49811727" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26911315" sideWeight="0.49811727" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18035427" sideWeight="0.7821159" order="0" side_tool="false" content_ui="combo" />
@@ -1683,7 +1680,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
+        <state relative-caret-position="510">
           <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
