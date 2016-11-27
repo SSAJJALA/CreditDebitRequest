@@ -31,15 +31,17 @@
 <html>
 <head>
     <title>Create CDMR</title>
+    <script LANGUAGE="JavaScript" src="js/validateform.js"></script>
 </head>
 <body>
-<script language="JavaScript" src="js/validateform.js"></script>
+
 <div id="mainContainer">
     <%@include file="header.jsp"%>
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-<form id="createForm" name="createCDMR" action="${pageContext.request.contextPath}/createCDMRServlet" method="post" onsubmit="return checkform()">
+<form id="createForm" name="createCDMR" action="${pageContext.request.contextPath}/createCDMRServlet" method="post" onsubmit="return checkform(this.form)">
+
 <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
     </p>

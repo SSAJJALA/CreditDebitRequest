@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
     </list>
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,23 +76,23 @@
       <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="300">
+              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
               <folding>
-                <marker date="1480220896782" expanded="true" signature="17126:17145" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="17275:17294" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="17447:17466" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="17557:17576" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="17662:17681" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="17797:17816" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="18361:18380" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="18469:18488" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="18559:18578" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="18649:18668" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="18739:18758" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="18829:18848" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="19262:19281" ph="..." />
-                <marker date="1480220896782" expanded="true" signature="19352:19371" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="17125:17144" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="17274:17293" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="17446:17465" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="17556:17575" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="17661:17680" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="17796:17815" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="18360:18379" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="18468:18487" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="18558:18577" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="18648:18667" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="18738:18757" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="18828:18847" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="19261:19280" ph="..." />
+                <marker date="1480221086809" expanded="true" signature="19351:19370" ph="..." />
               </folding>
             </state>
           </provider>
@@ -103,8 +101,8 @@
       <file leaf-file-name="validateform.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validateform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -113,8 +111,8 @@
       <file leaf-file-name="CreateCDMRServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="197" column="44" selection-start-line="197" selection-start-column="44" selection-end-line="197" selection-end-column="44" />
+            <state relative-caret-position="507">
+              <caret line="99" column="87" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -203,8 +201,8 @@
         <option value="$PROJECT_DIR$/src/test/com/cdmr/webservices/CustomerLookupConsumerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java" />
         <option value="$PROJECT_DIR$/src/test/com/cdmr/webservices/InvoiceLookupTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/validateform.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/validateform.js" />
       </list>
     </option>
   </component>
@@ -1235,7 +1233,7 @@
       <workItem from="1479913736161" duration="6129000" />
       <workItem from="1479943127107" duration="1193000" />
       <workItem from="1480134305725" duration="918000" />
-      <workItem from="1480186468223" duration="8599000" />
+      <workItem from="1480186468223" duration="9247000" />
     </task>
     <servers />
   </component>
@@ -1272,11 +1270,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="793419000" />
+    <option name="totallyTimeSpent" value="794067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1287,7 +1285,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.505618" sideWeight="0.50421256" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32415903" sideWeight="0.49578744" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32415903" sideWeight="0.49578744" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43730888" sideWeight="0.49811727" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1699,14 +1697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="197" column="44" selection-start-line="197" selection-start-column="44" selection-end-line="197" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1717,31 +1707,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validateform.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="99" column="87" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        <state relative-caret-position="300">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
-            <marker date="1480220896782" expanded="true" signature="17126:17145" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="17275:17294" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="17447:17466" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="17557:17576" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="17662:17681" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="17797:17816" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="18361:18380" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="18469:18488" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="18559:18578" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="18649:18668" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="18739:18758" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="18829:18848" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="19262:19281" ph="..." />
-            <marker date="1480220896782" expanded="true" signature="19352:19371" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="17125:17144" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="17274:17293" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="17446:17465" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="17556:17575" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="17661:17680" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="17796:17815" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="18360:18379" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="18468:18487" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="18558:18577" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="18648:18667" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="18738:18757" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="18828:18847" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="19261:19280" ph="..." />
+            <marker date="1480221086809" expanded="true" signature="19351:19370" ph="..." />
           </folding>
         </state>
       </provider>
