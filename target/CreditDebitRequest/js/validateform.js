@@ -3,10 +3,15 @@
  * Created by Siva Sajjala on 11/26/16.
  */
 
-function checkform() {
+function checkform(form) {
 
     console.log("inside validate form java script");
-    if (document.getElementById("btn_retCust").valueOf() != null ) {
+    var buttonCust = form.btn_retCust.value;
+    console.log("buttonCust:" + buttonCust);
+    alert("inside validate form java script");
+
+    //if (document.getElementById("btn_retCust").valueOf() != null ) {
+    if (buttonCust != "" && buttonCust != null) {
         console.log("inside check customer script");
         //var cust = document.forms["createCDMR"]["customer"].value();
         var cust = document.getElementById("customer").valueOf();
