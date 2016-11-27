@@ -38,7 +38,7 @@
 
     <h2 style="text-indent: 18em;"><b>Create Credit Debit Memo request</b></h2>
 
-    <script type="text/javascript" src="js/validateform.js.js"></script>
+    <script type="text/javascript" src="js/validateform.js"></script>
 <form id="createForm" name="createCDMR" action="${pageContext.request.contextPath}/createCDMRServlet" method="post" onSubmit="return checkform()">
 <div style="width:1300px;height:170px;border:1px solid #000;margin:0 auto;">
     <p width="100%" border="0" cellspacing="10" class="single-underline">&nbsp;<i>Customer/Invoice</i>
