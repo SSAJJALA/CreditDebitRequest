@@ -4,7 +4,10 @@
  */
 
 function checkcustomer() {
-    var cust = document.forms["createCDMR"]["customer"].value;
+    console.log("inside check customer script");
+    //var cust = document.forms["createCDMR"]["customer"].value();
+    var cust = document.getElementById("customer").valueOf();
+    console.log("customer:" + cust);
     if(cust == "") {
         alert("please enter valid customer number");
         return false;
@@ -14,7 +17,8 @@ function checkcustomer() {
 }
 
 function checkinvoice() {
-    var inv = document.forms["createCDMR"]["Invoice"].value;
+    //var inv = document.forms["createCDMR"]["Invoice"].value();
+    var inv = document.getElementById("Invoice").valueOf();
     if(inv == "") {
         alert("please enter valid invoice number");
         return false;
@@ -24,8 +28,8 @@ function checkinvoice() {
 }
 
 function checkcalculate() {
-    var adjQty = document.forms["createCDMR"]["adjQty"].value;
-    var creditdebitFlg = document.forms["createCDMR"]["creditDebit"].value;
+    var adjQty = document.forms["createCDMR"]["adjQty"].value();
+    var creditdebitFlg = document.forms["createCDMR"]["creditDebit"].value();
 
     if(adjQty == "" || creditdebitFlg == "") {
         if (adjQty == "") {
@@ -42,8 +46,8 @@ function checkcalculate() {
 }
 
 function checksubmit() {
-    var adjQty = document.forms["createCDMR"]["adjQty"].value;
-    var creditdebitFlg = document.forms["createCDMR"]["creditDebit"].value;
+    var adjQty = document.forms["createCDMR"]["adjQty"].value();
+    var creditdebitFlg = document.forms["createCDMR"]["creditDebit"].value();
 
     if(adjQty == "" || creditdebitFlg == "") {
         if (adjQty == "") {
