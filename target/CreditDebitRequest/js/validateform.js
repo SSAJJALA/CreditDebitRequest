@@ -4,11 +4,11 @@
  */
 
 function checkform(form) {
-
+    alert("inside validate form java script");
     console.log("inside validate form java script");
     var buttonCust = form.btn_retCust.value;
     console.log("buttonCust:" + buttonCust);
-    alert("inside validate form java script");
+
 
     //if (document.getElementById("btn_retCust").valueOf() != null ) {
     if (buttonCust != "" && buttonCust != null) {
