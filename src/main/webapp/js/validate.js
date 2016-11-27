@@ -5,8 +5,7 @@
 
 function checkcustomer() {
     console.log("inside check customer script");
-    //var cust = document.forms["createCDMR"]["customer"].value();
-    //var cust = document.getElementById("customer").valueOf();
+
     var cust = document.getElementById("createForm").elements.namedItem("customer").value;
     console.log("customer:" + cust);
     if(cust == '') {
@@ -19,8 +18,8 @@ function checkcustomer() {
 
 function checkinvoice() {
     console.log("inside check invoice script");
-    //var inv = document.forms["createCDMR"]["Invoice"].value();
-    //var inv = document.getElementById("Invoice").valueOf();
+    checkcustomer();
+
     var inv = document.getElementById("createForm").elements.namedItem("Invoice").value;
     console.log("invoice:" + inv);
     if(inv == '') {
@@ -31,43 +30,9 @@ function checkinvoice() {
     }
 }
 
-function checkcalculate() {
-    var adjQty = document.forms["createCDMR"]["adjQty"].value();
-    var creditdebitFlg = document.forms["createCDMR"]["creditDebit"].value();
-
-    if(adjQty == "" || creditdebitFlg == "") {
-        if (adjQty == "") {
-            alert("please enter valid adjustment qty");
-        }
-        if (creditdebitFlg == "") {
-            alert("please choose credit or debit flag");
-        }
-        return false;
-
-    } else {
-        return true;
-    }
-}
-
-function checksubmit() {
-    var adjQty = document.forms["createCDMR"]["adjQty"].value();
-    var creditdebitFlg = document.forms["createCDMR"]["creditDebit"].value();
-
-    if(adjQty == "" || creditdebitFlg == "") {
-        if (adjQty == "") {
-            alert("please enter valid adjustment qty");
-        }
-        if (creditdebitFlg == "") {
-            alert("please choose credit or debit flag");
-        }
-        return false;
-
-    } else {
-        return true;
-    }
-}
-
 function checkCalcSubmit() {
+    console.log("inside check check and calculate script");
+    checkinvoice();
     var table = document.getElementById("datatable2").rows;
     var fault = "false";
     for (i=0;i<table.length;i++) {
