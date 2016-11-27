@@ -1323,3 +1323,4 @@
 2016-11-27 09:46:20,521 164248 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
 2016-11-27 09:46:20,522 164249 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:Cancel
 2016-11-27 09:46:20,522 164249 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-27 11:01:45,563 0    [http-nio-8080-exec-5] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
