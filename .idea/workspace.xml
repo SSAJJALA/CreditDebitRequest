@@ -4,10 +4,7 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java" afterPath="$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java" />
-    </list>
+    <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="" />
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,8 +99,8 @@
       <file leaf-file-name="CreateCDMRScript.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state relative-caret-position="495">
+              <caret line="33" column="75" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#738#739#0" expanded="true" />
@@ -127,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="63" column="102" selection-start-line="63" selection-start-column="88" selection-end-line="63" selection-end-column="102" />
+              <caret line="63" column="101" selection-start-line="63" selection-start-column="95" selection-end-line="63" selection-end-column="101" />
               <folding />
             </state>
           </provider>
@@ -1193,7 +1190,7 @@
       <workItem from="1479943127107" duration="1193000" />
       <workItem from="1480134305725" duration="918000" />
       <workItem from="1480186468223" duration="10846000" />
-      <workItem from="1480223467225" duration="13038000" />
+      <workItem from="1480223467225" duration="13324000" />
     </task>
     <servers />
   </component>
@@ -1230,7 +1227,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="808704000" />
+    <option name="totallyTimeSpent" value="808990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1686,15 +1683,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="63" column="102" selection-start-line="63" selection-start-column="88" selection-end-line="63" selection-end-column="102" />
+          <caret line="63" column="101" selection-start-line="63" selection-start-column="95" selection-end-line="63" selection-end-column="101" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="495">
+          <caret line="33" column="75" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#738#739#0" expanded="true" />
