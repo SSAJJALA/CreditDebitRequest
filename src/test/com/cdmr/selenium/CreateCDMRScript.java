@@ -51,10 +51,26 @@ public class CreateCDMRScript {
         driver.findElement(By.id("btn_retInv")).click();
         Thread.sleep(5000);
 
-        driver.findElement(By.xpath("//table[@id='datatable1']/tbody/tr/td[contains(text(),'COAT STAND')]/pre‌​ceding-sibling::td/i‌​nput[@class='selInv']")).click();
+        //driver.findElement(By.xpath("//table[@id='datatable1']/tbody/tr/td[contains(text(),'COAT STAND')]/pre‌​ceding-sibling::td/i‌​nput[@class='selInv']")).click();
 
-        // Grab the table
-        WebElement datatable2 = driver.findElement(By.id("datatable2"));
+        //Grab the invoice table
+        WebElement datatable1 = driver.findElement(By.id("datatable1")).findElement(By.tagName("tbody"));
+
+        // Now get all the TR elements from the table
+        List<WebElement> allInvRows = datatable1.findElements(By.tagName("tr"));
+
+        // And iterate over them, getting the cells
+        for (WebElement rowInv : allInvRows) {
+            List<WebElement> cellsInv = rowInv.findElements(By.tagName("td"));
+            cellsInv.get(0).click();
+            break;
+
+        }
+
+        Thread.sleep(2000);
+
+        // Grab the adj table
+        WebElement datatable2 = driver.findElement(By.id("datatable2")).findElement(By.tagName("tbody"));
 
         // Now get all the TR elements from the table
         List<WebElement> allRows = datatable2.findElements(By.tagName("tr"));
