@@ -86,5 +86,16 @@ public class CreateCDMRScript {
             cd.selectByValue("Credit");
 
         }
+
+        Thread.sleep(2000);
+
+        driver.findElement(By.id("btn_calculate")).click();
+        Thread.sleep(3000);
+
+        driver.findElement(By.id("btn_submit")).click();
+        Thread.sleep(3000);
+
+
+
     }
 }

@@ -1511,3 +1511,29 @@
 2016-11-28 16:37:00,003 781042 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice header:InvoiceHeader{invCustomer=InvoiceHeaderPK{invoiceNum=2345, custNum=1000}, invDate=2016-10-01, grossAmnt=5050.0, allowance=0.0, charges=0.0, tax=0.0, netAmnt=5050.0}
 2016-11-28 16:37:00,003 781042 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice details:[com.cdmr.entity.InvoiceDetail@60098e37, com.cdmr.entity.InvoiceDetail@60293b9a]
 2016-11-28 16:37:00,003 781042 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-28 16:45:48,434 1309473 [http-nio-8080-exec-9] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
+2016-11-28 16:46:22,155 1343194 [http-nio-8080-exec-9] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
+2016-11-28 16:46:27,284 1348323 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-28 16:46:27,284 1348323 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-28 16:46:27,284 1348323 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:Search
+2016-11-28 16:46:27,284 1348323 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-11-28 16:46:27,284 1348323 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-28 16:46:27,284 1348323 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-28 16:46:27,284 1348323 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-28 16:46:27,284 1348323 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-11-28 16:46:27,374 1348413 [http-nio-8080-exec-1] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer number:1000
+2016-11-28 16:46:27,374 1348413 [http-nio-8080-exec-1] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer name:Experis
+2016-11-28 16:46:27,374 1348413 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - customr number:1000
+2016-11-28 16:46:27,374 1348413 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-28 16:46:32,418 1353457 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-28 16:46:32,418 1353457 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-28 16:46:32,418 1353457 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:null
+2016-11-28 16:46:32,418 1353457 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:Search
+2016-11-28 16:46:32,418 1353457 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-28 16:46:32,418 1353457 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-28 16:46:32,418 1353457 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-28 16:46:32,418 1353457 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting invoice details.
+2016-11-28 16:46:32,418 1353457 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - customer details inside cdmr create servlet:1000
+2016-11-28 16:46:32,457 1353496 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice header:InvoiceHeader{invCustomer=InvoiceHeaderPK{invoiceNum=2345, custNum=1000}, invDate=2016-10-01, grossAmnt=5050.0, allowance=0.0, charges=0.0, tax=0.0, netAmnt=5050.0}
+2016-11-28 16:46:32,457 1353496 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice details:[com.cdmr.entity.InvoiceDetail@195b4dd2, com.cdmr.entity.InvoiceDetail@210e8425]
+2016-11-28 16:46:32,458 1353497 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
