@@ -5,7 +5,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.util.List;
 
 /**
  * Created by student on 11/27/16.
@@ -46,5 +49,21 @@ public class CreateCDMRScript {
         driver.findElement(By.id("Invoice")).sendKeys("2345");
         driver.findElement(By.id("btn_retInv")).click();
         Thread.sleep(5000);
+
+        driver.findElement(By.xpath("//table[@id='datatable1']/tbody/tr/td[contains(text(),'COAT STAND')]/pre‌​ceding-sibling::td/i‌​nput[@class='selInv']")).click();
+
+        // Grab the table
+        WebElement datatable2 = driver.findElement(By.id("datatable2"));
+
+        // Now get all the TR elements from the table
+        List<WebElement> allRows = datatable2.findElements(By.tagName("tr"));
+
+        // And iterate over them, getting the cells
+        for (WebElement row : allRows) {
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+            cells.get(4).sendKeys("1");
+            cells.get(5).sendKeys("1-Defective");
+            cells.get(11).sendKeys("1-Credit");
+        }
     }
 }

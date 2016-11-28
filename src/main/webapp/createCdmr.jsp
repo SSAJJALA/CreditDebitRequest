@@ -225,6 +225,7 @@
                  <tbody>
                     <c:if test="${not empty cdmr}">
                         <c:forEach items="${cdmr.adjustments}" var="adjs">
+                        <tr class="tableRow">
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>
                         <td style="text-align: center;" rowspan="1" colspan="1"> ${adjs.itemNum}</td><input type="hidden" name="adjItem" value=""${adjs.itemNum}">
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemDesc}</td>
@@ -261,6 +262,7 @@
                                 %>
                             </c:forEach>
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" name="comments" value="<%= commentInfo%>"></td>
+                        </tr>
                         </c:forEach>
 
                     </c:if>
