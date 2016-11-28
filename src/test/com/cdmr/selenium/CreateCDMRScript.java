@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
@@ -62,8 +63,12 @@ public class CreateCDMRScript {
         for (WebElement row : allRows) {
             List<WebElement> cells = row.findElements(By.tagName("td"));
             cells.get(4).sendKeys("1");
-            cells.get(5).sendKeys("1-Defective");
-            cells.get(11).sendKeys("1-Credit");
+            Select rc = new Select(cells.get(5).findElement(By.id("reasonCode")));
+            rc.selectByValue("1-Defective");
+
+            Select cd = new Select(cells.get(11).findElement(By.id("creditDebit")));
+            cd.selectByValue("Credit");
+
         }
     }
 }
