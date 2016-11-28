@@ -1346,3 +1346,4 @@
 2016-11-27 12:18:23,500 4597937 [http-nio-8080-exec-1] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
 2016-11-27 17:23:49,008 22923445 [http-nio-8080-exec-3] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
 2016-11-27 17:28:23,031 23197468 [http-nio-8080-exec-1] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
+2016-11-27 18:01:29,753 25184190 [http-nio-8080-exec-2] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:

@@ -31,6 +31,7 @@ public class CreateCDMRScript {
         //login to the cdmr app
         driver.findElement(By.name("j_username")).sendKeys("VYU6026");
         driver.findElement(By.name("j_password")).sendKeys("Stoney@2016");
+        driver.findElement(By.xpath("//input[@value=' Log In ']")).click();
         Thread.sleep(5000);
 
         //click on create cdmr link on index (main menu) page
