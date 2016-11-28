@@ -67,7 +67,7 @@ public class CreateCDMRScript {
 
         }
 
-        Thread.sleep(2000);
+        Thread.sleep(4000);
 
         // Grab the adj table
         WebElement datatable2 = driver.findElement(By.id("datatable2")).findElement(By.tagName("tbody"));

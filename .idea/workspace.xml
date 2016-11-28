@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java" afterPath="$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java" />
     </list>
@@ -103,8 +102,8 @@
       <file leaf-file-name="CreateCDMRScript.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#847#848#0" expanded="true" />
@@ -1194,7 +1193,7 @@
       <workItem from="1479943127107" duration="1193000" />
       <workItem from="1480134305725" duration="918000" />
       <workItem from="1480186468223" duration="10846000" />
-      <workItem from="1480223467225" duration="24382000" />
+      <workItem from="1480223467225" duration="24699000" />
     </task>
     <servers />
   </component>
@@ -1223,15 +1222,15 @@
     <history-entry file="CreateCDMRScript_testCreateCDMR - 2016.11.28 at 16h 46m 44s.xml">
       <configuration name="CreateCDMRScript.testCreateCDMR" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InvoiceLookupTest_getInvoiceHeader - 2016.11.26 at 20h 43m 38s.xml">
-      <configuration name="InvoiceLookupTest.getInvoiceHeader" configurationId="JUnit" />
+    <history-entry file="CreateCDMRScript_testCreateCDMR - 2016.11.28 at 16h 52m 57s.xml">
+      <configuration name="CreateCDMRScript.testCreateCDMR" configurationId="JUnit" />
     </history-entry>
     <history-entry file="InvoiceLookupTest_getInvoiceHeader - 2016.11.26 at 21h 55m 42s.xml">
       <configuration name="InvoiceLookupTest.getInvoiceHeader" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="820048000" />
+    <option name="totallyTimeSpent" value="820365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1543" height="876" extended-state="6" />
@@ -1694,8 +1693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#847#848#0" expanded="true" />
