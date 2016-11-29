@@ -33,6 +33,7 @@ function checkinvoice() {
 function checkCalcSubmit() {
     console.log("inside check check and calculate script");
     checkinvoice();
+    /**
     var table = document.getElementById("datatable2").tBodies.rows;
     var fault = "false";
     for (i=0;i<table.length;i++) {
@@ -46,9 +47,30 @@ function checkCalcSubmit() {
         }
 
     }
+     **/
+    var table = document.getElementById('datatable2');
+    for (var i=0;i<table.tBodies.length;i++) {
+        var tbody = table.tBodies[i];
+        for (var j=0;j<tbody.rows.length;j++) {
+            var row = tbody.row[j];
+            var adjQty = row.cells[4];
+            var creditDebitFlg = row.cells[11];
+            var rc = row.cells[5];
+            var fault = "false";
+
+            console.log("Adj qty:" + adjQty);
+            console.log("creditDebitFlg:" + creditDebitFlg);
+            console.log("Reason code:" + rc);
+
+            if (adjQty == "" || creditDebitFlg == "" || rc == "") {
+                fault = "true";
+                break;
+            }
+        }
+    }
 
     if (fault = "true") {
-        alert("please enter valid adjustment qty/credit debit flag");
+        alert("please enter valid adjustment qty/reason code/credit debit flag");
         return false;
     } else {
         return true;
