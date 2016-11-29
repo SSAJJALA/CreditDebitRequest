@@ -33,11 +33,13 @@ function checkinvoice() {
 function checkCalcSubmit() {
     console.log("inside check check and calculate script");
     checkinvoice();
-    var table = document.getElementById("datatable2").rows;
+    var table = document.getElementById("datatable2").tBodies.rows;
     var fault = "false";
     for (i=0;i<table.length;i++) {
         var adjQty = table[i].cells[4].innerHTML;
+        console.log("Adj qty:" + adjQty);
         var creditDebitFlg = table[i].cells[11].innerHTML;
+        console.log("creditDebitFlg:" + creditDebitFlg);
         if (adjQty == "" || creditDebitFlg == "") {
             fault = "true";
             break;
