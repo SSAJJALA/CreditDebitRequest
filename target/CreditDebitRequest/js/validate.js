@@ -48,9 +48,14 @@ function checkCalcSubmit() {
 
     }
      **/
-    var table = document.getElementById('datatable2');
+    var table = document.getElementById("datatable2");
+
+    //var table = document.getElementById("createForm").elements.namedItem();
+
+    console.log("datatable2:" + table);
     for (var i=0;i<table.tBodies.length;i++) {
         var tbody = table.tBodies[i];
+        console.log("tbody:" + tbody);
         for (var j=0;j<tbody.rows.length;j++) {
             var row = tbody.row[j];
             var adjQty = row.cells[4];
