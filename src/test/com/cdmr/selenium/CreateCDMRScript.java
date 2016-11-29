@@ -78,7 +78,7 @@ public class CreateCDMRScript {
         // And iterate over them, getting the cells
         for (WebElement row : allRows) {
             List<WebElement> cells = row.findElements(By.tagName("td"));
-            cells.get(4).sendKeys("1");
+            cells.get(4).findElement(By.id("adjQty")).sendKeys("1");
             Select rc = new Select(cells.get(5).findElement(By.id("reasonCode")));
             rc.selectByValue("1-Defective");
 
