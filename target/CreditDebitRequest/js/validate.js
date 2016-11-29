@@ -48,6 +48,9 @@ function checkCalcSubmit() {
 
     }
      **/
+    var invtable = document.getElementById("datatable1");
+    console.log("datatable1:" + invtable);
+
     var table = document.getElementById("datatable2");
 
     //var table = document.getElementById("createForm").elements.namedItem();
@@ -57,7 +60,8 @@ function checkCalcSubmit() {
         var tbody = table.tBodies[i];
         console.log("tbody:" + tbody);
         for (var j=0;j<tbody.rows.length;j++) {
-            var row = tbody.row[j];
+            alert("inside tbody");
+            var row = tbody.rows[j];
             var adjQty = row.cells[4];
             var creditDebitFlg = row.cells[11];
             var rc = row.cells[5];
