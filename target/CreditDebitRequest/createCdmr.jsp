@@ -284,7 +284,7 @@
 
     <br>
     <span style="padding-left:1000px"></span>
-    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit" onclick="return checkCalcSubmit()">
+    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit">
     <span style="padding-left:20px"></span>
     <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit" onclick="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>

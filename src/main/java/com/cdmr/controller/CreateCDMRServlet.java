@@ -201,24 +201,33 @@ public class CreateCDMRServlet extends HttpServlet {
             buttonAction = "submit";
 
         } else if (request.getParameter("btn_cancel") != null) {
-            //request.getSession().invalidate();
+
             session.removeAttribute("cdmr");
             session.removeAttribute("customerResults");
             session.removeAttribute("invoiceResults");
             session.removeAttribute("invoiceDetails");
+            session.removeAttribute("message");
             buttonAction = "cancel";
         } else if (request.getParameter("logout") != null) {
             request.getSession().invalidate();
             buttonAction = "logout";
 
         } else if (request.getParameter("btn_message") != null) {
-            logger.info("directing to index page");
-            session.removeAttribute("cdmr");
-            session.removeAttribute("customerResults");
-            session.removeAttribute("invoiceResults");
-            session.removeAttribute("invoiceDetails");
-            session.removeAttribute("message");
-            buttonAction = "Message";
+
+            String message = (String) request.getAttribute("message");
+            if (message.equals("Invoice not found") || message.equals("Invalid invoice. Invoice details not found") || message.equals("please enter valid adjustment qty/reason code/credit debit flag")) {
+                buttonAction = "Alert";
+            } else {
+                logger.info("directing to index page");
+                session.removeAttribute("cdmr");
+                session.removeAttribute("customerResults");
+                session.removeAttribute("invoiceResults");
+                session.removeAttribute("invoiceDetails");
+                session.removeAttribute("message");
+                buttonAction = "Message";
+            }
+
+
         } else if (request.getParameter("btn_exit") != null) {
             logger.info("Exiting the cdmr create page");
             session.removeAttribute("cdmr");
@@ -234,14 +243,14 @@ public class CreateCDMRServlet extends HttpServlet {
             logger.info("create servlet context:" + request.getContextPath());
             RequestDispatcher dispatcher = request.getRequestDispatcher("createCdmr.jsp");
             dispatcher.forward(request, response);
-        } else if (buttonAction.equals("cancel") || buttonAction.equals("Message")){
+        } else if (buttonAction.equals("cancel") || buttonAction.equals("Alert")){
             logger.info("create servlet context:" + request.getContextPath());
             RequestDispatcher dispatcher = request.getRequestDispatcher("createCdmr.jsp");
             dispatcher.forward(request, response);
         } else if (buttonAction.equals("logout")) {
             logger.info("create servlet context:" + request.getContextPath());
             response.sendRedirect("login.jsp");
-        } else if (buttonAction.equals("Exit")) {
+        } else if (buttonAction.equals("Exit") || buttonAction.equals("Message")) {
             logger.info("create servlet context:" + request.getContextPath());
             response.sendRedirect("index.jsp");
         }

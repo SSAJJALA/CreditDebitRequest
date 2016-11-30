@@ -2141,3 +2141,4 @@
 2016-11-30 08:55:31,112 17209 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice header:InvoiceHeader{invCustomer=InvoiceHeaderPK{invoiceNum=2345, custNum=1000}, invDate=2016-10-01, grossAmnt=5050.0, allowance=0.0, charges=0.0, tax=0.0, netAmnt=5050.0}
 2016-11-30 08:55:31,113 17210 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice details:[com.cdmr.entity.InvoiceDetail@39b80e4f, com.cdmr.entity.InvoiceDetail@7cfb5869]
 2016-11-30 08:55:31,113 17210 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-30 10:02:49,377 4055474 [http-nio-8080-exec-4] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
