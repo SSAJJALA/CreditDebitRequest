@@ -227,7 +227,7 @@
                         <c:forEach items="${cdmr.adjustments}" var="adjs">
                         <tr class="tableRow">
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>
-                        <td style="text-align: center;" rowspan="1" colspan="1"> ${adjs.itemNum}</td><input type="hidden" name="adjItem" value=""${adjs.itemNum}">
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemNum}</td><input type="hidden" name="adjItem" value="${adjs.itemNum}">
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemDesc}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalQty}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" id="adjQty" name="adjQty" value="${adjs.adjQty}"></td>
