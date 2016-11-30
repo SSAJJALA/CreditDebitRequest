@@ -167,6 +167,7 @@ public class CreateCDMRServlet extends HttpServlet {
                 if(creditdebit[i] != null || !creditdebit[i].isEmpty()) {
                     logger.info("After validation Credit/Debit:" + creditdebit[i]);
                     adj.setReasonCode(creditdebit[i]);
+
                 } else {
                     request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
                     validation = "false";
@@ -182,8 +183,9 @@ public class CreateCDMRServlet extends HttpServlet {
                 InvoiceHeader header = (InvoiceHeader) session.getAttribute("invoiceResults");
                 List<InvoiceDetail> details = (List<InvoiceDetail>) session.getAttribute("invoiceDetails");
                 String user = request.getUserPrincipal().getName();
-
+                logger.info("Adjs:" + adjs);
                 CalculateCDMR calculate = new CalculateCDMR(customerDtls, header, details, adjs, user);
+                logger.info(calculate.toString());
                 CDMR cdmr = calculate.prepareCDMR();
                 logger.info("cdmr gross:" + cdmr.getAdjGross());
                 logger.info("cdmr allowance:" + cdmr.getAdjAllowance());
