@@ -90,9 +90,9 @@ function checkCalcSubmit() {
         for (j=0;j<tr.length;j++){
             alert("inside tr");
             var td = tr[j].querySelectorAll("td");
-            var adjQty = td[4].innerHTML;
-            var rc = td[5].innerHTML;
-            var creditDebitFlg = td[11].innerHTML;
+            var adjQty = td[4].firstChild.value;
+            var rc = td[5].querySelector("[selected]").innerHTML;
+            var creditDebitFlg = td[11].querySelector("[selected]").innerHTML;
 
             console.log("Adj qty:" + adjQty);
             console.log("Reason code:" + rc);

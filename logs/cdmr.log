@@ -2368,3 +2368,80 @@
 2016-11-30 14:22:36,701 25365 [http-nio-8080-exec-10] INFO  com.cdmr.controller.CreateCDMRServlet  - Adj Item:2350
 2016-11-30 14:22:36,703 25367 [http-nio-8080-exec-10] INFO  com.cdmr.controller.CreateCDMRServlet  - Adjs:[UiAdjData{itemNum=2350, adjQty=1, reasonCode='Credit', creditDebit='null', Comments='test defective'}]
 2016-11-30 14:22:36,705 25369 [http-nio-8080-exec-10] INFO  com.cdmr.controller.CreateCDMRServlet  - CalculateCDMR{customer=com.cdmr.webservices.Customer@4cf3ead5, invHeader=InvoiceHeader{invCustomer=InvoiceHeaderPK{invoiceNum=2345, custNum=1000}, invDate=2016-10-01, grossAmnt=5050.0, allowance=0.0, charges=0.0, tax=0.0, netAmnt=5050.0}, invDtls=[com.cdmr.entity.InvoiceDetail@44c20962, com.cdmr.entity.InvoiceDetail@6cfe432c], adjs=[UiAdjData{itemNum=2350, adjQty=1, reasonCode='Credit', creditDebit='null', Comments='test defective'}], cdmr=null, userID='VYU6026'}
+2016-11-30 14:34:18,837 0    [http-nio-8080-exec-4] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
+2016-11-30 14:34:27,308 8471 [http-nio-8080-exec-8] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
+2016-11-30 14:34:31,475 12638 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-30 14:34:31,475 12638 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-30 14:34:31,476 12639 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:Search
+2016-11-30 14:34:31,476 12639 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-11-30 14:34:31,476 12639 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-30 14:34:31,476 12639 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-30 14:34:31,476 12639 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-30 14:34:31,476 12639 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-11-30 14:34:35,463 16626 [http-nio-8080-exec-10] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-11-30 14:34:35,488 16651 [http-nio-8080-exec-10] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-11-30 14:34:35,491 16654 [http-nio-8080-exec-10] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-11-30 14:34:35,494 16657 [http-nio-8080-exec-10] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-11-30 14:34:35,532 16695 [http-nio-8080-exec-10] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-11-30 14:34:35,532 16695 [http-nio-8080-exec-10] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-11-30 14:34:35,654 16817 [http-nio-8080-exec-10] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-11-30 14:34:35,761 16924 [http-nio-8080-exec-10] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-11-30 14:34:35,764 16927 [http-nio-8080-exec-10] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD?useSSL=false]
+2016-11-30 14:34:35,765 16928 [http-nio-8080-exec-10] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-11-30 14:34:35,765 16928 [http-nio-8080-exec-10] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-11-30 14:34:35,766 16929 [http-nio-8080-exec-10] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-11-30 14:34:36,000 17163 [http-nio-8080-exec-10] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-11-30 14:34:36,307 17470 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-11-30 14:34:36,307 17470 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-11-30 14:34:36,307 17470 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-11-30 14:34:36,307 17470 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-11-30 14:34:36,308 17471 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-11-30 14:34:36,308 17471 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-11-30 14:34:36,308 17471 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-11-30 14:34:36,308 17471 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-11-30 14:34:36,308 17471 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-11-30 14:34:36,309 17472 [http-nio-8080-exec-10] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-11-30 14:34:36,327 17490 [http-nio-8080-exec-10] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-30 14:34:36,337 17500 [http-nio-8080-exec-10] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-30 14:34:38,120 19283 [http-nio-8080-exec-9] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer number:1000
+2016-11-30 14:34:38,120 19283 [http-nio-8080-exec-9] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer name:Experis
+2016-11-30 14:34:38,121 19284 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - customr number:1000
+2016-11-30 14:34:38,121 19284 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-30 14:34:42,307 23470 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-30 14:34:42,308 23471 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-30 14:34:42,308 23471 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:null
+2016-11-30 14:34:42,308 23471 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:Search
+2016-11-30 14:34:42,309 23472 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-11-30 14:34:42,309 23472 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-30 14:34:42,309 23472 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-30 14:34:42,309 23472 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting invoice details.
+2016-11-30 14:34:42,310 23473 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - customer details inside cdmr create servlet:1000
+2016-11-30 14:34:42,402 23565 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice header:InvoiceHeader{invCustomer=InvoiceHeaderPK{invoiceNum=2345, custNum=1000}, invDate=2016-10-01, grossAmnt=5050.0, allowance=0.0, charges=0.0, tax=0.0, netAmnt=5050.0}
+2016-11-30 14:34:42,402 23565 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice details:[com.cdmr.entity.InvoiceDetail@e611c20, com.cdmr.entity.InvoiceDetail@6209f589]
+2016-11-30 14:34:42,403 23566 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:null
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:Calculate
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment items: [Ljava.lang.String;@65c2f9fe
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment qtys: [Ljava.lang.String;@4ddfbe63
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment reason codes: [Ljava.lang.String;@36ae980d
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment credit/debit: [Ljava.lang.String;@69287ae3
+2016-11-30 14:34:57,228 38391 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment items: [Ljava.lang.String;@1bd77331
+2016-11-30 14:34:57,229 38392 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - Adj Qty:2
+2016-11-30 14:34:57,229 38392 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - After validation Adj Qty:2
+2016-11-30 14:34:57,229 38392 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - Reason Code:1-Defective
+2016-11-30 14:34:57,230 38393 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - After validation Reason Code:1-Defective
+2016-11-30 14:34:57,230 38393 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - Comments:test defective
+2016-11-30 14:34:57,230 38393 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - Credit/Debit:Credit
+2016-11-30 14:34:57,230 38393 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - After validation Credit/Debit:Credit
+2016-11-30 14:34:57,230 38393 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - Adj Item:2350
+2016-11-30 14:34:57,283 38446 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr gross:-200.0
+2016-11-30 14:34:57,284 38447 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr allowance:0.0
+2016-11-30 14:34:57,284 38447 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr charges:0.0
+2016-11-30 14:34:57,284 38447 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr taxes:0.0
+2016-11-30 14:34:57,284 38447 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr net:-200.0
+2016-11-30 14:34:57,284 38447 [http-nio-8080-exec-3] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
