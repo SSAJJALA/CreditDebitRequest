@@ -135,38 +135,60 @@ public class CreateCDMRServlet extends HttpServlet {
             logger.info("List of adjustment items: " + comments);
 
             List<UiAdjData> adjs = new ArrayList<UiAdjData>();
+            String validation = "true";
 
 
             for (int i=0;i<adjItem.length;i++) {
                 UiAdjData adj = new UiAdjData();
+
                 logger.info("Adj Qty:" + adjQty[i]);
-                adj.setAdjQty(Integer.parseInt(adjQty[i]));
+                if(adjQty[i] == null || adjQty[i] == "") {
+                    request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
+                    validation = "false";
+                } else {
+                    adj.setAdjQty(Integer.parseInt(adjQty[i]));
+                }
+
                 logger.info("Reason Code:" + reasonCode[i]);
-                adj.setReasonCode(reasonCode[i]);
+                if(reasonCode[i] == null || reasonCode[i] == "") {
+                    request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
+                    validation = "false";
+                } else {
+                    adj.setReasonCode(reasonCode[i]);
+                }
+
                 logger.info("Comments:" + comments[i]);
                 adj.setComments(comments[i]);
+
                 logger.info("Credit/Debit:" + creditdebit[i]);
-                adj.setCreditDebit(creditdebit[i]);
+                if(creditdebit[i] == null || creditdebit[i] == "") {
+                    request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
+                    validation = "false";
+                } else {
+                    adj.setReasonCode(creditdebit[i]);
+                }
+
                 logger.info("Adj Item:" + adjItem[i]);
                 adj.setItemNum(Integer.parseInt(adjItem[i]));
                 adjs.add(adj);
             }
 
-            Customer customerDtls = (Customer) session.getAttribute("customerResults");
-            InvoiceHeader header = (InvoiceHeader) session.getAttribute("invoiceResults");
-            List<InvoiceDetail> details = (List<InvoiceDetail>) session.getAttribute("invoiceDetails");
-            String user = request.getUserPrincipal().getName();
+            if (validation.equals("true")) {
+                Customer customerDtls = (Customer) session.getAttribute("customerResults");
+                InvoiceHeader header = (InvoiceHeader) session.getAttribute("invoiceResults");
+                List<InvoiceDetail> details = (List<InvoiceDetail>) session.getAttribute("invoiceDetails");
+                String user = request.getUserPrincipal().getName();
 
-            CalculateCDMR calculate = new CalculateCDMR(customerDtls, header, details, adjs, user);
-            CDMR cdmr = calculate.prepareCDMR();
-            logger.info("cdmr gross:" + cdmr.getAdjGross());
-            logger.info("cdmr allowance:" + cdmr.getAdjAllowance());
-            logger.info("cdmr charges:" + cdmr.getAdjCharges());
-            logger.info("cdmr taxes:" + cdmr.getAdjTax());
-            logger.info("cdmr net:" + cdmr.getAdjAmnt());
+                CalculateCDMR calculate = new CalculateCDMR(customerDtls, header, details, adjs, user);
+                CDMR cdmr = calculate.prepareCDMR();
+                logger.info("cdmr gross:" + cdmr.getAdjGross());
+                logger.info("cdmr allowance:" + cdmr.getAdjAllowance());
+                logger.info("cdmr charges:" + cdmr.getAdjCharges());
+                logger.info("cdmr taxes:" + cdmr.getAdjTax());
+                logger.info("cdmr net:" + cdmr.getAdjAmnt());
 
-            session.setAttribute("cdmr", cdmr);
-
+                session.setAttribute("cdmr", cdmr);
+            }
 
             buttonAction = "calculate";
 
@@ -212,18 +234,16 @@ public class CreateCDMRServlet extends HttpServlet {
             logger.info("create servlet context:" + request.getContextPath());
             RequestDispatcher dispatcher = request.getRequestDispatcher("createCdmr.jsp");
             dispatcher.forward(request, response);
-        } else if (buttonAction.equals("cancel")){
+        } else if (buttonAction.equals("cancel") || buttonAction.equals("Message")){
             logger.info("create servlet context:" + request.getContextPath());
             RequestDispatcher dispatcher = request.getRequestDispatcher("createCdmr.jsp");
             dispatcher.forward(request, response);
         } else if (buttonAction.equals("logout")) {
             logger.info("create servlet context:" + request.getContextPath());
             response.sendRedirect("login.jsp");
-        } else if (buttonAction.equals("Exit") || buttonAction.equals("Message")) {
+        } else if (buttonAction.equals("Exit")) {
             logger.info("create servlet context:" + request.getContextPath());
             response.sendRedirect("index.jsp");
         }
-
-
     }
 }
