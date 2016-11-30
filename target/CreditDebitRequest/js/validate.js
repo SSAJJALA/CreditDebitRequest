@@ -47,7 +47,7 @@ function checkCalcSubmit() {
         }
 
     }
-     **/
+
     var invtable = document.getElementById("datatable1");
     console.log("datatable1:" + invtable);
 
@@ -76,6 +76,28 @@ function checkCalcSubmit() {
                 break;
             }
         }
+    }
+     **/
+
+    var trs = document.querySelectorAll('datatable2 tbody tr'), i;
+    alert("inside tbody");
+    console.log("trs:" + trs);
+    for (i = 0 ; i < trs.length ; i++) {
+        var tds = trs.querySelectorAll('td');
+        var adjQty = tds[4].innerHTML;
+        console.log("Adj qty:" + adjQty);
+        var rc = tds[5].innerHTML;
+        console.log("Reason code:" + rc);
+        var creditDebitFlg = tds[11].innerHTML;
+        console.log("creditDebitFlg:" + creditDebitFlg);
+        var fault = "false";
+
+        if (adjQty == "" || creditDebitFlg == "" || rc == "") {
+            fault = "true";
+            break;
+        }
+
+
     }
 
     if (fault = "true") {

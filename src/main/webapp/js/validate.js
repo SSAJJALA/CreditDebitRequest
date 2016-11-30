@@ -82,6 +82,7 @@ function checkCalcSubmit() {
     var trs = document.querySelectorAll('datatable2 tbody tr'), i;
     alert("inside tbody");
     console.log("trs:" + trs);
+    var fault = "false";
     for (i = 0 ; i < trs.length ; i++) {
         var tds = trs.querySelectorAll('td');
         var adjQty = tds[4].innerHTML;
@@ -90,7 +91,6 @@ function checkCalcSubmit() {
         console.log("Reason code:" + rc);
         var creditDebitFlg = tds[11].innerHTML;
         console.log("creditDebitFlg:" + creditDebitFlg);
-        var fault = "false";
 
         if (adjQty == "" || creditDebitFlg == "" || rc == "") {
             fault = "true";

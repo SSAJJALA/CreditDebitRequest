@@ -2031,3 +2031,4 @@
 2016-11-29 20:03:34,415 104019 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - Comments:test defective
 2016-11-29 20:03:34,415 104019 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - Credit/Debit:Credit
 2016-11-29 20:03:34,415 104019 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - Adj Item:
+2016-11-29 22:38:28,076 9397680 [http-nio-8080-exec-8] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:

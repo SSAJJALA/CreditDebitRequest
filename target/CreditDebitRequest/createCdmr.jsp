@@ -227,7 +227,7 @@
                         <c:forEach items="${cdmr.adjustments}" var="adjs">
                         <tr class="tableRow">
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>
-                        <td style="text-align: center;" rowspan="1" colspan="1"> ${adjs.itemNum}</td><input type="hidden" name="adjItem" value=""${adjs.itemNum}">
+                        <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemNum}</td><input type="hidden" name="adjItem" value="${adjs.itemNum}">
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemDesc}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalQty}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="text" id="adjQty" name="adjQty" value="${adjs.adjQty}"></td>
@@ -284,9 +284,9 @@
 
     <br>
     <span style="padding-left:1000px"></span>
-    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit">
+    <input  id="btn_calculate" name="btn_calculate" class="btnInside" value="Calculate" type="submit" onclick="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
-    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit">
+    <input  id="btn_submit" name="btn_submit" class="btnInside" value="Submit" type="submit" onclick="return checkCalcSubmit()">
     <span style="padding-left:20px"></span>
     <input  id="btn_cancel" name="btn_cancel" class="btnInside" value="Cancel" type="submit">
     <span style="padding-left:20px"></span>
