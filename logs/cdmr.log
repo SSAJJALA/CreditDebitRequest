@@ -2599,3 +2599,4 @@
 2016-11-30 15:55:02,231 20709 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr taxes:0.0
 2016-11-30 15:55:02,231 20709 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr net:-100.0
 2016-11-30 15:55:02,231 20709 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-11-30 15:57:21,435 159913 [http-nio-8080-exec-7] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
