@@ -142,30 +142,34 @@ public class CreateCDMRServlet extends HttpServlet {
                 UiAdjData adj = new UiAdjData();
 
                 logger.info("Adj Qty:" + adjQty[i]);
-                if(adjQty[i] == null || adjQty[i] == "") {
+
+                if(adjQty[i] != null && !adjQty[i].isEmpty()) {
+                    logger.info("After validation Adj Qty:" + adjQty[i]);
+                    adj.setAdjQty(Integer.parseInt(adjQty[i]));
+                } else {
                     request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
                     validation = "false";
-                } else {
-                    adj.setAdjQty(Integer.parseInt(adjQty[i]));
                 }
 
                 logger.info("Reason Code:" + reasonCode[i]);
-                if(reasonCode[i] == null || reasonCode[i] == "") {
+                if(reasonCode[i] != null || !reasonCode[i].isEmpty()) {
+                    logger.info("After validation Reason Code:" + reasonCode[i]);
+                    adj.setReasonCode(reasonCode[i]);
+                } else {
                     request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
                     validation = "false";
-                } else {
-                    adj.setReasonCode(reasonCode[i]);
                 }
 
                 logger.info("Comments:" + comments[i]);
                 adj.setComments(comments[i]);
 
                 logger.info("Credit/Debit:" + creditdebit[i]);
-                if(creditdebit[i] == null || creditdebit[i] == "") {
+                if(creditdebit[i] != null || !creditdebit[i].isEmpty()) {
+                    logger.info("After validation Credit/Debit:" + creditdebit[i]);
+                    adj.setReasonCode(creditdebit[i]);
+                } else {
                     request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
                     validation = "false";
-                } else {
-                    adj.setReasonCode(creditdebit[i]);
                 }
 
                 logger.info("Adj Item:" + adjItem[i]);
