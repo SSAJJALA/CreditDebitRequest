@@ -100,7 +100,8 @@ function checkCalcSubmit() {
             alert("Adj Qty:" + adjQty);
             alert("rc:" + rc);
             alert("CreditDebitFlag:" + creditDebitFlg);
-            if (adjQty == "" || creditDebitFlg == "" || rc == "") {
+            if (adjQty == '' || creditDebitFlg == '' || rc == '') {
+                alert("making fault as true");
                 fault = "true";
                 break;
             }
