@@ -81,7 +81,7 @@ public class CreateCDMRServlet extends HttpServlet {
             }
 
             if (customerDtls == null){
-                request.setAttribute("message", "Customer not found");
+                session.setAttribute("message", "Customer not found");
             } else {
                 session.setAttribute("customerResults", customerDtls);
                 logger.info("customr number:" + customerDtls.getCustNum());
@@ -105,11 +105,11 @@ public class CreateCDMRServlet extends HttpServlet {
             invoiceLookup.setCustNum(cust1.getCustNum());
             header = invoiceLookup.getInvoiceHeader();
             if (header == null) {
-                request.setAttribute("message", "Invoice not found");
+                session.setAttribute("message", "Invoice not found");
             } else {
                 details = invoiceLookup.getInvoiceDetails();
                 if (details == null) {
-                    request.setAttribute("message", "Invalid invoice. Invoice details not found");
+                    session.setAttribute("message", "Invalid invoice. Invoice details not found");
                 } else {
                     session.setAttribute("invoiceResults", header);
                     session.setAttribute("invoiceDetails", details);
@@ -147,7 +147,7 @@ public class CreateCDMRServlet extends HttpServlet {
                     logger.info("After validation Adj Qty:" + adjQty[i]);
                     adj.setAdjQty(Integer.parseInt(adjQty[i]));
                 } else {
-                    request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
+                    session.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
                     validation = "false";
                 }
 
@@ -156,7 +156,7 @@ public class CreateCDMRServlet extends HttpServlet {
                     logger.info("After validation Reason Code:" + reasonCode[i]);
                     adj.setReasonCode(reasonCode[i]);
                 } else {
-                    request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
+                    session.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
                     validation = "false";
                 }
 
@@ -169,7 +169,7 @@ public class CreateCDMRServlet extends HttpServlet {
                     adj.setCreditDebit(creditdebit[i]);
 
                 } else {
-                    request.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
+                    session.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
                     validation = "false";
                 }
 
@@ -201,7 +201,7 @@ public class CreateCDMRServlet extends HttpServlet {
             CDMR cdmr = (CDMR) session.getAttribute("cdmr");
             SubmitCDMR submit = new SubmitCDMR(cdmr);
             String message = submit.saveCDMR();
-            request.setAttribute("message", message);
+            session.setAttribute("message", message);
             buttonAction = "submit";
 
         } else if (request.getParameter("btn_cancel") != null) {
@@ -218,8 +218,9 @@ public class CreateCDMRServlet extends HttpServlet {
 
         } else if (request.getParameter("btn_message") != null) {
 
-            String message = (String) request.getAttribute("message");
+            String message = (String) session.getAttribute("message");
             if (message.equals("Invoice not found") || message.equals("Invalid invoice. Invoice details not found") || message.equals("please enter valid adjustment qty/reason code/credit debit flag")) {
+                session.removeAttribute("message");
                 buttonAction = "Alert";
             } else {
                 logger.info("directing to index page");

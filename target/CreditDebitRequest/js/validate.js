@@ -134,7 +134,7 @@ function checkCalcSubmit() {
     }
      **/
 
-    if (fault = "true") {
+    if (fault == 'true') {
         alert("please enter valid adjustment qty/reason code/credit debit flag");
         return false;
     } else {
