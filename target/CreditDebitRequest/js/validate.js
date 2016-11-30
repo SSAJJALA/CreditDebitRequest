@@ -80,17 +80,18 @@ function checkCalcSubmit() {
      **/
 
     var trs = document.querySelectorAll('datatable2 tbody tr'), i;
-    alert("inside tbody");
     console.log("trs:" + trs);
+    alert("inside tbody");
+    var fault = "false";
     for (i = 0 ; i < trs.length ; i++) {
         var tds = trs.querySelectorAll('td');
+        console.log("td:" + tds);
         var adjQty = tds[4].innerHTML;
         console.log("Adj qty:" + adjQty);
         var rc = tds[5].innerHTML;
         console.log("Reason code:" + rc);
         var creditDebitFlg = tds[11].innerHTML;
         console.log("creditDebitFlg:" + creditDebitFlg);
-        var fault = "false";
 
         if (adjQty == "" || creditDebitFlg == "" || rc == "") {
             fault = "true";

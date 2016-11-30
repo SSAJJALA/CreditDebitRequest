@@ -79,12 +79,44 @@ function checkCalcSubmit() {
     }
      **/
 
-    var trs = document.querySelectorAll('datatable2 tbody tr'), i;
-    alert("inside tbody");
+    //var trs = document.querySelectorAll("#datatable2 tbody");
+    var tbody = document.querySelectorAll("#datatable2 tbody");
+    var fault = "false";
+
+    for (i=0;i<tbody.length;i++) {
+
+        alert("inside tbody");
+        var tr = tbody[i].querySelectorAll("tr");
+        for (j=0;j<tr.length;j++){
+            alert("inside tr");
+            var td = tr[j].querySelectorAll("td");
+            var adjQty = td[4].innerHTML;
+            var rc = td[5].innerHTML;
+            var creditDebitFlg = td[11].innerHTML;
+
+            console.log("Adj qty:" + adjQty);
+            console.log("Reason code:" + rc);
+            console.log("creditDebitFlg:" + creditDebitFlg);
+            alert("Adj Qty:" + adjQty);
+            alert("rc:" + rc);
+            alert("CreditDebitFlag:" + creditDebitFlg);
+            if (adjQty == "" || creditDebitFlg == "" || rc == "") {
+                fault = "true";
+                break;
+            }
+        }
+
+    }
+
+
+
+    /**
     console.log("trs:" + trs);
+    alert("inside tbody");
     var fault = "false";
     for (i = 0 ; i < trs.length ; i++) {
         var tds = trs.querySelectorAll('td');
+        console.log("td:" + tds);
         var adjQty = tds[4].innerHTML;
         console.log("Adj qty:" + adjQty);
         var rc = tds[5].innerHTML;
@@ -99,6 +131,7 @@ function checkCalcSubmit() {
 
 
     }
+     **/
 
     if (fault = "true") {
         alert("please enter valid adjustment qty/reason code/credit debit flag");

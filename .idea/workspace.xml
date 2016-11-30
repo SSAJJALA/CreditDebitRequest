@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest.war" afterPath="$PROJECT_DIR$/target/CreditDebitRequest.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/cdmr.log" afterPath="$PROJECT_DIR$/logs/cdmr.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/validate.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/validate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CreditDebitRequest/js/validate.js" afterPath="$PROJECT_DIR$/target/CreditDebitRequest/js/validate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +81,8 @@
       <file leaf-file-name="createCdmr.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="286" column="137" selection-start-line="286" selection-start-column="4" selection-end-line="286" selection-end-column="137" />
               <folding>
                 <marker date="1480480697745" expanded="true" signature="17241:17260" ph="..." />
                 <marker date="1480480697745" expanded="true" signature="17390:17409" ph="..." />
@@ -102,13 +106,9 @@
       <file leaf-file-name="CreateCDMRScript.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
+            <state relative-caret-position="1155">
               <caret line="77" column="3" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#847#848#0" expanded="true" />
-                <element signature="e#876#877#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,8 +116,8 @@
       <file leaf-file-name="validate.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+            <state relative-caret-position="351">
+              <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -126,18 +126,8 @@
       <file leaf-file-name="CreateCDMRServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
+            <state relative-caret-position="547">
               <caret line="175" column="53" selection-start-line="175" selection-start-column="53" selection-end-line="175" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cdmr.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/cdmr.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26131">
-              <caret line="2034" column="0" selection-start-line="2034" selection-start-column="0" selection-end-line="2034" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -216,8 +206,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/head.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/validate.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/createCdmr.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/validate.js" />
       </list>
     </option>
   </component>
@@ -249,8 +239,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="57" />
     <option name="y" value="24" />
-    <option name="width" value="1543" />
-    <option name="height" value="876" />
+    <option name="width" value="1863" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -277,6 +267,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -525,9 +517,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1259,7 +1249,8 @@
       <workItem from="1479943127107" duration="1193000" />
       <workItem from="1480134305725" duration="918000" />
       <workItem from="1480186468223" duration="10846000" />
-      <workItem from="1480223467225" duration="46001000" />
+      <workItem from="1480223467225" duration="46349000" />
+      <workItem from="1480509846152" duration="2763000" />
     </task>
     <servers />
   </component>
@@ -1296,15 +1287,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="841667000" />
+    <option name="totallyTimeSpent" value="844778000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="24" width="1543" height="876" extended-state="6" />
+    <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3570537" sideWeight="0.7875202" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3567788" sideWeight="0.7875202" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1312,14 +1303,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30836454" sideWeight="0.49578744" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30784914" sideWeight="0.49578744" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26716605" sideWeight="0.49811727" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19377835" sideWeight="0.7821159" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2603328" sideWeight="0.7821159" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18572195" sideWeight="0.21788414" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1205444" sideWeight="0.4897436" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16156736" sideWeight="0.4897436" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1685,14 +1676,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validateform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validateform.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1717,38 +1701,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="77" column="3" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/logs/cdmr.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26131">
+        <state relative-caret-position="419">
           <caret line="2034" column="0" selection-start-line="2034" selection-start-column="0" selection-end-line="2034" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CreateCDMRServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
+        <state relative-caret-position="547">
           <caret line="175" column="53" selection-start-line="175" selection-start-column="53" selection-end-line="175" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/cdmr/selenium/CreateCDMRScript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="77" column="3" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/createCdmr.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="286" column="137" selection-start-line="286" selection-start-column="4" selection-end-line="286" selection-end-column="137" />
           <folding>
             <marker date="1480480697745" expanded="true" signature="17241:17260" ph="..." />
             <marker date="1480480697745" expanded="true" signature="17390:17409" ph="..." />
@@ -1770,8 +1749,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+        <state relative-caret-position="351">
+          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
           <folding />
         </state>
       </provider>

@@ -1,0 +1,20 @@
+function myFunction() {
+    var x = document.querySelectorAll("#datatable1 tbody");
+    //alert ("x:" + x[0]);
+    //var tbody = x[0];
+    //alert ("tbody:" + tr);
+    for (i=0;i<x.length;i++) {
+    	alert("inside tbody");
+    	var y = x[i].querySelectorAll("tr");
+        for (j=0;j<y.length;j++){
+        	alert("inside tr");
+            var z = y[j].querySelectorAll("td");
+            for(k=0;k<z.length;k++) {
+            	alert("inside td");
+            	alert("cell:" + z[k].innerHTML);
+            }
+
+        }
+
+    }
+}
