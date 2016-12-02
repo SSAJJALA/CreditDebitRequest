@@ -34,9 +34,21 @@ public class CDMR {
     }
 
     /**
-     * constructor with args requisitionID, customer, status, invHeader, salesRepID, salesRepName, adjAmnt, adjGross, adjGross, adjAllowance, adjCharges, adjTax, cdmrDate, type, adjustments
-     * @param requisitionID, customer, status, invHeader, salesRepID, salesRepName, adjAmnt, adjGross, adjGross, adjAllowance, adjCharges, adjTax, cdmrDate, type, adjustments
-     *
+     * constructor with args
+     * @param requisitionID
+     * @param customer
+     * @param status
+     * @param invHeader
+     * @param salesRepID
+     * @param salesRepName
+     * @param adjAmnt
+     * @param adjGross
+     * @param adjAllowance
+     * @param adjCharges
+     * @param adjTax
+     * @param cdmrDate
+     * @param type
+     * @param adjustments
      */
     public CDMR(int requisitionID, Customer customer, String status, InvoiceHeader invHeader, String salesRepID, String salesRepName, Double adjAmnt, Double adjGross, Double adjAllowance, Double adjCharges, Double adjTax, LocalDate cdmrDate, String type, List<CDMRAdjustments> adjustments) {
         this.requisitionID = requisitionID;
