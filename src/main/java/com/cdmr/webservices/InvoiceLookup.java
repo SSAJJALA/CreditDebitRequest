@@ -32,6 +32,7 @@ public class InvoiceLookup {
      * @param custNum customer number
      */
     public InvoiceLookup(int invNum, int custNum) {
+        this();
         this.invNum = invNum;
         this.custNum = custNum;
     }
