@@ -3,6 +3,7 @@ package com.cdmr.persistence;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.Filter;
 import com.cdmr.entity.Task;
+import com.cdmr.util.AddRestrictions;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -31,6 +32,7 @@ public class TaskDao {
         List<Task> tasks = new ArrayList<Task>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         tasks = session.createCriteria(Task.class).list();
+        session.close();
         return tasks;
     }
 
@@ -43,6 +45,7 @@ public class TaskDao {
     public Task getTask(int taskID) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Task  task = (Task) session.get(Task.class, taskID);
+        session.close();
         return task;
 
     }
@@ -84,6 +87,7 @@ public class TaskDao {
         log.info("Task:" + task.toString());
         session.delete(task);
         tx.commit();
+        session.close();
         log.info("Task" + taskID + "deleted.");
 
 
@@ -99,13 +103,14 @@ public class TaskDao {
         Transaction tx = session.beginTransaction();
         session.update(task);
         tx.commit();
-
+        session.close();
     }
 
     public List<Task> getTasks(List<Filter> filters) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(Task.class);
         List<Task> tasks = null;
+        AddRestrictions addRestrictions = new AddRestrictions();
 
         for (Filter filter : filters) {
             String option = filter.getSearchOption();
@@ -122,11 +127,13 @@ public class TaskDao {
                 searchValue = value;
             }
 
-            c = this.addRestrictions(c, option, operand, searchValue);
+            //c = this.addRestrictions(c, option, operand, searchValue);
+            c= addRestrictions.addRestrictions(c, option, operand, searchValue);
 
         }
 
         tasks = c.list();
+        session.close();
         return tasks;
     }
 
