@@ -24,6 +24,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 /**
  * CreateCDMRServlet controller servlet for createCdmr.jsp page. Takes care of customer lookup, invoice lookup, submit and calculate action buttons from UI.
@@ -40,6 +41,18 @@ import java.util.List;
 )
 public class CreateCDMRServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
+    private Properties properties;
+
+    /**
+     * Constants for action buttons
+     */
+    public static final String buttonCustomer = "btn_retCust";
+    public static final String buttonInvoice = "btn_retInv";
+    public static final String buttonCalculate = "btn_calculate";
+    public static final String buttonSubmit = "btn_submit";
+    public static final String buttonCancel = "btn_cancel";
+    public static final String buttonMessage = "btn_message";
+    public static final String buttonExit = "btn_exit";
 
     /**
      * Method for post
@@ -62,17 +75,26 @@ public class CreateCDMRServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("inside create cdmr servlet @ get");
-        logger.info("btn_retCust:" + request.getParameter("btn_retCust"));
-        logger.info("btn_retInv:" + request.getParameter("btn_retInv"));
-        logger.info("btn_calculate:" + request.getParameter("btn_calculate"));
-        logger.info("btn_submit:" + request.getParameter("btn_submit"));
-        logger.info("btn_cancel:" + request.getParameter("btn_cancel"));
+        logger.info(buttonCustomer + request.getParameter(buttonCustomer));
+        logger.info(buttonInvoice + request.getParameter(buttonInvoice));
+        logger.info(buttonCalculate + request.getParameter(buttonCalculate));
+        logger.info(buttonSubmit + request.getParameter(buttonSubmit));
+        logger.info(buttonCancel + request.getParameter(buttonCancel));
+        logger.info(buttonMessage + request.getParameter(buttonMessage));
+        logger.info(buttonExit + request.getParameter(buttonExit));
 
         String buttonAction = "";
         String gotException = "";
 
         HttpSession session = request.getSession();
-        if (request.getParameter("btn_retCust") != null) {
+
+        try {
+            this.loadProperties();
+        } catch (Exception e) {
+            session.setAttribute("message", "Unable to load CDMR properties");
+        }
+
+        if (request.getParameter(buttonCustomer) != null) {
             logger.info("gettting customer details.");
 
             Customer customerDtls = null;
@@ -88,9 +110,9 @@ public class CreateCDMRServlet extends HttpServlet {
             }
 
             if (gotException.equals("true")) {
-                session.setAttribute("message", "Customer details web service is not available");
+                session.setAttribute("message", properties.getProperty("customerWebservice_01"));
             } else if (customerDtls == null){
-                session.setAttribute("message", "Customer not found");
+                session.setAttribute("message", properties.getProperty("customer_02"));
             } else {
                 session.setAttribute("customerResults", customerDtls);
                 logger.info("customr number:" + customerDtls.getCustNum());
@@ -99,7 +121,7 @@ public class CreateCDMRServlet extends HttpServlet {
             buttonAction = "customer";
 
 
-        } else if (request.getParameter("btn_retInv") != null) {
+        } else if (request.getParameter(buttonInvoice) != null) {
             logger.info("gettting invoice details.");
 
             InvoiceLookup invoiceLookup = new InvoiceLookup();
@@ -114,11 +136,11 @@ public class CreateCDMRServlet extends HttpServlet {
             invoiceLookup.setCustNum(cust1.getCustNum());
             header = invoiceLookup.getInvoiceHeader();
             if (header == null) {
-                session.setAttribute("message", "Invoice not found");
+                session.setAttribute("message", properties.getProperty("invoice_01"));
             } else {
                 details = invoiceLookup.getInvoiceDetails();
                 if (details == null) {
-                    session.setAttribute("message", "Invalid invoice. Invoice details not found");
+                    session.setAttribute("message", properties.getProperty("invoice_02"));
                 } else {
                     session.setAttribute("invoiceResults", header);
                     session.setAttribute("invoiceDetails", details);
@@ -130,7 +152,7 @@ public class CreateCDMRServlet extends HttpServlet {
 
             buttonAction = "invoice";
 
-        } else if (request.getParameter("btn_calculate") != null) {
+        } else if (request.getParameter(buttonCalculate) != null) {
             String[] adjItem = request.getParameterValues("adjItem");
             String[] adjQty = request.getParameterValues("adjQty");
             String[] reasonCode = request.getParameterValues("reasonCode");
@@ -156,7 +178,7 @@ public class CreateCDMRServlet extends HttpServlet {
                     logger.info("After validation Adj Qty:" + adjQty[i]);
                     adj.setAdjQty(Integer.parseInt(adjQty[i]));
                 } else {
-                    session.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
+                    session.setAttribute("message", properties.getProperty("validation_01"));
                     validation = "false";
                 }
 
@@ -165,7 +187,7 @@ public class CreateCDMRServlet extends HttpServlet {
                     logger.info("After validation Reason Code:" + reasonCode[i]);
                     adj.setReasonCode(reasonCode[i]);
                 } else {
-                    session.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
+                    session.setAttribute("message", properties.getProperty("validation_01"));
                     validation = "false";
                 }
 
@@ -178,7 +200,7 @@ public class CreateCDMRServlet extends HttpServlet {
                     adj.setCreditDebit(creditdebit[i]);
 
                 } else {
-                    session.setAttribute("message", "please enter valid adjustment qty/reason code/credit debit flag");
+                    session.setAttribute("message", properties.getProperty("validation_01"));
                     validation = "false";
                 }
 
@@ -205,7 +227,7 @@ public class CreateCDMRServlet extends HttpServlet {
 
             buttonAction = "calculate";
 
-        } else if (request.getParameter("btn_submit") != null) {
+        } else if (request.getParameter(buttonSubmit) != null) {
 
             CDMR cdmr = (CDMR) session.getAttribute("cdmr");
             SubmitCDMR submit = new SubmitCDMR(cdmr);
@@ -213,44 +235,29 @@ public class CreateCDMRServlet extends HttpServlet {
             session.setAttribute("message", message);
             buttonAction = "submit";
 
-        } else if (request.getParameter("btn_cancel") != null) {
+        } else if (request.getParameter(buttonCancel) != null) {
             this.removeAttributes(session);
-            //session.removeAttribute("cdmr");
-            //session.removeAttribute("customerResults");
-            //session.removeAttribute("invoiceResults");
-            //session.removeAttribute("invoiceDetails");
-            //session.removeAttribute("message");
             buttonAction = "cancel";
         } else if (request.getParameter("logout") != null) {
             request.getSession().invalidate();
             buttonAction = "logout";
 
-        } else if (request.getParameter("btn_message") != null) {
+        } else if (request.getParameter(buttonMessage) != null) {
 
             String message = (String) session.getAttribute("message");
-            if (message.equals("Invoice not found") || message.equals("Invalid invoice. Invoice details not found") || message.equals("please enter valid adjustment qty/reason code/credit debit flag")) {
+            if (message.equals(properties.getProperty("customer_02")) || message.equals(properties.getProperty("invoice_01")) || message.equals(properties.getProperty("invoice_02")) || message.equals(properties.getProperty("validation_01"))) {
                 session.removeAttribute("message");
                 buttonAction = "Alert";
             } else {
                 logger.info("directing to index page");
                 this.removeAttributes(session);
-                //session.removeAttribute("cdmr");
-                //session.removeAttribute("customerResults");
-                //session.removeAttribute("invoiceResults");
-                //session.removeAttribute("invoiceDetails");
-                //session.removeAttribute("message");
                 buttonAction = "Message";
             }
 
 
-        } else if (request.getParameter("btn_exit") != null) {
+        } else if (request.getParameter(buttonExit) != null) {
             logger.info("Exiting the cdmr create page");
             this.removeAttributes(session);
-            //session.removeAttribute("cdmr");
-            //session.removeAttribute("customerResults");
-            //session.removeAttribute("invoiceResults");
-            //session.removeAttribute("invoiceDetails");
-            //session.removeAttribute("message");
             buttonAction = "Exit";
         }
 
@@ -279,4 +286,17 @@ public class CreateCDMRServlet extends HttpServlet {
         session.removeAttribute("invoiceDetails");
         session.removeAttribute("message");
     }
+
+    public void loadProperties() throws Exception {
+        try {
+            properties.load (this.getClass().getResourceAsStream("/cdmr.properties"));
+        } catch (IOException ioe) {
+            logger.error("cdmr.loadProperties()...Cannot load the properties file");
+            throw ioe;
+        } catch (Exception e) {
+            logger.error("cdmr.loadProperties()..." + e);
+            throw e;
+        }
+    }
+
 }
