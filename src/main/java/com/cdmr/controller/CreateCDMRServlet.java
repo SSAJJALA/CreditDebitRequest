@@ -20,6 +20,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +69,7 @@ public class CreateCDMRServlet extends HttpServlet {
         logger.info("btn_cancel:" + request.getParameter("btn_cancel"));
 
         String buttonAction = "";
+        String gotException = "";
 
         HttpSession session = request.getSession();
         if (request.getParameter("btn_retCust") != null) {
@@ -77,10 +80,16 @@ public class CreateCDMRServlet extends HttpServlet {
             try {
                 customerDtls = customerWebService.getCustomerApiJSON(Integer.parseInt(request.getParameter("customer")));
             } catch (Exception e) {
-                e.printStackTrace();
+                StringWriter sw = new StringWriter();
+                e.printStackTrace(new PrintWriter(sw));
+                String exception = sw.toString();
+                logger.error(exception);
+                gotException = "true";
             }
 
-            if (customerDtls == null){
+            if (gotException.equals("true")) {
+                session.setAttribute("message", "Customer details web service is not available");
+            } else if (customerDtls == null){
                 session.setAttribute("message", "Customer not found");
             } else {
                 session.setAttribute("customerResults", customerDtls);
