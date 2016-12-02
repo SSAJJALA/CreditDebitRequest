@@ -4,6 +4,7 @@ import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.Filter;
 import com.cdmr.entity.Task;
 import com.cdmr.util.AddRestrictions;
+import com.cdmr.util.ConvertToLocalDate;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -122,7 +123,8 @@ public class TaskDao {
             if (option.equals("taskID")) {
                 searchValue = Integer.parseInt(value);
             } else if (option.equals("createdDate")) {
-                searchValue = formatDate(value);
+                //searchValue = formatDate(value);
+                searchValue = new ConvertToLocalDate().formatDate(value);
             } else {
                 searchValue = value;
             }
@@ -160,6 +162,7 @@ public class TaskDao {
 
     }
 
+    /**
     private LocalDate formatDate (String dob) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -168,4 +171,5 @@ public class TaskDao {
         return date;
 
     }
+     **/
 }

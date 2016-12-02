@@ -3,6 +3,7 @@ package com.cdmr.persistence;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.Requisition;
 import com.cdmr.util.AddRestrictions;
+import com.cdmr.util.ConvertToLocalDate;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -106,7 +107,8 @@ public class CdmrDao {
         if (searchOption.equals("requisitionID")) {
             searchValue = Integer.parseInt(value);
         } else if (searchOption.equals("cdmrDate")) {
-            searchValue = formatDate(value);
+            //searchValue = formatDate(value);
+            searchValue = new ConvertToLocalDate().formatDate(value);
         } else {
             searchValue = value;
         }
@@ -150,7 +152,7 @@ public class CdmrDao {
 
     }
      **/
-
+    /**
     private LocalDate formatDate (String dob) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -159,5 +161,6 @@ public class CdmrDao {
         return date;
 
     }
+     **/
 
 }

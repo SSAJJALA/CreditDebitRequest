@@ -93,7 +93,7 @@ public class InvoiceHeaderDao {
         session.close();
 
     }
-
+    /**
     private LocalDate formatDate (String dob) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -102,5 +102,6 @@ public class InvoiceHeaderDao {
         return date;
 
     }
+     **/
 
 }
