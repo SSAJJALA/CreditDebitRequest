@@ -138,7 +138,7 @@ public class TaskDao {
         session.close();
         return tasks;
     }
-
+    /**
     public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
 
         if (operand.equals("="))  {
@@ -161,7 +161,7 @@ public class TaskDao {
         return tempCriteria;
 
     }
-
+    **/
     /**
     private LocalDate formatDate (String dob) {
 

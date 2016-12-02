@@ -66,7 +66,6 @@ public class RequisitionDao {
         } catch (Exception e) {
             throw e;
         }
-
         return reqID;
     }
 
