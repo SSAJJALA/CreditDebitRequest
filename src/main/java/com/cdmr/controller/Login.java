@@ -18,6 +18,7 @@ import java.io.IOException;
  * @version 1.0
  * @since   2016-09-22
  */
+
 @WebServlet(
         name = "login",
         urlPatterns = {"/login"}
@@ -68,4 +69,3 @@ public class Login extends HttpServlet {
         }
     }
 }
-
