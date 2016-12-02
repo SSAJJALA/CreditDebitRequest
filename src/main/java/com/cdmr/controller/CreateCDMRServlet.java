@@ -214,12 +214,12 @@ public class CreateCDMRServlet extends HttpServlet {
             buttonAction = "submit";
 
         } else if (request.getParameter("btn_cancel") != null) {
-
-            session.removeAttribute("cdmr");
-            session.removeAttribute("customerResults");
-            session.removeAttribute("invoiceResults");
-            session.removeAttribute("invoiceDetails");
-            session.removeAttribute("message");
+            this.removeAttributes(session);
+            //session.removeAttribute("cdmr");
+            //session.removeAttribute("customerResults");
+            //session.removeAttribute("invoiceResults");
+            //session.removeAttribute("invoiceDetails");
+            //session.removeAttribute("message");
             buttonAction = "cancel";
         } else if (request.getParameter("logout") != null) {
             request.getSession().invalidate();
@@ -233,22 +233,24 @@ public class CreateCDMRServlet extends HttpServlet {
                 buttonAction = "Alert";
             } else {
                 logger.info("directing to index page");
-                session.removeAttribute("cdmr");
-                session.removeAttribute("customerResults");
-                session.removeAttribute("invoiceResults");
-                session.removeAttribute("invoiceDetails");
-                session.removeAttribute("message");
+                this.removeAttributes(session);
+                //session.removeAttribute("cdmr");
+                //session.removeAttribute("customerResults");
+                //session.removeAttribute("invoiceResults");
+                //session.removeAttribute("invoiceDetails");
+                //session.removeAttribute("message");
                 buttonAction = "Message";
             }
 
 
         } else if (request.getParameter("btn_exit") != null) {
             logger.info("Exiting the cdmr create page");
-            session.removeAttribute("cdmr");
-            session.removeAttribute("customerResults");
-            session.removeAttribute("invoiceResults");
-            session.removeAttribute("invoiceDetails");
-            session.removeAttribute("message");
+            this.removeAttributes(session);
+            //session.removeAttribute("cdmr");
+            //session.removeAttribute("customerResults");
+            //session.removeAttribute("invoiceResults");
+            //session.removeAttribute("invoiceDetails");
+            //session.removeAttribute("message");
             buttonAction = "Exit";
         }
 
@@ -268,5 +270,13 @@ public class CreateCDMRServlet extends HttpServlet {
             logger.info("create servlet context:" + request.getContextPath());
             response.sendRedirect("index.jsp");
         }
+    }
+
+    public void removeAttributes(HttpSession session) {
+        session.removeAttribute("cdmr");
+        session.removeAttribute("customerResults");
+        session.removeAttribute("invoiceResults");
+        session.removeAttribute("invoiceDetails");
+        session.removeAttribute("message");
     }
 }

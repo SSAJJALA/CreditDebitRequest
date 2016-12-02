@@ -4,10 +4,7 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/persistence/RequisitionDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/persistence/RequisitionDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/persistence/TaskDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/persistence/TaskDao.java" />
-    </list>
+    <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="" />
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -133,11 +130,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequisitionDao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RequisitionDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/persistence/RequisitionDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="470">
               <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CDMRDetailsServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CDMRDetailsServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="63" column="53" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -1193,7 +1200,7 @@
       <workItem from="1480223467225" duration="46349000" />
       <workItem from="1480509846152" duration="17896000" />
       <workItem from="1480547333712" duration="4846000" />
-      <workItem from="1480631501642" duration="23067000" />
+      <workItem from="1480631501642" duration="24279000" />
     </task>
     <servers />
   </component>
@@ -1230,7 +1237,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="887824000" />
+    <option name="totallyTimeSpent" value="889036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1526,16 +1533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CDMRDetailsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="63" column="53" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/750b3ad4/13347100-7a19-4686-be4e-b581d92c7501/APPSPROD.TASK_ASSIGNMENT">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1746,6 +1743,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
           <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CDMRDetailsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="63" column="53" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="53" />
           <folding />
         </state>
       </provider>

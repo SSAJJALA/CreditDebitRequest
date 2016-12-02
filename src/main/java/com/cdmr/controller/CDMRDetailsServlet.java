@@ -60,27 +60,27 @@ public class CDMRDetailsServlet extends HttpServlet {
             logger.info("Approving the cdmr request");
             buttonAction = "Approved";
             String message = this.completeTaskAction(request, response, buttonAction, session);
-            //request.setAttribute("message", message);
             session.setAttribute("message", message);
 
         } else if (request.getParameter("btn_reject") != null) {
             logger.info("Rejecting the cdmr request");
             buttonAction = "Rejected";
             String message = this.completeTaskAction(request, response, buttonAction, session);
-            //request.setAttribute("message", message);
             session.setAttribute("message", message);
 
         } else if (request.getParameter("btn_exit") != null) {
             logger.info("Exiting cdmr request");
-            session.removeAttribute("cdmr");
-            session.removeAttribute("taskDetails");
-            session.removeAttribute("message");
+            this.removeAttributes(session);
+            //session.removeAttribute("cdmr");
+            //session.removeAttribute("taskDetails");
+            //session.removeAttribute("message");
             buttonAction = "Exit";
         } else if (request.getParameter("btn_message") != null) {
             logger.info("directing to index page");
-            session.removeAttribute("cdmr");
-            session.removeAttribute("taskDetails");
-            session.removeAttribute("message");
+            this.removeAttributes(session);
+            //session.removeAttribute("cdmr");
+            //session.removeAttribute("taskDetails");
+            //session.removeAttribute("message");
             buttonAction = "Message";
         }
 
@@ -109,5 +109,11 @@ public class CDMRDetailsServlet extends HttpServlet {
         CompleteTask completeTask = new CompleteTask(taskResponse, cdmr);
         String message = completeTask.completeTaskAndRouteCDMR();
         return message;
+    }
+
+    public void removeAttributes(HttpSession session) {
+        session.removeAttribute("cdmr");
+        session.removeAttribute("taskDetails");
+        session.removeAttribute("message");
     }
 }
