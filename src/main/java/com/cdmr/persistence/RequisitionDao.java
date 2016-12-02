@@ -27,6 +27,7 @@ public class RequisitionDao {
         List<Requisition> reqs = new ArrayList<Requisition>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         reqs = session.createCriteria(Requisition.class).list();
+        session.close();
         return reqs;
     }
 
@@ -39,6 +40,7 @@ public class RequisitionDao {
     public Requisition getRequisition(int reqID) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Requisition  req = (Requisition) session.get(Requisition.class, reqID);
+        session.close();
         return req;
 
     }
@@ -64,14 +66,7 @@ public class RequisitionDao {
         } catch (Exception e) {
             throw e;
         }
-        //session.save(req);
-        //int reqID = req.getId();
-        //String queryString = String.format("SELECT LAST_INSERT_ID() AS LAST_ID FROM Requisition");
-        //String queryString = String.format("SELECT LAST_INSERT_ID()");
-        //int reqID = (Integer) session.createQuery(queryString).uniqueResult();
-        //tx.commit();
-        //session.close();
-        //int reqID = getLastReqID();
+
         return reqID;
     }
 
@@ -83,6 +78,7 @@ public class RequisitionDao {
 
         Query query = session.createQuery(queryString);
         reqID = query.getFirstResult();
+        session.close();
         return reqID;
 
 
@@ -100,6 +96,7 @@ public class RequisitionDao {
         log.info("Requisition" + req.toString());
         session.delete(req);
         tx.commit();
+        session.close();
         log.info("Requisition" + reqID + "deleted.");
 
 
@@ -115,6 +112,7 @@ public class RequisitionDao {
         Transaction tx = session.beginTransaction();
         session.update(req);
         tx.commit();
+        session.close();
 
     }
 
