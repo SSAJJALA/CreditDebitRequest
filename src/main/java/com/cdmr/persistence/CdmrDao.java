@@ -2,6 +2,7 @@ package com.cdmr.persistence;
 
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.Requisition;
+import com.cdmr.util.AddRestrictions;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -28,6 +29,7 @@ public class CdmrDao {
         List<Cdmr> cdmrs = new ArrayList<Cdmr>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         cdmrs = session.createCriteria(Cdmr.class).list();
+        session.close();
         return cdmrs;
     }
 
@@ -40,6 +42,7 @@ public class CdmrDao {
     public Cdmr getCdmr(int reqID) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Cdmr  cdmr = (Cdmr) session.get(Cdmr.class, reqID);
+        session.close();
         return cdmr;
 
     }
@@ -73,6 +76,7 @@ public class CdmrDao {
         log.info("CDMR:" + cdmr.toString());
         session.delete(cdmr);
         tx.commit();
+        session.close();
         log.info("CDMR" + reqID + "deleted.");
 
 
@@ -88,12 +92,14 @@ public class CdmrDao {
         Transaction tx = session.beginTransaction();
         session.update(cdmr);
         tx.commit();
+        session.close();
 
     }
 
     public List<Cdmr> getCdmrs(String searchOption, String operand, String value) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(Cdmr.class);
+        AddRestrictions addRestrictions = new AddRestrictions();
 
         Object searchValue = null;
 
@@ -110,14 +116,17 @@ public class CdmrDao {
         log.info("searchValue: " + searchValue);
 
         if (!searchOption.equals("all")) {
-            c = this.addRestrictions(c, searchOption, operand, searchValue);
+            //c = this.addRestrictions(c, searchOption, operand, searchValue);
+            c= addRestrictions.addRestrictions(c, searchOption, operand, searchValue);
         }
 
         List<Cdmr> cdmrs = c.list();
+        session.close();
         log.info("cdmrs: " + cdmrs.toString());
         return cdmrs;
     }
 
+    /**
     public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
 
         if (operand.equals("="))  {
@@ -140,6 +149,7 @@ public class CdmrDao {
         return tempCriteria;
 
     }
+     **/
 
     private LocalDate formatDate (String dob) {
 

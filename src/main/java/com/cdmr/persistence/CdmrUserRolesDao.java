@@ -1,6 +1,7 @@
 package com.cdmr.persistence;
 
 import com.cdmr.entity.*;
+import com.cdmr.util.AddRestrictions;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -28,6 +29,7 @@ public class CdmrUserRolesDao {
         List<CdmrUserRoles> userRoles = new ArrayList<CdmrUserRoles>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         userRoles = session.createCriteria(CdmrUserRoles.class).list();
+        session.close();
         return userRoles;
     }
 
@@ -43,6 +45,7 @@ public class CdmrUserRolesDao {
         Criteria criteria = session.createCriteria(CdmrUserRoles.class);
         criteria.add(Restrictions.eq("userRoles.userID", userRole.getUserID()));
         userRoles = criteria.list();
+        session.close();
         return userRoles;
     }
 
@@ -75,6 +78,7 @@ public class CdmrUserRolesDao {
         log.info("CDMR user roles:" + cdmrUserRoles.toString());
         session.delete(cdmrUserRoles);
         tx.commit();
+        session.close();
         log.info("User" + cdmrUserRoles.getUserRoles().getUserID() + "with role " + cdmrUserRoles.getUserRoles().getRole() + " deleted.");
 
 
@@ -90,6 +94,7 @@ public class CdmrUserRolesDao {
         Transaction tx = session.beginTransaction();
         session.update(cdmrUserRoles);
         tx.commit();
+        session.close();
 
     }
 
@@ -103,6 +108,7 @@ public class CdmrUserRolesDao {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(CdmrUserRoles.class);
         List<CdmrUserRoles> userRoles = null;
+        AddRestrictions addRestrictions = new AddRestrictions();
 
         for (Filter filter : filters) {
             String option = filter.getSearchOption();
@@ -117,11 +123,13 @@ public class CdmrUserRolesDao {
             } else if (option.equals("role") ) {
                 option = "userRoles.role";
             }
-            c = this.addRestrictions(c, option, operand, searchValue);
+            //c = this.addRestrictions(c, option, operand, searchValue);
+            c= addRestrictions.addRestrictions(c, option, operand, searchValue);
 
         }
 
         userRoles = c.list();
+        session.close();
         return userRoles;
     }
 
@@ -134,6 +142,7 @@ public class CdmrUserRolesDao {
      * @return Criteria with added restrictions
      */
 
+    /**
     public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
 
         if (operand.equals("="))  {
@@ -156,6 +165,7 @@ public class CdmrUserRolesDao {
         return tempCriteria;
 
     }
+     **/
 
     /**
      * get date in local date format

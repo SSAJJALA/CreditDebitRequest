@@ -1,6 +1,7 @@
 package com.cdmr.persistence;
 
 import com.cdmr.entity.*;
+import com.cdmr.util.AddRestrictions;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -27,6 +28,7 @@ public class CdmrAdjustmentsDao {
         List<CdmrAdjustments> cdmrAdjs = new ArrayList<CdmrAdjustments>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         cdmrAdjs = session.createCriteria(CdmrAdjustments.class).list();
+        session.close();
         return cdmrAdjs;
     }
 
@@ -39,6 +41,7 @@ public class CdmrAdjustmentsDao {
     public CdmrAdjustments getCdmrAdjs(CdmrAdjustmentsPK requisitionItem) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         CdmrAdjustments  cdmrAdjs = (CdmrAdjustments) session.get(CdmrAdjustments.class, requisitionItem);
+        session.close();
         return cdmrAdjs;
 
     }
@@ -72,6 +75,7 @@ public class CdmrAdjustmentsDao {
         log.info("CDMR Adjustment:" + reqItem.toString());
         session.delete(cdmrAdjustment);
         tx.commit();
+        session.close();
         log.info("CDMR" + reqItem.getRequisitionID() + "with item" + reqItem.getItemNum() + "deleted.");
 
 
@@ -87,6 +91,7 @@ public class CdmrAdjustmentsDao {
         Transaction tx = session.beginTransaction();
         session.update(cdmrAdj);
         tx.commit();
+        session.close();
 
     }
 
@@ -100,6 +105,7 @@ public class CdmrAdjustmentsDao {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(CdmrAdjustments.class);
         List<CdmrAdjustments> cdmrAdjs = null;
+        AddRestrictions addRestrictions = new AddRestrictions();
 
         for (Filter filter : filters) {
             String option = filter.getSearchOption();
@@ -120,13 +126,16 @@ public class CdmrAdjustmentsDao {
                 searchValue = value;
             }
 
-            c = this.addRestrictions(c, option, operand, searchValue);
+            //c = this.addRestrictions(c, option, operand, searchValue);
+            c= addRestrictions.addRestrictions(c, option, operand, searchValue);
 
         }
 
         cdmrAdjs = c.list();
+        session.close();
         return cdmrAdjs;
     }
+
 
     /**
      * Add filters to the search
@@ -137,6 +146,7 @@ public class CdmrAdjustmentsDao {
      * @return Criteria with added restrictions
      */
 
+    /**
     public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
 
         if (operand.equals("="))  {
@@ -159,6 +169,8 @@ public class CdmrAdjustmentsDao {
         return tempCriteria;
 
     }
+
+     **/
 
     /**
      * get date in local date format
