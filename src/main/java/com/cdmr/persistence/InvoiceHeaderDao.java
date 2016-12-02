@@ -26,6 +26,7 @@ public class InvoiceHeaderDao {
         List<InvoiceHeader> invoices = new ArrayList<InvoiceHeader>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         invoices = session.createCriteria(InvoiceHeader.class).list();
+        session.close();
         return invoices;
     }
 
@@ -38,6 +39,7 @@ public class InvoiceHeaderDao {
     public InvoiceHeader getInvoiceHeader(InvoiceHeaderPK invCust) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         InvoiceHeader  invoiceHeader = (InvoiceHeader) session.get(InvoiceHeader.class, invCust);
+        session.close();
         return invoiceHeader;
 
     }
@@ -72,6 +74,7 @@ public class InvoiceHeaderDao {
         log.info("Invoice:" + invoiceHeader.toString());
         session.delete(invoiceHeader);
         tx.commit();
+        session.close();
         log.info("Invoice" + invoiceHeader.getInvCustomer().getInvoiceNum() + "for customer" + invoiceHeader.getInvCustomer().getCustNum() + "deleted.");
 
 
@@ -87,6 +90,7 @@ public class InvoiceHeaderDao {
         Transaction tx = session.beginTransaction();
         session.update(invoiceHeader);
         tx.commit();
+        session.close();
 
     }
 
