@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 
+import javax.servlet.http.HttpSession;
 import java.security.Principal;
 
 import static org.junit.Assert.*;
@@ -31,15 +32,15 @@ public class DirectToDetailsTest {
     }
     @Test
     public void doGet() throws Exception {
-
+        HttpSession session = request.getSession();
         request.addParameter("taskID", "48");
         Principal user = new UserPrincipal("SSAJJALA");
         request.setUserPrincipal(user);
 
         servlet.doGet(request, response);
 
-        Task task = (Task) request.getAttribute("taskDetails");
-        CDMR cdmrData = (CDMR) request.getAttribute("cdmr");
+        Task task = (Task) session.getAttribute("taskDetails");
+        CDMR cdmrData = (CDMR) session.getAttribute("cdmr");
 
         assertNotNull("cdmr is null:", cdmrData);
         assertNotNull("task is null:", task);
