@@ -41,5 +41,13 @@ Date        Task                                            Hours       Notes
 11/14/2016  Worked on testing the email client              2
 11/15/206   Fixed the team project code to work on digital ocean    4
 
+11/24/2016  Worked on java script validations               2
+11/25/2016  Worked on java script validations               2
+11/26/2016  Worked on fixing the dynamic table update       2
+11/27/2016  Completed MDB exercise                          2
+11/28/2016  Worked on error messages                        1           
+11/29/2016  Worked on creating the selenium script          2   
+12/01/2016  Polishing the code                              3
+
 
 
