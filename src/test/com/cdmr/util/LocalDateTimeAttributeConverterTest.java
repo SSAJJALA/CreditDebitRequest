@@ -34,11 +34,7 @@ public class LocalDateTimeAttributeConverterTest {
     public void convertToEntityAttribute() throws Exception {
 
         java.util.Date utilDate = new java.util.Date();
-        //Calendar cal = Calendar.getInstance();
-        //cal.setTime(utilDate);
-        //cal.set(Calendar.MILLISECOND, 0);
-        System.out.println(new java.sql.Timestamp(utilDate.getTime()));
-        System.out.println(new java.sql.Timestamp(cal.getTimeInMillis()));
+
 
         LocalDateTime localDateTime = localDateTimeAttributeConverter.convertToEntityAttribute(new java.sql.Timestamp(utilDate.getTime()));
         assertNotNull("local date time conversion failed", localDateTime);
