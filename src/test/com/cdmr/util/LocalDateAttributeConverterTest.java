@@ -1,5 +1,6 @@
 package com.cdmr.util;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.Date;
@@ -14,7 +15,8 @@ import static org.junit.Assert.*;
  */
 public class LocalDateAttributeConverterTest {
     LocalDateAttributeConverter localDateConverted = null;
-    @Test
+
+    @Before
     public void convertToDatabaseColumn() throws Exception {
         localDateConverted = new LocalDateAttributeConverter();
     }
@@ -24,7 +26,7 @@ public class LocalDateAttributeConverterTest {
         LocalDate locDate = LocalDate.now();
         Date sqldate = localDateConverted.convertToDatabaseColumn(locDate);
 
-        /**
+
         Calendar cal = java.util.Calendar.getInstance();
         java.util.Date utilDate = cal.getTime();
         Date sqlDate = new Date(utilDate.getTime());
@@ -32,7 +34,7 @@ public class LocalDateAttributeConverterTest {
         LocalDate localDate = localDateConverted.convertToEntityAttribute(sqlDate);
 
         assertNotNull("local date conversion failed", localDate);
-         **/
+
         assertNotNull("sql date conversion failed", sqldate);
 
     }
