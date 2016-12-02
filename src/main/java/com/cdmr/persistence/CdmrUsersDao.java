@@ -138,7 +138,7 @@ public class CdmrUsersDao {
 
     }
      **/
-
+    /**
     private LocalDate formatDate (String dob) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -147,4 +147,5 @@ public class CdmrUsersDao {
         return date;
 
     }
+     **/
 }
