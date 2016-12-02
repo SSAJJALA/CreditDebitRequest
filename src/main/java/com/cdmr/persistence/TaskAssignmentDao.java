@@ -1,6 +1,7 @@
 package com.cdmr.persistence;
 
 import com.cdmr.entity.*;
+import com.cdmr.util.AddRestrictions;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -28,6 +29,7 @@ public class TaskAssignmentDao {
         List<TaskAssignment> tasks = new ArrayList<TaskAssignment>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         tasks = session.createCriteria(TaskAssignment.class).list();
+        session.close();
         return tasks;
     }
 
@@ -40,6 +42,7 @@ public class TaskAssignmentDao {
     public TaskAssignment getTask(TaskAssignmentPK taskUser) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         TaskAssignment  tasks = (TaskAssignment) session.get(TaskAssignment.class, taskUser);
+        session.close();
         return tasks;
 
     }
@@ -73,6 +76,7 @@ public class TaskAssignmentDao {
         log.info("Task Assignment:" + taskUser.toString());
         session.delete(taskAssignment);
         tx.commit();
+        session.close();
         log.info("Task" + taskUser.getTaskID() + "with user" + taskUser.getUserID() + "deleted.");
 
 
@@ -88,6 +92,7 @@ public class TaskAssignmentDao {
         Transaction tx = session.beginTransaction();
         session.update(taskAssignment);
         tx.commit();
+        session.close();
 
     }
 
@@ -101,6 +106,7 @@ public class TaskAssignmentDao {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(TaskAssignment.class);
         List<TaskAssignment> taskAssignments = null;
+        AddRestrictions addRestrictions = new AddRestrictions();
 
         for (Filter filter : filters) {
             String option = filter.getSearchOption();
@@ -120,11 +126,13 @@ public class TaskAssignmentDao {
                 searchValue = value;
             }
 
-            c = this.addRestrictions(c, option, operand, searchValue);
+            //c = this.addRestrictions(c, option, operand, searchValue);
+            c= addRestrictions.addRestrictions(c, option, operand, searchValue);
 
         }
 
         taskAssignments = c.list();
+        session.close();
         return taskAssignments;
     }
 
@@ -136,7 +144,7 @@ public class TaskAssignmentDao {
      * @param value
      * @return Criteria with added restrictions
      */
-
+    /**
     public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
 
         if (operand.equals("="))  {
@@ -159,6 +167,7 @@ public class TaskAssignmentDao {
         return tempCriteria;
 
     }
+     **/
 
     /**
      * get date in local date format
