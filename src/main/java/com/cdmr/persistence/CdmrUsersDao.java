@@ -3,6 +3,7 @@ package com.cdmr.persistence;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.CdmrUsers;
 import com.cdmr.entity.Requisition;
+import com.cdmr.util.AddRestrictions;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -29,6 +30,7 @@ public class CdmrUsersDao {
         List<CdmrUsers> users = new ArrayList<CdmrUsers>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         users = session.createCriteria(CdmrUsers.class).list();
+        session.close();
         return users;
     }
 
@@ -42,6 +44,7 @@ public class CdmrUsersDao {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         CdmrUsers  user = (CdmrUsers) session.get(CdmrUsers.class, userID);
         log.info("User:" + user.getUserID() + "fetched from the database");
+        session.close();
         return user;
 
     }
@@ -75,6 +78,7 @@ public class CdmrUsersDao {
         log.info("User:" + user.toString());
         session.delete(user);
         tx.commit();
+        session.close();
         log.info("User" + userID + "deleted.");
 
 
@@ -90,6 +94,7 @@ public class CdmrUsersDao {
         Transaction tx = session.beginTransaction();
         session.update(user);
         tx.commit();
+        session.close();
 
     }
 
@@ -97,15 +102,19 @@ public class CdmrUsersDao {
     public List<CdmrUsers> getCdmrUsersWithFilters(String searchOption, String operand, String value) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(CdmrUsers.class);
+        AddRestrictions addRestrictions = new AddRestrictions();
 
         if (!searchOption.equals("all")) {
-            c = this.addRestrictions(c, searchOption, operand, value);
+            //c = this.addRestrictions(c, searchOption, operand, value);
+            c= addRestrictions.addRestrictions(c, searchOption, operand, value);
         }
 
         List<CdmrUsers> cdmrUsers = c.list();
+        session.close();
         return cdmrUsers;
     }
 
+    /**
     public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
 
         if (operand.equals("="))  {
@@ -128,6 +137,7 @@ public class CdmrUsersDao {
         return tempCriteria;
 
     }
+     **/
 
     private LocalDate formatDate (String dob) {
 
