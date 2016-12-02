@@ -45,7 +45,7 @@ public class CDMRDetailsServletTest {
 
         servlet.doGet(request, response);
 
-        String message = (String) request.getAttribute("message");
+        String message = (String) session.getAttribute("message");
         assertEquals("CDMR Routing failed", "CDMR routed to FM", message);
 
     }
