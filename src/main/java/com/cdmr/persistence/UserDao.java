@@ -28,6 +28,7 @@ public class UserDao {
         List<User> users = new ArrayList<User>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         users = session.createCriteria(User.class).list();
+        session.close();
         return users;
     }
 
@@ -40,6 +41,7 @@ public class UserDao {
     public User getUser(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         User user = (User) session.get(User.class, id);
+        session.close();
         return user;
 
     }
@@ -60,6 +62,7 @@ public class UserDao {
         criteria.add(Restrictions.eq("lastName", user.getLastName()));
         User user4 = (User) criteria.uniqueResult();
         int id = user4.getUserid();
+        session.close();
         return id;
     }
 
@@ -76,6 +79,7 @@ public class UserDao {
         //user2.setUserid(id);
         session.delete(user2);
         tx.commit();
+        session.close();
         log.info("user2 deleted");
 
 
@@ -91,6 +95,7 @@ public class UserDao {
         Transaction tx = session.beginTransaction();
         session.update(user);
         tx.commit();
+        session.close();
 
     }
 
