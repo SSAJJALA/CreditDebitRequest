@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 
+import javax.servlet.http.HttpSession;
+
 import static org.junit.Assert.*;
 
 /**
@@ -14,7 +16,7 @@ import static org.junit.Assert.*;
  */
 public class CreateCDMRServletTest {
 
-    private  CreateCDMRServlet servlet;
+    private CreateCDMRServlet servlet;
     private MockHttpServletRequest request;
     private MockHttpServletResponse response;
     private final Logger logger = Logger.getLogger(this.getClass());
@@ -28,13 +30,13 @@ public class CreateCDMRServletTest {
     @Test
     public void doGet() throws Exception {
 
-
+        HttpSession session = request.getSession();
         request.addParameter("btn_retCust", "Search");
         request.addParameter("customer", "1000");
 
         servlet.doGet(request, response);
 
-        Customer cust = (Customer) request.getAttribute("customerResults");
+        Customer cust = (Customer) session.getAttribute("customerResults");
         assertEquals("Customer ID doesn't match", 1000, cust.getCustNum());
 
 
