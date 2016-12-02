@@ -3135,3 +3135,66 @@
 2016-11-30 19:21:16,793 50910 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2357
 2016-11-30 19:21:16,793 50910 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:ALARM CLOCK
 2016-11-30 21:03:38,005 12797700 [http-nio-8080-exec-6] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
+2016-12-01 23:11:05,871 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-01 23:11:05,895 24   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-01 23:11:05,901 30   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-12-01 23:11:05,907 36   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-12-01 23:11:05,970 99   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-12-01 23:11:05,970 99   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-12-01 23:11:06,299 428  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-12-01 23:11:06,436 565  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-12-01 23:11:06,488 617  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD?useSSL=false]
+2016-12-01 23:11:06,488 617  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-12-01 23:11:06,489 618  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-12-01 23:11:06,490 619  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-12-01 23:11:07,148 1277 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-01 23:11:07,469 1598 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-01 23:11:07,469 1598 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-01 23:11:07,469 1598 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-12-01 23:11:07,469 1598 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-12-01 23:11:07,469 1598 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-01 23:11:07,469 1598 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-01 23:11:07,470 1599 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-12-01 23:11:07,470 1599 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-12-01 23:11:07,470 1599 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-01 23:11:07,481 1610 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-01 23:11:07,488 1617 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-12-01 23:11:07,493 1622 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-12-01 23:11:08,471 2600 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-12-01 23:11:08,473 2602 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - Approving the cdmr request
+2016-12-01 23:11:08,473 2602 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside completeTaskAction from cdmr details servlet
+2016-12-01 23:11:08,483 2612 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-01 23:11:08,491 2620 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:Search
+2016-12-01 23:11:08,491 2620 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-12-01 23:11:08,491 2620 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-12-01 23:11:08,491 2620 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-12-01 23:11:08,491 2620 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-12-01 23:11:08,492 2621 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-12-01 23:11:09,766 3895 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-01 23:11:09,821 3950 [main] INFO  com.cdmr.controller.DirectToDetails  - direct to details servlet context:
+2016-12-01 23:11:09,823 3952 [main] INFO  com.cdmr.controller.InboxServletTest  - logged in user:VYU6026
+2016-12-01 23:11:09,823 3952 [main] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-12-01 23:11:09,823 3952 [main] INFO  com.cdmr.controller.InboxServlet  - User id:VYU6026
+2016-12-01 23:11:09,909 4038 [main] INFO  com.cdmr.controller.InboxServlet  - inbox servlet context:
+2016-12-01 23:11:09,909 4038 [main] INFO  com.cdmr.controller.InboxServletTest  - Task ID:42
+2016-12-01 23:11:09,910 4039 [main] INFO  com.cdmr.controller.Login  - In doPost() method
+2016-12-01 23:11:09,911 4040 [main] INFO  com.cdmr.controller.Login  - User:SSAJJALA
+2016-12-01 23:11:09,965 4094 [main] INFO  com.cdmr.persistence.CdmrUsersDao  - User:SSAJJALAfetched from the database
+2016-12-01 23:11:09,965 4094 [main] INFO  com.cdmr.ui.ValidateUser  - User authenticated
+2016-12-01 23:11:09,965 4094 [main] INFO  com.cdmr.controller.Login  - User authenticated. Forwarding to CDMR application
+2016-12-01 23:11:09,965 4094 [main] INFO  com.cdmr.controller.Login  - login servlet context:
+2016-12-01 23:11:09,966 4095 [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-01 23:11:19,143 13272 [main] INFO  com.cdmr.ui.CalculateCDMRTest  - cdmr CDMR{requisitionID=0, customer=Customer{custNum=1000, custName='Experis', address1='100', address2='Manpower Place', city='Milwaukee', state='WI', zip='53212', phone='414-961-1000'}, status='New', invHeader=InvoiceHeader{invNum=2345, custNum=1000, invDate=2016-10-01, grossAmnt=5050.0, allowanceAmnt=0.0, chargesAmnt=0.0, taxAmnt=0.0, netAmnt=5050.0}, salesRepID='null', salesRepName='null', adjAmnt=-500.0, adjGross=-500.0, adjAllowance=0.0, adjCharges=0.0, adjTax=0.0, cdmrDate=2016-12-01, type='Credit', adjustments=[CDMRAdjustments{itemNum=2350, itemDesc='COAT STAND', reasonCode='1-Defective', originalPrice=100.0, originalQty=50, adjQty=5, originalInvLineTotal=5000.0, creditDebitFlg='Credit', allowanceAdjAmnt=0.0, chargeAdjAmnt=0.0, taxAdjAmnt=0.0, lineAdjAmnt=-500.0, newInvLineTotal=5500.0, comments=[CDMRComment{userID='VYU6026', requisitionID=0, itemNum=2350, createdDate=2016-12-01T23:11:19.142, comment='defective', seqID=1}]}]}
+2016-12-01 23:11:19,226 13355 [main] INFO  com.cdmr.persistence.CdmrDao  - searchOption: requisitionID
+2016-12-01 23:11:19,226 13355 [main] INFO  com.cdmr.persistence.CdmrDao  - operand: =
+2016-12-01 23:11:19,228 13357 [main] INFO  com.cdmr.persistence.CdmrDao  - searchValue: 10
+2016-12-01 23:11:19,248 13377 [main] INFO  com.cdmr.persistence.CdmrDao  - cdmrs: []
+2016-12-01 23:11:19,248 13377 [main] INFO  com.cdmr.ui.SearchTest  - Search results:[]
+2016-12-01 23:11:19,340 13469 [main] INFO  com.cdmr.ui.SubmitCDMR  - Requisition 64 submitted successfully
+2016-12-01 23:11:19,444 13573 [main] INFO  com.cdmr.ui.SubmitCDMR  - DSM Task: 57 created successfully
+2016-12-01 23:11:19,493 13622 [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Requisition 64 submitted successfully
+2016-12-01 23:11:19,592 13721 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Invoice not found
+2016-12-01 23:11:19,625 13754 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2350
+2016-12-01 23:11:19,625 13754 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:COAT STAND
+2016-12-01 23:11:19,625 13754 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2357
+2016-12-01 23:11:19,625 13754 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:ALARM CLOCK

@@ -32,11 +32,11 @@ public class SearchServletTest {
 
         request.addParameter("searchoptions", "requisitionID");
         request.addParameter("operands", "=");
-        request.addParameter("searchTerm", "10");
+        request.addParameter("searchTerm", "60");
         servlet.doPost(request, response);
         List<SearchCDMR>  searchResults = (List<SearchCDMR>) request.getAttribute("results");
         logger.info("Requisition:" + searchResults.get(0).getRequisitionID());
-        assertEquals("Requisition ID doesn't match", 10, searchResults.get(0).getRequisitionID());
+        assertEquals("Requisition ID doesn't match", 60, searchResults.get(0).getRequisitionID());
 
     }
 
