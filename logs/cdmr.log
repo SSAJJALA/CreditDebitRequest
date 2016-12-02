@@ -3200,3 +3200,110 @@
 2016-12-01 23:11:19,625 13754 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:ALARM CLOCK
 2016-12-01 23:14:38,900 0    [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
 2016-12-01 23:15:28,268 0    [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-01 23:21:09,989 0    [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-01 23:21:09,993 4    [main] INFO  com.cdmr.controller.SearchServlet  - searchFilter: requisitionID
+2016-12-01 23:21:09,993 4    [main] INFO  com.cdmr.controller.SearchServlet  - operand: =
+2016-12-01 23:21:09,994 5    [main] INFO  com.cdmr.controller.SearchServlet  - term: 60
+2016-12-01 23:21:10,243 254  [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-01 23:21:10,254 265  [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-01 23:21:10,256 267  [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-12-01 23:21:10,258 269  [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-12-01 23:21:10,283 294  [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-12-01 23:21:10,284 295  [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-12-01 23:21:10,467 478  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-12-01 23:21:10,624 635  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-12-01 23:21:10,643 654  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD?useSSL=false]
+2016-12-01 23:21:10,644 655  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-12-01 23:21:10,644 655  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-12-01 23:21:10,648 659  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-12-01 23:21:11,856 1867 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-01 23:21:12,629 2640 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-01 23:21:12,629 2640 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-01 23:21:12,632 2643 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-12-01 23:21:12,632 2643 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-12-01 23:21:12,633 2644 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-01 23:21:12,633 2644 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-01 23:21:12,633 2644 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-12-01 23:21:12,633 2644 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-12-01 23:21:12,633 2644 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-01 23:21:12,634 2645 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-01 23:21:12,667 2678 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-12-01 23:21:12,681 2692 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-12-01 23:21:13,424 3435 [main] INFO  com.cdmr.persistence.CdmrDao  - searchOption: requisitionID
+2016-12-01 23:21:13,424 3435 [main] INFO  com.cdmr.persistence.CdmrDao  - operand: =
+2016-12-01 23:21:13,424 3435 [main] INFO  com.cdmr.persistence.CdmrDao  - searchValue: 60
+2016-12-01 23:21:13,535 3546 [main] INFO  com.cdmr.persistence.CdmrDao  - cdmrs: [Cdmr{requisitionID=60, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}]
+2016-12-01 23:21:13,539 3550 [main] INFO  com.cdmr.controller.SearchServlet  - search servlet context:
+2016-12-01 23:21:13,540 3551 [main] INFO  com.cdmr.controller.SearchServletTest  - Requisition:60
+2016-12-01 23:22:20,107 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-01 23:22:20,126 19   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-01 23:22:20,138 31   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-12-01 23:22:20,141 34   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-12-01 23:22:20,196 89   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-12-01 23:22:20,197 90   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-12-01 23:22:20,533 426  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-12-01 23:22:20,734 627  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-12-01 23:22:20,757 650  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD?useSSL=false]
+2016-12-01 23:22:20,758 651  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-12-01 23:22:20,758 651  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-12-01 23:22:20,759 652  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-12-01 23:22:21,194 1087 [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-01 23:22:21,402 1295 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-01 23:22:21,402 1295 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-01 23:22:21,403 1296 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-12-01 23:22:21,403 1296 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-12-01 23:22:21,403 1296 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-01 23:22:21,403 1296 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-01 23:22:21,403 1296 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-12-01 23:22:21,403 1296 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-12-01 23:22:21,404 1297 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-01 23:22:21,404 1297 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-01 23:22:21,409 1302 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-12-01 23:22:21,412 1305 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-12-01 23:22:22,145 2038 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-12-01 23:22:22,147 2040 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - Approving the cdmr request
+2016-12-01 23:22:22,147 2040 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside completeTaskAction from cdmr details servlet
+2016-12-01 23:22:22,161 2054 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-01 23:22:22,161 2054 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCust:Search
+2016-12-01 23:22:22,161 2054 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInv:null
+2016-12-01 23:22:22,162 2055 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculate:null
+2016-12-01 23:22:22,162 2055 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submit:null
+2016-12-01 23:22:22,162 2055 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancel:null
+2016-12-01 23:22:22,162 2055 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-12-01 23:22:22,962 2855 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-01 23:22:23,038 2931 [main] INFO  com.cdmr.controller.DirectToDetails  - direct to details servlet context:
+2016-12-01 23:22:23,039 2932 [main] INFO  com.cdmr.controller.InboxServletTest  - logged in user:VYU6026
+2016-12-01 23:22:23,039 2932 [main] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-12-01 23:22:23,040 2933 [main] INFO  com.cdmr.controller.InboxServlet  - User id:VYU6026
+2016-12-01 23:22:23,110 3003 [main] INFO  com.cdmr.controller.InboxServlet  - inbox servlet context:
+2016-12-01 23:22:23,111 3004 [main] INFO  com.cdmr.controller.InboxServletTest  - Task ID:42
+2016-12-01 23:22:23,112 3005 [main] INFO  com.cdmr.controller.Login  - In doPost() method
+2016-12-01 23:22:23,112 3005 [main] INFO  com.cdmr.controller.Login  - User:SSAJJALA
+2016-12-01 23:22:23,127 3020 [main] INFO  com.cdmr.persistence.CdmrUsersDao  - User:SSAJJALAfetched from the database
+2016-12-01 23:22:23,127 3020 [main] INFO  com.cdmr.ui.ValidateUser  - User authenticated
+2016-12-01 23:22:23,127 3020 [main] INFO  com.cdmr.controller.Login  - User authenticated. Forwarding to CDMR application
+2016-12-01 23:22:23,127 3020 [main] INFO  com.cdmr.controller.Login  - login servlet context:
+2016-12-01 23:22:23,128 3021 [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-01 23:22:23,128 3021 [main] INFO  com.cdmr.controller.SearchServlet  - searchFilter: requisitionID
+2016-12-01 23:22:23,128 3021 [main] INFO  com.cdmr.controller.SearchServlet  - operand: =
+2016-12-01 23:22:23,128 3021 [main] INFO  com.cdmr.controller.SearchServlet  - term: 60
+2016-12-01 23:22:23,129 3022 [main] INFO  com.cdmr.persistence.CdmrDao  - searchOption: requisitionID
+2016-12-01 23:22:23,129 3022 [main] INFO  com.cdmr.persistence.CdmrDao  - operand: =
+2016-12-01 23:22:23,129 3022 [main] INFO  com.cdmr.persistence.CdmrDao  - searchValue: 60
+2016-12-01 23:22:23,145 3038 [main] INFO  com.cdmr.persistence.CdmrDao  - cdmrs: [Cdmr{requisitionID=60, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}]
+2016-12-01 23:22:23,145 3038 [main] INFO  com.cdmr.controller.SearchServlet  - search servlet context:
+2016-12-01 23:22:23,146 3039 [main] INFO  com.cdmr.controller.SearchServletTest  - Requisition:60
+2016-12-01 23:22:28,520 8413 [main] INFO  com.cdmr.ui.CalculateCDMRTest  - cdmr CDMR{requisitionID=0, customer=Customer{custNum=1000, custName='Experis', address1='100', address2='Manpower Place', city='Milwaukee', state='WI', zip='53212', phone='414-961-1000'}, status='New', invHeader=InvoiceHeader{invNum=2345, custNum=1000, invDate=2016-10-01, grossAmnt=5050.0, allowanceAmnt=0.0, chargesAmnt=0.0, taxAmnt=0.0, netAmnt=5050.0}, salesRepID='null', salesRepName='null', adjAmnt=-500.0, adjGross=-500.0, adjAllowance=0.0, adjCharges=0.0, adjTax=0.0, cdmrDate=2016-12-01, type='Credit', adjustments=[CDMRAdjustments{itemNum=2350, itemDesc='COAT STAND', reasonCode='1-Defective', originalPrice=100.0, originalQty=51, adjQty=5, originalInvLineTotal=5100.0, creditDebitFlg='Credit', allowanceAdjAmnt=0.0, chargeAdjAmnt=0.0, taxAdjAmnt=0.0, lineAdjAmnt=-500.0, newInvLineTotal=5600.0, comments=[CDMRComment{userID='VYU6026', requisitionID=0, itemNum=2350, createdDate=2016-12-01T23:22:28.520, comment='defective', seqID=1}]}]}
+2016-12-01 23:22:28,622 8515 [main] INFO  com.cdmr.persistence.CdmrDao  - searchOption: requisitionID
+2016-12-01 23:22:28,623 8516 [main] INFO  com.cdmr.persistence.CdmrDao  - operand: =
+2016-12-01 23:22:28,623 8516 [main] INFO  com.cdmr.persistence.CdmrDao  - searchValue: 10
+2016-12-01 23:22:28,648 8541 [main] INFO  com.cdmr.persistence.CdmrDao  - cdmrs: []
+2016-12-01 23:22:28,648 8541 [main] INFO  com.cdmr.ui.SearchTest  - Search results:[]
+2016-12-01 23:22:28,706 8599 [main] INFO  com.cdmr.ui.SubmitCDMR  - Requisition 65 submitted successfully
+2016-12-01 23:22:28,731 8624 [main] INFO  com.cdmr.ui.SubmitCDMR  - DSM Task: 58 created successfully
+2016-12-01 23:22:28,794 8687 [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Requisition 65 submitted successfully
+2016-12-01 23:22:28,991 8884 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Invoice not found
+2016-12-01 23:22:29,020 8913 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2350
+2016-12-01 23:22:29,021 8914 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:COAT STAND
+2016-12-01 23:22:29,021 8914 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2357
+2016-12-01 23:22:29,021 8914 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:ALARM CLOCK
