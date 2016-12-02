@@ -61,6 +61,7 @@ public class Cdmr {
 
 
     public Cdmr(int requisitionID, String status, int custNum, String custName, int invNum, LocalDate invDate, double invAmount, String salesRepID, String salesRepName, double adjAmnt, LocalDate cdmrDate, String type) {
+        this();
         this.requisitionID = requisitionID;
         this.status = status;
         this.custNum = custNum;

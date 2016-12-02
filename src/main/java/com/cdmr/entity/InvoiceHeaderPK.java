@@ -20,6 +20,7 @@ public class InvoiceHeaderPK implements Serializable {
     }
 
     public InvoiceHeaderPK(int invoiceNum, int custNum) {
+        this();
         this.invoiceNum = invoiceNum;
         this.custNum = custNum;
     }

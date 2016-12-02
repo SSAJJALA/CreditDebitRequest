@@ -63,6 +63,7 @@ public class Customer {
      * @param phone
      */
     public Customer(int custNum, String custName, String add1, String add2, String city, String state, String zip, String phone) {
+        this();
         this.custNum = custNum;
         this.custName = custName;
         this.add1 = add1;

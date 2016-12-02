@@ -44,6 +44,7 @@ public class InvoiceDetail implements Serializable {
     }
 
     public InvoiceDetail(InvoiceDetailPK invItem, int custNum, String itemDesc, int qty, Double unitPrice, Double grossAmnt, Double allowance, Double charges, Double tax, Double netAmnt) {
+        this();
         this.invItem = invItem;
         this.custNum = custNum;
         this.itemDesc = itemDesc;

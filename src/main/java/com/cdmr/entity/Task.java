@@ -40,6 +40,7 @@ public class Task {
     }
 
     public Task(int taskID, String taskName, String taskStatus, LocalDateTime createdDate, LocalDateTime updatedDate) {
+        this();
         this.taskID = taskID;
         this.taskName = taskName;
         this.taskStatus = taskStatus;

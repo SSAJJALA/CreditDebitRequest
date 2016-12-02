@@ -23,6 +23,7 @@ public class SearchInbox {
     }
 
     public SearchInbox(int taskID, LocalDateTime createdDate, LocalDateTime updatedDate, String application, String taskName, String taskStatus, int requisitionID, String userID, String customerName, Double adjAmnt) {
+        this();
         this.taskID = taskID;
         this.createdDate = createdDate;
         this.updatedDate = updatedDate;

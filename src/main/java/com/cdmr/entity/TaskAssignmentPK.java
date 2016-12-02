@@ -21,6 +21,7 @@ public class TaskAssignmentPK implements Serializable {
     }
 
     public TaskAssignmentPK(int taskID, String userID) {
+        this();
         this.taskID = taskID;
         this.userID = userID;
     }

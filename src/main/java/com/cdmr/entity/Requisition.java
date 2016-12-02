@@ -55,6 +55,7 @@ public class Requisition {
      */
 
     public Requisition(int appID, String appName, LocalDateTime createdDate, LocalDateTime updatedDate) {
+        this();
         this.appID = appID;
         this.appName = appName;
         this.createdDate = createdDate;

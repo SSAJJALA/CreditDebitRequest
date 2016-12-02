@@ -18,6 +18,7 @@ public class SearchCDMR {
     }
 
     public SearchCDMR(int requisitionID, int invoiceNum, Double invAmnt, int custNo, String custName, String reqType, Double adjAmnt, String status) {
+        this();
         this.requisitionID = requisitionID;
         this.invoiceNum = invoiceNum;
         this.invAmnt = invAmnt;

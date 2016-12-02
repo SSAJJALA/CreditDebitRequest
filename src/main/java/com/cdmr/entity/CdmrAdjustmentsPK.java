@@ -21,6 +21,7 @@ public class CdmrAdjustmentsPK implements Serializable {
     }
 
     public CdmrAdjustmentsPK(int requisitionID, int itemNum) {
+        this();
         this.requisitionID = requisitionID;
         this.itemNum = itemNum;
     }

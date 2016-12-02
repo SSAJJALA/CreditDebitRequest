@@ -21,6 +21,7 @@ public class CdmrUserRolesPK implements Serializable {
     }
 
     public CdmrUserRolesPK(String userID, String role) {
+        this();
         this.userID = userID;
         this.role = role;
     }

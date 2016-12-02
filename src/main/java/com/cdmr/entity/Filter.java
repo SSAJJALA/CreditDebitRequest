@@ -13,6 +13,7 @@ public class Filter {
     }
 
     public Filter(String searchOption, String operand, String searchValue) {
+        this();
         this.searchOption = searchOption;
         this.operand = operand;
         this.searchValue = searchValue;

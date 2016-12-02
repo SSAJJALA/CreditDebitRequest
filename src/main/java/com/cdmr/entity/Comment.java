@@ -44,6 +44,7 @@ public class Comment {
     }
 
     public Comment(int requisitionID, int commentID, int itemNum, int seqID, String comment, LocalDateTime createdDate, String userID) {
+        this();
         this.requisitionID = requisitionID;
         this.commentID = commentID;
         this.itemNum = itemNum;

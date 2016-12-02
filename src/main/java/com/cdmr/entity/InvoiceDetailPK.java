@@ -21,6 +21,7 @@ public class InvoiceDetailPK implements Serializable{
     }
 
     public InvoiceDetailPK(int invNum, int itemNum) {
+        this();
         this.invNum = invNum;
         this.itemNum = itemNum;
     }

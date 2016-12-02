@@ -36,6 +36,7 @@ public class CdmrUsers {
     }
 
     public CdmrUsers(String userID, String firstName, String lastName, String passWord, String role) {
+        this();
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;

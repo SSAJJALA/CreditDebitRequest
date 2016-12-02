@@ -51,6 +51,7 @@ public class CdmrAdjustments {
     }
 
     public CdmrAdjustments(CdmrAdjustmentsPK requisitionItem, int custNum, String reasonCode, String itemDesc, int adjQty, Double allowanceAdj, Double chargesAdj, Double taxAdj, String cdFlag, Double extPrice, Double newInvLineAmnt) {
+        this();
         this.requisitionItem = requisitionItem;
         this.custNum = custNum;
         this.reasonCode = reasonCode;

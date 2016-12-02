@@ -21,6 +21,7 @@ public class TaskAssignment {
     }
 
     public TaskAssignment(TaskAssignmentPK taskuser, int requisitionID) {
+        this();
         this.taskuser = taskuser;
         this.requisitionID = requisitionID;
     }

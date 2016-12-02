@@ -42,6 +42,7 @@ public class InvoiceHeader implements Serializable {
     }
 
     public InvoiceHeader(InvoiceHeaderPK invCustomer, LocalDate invDate, Double grossAmnt, Double allowance, Double charges, Double tax, Double netAmnt) {
+        this();
         this.invCustomer = invCustomer;
         this.invDate = invDate;
         this.grossAmnt = grossAmnt;
