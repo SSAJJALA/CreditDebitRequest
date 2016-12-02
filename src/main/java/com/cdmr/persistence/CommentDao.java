@@ -3,13 +3,16 @@ package com.cdmr.persistence;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.Comment;
 import com.cdmr.entity.Filter;
+import com.cdmr.util.AddRestrictions;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+import java.io.PrintWriter;
 import java.io.Serializable;
+import java.io.StringWriter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -30,6 +33,7 @@ public class CommentDao {
         List<Comment> comments = new ArrayList<Comment>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         comments = session.createCriteria(Comment.class).list();
+        session.close();
         return comments;
     }
 
@@ -42,6 +46,7 @@ public class CommentDao {
     public Comment getComments(int commentID) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Comment comment = (Comment) session.get(Comment.class, commentID);
+        session.close();
         return comment;
 
     }
@@ -66,6 +71,7 @@ public class CommentDao {
             session.close();
         } catch (Exception e) {
             throw e;
+
         }
 
         return commentID;
@@ -83,6 +89,7 @@ public class CommentDao {
         log.info("Comment:" + comment.toString());
         session.delete(comment);
         tx.commit();
+        session.close();
         log.info("Comment" + commentID + "deleted.");
 
 
@@ -98,6 +105,7 @@ public class CommentDao {
         Transaction tx = session.beginTransaction();
         session.update(comment);
         tx.commit();
+        session.close();
 
     }
 
@@ -105,6 +113,7 @@ public class CommentDao {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(Comment.class);
         List<Comment> comments = null;
+        AddRestrictions addRestrictions = new AddRestrictions();
 
         for (Filter filter : filters) {
             String option = filter.getSearchOption();
@@ -122,14 +131,17 @@ public class CommentDao {
                 searchValue = value;
             }
 
-            c = this.addRestrictions(c, option, operand, searchValue);
+            //c = this.addRestrictions(c, option, operand, searchValue);
+            c= addRestrictions.addRestrictions(c, option, operand, searchValue);
 
         }
 
         comments = c.list();
+        session.close();
         return comments;
     }
 
+    /**
     public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
 
         if (operand.equals("="))  {
@@ -152,6 +164,7 @@ public class CommentDao {
         return tempCriteria;
 
     }
+     **/
 
     private LocalDate formatDate (String dob) {
 
