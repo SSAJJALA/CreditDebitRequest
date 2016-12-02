@@ -37,6 +37,7 @@ public class InvoiceDetails {
      * @param netAmnt
      */
     public InvoiceDetails(int itemNum, String itemDesc, int qty, Double unitPrice, Double grossAmnt, Double allowanceAmnt, Double chargesAmnt, Double taxAmnt, Double netAmnt) {
+        this();
         this.itemNum = itemNum;
         this.itemDesc = itemDesc;
         this.qty = qty;

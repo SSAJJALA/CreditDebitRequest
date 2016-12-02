@@ -51,6 +51,7 @@ public class CDMR {
      * @param adjustments
      */
     public CDMR(int requisitionID, Customer customer, String status, InvoiceHeader invHeader, String salesRepID, String salesRepName, Double adjAmnt, Double adjGross, Double adjAllowance, Double adjCharges, Double adjTax, LocalDate cdmrDate, String type, List<CDMRAdjustments> adjustments) {
+        this();
         this.requisitionID = requisitionID;
         this.customer = customer;
         this.status = status;

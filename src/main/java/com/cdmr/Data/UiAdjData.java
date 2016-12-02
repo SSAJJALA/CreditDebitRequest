@@ -31,6 +31,7 @@ public class UiAdjData {
      * @param comments
      */
     public UiAdjData(int itemNum, int adjQty, String reasonCode, String creditDebit, String comments) {
+        this();
         this.itemNum = itemNum;
         this.adjQty = adjQty;
         this.reasonCode = reasonCode;

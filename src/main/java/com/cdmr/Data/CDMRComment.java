@@ -34,6 +34,7 @@ public class CDMRComment {
      * @param seqID
      */
     public CDMRComment(String userID, int requisitionID, int itemNum, LocalDateTime createdDate, String comment, int seqID) {
+        this();
         this.userID = userID;
         this.requisitionID = requisitionID;
         this.itemNum = itemNum;

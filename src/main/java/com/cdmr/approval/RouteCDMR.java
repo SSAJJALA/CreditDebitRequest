@@ -37,6 +37,7 @@ public class RouteCDMR {
      * @param taskResponse approvers's task response document
      */
     public RouteCDMR(CDMR cdmr, TaskResponse taskResponse) {
+        this();
         this.cdmr = cdmr;
         this.taskResponse = taskResponse;
     }

@@ -28,6 +28,7 @@ public class TaskResponse {
      * @param approverID
      */
     public TaskResponse(int taskID, String taskName, String approvalDecesion, String approverID) {
+        this();
         this.taskID = taskID;
         this.taskName = taskName;
         this.approvalDecesion = approvalDecesion;

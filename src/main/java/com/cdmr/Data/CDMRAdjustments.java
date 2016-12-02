@@ -49,6 +49,7 @@ public class CDMRAdjustments {
      * @param comments comments
      */
     public CDMRAdjustments(int itemNum, String itemDesc, String reasonCode, Double originalPrice, int originalQty, int adjQty, Double originalInvLineTotal, String creditDebitFlg, Double allowanceAdjAmnt, Double chargeAdjAmnt, Double taxAdjAmnt, Double lineAdjAmnt, Double newInvLineTotal, List<CDMRComment> comments) {
+        this();
         this.itemNum = itemNum;
         this.itemDesc = itemDesc;
         this.reasonCode = reasonCode;

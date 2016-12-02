@@ -37,6 +37,7 @@ public class InvoiceHeader {
      * @param netAmnt
      */
     public InvoiceHeader(int invNum, int custNum, LocalDate invDate, Double grossAmnt, Double allowanceAmnt, Double chargesAmnt, Double taxAmnt, Double netAmnt) {
+        this();
         this.invNum = invNum;
         this.custNum = custNum;
         this.invDate = invDate;

@@ -36,6 +36,7 @@ public class Customer {
      * @param phone
      */
     public Customer(int custNum, String custName, String address1, String address2, String city, String state, String zip, String phone) {
+        this();
         this.custNum = custNum;
         this.custName = custName;
         this.address1 = address1;
