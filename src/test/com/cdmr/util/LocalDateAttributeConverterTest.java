@@ -21,7 +21,8 @@ public class LocalDateAttributeConverterTest {
 
     @Test
     public void convertToEntityAttribute() throws Exception {
-        Date sqldate = localDateConverted.convertToDatabaseColumn(LocalDate.now());
+        LocalDate locDate = LocalDate.now();
+        Date sqldate = localDateConverted.convertToDatabaseColumn(locDate);
 
         /**
         Calendar cal = java.util.Calendar.getInstance();
