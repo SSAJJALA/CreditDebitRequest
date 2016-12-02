@@ -249,26 +249,50 @@ public class CDMRAdjustments {
         return chargeAdjAmnt;
     }
 
+    /**
+     * set the charge amount
+     * @param chargeAdjAmnt charge amount
+     */
     public void setChargeAdjAmnt(Double chargeAdjAmnt) {
         this.chargeAdjAmnt = chargeAdjAmnt;
     }
 
+    /**
+     * get the tax adjustment amount
+     * @return taxAdjAmnt tax adjustment amount
+     */
     public Double getTaxAdjAmnt() {
         return taxAdjAmnt;
     }
 
+    /**
+     * set the tax adjustment amount
+     * @param taxAdjAmnt tax adjustment amount
+     */
     public void setTaxAdjAmnt(Double taxAdjAmnt) {
         this.taxAdjAmnt = taxAdjAmnt;
     }
 
+    /**
+     * get the comments
+     * @return comments
+     */
     public List<CDMRComment> getComments() {
         return comments;
     }
 
+    /**
+     * set the comments
+     * @param comments
+     */
     public void setComments(List<CDMRComment> comments) {
         this.comments = comments;
     }
 
+    /**
+     * toString method to display the cdmr adjustments
+     * @return String
+     */
     @Override
     public String toString() {
         return "CDMRAdjustments{" +
