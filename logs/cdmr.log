@@ -3198,3 +3198,5 @@
 2016-12-01 23:11:19,625 13754 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:COAT STAND
 2016-12-01 23:11:19,625 13754 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2357
 2016-12-01 23:11:19,625 13754 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:ALARM CLOCK
+2016-12-01 23:14:38,900 0    [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-01 23:15:28,268 0    [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method

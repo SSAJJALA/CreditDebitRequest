@@ -30,9 +30,11 @@ public class SearchServletTest {
     @Test
     public void doPost() throws Exception {
 
+        request.addParameter("btn_search", "btn_search");
         request.addParameter("searchoptions", "requisitionID");
         request.addParameter("operands", "=");
         request.addParameter("searchTerm", "60");
+
         servlet.doPost(request, response);
         List<SearchCDMR>  searchResults = (List<SearchCDMR>) request.getAttribute("results");
         logger.info("Requisition:" + searchResults.get(0).getRequisitionID());
