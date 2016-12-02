@@ -1,6 +1,7 @@
 package com.cdmr.persistence;
 
 import com.cdmr.entity.*;
+import com.cdmr.util.AddRestrictions;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -27,6 +28,7 @@ public class InvoiceDetailDao {
         List<InvoiceDetail> invoiceDetails = new ArrayList<InvoiceDetail>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         invoiceDetails = session.createCriteria(InvoiceDetail.class).list();
+        session.close();
         return invoiceDetails;
     }
 
@@ -37,12 +39,9 @@ public class InvoiceDetailDao {
      * @return invoiceHeader
      */
     public InvoiceDetail getInvoiceDetail(InvoiceDetailPK invItem) {
-        //List<InvoiceDetail> invoiceDetails = new ArrayList<InvoiceDetail>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         InvoiceDetail invoiceDetails = (InvoiceDetail) session.get(InvoiceDetail.class, invItem);
-        //Criteria criteria = session.createCriteria(InvoiceDetail.class);
-        //criteria.add(Restrictions.eq("invoiceNum", invItem.getInvNum()));
-        //invoiceDetails = criteria.list();
+        session.close();
         return invoiceDetails;
 
     }
@@ -76,6 +75,7 @@ public class InvoiceDetailDao {
         log.info("Invoice:" + invoiceDetail.toString());
         session.delete(invoiceDetail);
         tx.commit();
+        session.close();
         log.info("Invoice details for " + invoiceDetail.getInvItem().getInvNum() + "and item " + invoiceDetail.getInvItem().getItemNum() + " deleted.");
 
 
@@ -91,6 +91,7 @@ public class InvoiceDetailDao {
         Transaction tx = session.beginTransaction();
         session.update(invoiceDetail);
         tx.commit();
+        session.close();
 
     }
 
@@ -104,6 +105,7 @@ public class InvoiceDetailDao {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Criteria c = session.createCriteria(InvoiceDetail.class);
         List<InvoiceDetail> invoiceDetails = null;
+        AddRestrictions addRestrictions = new AddRestrictions();
 
         for (Filter filter : filters) {
             String option = filter.getSearchOption();
@@ -124,11 +126,13 @@ public class InvoiceDetailDao {
                 searchValue = value;
             }
 
-            c = this.addRestrictions(c, option, operand, searchValue);
+            //c = this.addRestrictions(c, option, operand, searchValue);
+            c= addRestrictions.addRestrictions(c, option, operand, searchValue);
 
         }
 
         invoiceDetails = c.list();
+        session.close();
         return invoiceDetails;
     }
 
@@ -140,7 +144,7 @@ public class InvoiceDetailDao {
      * @param value
      * @return Criteria with added restrictions
      */
-
+    /**
     public Criteria addRestrictions(Criteria tempCriteria, String option, String operand, Object value) {
 
         if (operand.equals("="))  {
@@ -163,7 +167,7 @@ public class InvoiceDetailDao {
         return tempCriteria;
 
     }
-
+    **/
 
     private LocalDate formatDate (String dob) {
 
