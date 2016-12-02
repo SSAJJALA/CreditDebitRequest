@@ -44,6 +44,7 @@ public class CalculateCDMR {
      * @param userID
      */
     public CalculateCDMR(Customer customer, InvoiceHeader invHeader, List<InvoiceDetail> invDtls, List<UiAdjData> adjs, String userID) {
+        this();
         this.customer = customer;
         this.invHeader = invHeader;
         this.invDtls = invDtls;

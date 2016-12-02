@@ -37,6 +37,7 @@ public class SaveRequisition {
      * @param cdmr cdmr document
      */
     public SaveRequisition(CDMR cdmr) {
+        this();
         this.cdmr = cdmr;
     }
 

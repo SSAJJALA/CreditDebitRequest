@@ -36,6 +36,7 @@ public class QueueTask {
      * @param reqID reqID
      */
     public QueueTask(String assignToUserID, String taskName, int reqID) {
+        this();
         this.assignToUserID = assignToUserID;
         this.taskName = taskName;
         this.reqID = reqID;

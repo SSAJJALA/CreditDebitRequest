@@ -35,6 +35,7 @@ public class GetRequisition {
      * @param requisitionID requisition ID
      */
     public GetRequisition(int requisitionID) {
+        this();
         this.requisitionID = requisitionID;
     }
 

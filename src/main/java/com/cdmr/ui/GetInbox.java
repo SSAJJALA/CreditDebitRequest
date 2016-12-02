@@ -38,6 +38,7 @@ public class GetInbox {
      * @param userID
      */
     public GetInbox(String userID) {
+        this();
         this.userID = userID;
     }
 

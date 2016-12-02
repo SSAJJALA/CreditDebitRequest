@@ -36,6 +36,7 @@ public class UpdateRequisition {
      * @param cdmr cdmr document
      */
     public UpdateRequisition(CDMR cdmr) {
+        this();
         this.cdmr = cdmr;
     }
 

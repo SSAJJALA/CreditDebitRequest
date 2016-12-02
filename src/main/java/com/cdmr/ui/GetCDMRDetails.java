@@ -38,6 +38,7 @@ public class GetCDMRDetails {
      * @param userID
      */
     public GetCDMRDetails(int reqID, int taskID, String userID) {
+        this();
         this.reqID = reqID;
         this.taskID = taskID;
         this.userID = userID;

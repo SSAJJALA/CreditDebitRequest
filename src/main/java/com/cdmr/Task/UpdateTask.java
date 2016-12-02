@@ -27,6 +27,7 @@ public class UpdateTask {
      * @param taskStatus
      */
     public UpdateTask(int taskID, String taskStatus) {
+        this();
         this.taskID = taskID;
         this.taskStatus = taskStatus;
     }

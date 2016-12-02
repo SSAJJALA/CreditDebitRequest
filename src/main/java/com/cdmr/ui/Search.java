@@ -34,6 +34,7 @@ public class Search {
      * @param searchValue
      */
     public Search(String searchFilter, String operand, String searchValue) {
+        this();
         this.searchFilter = searchFilter;
         this.operand = operand;
         this.searchValue = searchValue;

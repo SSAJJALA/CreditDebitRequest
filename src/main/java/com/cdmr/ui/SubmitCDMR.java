@@ -33,6 +33,7 @@ public class SubmitCDMR {
      * @param cdmr
      */
     public SubmitCDMR(CDMR cdmr) {
+        this();
         this.cdmr = cdmr;
     }
 
