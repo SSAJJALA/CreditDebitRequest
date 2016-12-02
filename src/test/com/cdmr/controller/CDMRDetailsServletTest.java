@@ -33,7 +33,7 @@ public class CDMRDetailsServletTest {
     }
     @Test
     public void doGet() throws Exception {
-        GetCDMRDetails details = new GetCDMRDetails(0, 52, "VYU6026");
+        GetCDMRDetails details = new GetCDMRDetails(0, 53, "VYU6026");
         CDMR cdmr = details.getCDMR();
         Task task = details.getTaskDetails();
         HttpSession session = request.getSession();
