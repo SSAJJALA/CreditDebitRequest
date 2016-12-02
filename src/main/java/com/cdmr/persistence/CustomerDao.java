@@ -27,6 +27,7 @@ public class CustomerDao {
         List<Customer> custs = new ArrayList<Customer>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         custs = session.createCriteria(Customer.class).list();
+        session.close();
         return custs;
     }
 
@@ -38,6 +39,7 @@ public class CustomerDao {
     public Customer getCustomer(int custID) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Customer  cust = (Customer) session.get(Customer.class, custID);
+        session.close();
         return cust;
 
     }
@@ -71,6 +73,7 @@ public class CustomerDao {
         log.info("Customer" + cust.toString());
         session.delete(cust);
         tx.commit();
+        session.close();
         log.info("Customer" + custID + "deleted.");
 
 
@@ -86,6 +89,7 @@ public class CustomerDao {
         Transaction tx = session.beginTransaction();
         session.update(cust);
         tx.commit();
+        session.close();
 
     }
 
@@ -99,6 +103,7 @@ public class CustomerDao {
         c.addOrder(Order.desc("custNum"));
         c.setMaxResults(1);
         Customer cust = (Customer)c.uniqueResult();
+        session.close();
         return cust.getCustNum();
 
     }
