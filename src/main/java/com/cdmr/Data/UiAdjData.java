@@ -112,7 +112,7 @@ public class UiAdjData {
 
     /**
      * set comments
-     * @param  Comments
+     * @param  comments
      */
     public void setComments(String comments) {
         Comments = comments;

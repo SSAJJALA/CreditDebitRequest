@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e87aa6c6-9f49-4c56-aa4a-3444e07e1658" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRAdjustments.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRAdjustments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRComment.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRComment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/Data/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/Data/Customer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cdmr/Data/UiAdjData.java" afterPath="$PROJECT_DIR$/src/main/java/com/cdmr/Data/UiAdjData.java" />
     </list>
     <ignored path="cdmr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,21 +92,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="177" column="46" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
+            <state relative-caret-position="306">
+              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="179" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RouteCDMR.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/approval/RouteCDMR.java">
+      <file leaf-file-name="InvoiceDetails.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/InvoiceDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvoiceHeader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/InvoiceHeader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="180" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UiAdjData.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/UiAdjData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -139,10 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/ui/GetCDMRDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/ui/SubmitCDMR.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/ui/UpdateCDMRDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/ui/ValidateUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/persistence/CdmrUsersDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/persistence/CommentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/persistence/TaskDao.java" />
@@ -190,6 +203,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRAdjustments.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMRComment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cdmr/Data/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/Data/InvoiceDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/Data/InvoiceHeader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/Data/TaskResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cdmr/Data/UiAdjData.java" />
       </list>
     </option>
   </component>
@@ -1188,7 +1205,7 @@
       <workItem from="1480223467225" duration="46349000" />
       <workItem from="1480509846152" duration="17896000" />
       <workItem from="1480547333712" duration="4846000" />
-      <workItem from="1480631501642" duration="4789000" />
+      <workItem from="1480631501642" duration="6258000" />
     </task>
     <servers />
   </component>
@@ -1225,7 +1242,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="869546000" />
+    <option name="totallyTimeSpent" value="871015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1863" height="1056" extended-state="6" />
@@ -1309,34 +1326,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/persistence/TaskAssignmentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/ui/GetInbox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="87" column="46" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/ui/Search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="91" column="39" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/CDMRDetailsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="18" column="112" selection-start-line="18" selection-start-column="112" selection-end-line="18" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/controller/DirectToCreate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1675,14 +1664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/approval/RouteCDMR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/CDMR.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1709,8 +1690,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="177" column="46" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
+        <state relative-caret-position="306">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="179" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/approval/RouteCDMR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/TaskResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="101" column="43" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/InvoiceDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/InvoiceHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="180" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cdmr/Data/UiAdjData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
           <folding />
         </state>
       </provider>
