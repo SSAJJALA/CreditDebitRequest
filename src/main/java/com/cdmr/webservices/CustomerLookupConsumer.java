@@ -56,4 +56,16 @@ public class CustomerLookupConsumer {
 
         return result;
     }
+
+    public void loadProperties() throws Exception {
+        try {
+            properties.load (this.getClass().getResourceAsStream("/cdmr.properties"));
+        } catch (IOException ioe) {
+            log.error("cdmr.loadProperties()...Cannot load the properties file");
+            throw ioe;
+        } catch (Exception e) {
+            log.error("cdmr.loadProperties()..." + e);
+            throw e;
+        }
+    }
 }

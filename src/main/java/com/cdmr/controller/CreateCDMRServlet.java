@@ -7,6 +7,7 @@ import com.cdmr.entity.InvoiceDetail;
 import com.cdmr.entity.InvoiceHeader;
 import com.cdmr.ui.CalculateCDMR;
 import com.cdmr.ui.SubmitCDMR;
+import com.cdmr.util.LoadProperties;
 import com.cdmr.webservices.Customer;
 import com.cdmr.webservices.CustomerLookupConsumer;
 import com.cdmr.webservices.InvoiceLookup;
@@ -89,7 +90,9 @@ public class CreateCDMRServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         try {
-            this.loadProperties();
+            //this.loadProperties();
+            LoadProperties loadProperties = new LoadProperties();
+            properties = loadProperties.loadProperties();
         } catch (Exception e) {
             session.setAttribute("message", "Unable to load CDMR properties");
         }
@@ -287,6 +290,7 @@ public class CreateCDMRServlet extends HttpServlet {
         session.removeAttribute("message");
     }
 
+    /**
     public void loadProperties() throws Exception {
         try {
             properties.load (this.getClass().getResourceAsStream("/cdmr.properties"));
@@ -298,5 +302,6 @@ public class CreateCDMRServlet extends HttpServlet {
             throw e;
         }
     }
+     **/
 
 }

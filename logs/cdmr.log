@@ -3758,3 +3758,17 @@
 2016-12-02 15:42:12,431 707319 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
 2016-12-02 15:42:12,431 707319 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CDMRDetailsServlet  - Exiting cdmr request
 2016-12-02 15:42:12,431 707319 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CDMRDetailsServlet  - Details servlet context:
+2016-12-02 17:32:50,304 0    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-02 17:32:50,308 4    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCustSearch
+2016-12-02 17:32:50,309 5    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInvnull
+2016-12-02 17:32:50,309 5    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculatenull
+2016-12-02 17:32:50,309 5    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submitnull
+2016-12-02 17:32:50,309 5    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancelnull
+2016-12-02 17:32:50,309 5    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_messagenull
+2016-12-02 17:32:50,309 5    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_exitnull
+2016-12-02 17:32:50,311 7    [main] ERROR com.cdmr.controller.CreateCDMRServlet  - cdmr.loadProperties()...java.lang.NullPointerException
+2016-12-02 17:32:50,325 21   [main] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-12-02 17:32:58,728 8424 [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer number:1000
+2016-12-02 17:32:58,728 8424 [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer name:Experis
+2016-12-02 17:32:58,728 8424 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - customr number:1000
+2016-12-02 17:32:58,728 8424 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:

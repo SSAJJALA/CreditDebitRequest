@@ -71,16 +71,10 @@ public class CDMRDetailsServlet extends HttpServlet {
         } else if (request.getParameter("btn_exit") != null) {
             logger.info("Exiting cdmr request");
             this.removeAttributes(session);
-            //session.removeAttribute("cdmr");
-            //session.removeAttribute("taskDetails");
-            //session.removeAttribute("message");
             buttonAction = "Exit";
         } else if (request.getParameter("btn_message") != null) {
             logger.info("directing to index page");
             this.removeAttributes(session);
-            //session.removeAttribute("cdmr");
-            //session.removeAttribute("taskDetails");
-            //session.removeAttribute("message");
             buttonAction = "Message";
         }
 
