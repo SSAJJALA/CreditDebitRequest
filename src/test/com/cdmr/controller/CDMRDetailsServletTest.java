@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 
+import javax.servlet.http.HttpSession;
 import java.security.Principal;
 
 import static org.junit.Assert.*;
@@ -35,10 +36,11 @@ public class CDMRDetailsServletTest {
         GetCDMRDetails details = new GetCDMRDetails(0, 58, "VYU6026");
         CDMR cdmr = details.getCDMR();
         Task task = details.getTaskDetails();
-        request.setAttribute("cdmr", cdmr);
-        request.setAttribute("taskDetails", task);
+        HttpSession session = request.getSession();
+        session.setAttribute("cdmr", cdmr);
+        session.setAttribute("taskDetails", task);
         request.setParameter("btn_approve", "btn_approve");
-        Principal user = new UserPrincipal("SSAJJALA");
+        Principal user = new UserPrincipal("VYU6026");
         request.setUserPrincipal(user);
 
         servlet.doGet(request, response);
