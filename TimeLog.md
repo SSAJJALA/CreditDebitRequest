@@ -20,7 +20,6 @@
 |10/08/2016|Started creating the Junit test cases| 4|| 
 |10/09/2016|Went thru the REST material | 2|| 
 |10/11/2016|Wrote some additional java services(update invoice)| 3|| 
-
 |10/29/2016| Worked on individual project| 2|| 
 |10/30/2016|Worked on creating the CDMR details screen| 2|| 
 |11/01/2016| Worked on fixing the JSP load issue| 3|| 
@@ -45,6 +44,3 @@
 |11/28/2016|Worked on error messages | 1|| 
 |11/29/2016|Worked on creating the selenium script | 2|| 
 |12/01/2016|Polishing the code| 3|| 
-
-
-
