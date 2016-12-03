@@ -1,8 +1,11 @@
 package com.cdmr.persistence;
 
+import com.cdmr.entity.Cdmr;
+import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -12,6 +15,7 @@ import static org.junit.Assert.*;
  */
 public class CdmrDAOnewTest {
     CdmrDAOnew cdmrDaoNew = null;
+    private final Logger log = Logger.getLogger(this.getClass());
 
     @Before
     public void setUp() throws Exception {
@@ -20,13 +24,18 @@ public class CdmrDAOnewTest {
 
     @Test
     public void getAll() throws Exception {
-        List<?> cdmrs = cdmrDaoNew.getAll();
+        List<Cdmr> cdmrs = (List<Cdmr>) cdmrDaoNew.getAll();
+        for (Cdmr tempcdmr : cdmrs) {
+            log.info(tempcdmr.getRequisitionID());
+        }
         assertNotNull("CDMR get all failed", cdmrs);
 
     }
 
     @Test
     public void getOne() throws Exception {
+        Cdmr cdmr = (Cdmr) cdmrDaoNew.getOne(66);
+        assertNotNull("CDMR getOne() failed", cdmr);
 
     }
 
@@ -37,16 +46,24 @@ public class CdmrDAOnewTest {
 
     @Test
     public void delete() throws Exception {
+        cdmrDaoNew.delete(54);
 
     }
 
     @Test
     public void update() throws Exception {
+        Cdmr cdmr = (Cdmr) cdmrDaoNew.getOne(66);
+        cdmrDaoNew.update(cdmr);
 
     }
 
     @Test
     public void getWithFilters() throws Exception {
+        List<Cdmr> cdmrs = (List<Cdmr>)cdmrDaoNew.getWithFilters("requisitionID","=","61");
+        for (Cdmr tempcdmr : cdmrs) {
+            log.info(tempcdmr.getRequisitionID());
+        }
+        assertNotNull("CDMR get all failed", cdmrs);
 
     }
 

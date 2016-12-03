@@ -30,13 +30,23 @@ public class CustomerLookup {
     @Path("{param1}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Consumes({"text/plain,text/html"})
-    public Response getCustomer(@PathParam("param1") int custNum) {
-        int custNo = custNum;
-        Customer cust;
-        CustomerDao custDao = new CustomerDao();
-        cust = custDao.getCustomer(custNo);
-        //return cust;
-        return Response.status(200).entity(cust).build();
+    public Response getCustomer(@PathParam("param1") int custNum) throws  CustomerNumberInvalidException, CustomerNotFoundException{
+
+        if (custNum == 0 || custNum < 0) {
+            throw new CustomerNumberInvalidException();
+        } else {
+            int custNo = custNum;
+            Customer cust;
+            CustomerDao custDao = new CustomerDao();
+            cust = custDao.getCustomer(custNo);
+
+            if(cust == null) {
+                throw new CustomerNotFoundException();
+            }
+            //return cust;
+            return Response.ok().entity(cust).build();
+            //return Response.status(200).entity(cust).build();
+        }
     }
 
 }
