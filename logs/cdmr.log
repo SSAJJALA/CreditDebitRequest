@@ -4053,3 +4053,7 @@
 2016-12-03 12:57:41,698 7555 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
 2016-12-03 13:00:12,483 0    [main] ERROR com.cdmr.webservices.CustomerLookupConsumer  - Customer lookup webservice not available:Customer not found:404
 2016-12-03 13:04:26,891 0    [main] ERROR com.cdmr.webservices.CustomerLookupConsumer  - Customer lookup webservice not available:Customer not found:404
+2016-12-03 13:07:48,847 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumerTest  - Customer number: 1000
+2016-12-03 13:10:57,752 0    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-03 13:11:16,321 18569 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-12-03 13:12:06,944 69192 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:

@@ -109,7 +109,7 @@ public class CreateCDMRServlet extends HttpServlet {
             } catch (Exception e) {
                 logger.error("Customer lookup failed:" +e.getMessage());
                 session.setAttribute("message", e.getMessage());
-
+                gotException = "true";
             }
             /**
             try {
@@ -133,6 +133,10 @@ public class CreateCDMRServlet extends HttpServlet {
             }
              **/
 
+            if (!gotException.equals("true")) {
+                session.setAttribute("customerResults", customerDtls);
+                logger.info("customr number:" + customerDtls.getCustNum());
+            }
             buttonAction = "customer";
 
 
