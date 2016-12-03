@@ -76,6 +76,7 @@ public class CreateCDMRServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("inside create cdmr servlet @ get");
+        /**
         logger.info(buttonCustomer + request.getParameter(buttonCustomer));
         logger.info(buttonInvoice + request.getParameter(buttonInvoice));
         logger.info(buttonCalculate + request.getParameter(buttonCalculate));
@@ -83,6 +84,7 @@ public class CreateCDMRServlet extends HttpServlet {
         logger.info(buttonCancel + request.getParameter(buttonCancel));
         logger.info(buttonMessage + request.getParameter(buttonMessage));
         logger.info(buttonExit + request.getParameter(buttonExit));
+        **/
 
         String buttonAction = "";
         String gotException = "";
@@ -105,12 +107,21 @@ public class CreateCDMRServlet extends HttpServlet {
             try {
                 customerDtls = customerWebService.getCustomerApiJSON(Integer.parseInt(request.getParameter("customer")));
             } catch (Exception e) {
+                logger.error("Customer lookup failed:" +e.getMessage());
+                session.setAttribute("message", e.getMessage());
+
+            }
+            /**
+            try {
+                customerDtls = customerWebService.getCustomerApiJSON(Integer.parseInt(request.getParameter("customer")));
+            } catch (Exception e) {
                 StringWriter sw = new StringWriter();
                 e.printStackTrace(new PrintWriter(sw));
                 String exception = sw.toString();
                 logger.error(exception);
                 gotException = "true";
             }
+
 
             if (gotException.equals("true")) {
                 session.setAttribute("message", properties.getProperty("customerWebservice_01"));
@@ -120,6 +131,7 @@ public class CreateCDMRServlet extends HttpServlet {
                 session.setAttribute("customerResults", customerDtls);
                 logger.info("customr number:" + customerDtls.getCustNum());
             }
+             **/
 
             buttonAction = "customer";
 
