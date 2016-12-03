@@ -4019,3 +4019,4 @@
 2016-12-03 01:47:10,699 2601 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
 2016-12-03 01:47:12,656 4558 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - CDMR:Cdmr{requisitionID=54, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}
 2016-12-03 01:47:12,762 4664 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - CDMR54deleted.
+2016-12-03 11:30:38,032 0    [main] ERROR com.cdmr.webservices.CustomerLookupConsumer  - Customer lookup webservice not available:java.net.ConnectException: Connection refused

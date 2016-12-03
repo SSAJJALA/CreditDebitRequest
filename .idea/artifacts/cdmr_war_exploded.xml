@@ -89,6 +89,8 @@
           <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-io:9.2.15.v20160210" />
           <element id="library" level="project" name="Maven: org.eclipse.jetty.websocket:websocket-common:9.2.15.v20160210" />
           <element id="library" level="project" name="Maven: org.eclipse.jetty.websocket:websocket-api:9.2.15.v20160210" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-client:1.8" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-core:1.8" />
         </element>
       </element>
       <element id="directory" name="META-INF">

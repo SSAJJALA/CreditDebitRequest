@@ -3,13 +3,17 @@ package com.cdmr.webservices;
 import com.cdmr.util.LoadProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
-
+/**
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+ **/
 import java.io.IOException;
 import java.util.Properties;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
 
 /**
  * CustomerLookupConsumer is the web service client to call customer lookup rest web service. This gets the customer details and map it to Customer object.
@@ -30,15 +34,45 @@ public class CustomerLookupConsumer {
      */
     public Customer getCustomerApiJSON(int customerNo) throws Exception {
         properties = new Properties();
-        Customer result = null;
+        Customer customer = null;
 
         try {
             //this.loadProperties();
             LoadProperties loadProperties = new LoadProperties();
             properties = loadProperties.loadProperties();
+
+            Client client = Client.create();
+            WebResource webResource = client.resource(properties.getProperty("customerLookupURL") + customerNo);
+            ClientResponse response = webResource.accept("application/json").get(ClientResponse.class);
+
+            if(response.getStatus() == 400) {
+                throw new RuntimeException(properties.getProperty("customerLookupError_01") +":"+ response.getStatus());
+
+            }
+            if(response.getStatus() == 404) {
+                throw new RuntimeException(properties.getProperty("customerLookupError_02") +":"+ response.getStatus());
+
+            }
+            if(response.getStatus() == 500) {
+                throw new RuntimeException(properties.getProperty("customerLookupError_03") +":"+ response.getStatus());
+
+            }
+
+            if(response.getStatus() == 200) {
+                String customerString = response.getEntity(String.class);
+                ObjectMapper mapper = new ObjectMapper();
+                customer = mapper.readValue(customerString, Customer.class);
+            }
+
         } catch (Exception e) {
-            throw e;
+            log.error(properties.getProperty("customerLookupError_04") + ":" + e.getMessage());
+            throw new RuntimeException(properties.getProperty("customerLookupError_04"));
+
         }
+
+        return customer;
+
+
 
         /**
         try {
@@ -51,7 +85,9 @@ public class CustomerLookupConsumer {
             e.printStackTrace();
         }
          **/
+        /**
         Client client = ClientBuilder.newClient();
+
         WebTarget target =
                 client.target(properties.getProperty("customerLookupURL") + customerNo);
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
@@ -66,6 +102,11 @@ public class CustomerLookupConsumer {
         }
 
         return result;
+         **/
+
+
+
+
     }
 
 }
