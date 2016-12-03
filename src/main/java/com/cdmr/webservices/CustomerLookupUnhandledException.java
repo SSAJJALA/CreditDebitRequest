@@ -8,13 +8,13 @@ import javax.ws.rs.core.Response;
 import java.util.Properties;
 
 /**
- * Customer Lookup web service exceptions
+ * Customer Lookup unhandled exceptions
  *
  * @author  Siva Sajjala
  * @version 1.0
  * @since   2016-12-03
  */
-public class CustomerNotFoundException extends WebApplicationException {
+public class CustomerLookupUnhandledException extends WebApplicationException {
     private Properties properties;
     private final Logger logger = Logger.getLogger(this.getClass());
 
@@ -26,7 +26,7 @@ public class CustomerNotFoundException extends WebApplicationException {
         } catch (Exception e) {
             logger.info("Unable to load CDMR properties");
         }
-        //HTTP response code 404
-        return Response.status(Response.Status.NOT_FOUND).entity(properties.getProperty("customerLookupError_02")).build();
+        //HTTP response code 500
+        return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(properties.getProperty("customerLookupError_03")).build();
     }
 }
