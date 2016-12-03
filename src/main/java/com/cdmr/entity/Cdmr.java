@@ -59,7 +59,21 @@ public class Cdmr {
     public Cdmr() {
     }
 
-
+    /**
+     * Arg constructor
+     * @param requisitionID
+     * @param status
+     * @param custNum
+     * @param custName
+     * @param invNum
+     * @param invDate
+     * @param invAmount
+     * @param salesRepID
+     * @param salesRepName
+     * @param adjAmnt
+     * @param cdmrDate
+     * @param type
+     */
     public Cdmr(int requisitionID, String status, int custNum, String custName, int invNum, LocalDate invDate, double invAmount, String salesRepID, String salesRepName, double adjAmnt, LocalDate cdmrDate, String type) {
         this();
         this.requisitionID = requisitionID;
