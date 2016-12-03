@@ -3800,3 +3800,5 @@
 2016-12-02 17:52:47,445 4570 [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer name:Experis
 2016-12-02 17:52:47,445 4570 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - customr number:1000
 2016-12-02 17:52:47,445 4570 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-02 18:03:36,335 1    [main] ERROR com.cdmr.util.LoadProperties  - cdmr.loadProperties()...java.lang.NullPointerException
+2016-12-02 18:11:46,511 0    [main] ERROR com.cdmr.util.LoadProperties  - cdmr.loadProperties()...java.lang.NullPointerException

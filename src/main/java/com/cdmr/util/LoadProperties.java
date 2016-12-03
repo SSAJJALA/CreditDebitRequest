@@ -22,6 +22,7 @@ public class LoadProperties {
      * @throws Exception
      */
     public Properties loadProperties() throws Exception {
+        properties = new Properties();
         try {
             properties.load (this.getClass().getResourceAsStream("/cdmr.properties"));
         } catch (IOException ioe) {
