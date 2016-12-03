@@ -63,8 +63,10 @@ public class CustomerLookupConsumer {
                 ObjectMapper mapper = new ObjectMapper();
                 customer = mapper.readValue(customerString, Customer.class);
             }
+            client.destroy();
 
         } catch (Exception e) {
+
             log.error(properties.getProperty("customerLookupError_04") + ":" + e.getMessage());
             throw new RuntimeException(properties.getProperty("customerLookupError_04"));
 
