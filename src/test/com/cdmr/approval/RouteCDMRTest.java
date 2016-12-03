@@ -16,11 +16,11 @@ public class RouteCDMRTest {
 
     @Before
     public void setUp() throws Exception {
-        GetRequisition getCDMR = new GetRequisition(66);
+        GetRequisition getCDMR = new GetRequisition(63);
         CDMR cdmr = getCDMR.getRequisition();
         TaskResponse taskResponse = new TaskResponse();
         taskResponse.setTaskName("DSM Approval");
-        taskResponse.setTaskID(61);
+        taskResponse.setTaskID(56);
         taskResponse.setApproverID("VYU6026");
         taskResponse.setApprovalDecesion("Approved");
         route = new RouteCDMR(cdmr, taskResponse);
