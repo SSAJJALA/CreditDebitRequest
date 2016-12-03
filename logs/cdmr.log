@@ -4021,3 +4021,35 @@
 2016-12-03 01:47:12,762 4664 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - CDMR54deleted.
 2016-12-03 11:30:38,032 0    [main] ERROR com.cdmr.webservices.CustomerLookupConsumer  - Customer lookup webservice not available:java.net.ConnectException: Connection refused
 2016-12-03 11:39:18,984 0    [main] ERROR com.cdmr.webservices.CustomerLookupConsumer  - Customer lookup webservice not available:java.net.ConnectException: Connection refused
+2016-12-03 12:57:34,143 0    [http-nio-8080-exec-4] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
+2016-12-03 12:57:38,206 4063 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-12-03 12:57:38,206 4063 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-03 12:57:38,207 4064 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-12-03 12:57:38,688 4545 [http-nio-8080-exec-6] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-03 12:57:38,698 4555 [http-nio-8080-exec-6] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-03 12:57:38,701 4558 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-12-03 12:57:38,703 4560 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-12-03 12:57:38,728 4585 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-12-03 12:57:38,729 4586 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-12-03 12:57:38,817 4674 [http-nio-8080-exec-6] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-12-03 12:57:38,935 4792 [http-nio-8080-exec-6] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-12-03 12:57:38,939 4796 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD?useSSL=false]
+2016-12-03 12:57:38,939 4796 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-12-03 12:57:38,939 4796 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-12-03 12:57:38,941 4798 [http-nio-8080-exec-6] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-12-03 12:57:39,229 5086 [http-nio-8080-exec-6] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-03 12:57:39,629 5486 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-03 12:57:39,630 5487 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-03 12:57:39,631 5488 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-12-03 12:57:39,631 5488 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-12-03 12:57:39,632 5489 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-03 12:57:39,632 5489 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-03 12:57:39,632 5489 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-12-03 12:57:39,632 5489 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-12-03 12:57:39,632 5489 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-03 12:57:39,632 5489 [http-nio-8080-exec-6] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-03 12:57:39,644 5501 [http-nio-8080-exec-6] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-12-03 12:57:39,651 5508 [http-nio-8080-exec-6] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-12-03 12:57:41,698 7555 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-03 13:00:12,483 0    [main] ERROR com.cdmr.webservices.CustomerLookupConsumer  - Customer lookup webservice not available:Customer not found:404
+2016-12-03 13:04:26,891 0    [main] ERROR com.cdmr.webservices.CustomerLookupConsumer  - Customer lookup webservice not available:Customer not found:404

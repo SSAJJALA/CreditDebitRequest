@@ -25,9 +25,9 @@ public class CustomerLookupConsumerTest {
     public void getCustomerApiJSON() throws Exception {
         Customer cust = null;
         try {
-            cust = customerLookup.getCustomerApiJSON(1);
+            cust = customerLookup.getCustomerApiJSON(1000);
             log.info("Customer number: " + cust.getCustNum());
-            assertEquals("Customer doesn't match", 1, cust.getCustNum());
+            assertEquals("Customer doesn't match", 1000, cust.getCustNum());
         } catch (Exception e) {
             assertEquals("Customer lookup failed", "Customer lookup webservice not available", e.getMessage());
         }
