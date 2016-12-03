@@ -35,15 +35,17 @@ public class CustomerLookupConsumer {
     public Customer getCustomerApiJSON(int customerNo) throws Exception {
         properties = new Properties();
         Customer customer = null;
+        final Client client = Client.create();
+        WebResource webResource = null;
+        ClientResponse response = null;
 
         try {
             //this.loadProperties();
             LoadProperties loadProperties = new LoadProperties();
             properties = loadProperties.loadProperties();
 
-            Client client = Client.create();
-            WebResource webResource = client.resource(properties.getProperty("customerLookupURL") + customerNo);
-            ClientResponse response = webResource.accept("application/json").get(ClientResponse.class);
+            webResource = client.resource(properties.getProperty("customerLookupURL") + customerNo);
+            response = webResource.accept("application/json").get(ClientResponse.class);
 
             if(response.getStatus() == 400) {
                 throw new RuntimeException(properties.getProperty("customerLookupError_01") +":"+ response.getStatus());
@@ -63,12 +65,20 @@ public class CustomerLookupConsumer {
                 ObjectMapper mapper = new ObjectMapper();
                 customer = mapper.readValue(customerString, Customer.class);
             }
-            client.destroy();
+
 
         } catch (Exception e) {
 
             log.error(properties.getProperty("customerLookupError_04") + ":" + e.getMessage());
             throw new RuntimeException(properties.getProperty("customerLookupError_04"));
+
+        } finally {
+            if (response != null) {
+                response.close();
+            }
+            if (client != null) {
+                client.destroy();
+            }
 
         }
 
