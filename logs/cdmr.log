@@ -3802,3 +3802,18 @@
 2016-12-02 17:52:47,445 4570 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
 2016-12-02 18:03:36,335 1    [main] ERROR com.cdmr.util.LoadProperties  - cdmr.loadProperties()...java.lang.NullPointerException
 2016-12-02 18:11:46,511 0    [main] ERROR com.cdmr.util.LoadProperties  - cdmr.loadProperties()...java.lang.NullPointerException
+2016-12-02 18:12:09,496 0    [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer not found: 1
+2016-12-02 18:12:09,497 1    [main] INFO  com.cdmr.webservices.CustomerLookupConsumerTest  - Customer number not found
+2016-12-02 18:15:00,098 0    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-02 18:15:00,099 1    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retCustSearch
+2016-12-02 18:15:00,099 1    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_retInvnull
+2016-12-02 18:15:00,099 1    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_calculatenull
+2016-12-02 18:15:00,099 1    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_submitnull
+2016-12-02 18:15:00,100 2    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_cancelnull
+2016-12-02 18:15:00,101 3    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_messagenull
+2016-12-02 18:15:00,101 3    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - btn_exitnull
+2016-12-02 18:15:00,103 5    [main] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-12-02 18:15:02,256 2158 [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer number:1000
+2016-12-02 18:15:02,256 2158 [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - customer name:Experis
+2016-12-02 18:15:02,257 2159 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - customr number:1000
+2016-12-02 18:15:02,257 2159 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:

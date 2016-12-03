@@ -31,6 +31,14 @@ public class CDMRDetailsServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
     /**
+     * Constants for action buttons
+     */
+    public static final String buttonApprove = "btn_approve";
+    public static final String buttonReject = "btn_reject";
+    public static final String buttonMessage = "btn_message";
+    public static final String buttonExit = "btn_exit";
+
+    /**
      * Method for post
      * @param request HttpServletRequest
      * @param response HttpServletResponse
@@ -56,23 +64,23 @@ public class CDMRDetailsServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
 
-        if (request.getParameter("btn_approve") != null) {
+        if (request.getParameter(buttonApprove) != null) {
             logger.info("Approving the cdmr request");
             buttonAction = "Approved";
             String message = this.completeTaskAction(request, response, buttonAction, session);
             session.setAttribute("message", message);
 
-        } else if (request.getParameter("btn_reject") != null) {
+        } else if (request.getParameter(buttonReject) != null) {
             logger.info("Rejecting the cdmr request");
             buttonAction = "Rejected";
             String message = this.completeTaskAction(request, response, buttonAction, session);
             session.setAttribute("message", message);
 
-        } else if (request.getParameter("btn_exit") != null) {
+        } else if (request.getParameter(buttonExit) != null) {
             logger.info("Exiting cdmr request");
             this.removeAttributes(session);
             buttonAction = "Exit";
-        } else if (request.getParameter("btn_message") != null) {
+        } else if (request.getParameter(buttonMessage) != null) {
             logger.info("directing to index page");
             this.removeAttributes(session);
             buttonAction = "Message";

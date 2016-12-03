@@ -32,6 +32,11 @@ public class InboxServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
     /**
+     * Constants for action buttons
+     */
+    public static final String buttonExit = "btn_exit";
+
+    /**
      * Method for post
      * @param request HttpServletRequest
      * @param response HttpServletResponse
@@ -55,7 +60,7 @@ public class InboxServlet extends HttpServlet {
         response.setContentType("text/html");
         String buttonAction = "";
 
-        if (request.getParameter("btn_exit") != null) {
+        if (request.getParameter(buttonExit) != null) {
             logger.info("directing to index page");
             request.removeAttribute("inbox");
             buttonAction = "Exit";

@@ -32,6 +32,12 @@ public class SearchServlet extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
     /**
+     * Constants for action buttons
+     */
+    public static final String buttonApprove = "btn_search";
+    public static final String buttonExit = "btn_exit";
+
+    /**
      * Method for post
      * @param request HttpServletRequest
      * @param response HttpServletResponse
@@ -54,7 +60,7 @@ public class SearchServlet extends HttpServlet {
         response.setContentType("text/html");
         String buttonAction = "";
 
-        if (request.getParameter("btn_search") != null) {
+        if (request.getParameter(buttonApprove) != null) {
             Search searchObj = null;
             String searchFilter = request.getParameter("searchoptions");
             logger.info("searchFilter: " + searchFilter);
@@ -66,7 +72,7 @@ public class SearchServlet extends HttpServlet {
             List<SearchCDMR> results = searchObj.search();
             request.setAttribute("results", results);
             buttonAction = "Search";
-        } else if (request.getParameter("btn_exit") != null) {
+        } else if (request.getParameter(buttonExit) != null) {
             logger.info("directing to index page");
             request.removeAttribute("results");
             buttonAction = "Exit";

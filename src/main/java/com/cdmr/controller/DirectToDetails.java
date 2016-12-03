@@ -64,13 +64,10 @@ public class DirectToDetails extends HttpServlet {
         if (taskID != 0) {
             CDMR cdmr = details.getCDMR();
             Task task = details.getTaskDetails();
-            //request.setAttribute("cdmr", cdmr);
-            //request.setAttribute("taskDetails", task);
             session.setAttribute("cdmr", cdmr);
             session.setAttribute("taskDetails", task);
         } else if (ReqID != 0) {
             CDMR cdmr = details.getCDMR();
-            //request.setAttribute("cdmr", cdmr);
             session.setAttribute("cdmr", cdmr);
         }
         logger.info("direct to details servlet context:" + request.getContextPath());
