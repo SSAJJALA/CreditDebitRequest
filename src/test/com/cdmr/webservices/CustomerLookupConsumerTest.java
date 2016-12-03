@@ -31,10 +31,6 @@ public class CustomerLookupConsumerTest {
         } catch (Exception e) {
             assertEquals("Customer lookup failed", "Customer lookup webservice not available", e.getMessage());
         }
-
-
-
-
     }
 
 }
