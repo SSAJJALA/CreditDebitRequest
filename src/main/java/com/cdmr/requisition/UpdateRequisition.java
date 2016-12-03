@@ -8,6 +8,7 @@ import com.cdmr.entity.Filter;
 import com.cdmr.persistence.CommentDao;
 import com.cdmr.util.CDMRCommentSeqComparator;
 import com.cdmr.util.CommentSeqComparator;
+import com.cdmr.util.CreateFilter;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -122,22 +123,15 @@ public class UpdateRequisition {
         List<Filter> filters = new ArrayList<Filter>();
 
         //Add first filter
-        Filter filter1 = new Filter();
-        filter1.setSearchValue(Integer.toString(cdmr.getRequisitionID()));
-        filter1.setOperand("=");
-        filter1.setSearchOption("requisitionID");
+        Filter filter1 = new CreateFilter().getFilter(Integer.toString(cdmr.getRequisitionID()), "=", "requisitionID");
         filters.add(filter1);
 
         //Add second filter
-        Filter filter2 = new Filter();
-        filter2.setSearchValue(Integer.toString(itemNum));
-        filter2.setOperand("=");
-        filter2.setSearchOption("itemNum");
+        Filter filter2 = new CreateFilter().getFilter(Integer.toString(itemNum), "=", "itemNum");
         filters.add(filter2);
 
         List<Comment> commentsFromDB = commentsDao.getCommentsWithFilter(filters);
         return commentsFromDB;
     }
-
 
 }

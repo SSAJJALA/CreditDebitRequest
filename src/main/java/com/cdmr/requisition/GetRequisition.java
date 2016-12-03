@@ -5,6 +5,7 @@ import com.cdmr.Data.CDMRAdjustments;
 import com.cdmr.Data.CDMRComment;
 import com.cdmr.entity.*;
 import com.cdmr.persistence.*;
+import com.cdmr.util.CreateFilter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -258,17 +259,11 @@ public class GetRequisition {
         List<Filter> filters = new ArrayList<Filter>();
 
         //Add first filter
-        Filter filter1 = new Filter();
-        filter1.setSearchValue(Integer.toString(reqID));
-        filter1.setOperand("=");
-        filter1.setSearchOption("requisitionID");
+        Filter filter1 = new CreateFilter().getFilter(Integer.toString(reqID), "=", "requisitionID");
         filters.add(filter1);
 
         //Add second filter
-        Filter filter2 = new Filter();
-        filter2.setSearchValue(Integer.toString(itemNum));
-        filter2.setOperand("=");
-        filter2.setSearchOption("itemNum");
+        Filter filter2 = new CreateFilter().getFilter(Integer.toString(itemNum), "=", "itemNum");
         filters.add(filter2);
 
         List<Comment> comments = commentDao.getCommentsWithFilter(filters);
@@ -287,7 +282,5 @@ public class GetRequisition {
         return commentsData;
 
     }
-
-
 
 }

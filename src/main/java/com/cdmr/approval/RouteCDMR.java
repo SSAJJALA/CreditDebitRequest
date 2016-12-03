@@ -80,11 +80,19 @@ public class RouteCDMR {
      */
     public String routeCDMR() {
 
+
         //Update CDMR comments (if any)
         UpdateRequisition updateReq = new UpdateRequisition(cdmr);
         updateReq.updateCDMR();
         String message = null;
 
+        if (taskResponse == null) {
+            message = this.routeToDSM();
+        } else {
+            message = this.handleRouting();
+        }
+
+        /**
         if (taskResponse != null) {
             if (taskResponse.getApprovalDecesion().equals("Approved")) {
                 if (taskResponse.getTaskName().equals("DSM Approval")) {
@@ -122,9 +130,11 @@ public class RouteCDMR {
             message = "CDMR routed to DSM";
 
         }
+         **/
 
         return message;
     }
+
 
     /**
      * Method to update te task status to complete
@@ -170,5 +180,66 @@ public class RouteCDMR {
         int taskID = queueTask.createTask();
         log.info(role + " Task created. Task ID is " + taskID );
         return taskID;
+    }
+
+
+    /**
+     * Handle task assignment to DSM
+     * @return message
+     */
+    public String routeToDSM() {
+        //New requisition. Route to DSM
+        int taskID = this.routeToNextApprover("DSM");
+        String message = "CDMR routed to DSM";
+        return message;
+    }
+
+    /**
+     * Handle routing
+     * @return message status
+     */
+    public String handleRouting() {
+        String message = null;
+        switch (taskResponse.getApprovalDecesion()) {
+            case "Approved" :
+                message = this.handleApproval();
+            case "Rejected" :
+                message = this.handleRejection();
+        }
+        return message;
+    }
+
+    /**
+     * Handle DSM and FM approvals
+     * @return message status
+     */
+    public String handleApproval() {
+        String message = null;
+        switch (taskResponse.getTaskName()) {
+            case "DSM Approval" :
+                this.updateTaskStatus("Complete");
+                //route CDMR to FM
+                int taskID = this.routeToNextApprover("FM");
+                message = "CDMR routed to FM";
+            case "FM Approval"  :
+                this.updateTaskStatus("Complete");
+                this.updateCdmrStatus("Approved");
+                log.info("CDMR final approval received. No more routing required");
+                message = "CDMR final approval received. No more routing required";
+        }
+        return message;
+    }
+
+    /**
+     * Handle Rejections
+     * @return message status
+     */
+    public String handleRejection() {
+        String message = null;
+        this.updateTaskStatus("Complete");
+        this.updateCdmrStatus("Rejected");
+        log.info("CDMR Rejected");
+        message = "CDMR Rejected";
+        return message;
     }
 }
