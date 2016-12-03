@@ -1,5 +1,6 @@
 package com.cdmr.webservices;
 
+import com.cdmr.util.LoadProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
 
@@ -32,6 +33,14 @@ public class CustomerLookupConsumer {
         Customer result = null;
 
         try {
+            //this.loadProperties();
+            LoadProperties loadProperties = new LoadProperties();
+            properties = loadProperties.loadProperties();
+        } catch (Exception e) {
+            throw e;
+        }
+
+        try {
             properties.load (this.getClass().getResourceAsStream("/cdmr.properties"));
         } catch (IOException ioe) {
             System.out.println("cdmr.loadProperties()...Cannot load the properties file");
@@ -57,6 +66,7 @@ public class CustomerLookupConsumer {
         return result;
     }
 
+    /**
     public void loadProperties() throws Exception {
         try {
             properties.load (this.getClass().getResourceAsStream("/cdmr.properties"));
@@ -68,4 +78,5 @@ public class CustomerLookupConsumer {
             throw e;
         }
     }
+     **/
 }
