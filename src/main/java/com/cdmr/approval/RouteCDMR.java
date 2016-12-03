@@ -201,10 +201,12 @@ public class RouteCDMR {
     public String handleRouting() {
         String message = null;
         switch (taskResponse.getApprovalDecesion()) {
-            case "Approved" :
+            case "Approved":
                 message = this.handleApproval();
-            case "Rejected" :
+                break;
+            case "Rejected":
                 message = this.handleRejection();
+                break;
         }
         return message;
     }
@@ -216,16 +218,18 @@ public class RouteCDMR {
     public String handleApproval() {
         String message = null;
         switch (taskResponse.getTaskName()) {
-            case "DSM Approval" :
+            case "DSM Approval":
                 this.updateTaskStatus("Complete");
                 //route CDMR to FM
                 int taskID = this.routeToNextApprover("FM");
                 message = "CDMR routed to FM";
-            case "FM Approval"  :
+                break;
+            case "FM Approval":
                 this.updateTaskStatus("Complete");
                 this.updateCdmrStatus("Approved");
                 log.info("CDMR final approval received. No more routing required");
                 message = "CDMR final approval received. No more routing required";
+                break;
         }
         return message;
     }
