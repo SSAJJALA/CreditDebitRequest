@@ -112,7 +112,7 @@ public class RequisitionDAOnew extends GenericDAO{
         Session session = getSession();
         Transaction tx = session.beginTransaction();
         Requisition req = (Requisition) session.load(Requisition.class,t);
-        log.info("Requisition" + req.toString());
+        //log.info("Requisition" + req.toString());
         session.delete(req);
         tx.commit();
         session.close();
