@@ -18,14 +18,14 @@ Desc: Valid Customer Number
 
 |Field|Type|Description|
 |-----|----|---------------|
-/custNum/int/Customer Number/
-/custName/String/Customer Name/
-/add1/String/Customer address/
-/add2/String/Customer address/
-/city/String/City/
-/state/String/State/
-/Zip/String/Zip code/
-/Phone/String/Customer Phone number/
+|custNum|int|Customer Number|
+|custName|String|Customer Name|
+|add1|String|Customer address|
+|add2|String|Customer address|
+|city|String|City|
+|state|String|State|
+|Zip|String|Zip code|
+|Phone|String|Customer Phone number|
 
 
 
