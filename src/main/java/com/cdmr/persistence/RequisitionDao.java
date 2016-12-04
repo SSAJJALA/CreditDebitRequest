@@ -72,7 +72,8 @@ public class RequisitionDao {
     public int getLastReqID() {
 
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        String queryString = String.format("SELECT LAST_INSERT_ID() AS LAST_ID FROM REQUISITION");
+        //String queryString = String.format("SELECT LAST_INSERT_ID() AS LAST_ID FROM REQUISITION");
+        String queryString = String.format("SELECT LAST_INSERT_ID() AS LAST_ID FROM Requisition");
         int reqID;
 
         Query query = session.createQuery(queryString);
