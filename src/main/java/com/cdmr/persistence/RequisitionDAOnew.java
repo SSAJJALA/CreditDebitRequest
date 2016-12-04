@@ -93,7 +93,8 @@ public class RequisitionDAOnew extends GenericDAO{
      */
     public int getLastReqID() throws HibernateException {
         Session session = getSession();
-        String queryString = String.format("SELECT LAST_INSERT_ID() AS LAST_ID FROM REQUISITION");
+        //String queryString = String.format("SELECT LAST_INSERT_ID() AS LAST_ID FROM REQUISITION");
+        String queryString = String.format("SELECT LAST_INSERT_ID() AS LAST_ID FROM Requisition");
         int reqID;
 
         Query query = session.createQuery(queryString);
