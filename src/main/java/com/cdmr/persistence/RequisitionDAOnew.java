@@ -27,8 +27,8 @@ public class RequisitionDAOnew extends GenericDAO{
         return null;
     }
 
-    /** Return a list of all users
-     *
+    /**
+     * Return a list of all requisitions
      * @return All requisitions
      */
     @Override
