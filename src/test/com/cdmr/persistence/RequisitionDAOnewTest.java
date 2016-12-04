@@ -46,8 +46,8 @@ public class RequisitionDAOnewTest {
 
     @Test
     public void delete() throws Exception {
-        requisitionDAOnew.delete(1);
-        Requisition  req = (Requisition) requisitionDAOnew.getOne(1);
+        requisitionDAOnew.delete(2);
+        Requisition  req = (Requisition) requisitionDAOnew.getOne(2);
         assertNull("Unable to delete requisition", req);
 
     }
