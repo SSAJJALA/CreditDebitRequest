@@ -1,6 +1,5 @@
 package com.cdmr.persistence;
 
-import com.cdmr.Data.CDMR;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.util.AddRestrictions;
 import com.cdmr.util.ConvertToLocalDate;
@@ -41,7 +40,7 @@ public class CdmrDAOnew extends GenericDAO {
     public List<?> getAll() throws HibernateException {
         List<Cdmr> cdmrs = new ArrayList<Cdmr>();
         Session session = getSession();
-        cdmrs = session.createCriteria(Cdmr.class).list();
+        cdmrs = (List<Cdmr>) session.createCriteria(Cdmr.class).list();
         session.close();
         return cdmrs;
     }
@@ -82,19 +81,19 @@ public class CdmrDAOnew extends GenericDAO {
 
     /**
      * Delete a CDMR
-     * @param reqID
+     * @param custID
      * @throws HibernateException
      */
     @Override
-    public void delete(int reqID) throws HibernateException {
+    public void delete(int custID) throws HibernateException {
         Session session = getSession();
         Transaction tx = session.beginTransaction();
-        Cdmr cdmr = (Cdmr) session.load(Cdmr.class,reqID);
+        Cdmr cdmr = (Cdmr) session.load(Cdmr.class,custID);
         log.info("CDMR:" + cdmr.toString());
         session.delete(cdmr);
         tx.commit();
         session.close();
-        log.info("CDMR" + reqID + "deleted.");
+        log.info("CDMR" + custID + "deleted.");
     }
 
     /**

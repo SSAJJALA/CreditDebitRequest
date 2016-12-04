@@ -1,6 +1,5 @@
 package com.cdmr.persistence;
 
-import com.cdmr.entity.Cdmr;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
@@ -40,5 +39,9 @@ public abstract class GenericDAO {
     public List<?> getWithFilters(String a, String b, String c) throws HibernateException {
 
         return new ArrayList<Object>();
+    }
+
+    public int getMaxID() {
+        return 0;
     }
 }
