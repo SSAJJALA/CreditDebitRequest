@@ -22,9 +22,13 @@ import java.util.List;
 public class RequisitionDAOnew extends GenericDAO{
     private final Logger log = Logger.getLogger(this.getClass());
 
+    /**
+     * get session
+     * @return session
+     */
     @Override
     protected Session getSession() {
-        return null;
+        return SessionFactoryProvider.getSessionFactory().openSession();
     }
 
     /**
