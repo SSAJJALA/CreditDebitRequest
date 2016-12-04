@@ -15,7 +15,11 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created by student on 9/26/16.
+ * This is concrete implementation for abstract class GenericDAO. Fetches from the DB table CDMR_ADJUSTMENTS
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-12-04
  */
 public class CdmrAdjustmentsDao {
     private final Logger log = Logger.getLogger(this.getClass());

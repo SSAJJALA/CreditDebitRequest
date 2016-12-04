@@ -4,6 +4,7 @@ import com.cdmr.entity.Filter;
 import com.cdmr.entity.InvoiceDetail;
 import com.cdmr.entity.InvoiceDetailPK;
 import com.cdmr.util.AddRestrictions;
+import com.cdmr.util.GetUpdatedCriteria;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This is concrete implementation for abstact class GenericDAO. Fetches from the DB table INVOICE_DETAIL
+ * This is concrete implementation for abstract class GenericDAO. Fetches from the DB table INVOICE_DETAIL
  *
  * @author  Siva Sajjala
  * @version 1.0
@@ -115,7 +116,7 @@ public class InvoiceDetailDAOnew extends GenericDAO{
         Criteria c = session.createCriteria(InvoiceDetail.class);
         List<InvoiceDetail> invoiceDetails = null;
         List<Filter> filters = (List<Filter>) obj;
-        c= getUpdatedCriteria(c, filters);
+        c= new GetUpdatedCriteria().getUpdatedCriteria(c, filters);
         /**
         AddRestrictions addRestrictions = new AddRestrictions();
 
@@ -148,33 +149,4 @@ public class InvoiceDetailDAOnew extends GenericDAO{
         return invoiceDetails;
     }
 
-    public Criteria getUpdatedCriteria(Criteria c, List<Filter> filters) {
-        AddRestrictions addRestrictions = new AddRestrictions();
-        for (Filter filter : filters) {
-            String option = filter.getSearchOption();
-            String operand = filter.getOperand();
-            String value = filter.getSearchValue();
-
-            Object searchValue = null;
-
-            switch (option) {
-                case "custNum" :
-                    searchValue = Integer.parseInt(value);
-                    break;
-                case "invNum" :
-                    option = "invItem.invNum";
-                    searchValue = Integer.parseInt(value);
-                    break;
-                case "itemNum" :
-                    option = "invItem.itemNum";
-                    searchValue = Integer.parseInt(value);
-                    break;
-                default:
-                    searchValue = value;
-            }
-            c = addRestrictions.addRestrictions(c, option, operand, searchValue);
-
-        }
-        return c;
-    }
 }
