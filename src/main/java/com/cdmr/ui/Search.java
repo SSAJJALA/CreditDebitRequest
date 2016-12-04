@@ -3,7 +3,7 @@ package com.cdmr.ui;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.SearchCDMR;
 import com.cdmr.persistence.CdmrDAOnew;
-import com.cdmr.persistence.CdmrDao;
+//import com.cdmr.persistence.CdmrDao;
 
 import java.util.ArrayList;
 import java.util.List;

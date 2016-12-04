@@ -7,7 +7,7 @@ import com.cdmr.Task.UpdateTask;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.CdmrUsers;
 import com.cdmr.persistence.CdmrDAOnew;
-import com.cdmr.persistence.CdmrDao;
+//import com.cdmr.persistence.CdmrDao;
 import com.cdmr.persistence.CdmrUsersDao;
 import com.cdmr.requisition.UpdateRequisition;
 import org.apache.log4j.Logger;
