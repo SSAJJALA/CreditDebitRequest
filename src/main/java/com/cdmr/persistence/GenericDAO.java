@@ -1,5 +1,6 @@
 package com.cdmr.persistence;
 
+import com.cdmr.entity.Filter;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
@@ -37,6 +38,11 @@ public abstract class GenericDAO {
     }
 
     public List<?> getWithFilters(String a, String b, String c) throws HibernateException {
+
+        return new ArrayList<Object>();
+    }
+
+    public List<?> getWithFilterObjects(List<?> obj) throws HibernateException {
 
         return new ArrayList<Object>();
     }
