@@ -22,6 +22,12 @@ public class RequisitionDAOnewTest {
     }
 
     @Test
+    public void getAll() throws Exception {
+        List<Requisition> reqs = (List<Requisition>) requisitionDAOnew.getAll();
+        assertNotNull("unable to get all requisitions", reqs);
+    }
+
+    @Test
     public void getOne() throws Exception {
         Requisition  req = (Requisition) requisitionDAOnew.getOne(67);
         assertNotNull("Unable to fetch requisition 67", req);
