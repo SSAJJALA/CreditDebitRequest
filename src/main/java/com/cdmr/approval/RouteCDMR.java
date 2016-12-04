@@ -6,6 +6,7 @@ import com.cdmr.Task.QueueTask;
 import com.cdmr.Task.UpdateTask;
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.CdmrUsers;
+import com.cdmr.persistence.CdmrDAOnew;
 import com.cdmr.persistence.CdmrDao;
 import com.cdmr.persistence.CdmrUsersDao;
 import com.cdmr.requisition.UpdateRequisition;
@@ -155,10 +156,17 @@ public class RouteCDMR {
 
         //update the CDMR status
 
+        /**
         CdmrDao cdmrDao = new CdmrDao();
         Cdmr cdmrEnt = cdmrDao.getCdmr(cdmr.getRequisitionID());
         cdmrEnt.setStatus(status);
         cdmrDao.updateCdmr(cdmrEnt);
+         **/
+
+        CdmrDAOnew cdmrDao = new CdmrDAOnew();
+        Cdmr cdmrEnt = (Cdmr) cdmrDao.getOne(cdmr.getRequisitionID());
+        cdmrEnt.setStatus(status);
+        cdmrDao.update(cdmrEnt);
 
     }
 

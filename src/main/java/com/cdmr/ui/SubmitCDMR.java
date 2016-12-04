@@ -122,10 +122,17 @@ public class SubmitCDMR {
      * update status
      */
     public void updateStatus() {
+        /**
         CdmrDao cdmrDao = new CdmrDao();
         Cdmr tempCDMR = cdmrDao.getCdmr(cdmr.getRequisitionID());
+         **/
+        CdmrDAOnew cdmrDao = new CdmrDAOnew();
+        Cdmr tempCDMR = (Cdmr) cdmrDao.getOne(cdmr.getRequisitionID());
         tempCDMR.setStatus("In Progress");
+        /**
         cdmrDao.updateCdmr(tempCDMR);
+         **/
+        cdmrDao.update(tempCDMR);
     }
 
     /**

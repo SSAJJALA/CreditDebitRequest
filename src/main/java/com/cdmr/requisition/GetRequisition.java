@@ -137,8 +137,12 @@ public class GetRequisition {
      * Prepares the header
      */
     public void prepareCDMRHeader() {
+        /**
         CdmrDao cdmrHeaderDao = new CdmrDao();
         Cdmr cdmrHeader = cdmrHeaderDao.getCdmr(this.getRequisitionID());
+         **/
+        CdmrDAOnew cdmrHeaderDao = new CdmrDAOnew();
+        Cdmr cdmrHeader = (Cdmr) cdmrHeaderDao.getOne(this.getRequisitionID());
         cdmr = new CDMR();
         cdmr.setRequisitionID(this.getRequisitionID());
         cdmr.setAdjAmnt(cdmrHeader.getAdjAmnt());

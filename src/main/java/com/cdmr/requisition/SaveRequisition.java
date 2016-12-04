@@ -4,10 +4,7 @@ import com.cdmr.Data.*;
 import com.cdmr.Data.Customer;
 import com.cdmr.Data.InvoiceHeader;
 import com.cdmr.entity.*;
-import com.cdmr.persistence.CdmrAdjustmentsDao;
-import com.cdmr.persistence.CdmrDao;
-import com.cdmr.persistence.CommentDao;
-import com.cdmr.persistence.RequisitionDao;
+import com.cdmr.persistence.*;
 import org.apache.log4j.Logger;
 
 import java.time.LocalDateTime;
@@ -124,9 +121,12 @@ public class SaveRequisition {
         cdmrHeader.setInvNum(invHeader.getInvNum());
 
         //Insert CDMR header table
+        /**
         CdmrDao cdmrDao = new CdmrDao();
         cdmrDao.addCdmr(cdmrHeader);
-
+         **/
+        CdmrDAOnew cdmrDao = new CdmrDAOnew();
+        cdmrDao.add(cdmrHeader);
 
     }
 

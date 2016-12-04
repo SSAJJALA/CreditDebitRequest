@@ -2,6 +2,7 @@ package com.cdmr.ui;
 
 import com.cdmr.entity.Cdmr;
 import com.cdmr.entity.SearchCDMR;
+import com.cdmr.persistence.CdmrDAOnew;
 import com.cdmr.persistence.CdmrDao;
 
 import java.util.ArrayList;
@@ -93,8 +94,11 @@ public class Search {
      * @return SearchCDMR List of CDMRs
      */
     public List<SearchCDMR> search() {
-
+        /**
         CdmrDao cdmrs = new CdmrDao();
+         **/
+        CdmrDAOnew cdmrs = new CdmrDAOnew();
+
         List<SearchCDMR> prepareResults = new ArrayList<SearchCDMR>();
         String column = null;
         if (this.getSearchFilter().equals("requisitionID")) {
@@ -109,7 +113,10 @@ public class Search {
             column = "";
         }
 
+        /**
         List<Cdmr> searchResults = cdmrs.getCdmrs(column, this.getOperand(), this.getSearchValue());
+         **/
+        List<Cdmr> searchResults = (List<Cdmr>) cdmrs.getWithFilters(column, this.getOperand(), this.getSearchValue());
 
 
         for (Cdmr cdmr:searchResults) {
