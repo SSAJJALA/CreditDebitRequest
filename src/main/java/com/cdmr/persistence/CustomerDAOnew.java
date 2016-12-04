@@ -12,7 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by student on 12/4/16.
+ * This is concrete implementation for Customer table DAO. Fetches from the DB table CUSTOMER.
+ *
+ * @author  Siva Sajjala
+ * @version 1.0
+ * @since   2016-12-04
  */
 public class CustomerDAOnew extends GenericDAO{
     private final Logger log = Logger.getLogger(this.getClass());
