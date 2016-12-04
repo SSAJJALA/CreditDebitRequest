@@ -62,6 +62,7 @@ public class CustomerLookupConsumer {
 
             if(response.getStatus() == 200) {
                 String customerString = response.getEntity(String.class);
+                log.info("JSON output:" + customerString);
                 ObjectMapper mapper = new ObjectMapper();
                 customer = mapper.readValue(customerString, Customer.class);
             }
