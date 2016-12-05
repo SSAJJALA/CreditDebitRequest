@@ -1,7 +1,8 @@
 package com.cdmr.webservices;
 
 import com.cdmr.entity.*;
-import com.cdmr.persistence.InvoiceDetailDao;
+import com.cdmr.persistence.InvoiceDetailDAOnew;
+//import com.cdmr.persistence.InvoiceDetailDao;
 import com.cdmr.persistence.InvoiceHeaderDao;
 
 import java.util.ArrayList;
@@ -73,7 +74,8 @@ public class InvoiceLookup {
      */
     public List<InvoiceDetail> getInvoiceDetails() {
 
-        InvoiceDetailDao invoiceDeailDao = new InvoiceDetailDao();
+        //InvoiceDetailDao invoiceDeailDao = new InvoiceDetailDao();
+        InvoiceDetailDAOnew invoiceDeailDao = new InvoiceDetailDAOnew();
         List<Filter> filters = new ArrayList<Filter>();
 
         //Set filter1
@@ -90,7 +92,8 @@ public class InvoiceLookup {
         filter2.setSearchOption("custNum");
         filters.add(filter2);
 
-        List<InvoiceDetail> invoiceDetails = invoiceDeailDao.getInvoicesWithFilter(filters);
+        //List<InvoiceDetail> invoiceDetails = invoiceDeailDao.getInvoicesWithFilter(filters);
+        List<InvoiceDetail> invoiceDetails = (List<InvoiceDetail>) invoiceDeailDao.getWithFilterObjects(filters);
         return invoiceDetails;
     }
 

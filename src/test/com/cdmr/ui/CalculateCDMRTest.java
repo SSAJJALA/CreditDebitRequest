@@ -6,7 +6,8 @@ import com.cdmr.entity.Filter;
 import com.cdmr.entity.InvoiceDetail;
 import com.cdmr.entity.InvoiceHeader;
 import com.cdmr.entity.InvoiceHeaderPK;
-import com.cdmr.persistence.InvoiceDetailDao;
+import com.cdmr.persistence.InvoiceDetailDAOnew;
+//import com.cdmr.persistence.InvoiceDetailDao;
 import com.cdmr.persistence.InvoiceHeaderDao;
 import com.cdmr.util.ConvertToLocalDate;
 import com.cdmr.webservices.Customer;
@@ -61,7 +62,8 @@ public class CalculateCDMRTest {
         InvoiceHeaderDao invoiceHeaderDao = new InvoiceHeaderDao();
         header = invoiceHeaderDao.getInvoiceHeader(headerPK);
 
-        InvoiceDetailDao invoiceDetailDao = new InvoiceDetailDao();
+        //InvoiceDetailDao invoiceDetailDao = new InvoiceDetailDao();
+        InvoiceDetailDAOnew invoiceDetailDao = new InvoiceDetailDAOnew();
         List<Filter> filters = new ArrayList<Filter>();
         Filter filter1 = new Filter();
         filter1.setSearchOption("custNum");
@@ -75,7 +77,8 @@ public class CalculateCDMRTest {
         filter2.setSearchValue("2345");
         filters.add(filter2);
 
-        details = invoiceDetailDao.getInvoicesWithFilter(filters);
+        //details = invoiceDetailDao.getInvoicesWithFilter(filters);
+        details = (List<InvoiceDetail>) invoiceDetailDao.getWithFilterObjects(filters);
 
         UiAdjData adj = new UiAdjData();
         adj.setItemNum(2350);

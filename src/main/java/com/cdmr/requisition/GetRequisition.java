@@ -226,7 +226,8 @@ public class GetRequisition {
             adjData.setLineAdjAmnt(adjEntity.getExtPrice());
             adjData.setNewInvLineTotal(adjEntity.getNewInvLineAmnt());
 
-            InvoiceDetailDao invDtlsDao = new InvoiceDetailDao();
+            //InvoiceDetailDao invDtlsDao = new InvoiceDetailDao();
+            InvoiceDetailDAOnew invDtlsDao = new InvoiceDetailDAOnew();
             List<Filter> invItemFilter = new ArrayList<Filter>();
             Filter invFilter = new Filter();
             invFilter.setSearchOption("invNum");
@@ -238,7 +239,8 @@ public class GetRequisition {
             itemFilter.setOperand("=");
             itemFilter.setSearchValue(Integer.toString(adjEntity.getRequisitionItem().getItemNum()));
             invItemFilter.add(itemFilter);
-            List<InvoiceDetail> invDetails = invDtlsDao.getInvoicesWithFilter(invItemFilter);
+            //List<InvoiceDetail> invDetails = invDtlsDao.getInvoicesWithFilter(invItemFilter);
+            List<InvoiceDetail> invDetails = (List<InvoiceDetail>) invDtlsDao.getWithFilterObjects(invItemFilter);
             adjData.setOriginalInvLineTotal(invDetails.get(0).getNetAmnt());
             adjData.setOriginalPrice(invDetails.get(0).getUnitPrice());
             adjData.setOriginalQty(invDetails.get(0).getQty());

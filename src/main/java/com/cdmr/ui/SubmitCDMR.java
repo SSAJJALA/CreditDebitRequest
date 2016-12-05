@@ -144,7 +144,8 @@ public class SubmitCDMR {
 
         for (CDMRAdjustments adj : adjs) {
             InvoiceDetail tempInvDtl = new InvoiceDetail();
-            InvoiceDetailDao tempInvDtlDao = new InvoiceDetailDao();
+            //InvoiceDetailDao tempInvDtlDao = new InvoiceDetailDao();
+            InvoiceDetailDAOnew tempInvDtlDao = new InvoiceDetailDAOnew();
             InvoiceDetailPK tempInvDtlPK = new InvoiceDetailPK();
             tempInvDtlPK.setInvNum(cdmr.getInvHeader().getInvNum());
             tempInvDtlPK.setItemNum(adj.getItemNum());
@@ -158,7 +159,8 @@ public class SubmitCDMR {
             tempInvDtl.setTax((tempInvDtl.getTax() + adj.getTaxAdjAmnt()));
             tempInvDtl.setNetAmnt((tempInvDtl.getGrossAmnt() + tempInvDtl.getAllowance() + tempInvDtl.getCharges() + tempInvDtl.getTax()));
 
-            tempInvDtlDao.updateInvoiceDetail(tempInvDtl);
+            //tempInvDtlDao.updateInvoiceDetail(tempInvDtl);
+            tempInvDtlDao.update(tempInvDtl);
 
         }
 
