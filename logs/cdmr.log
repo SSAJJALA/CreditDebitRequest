@@ -5079,3 +5079,4 @@ The last packet successfully received from the server was 37,800,341 millisecond
 2016-12-04 23:03:16,864 1166 [http-nio-8080-exec-6] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
 2016-12-04 23:03:17,428 1730 [http-nio-8080-exec-6] INFO  com.cdmr.controller.InboxServlet  - inbox servlet context:
 2016-12-04 23:03:21,870 6172 [http-nio-8080-exec-7] INFO  com.cdmr.controller.DirectToDetails  - direct to details servlet context:
+2016-12-04 23:09:35,982 380284 [http-nio-8080-exec-9] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
