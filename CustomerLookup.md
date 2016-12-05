@@ -49,8 +49,37 @@ Desc: Valid Customer Number
 
 ###Example JSON Response (Success)
 
+####`status: HTTP/1.1 200`
+
+{
+   "add1": "100",
+   "add2": "Manpower Place",
+   "city": "Milwaukee",
+   "custName": "Experis",
+   "custNum": 1000,
+   "phone": "414-961-1000",
+   "state": "WI",
+   "zip": "53212"
+}
+
 ###Example JSON Response (Error)
+
+####`status: HTTP/1.1 404`
+Customer not found
+
+####`status: HTTP/1.1 400`
+Customer number invalid
+
 
 ###Example XML Response (Success)
 
-<customer><add1>100</add1><add2>Manpower Place</add2><city>Milwaukee</city><custName>Experis</custName><custNum>1000</custNum><phone>414-961-1000</phone><state>WI</state><zip>53212</zip></customer>
+`<customer>
+    <add1>100</add1>
+    <add2>Manpower Place</add2>
+    <city>Milwaukee</city>
+    <custName>Experis</custName><
+    custNum>1000</custNum>
+    <phone>414-961-1000</phone>
+    <state>WI</state>
+    <zip>53212</zip>
+</customer>`
