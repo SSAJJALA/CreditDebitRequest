@@ -85,23 +85,23 @@ function checkCalcSubmit() {
 
     for (i=0;i<tbody.length;i++) {
 
-        alert("inside tbody");
+        //alert("inside tbody");
         var tr = tbody[i].querySelectorAll("tr");
         for (j=0;j<tr.length;j++){
-            alert("inside tr");
+            //alert("inside tr");
             var td = tr[j].querySelectorAll("td");
-            var adjQty = td[4].firstChild.value;
-            var rc = td[5].querySelector("[selected]").innerHTML;
-            var creditDebitFlg = td[11].querySelector("[selected]").innerHTML;
+            var adjQty = td[3].firstChild.value;
+            var rc = td[4].querySelector("[selected]").innerHTML;
+            var creditDebitFlg = td[9].querySelector("[selected]").innerHTML;
 
             console.log("Adj qty:" + adjQty);
             console.log("Reason code:" + rc);
             console.log("creditDebitFlg:" + creditDebitFlg);
-            alert("Adj Qty:" + adjQty);
-            alert("rc:" + rc);
-            alert("CreditDebitFlag:" + creditDebitFlg);
+            //alert("Adj Qty:" + adjQty);
+            //alert("rc:" + rc);
+            //alert("CreditDebitFlag:" + creditDebitFlg);
             if (adjQty == '' || creditDebitFlg == '' || rc == '') {
-                alert("making fault as true");
+                //alert("making fault as true");
                 fault = "true";
                 break;
             }

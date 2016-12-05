@@ -13,7 +13,9 @@
 
 <%@include file="head.jsp"%>
 
+<%--
 <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
+--%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page buffer="16kb" autoFlush="true" %>
@@ -213,7 +215,9 @@
                         <th style="text-align: center;" rowspan="1" colspan="1">Adjusted Qty</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Reason Code</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Original Unit Price($)</th>
+                        <%--
                         <th style="text-align: center;" rowspan="1" colspan="1">Adjusted Price ($)</th>
+                        --%>
                         <th style="text-align: center;" rowspan="1" colspan="1">Allowance Adj ($)</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Charge Adj ($)</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Tax Adj ($)</th>
@@ -240,7 +244,9 @@
                                 </select>
                         </td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalPrice}</td>
+                        <%--
                         <td style="text-align: center;" rowspan="1" colspan="1"></td>
+                        --%>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.allowanceAdjAmnt}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.chargeAdjAmnt}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.taxAdjAmnt}</td>
@@ -332,7 +338,7 @@
                             '</select>' +
                         '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_uprice + '</td>' +
-                        '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
+                        //'<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1"></td>' +

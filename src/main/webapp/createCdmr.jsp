@@ -13,9 +13,7 @@
 
 <%@include file="head.jsp"%>
 
-<%--
 <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
---%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page buffer="16kb" autoFlush="true" %>
@@ -208,7 +206,9 @@
              <table id = "datatable2" width="90%" border="1" align = "center">
                 <thead>
                     <tr style="height: 7px;">
+                        <%--
                         <th style="text-align: center;" rowspan="1" colspan="1">Delete</th>
+                        --%>
                         <th style="text-align: center;" rowspan="1" colspan="1">Item</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Item Description</th>
                         <th style="text-align: center;" rowspan="1" colspan="1">Original Qty</th>
@@ -230,7 +230,9 @@
                     <c:if test="${not empty cdmr}">
                         <c:forEach items="${cdmr.adjustments}" var="adjs">
                         <tr class="tableRow">
+                        <%--
                         <td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>
+                        --%>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemNum}</td><input type="hidden" name="adjItem" value="${adjs.itemNum}">
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.itemDesc}</td>
                         <td style="text-align: center;" rowspan="1" colspan="1">${adjs.originalQty}</td>
@@ -323,7 +325,7 @@
                 console.log("all variables are filled");
 
                 $('#datatable2 tbody').append('<tr class="tableRow">'+
-                        '<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
+                        //'<td style="text-align: center;" rowspan="1" colspan="1"><input type="checkbox" name="delselInv" value ="delselInv"></td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_item + '</td>' + '<input type="hidden" name="adjItem" value="' + tds_item + '">' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_itemDesc + '</td>' +
                         '<td style="text-align: center;" rowspan="1" colspan="1">' + tds_qty + '</td>' +
