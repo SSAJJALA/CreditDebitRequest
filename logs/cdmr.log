@@ -4971,3 +4971,6 @@ The last packet successfully received from the server was 37,800,341 millisecond
 2016-12-04 21:48:01,559 6160 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
 2016-12-04 21:48:01,599 6200 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2016-12-04 21:48:01,620 6221 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-12-04 22:34:24,277 7256362 [http-nio-8080-exec-7] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-04 22:34:24,279 7256364 [http-nio-8080-exec-7] INFO  com.cdmr.controller.SearchServlet  - directing to index page
+2016-12-04 22:34:24,279 7256364 [http-nio-8080-exec-7] INFO  com.cdmr.controller.SearchServlet  - search servlet context:
