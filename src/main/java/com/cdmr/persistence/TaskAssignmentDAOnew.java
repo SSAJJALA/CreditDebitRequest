@@ -121,7 +121,7 @@ public class TaskAssignmentDAOnew extends GenericDAO {
         List<TaskAssignment> taskAssignments = null;
         List<Filter> filters = (List<Filter>) obj;
         AddRestrictions addRestrictions = new AddRestrictions();
-        c= new GetUpdatedCriteria().getUpdatedCriteria(c, filters);
+        c= new GetUpdatedCriteria().getUpdatedCriteria(c, filters, "TASK_ASSIGNMENT");
         taskAssignments = c.list();
         session.close();
         return taskAssignments;

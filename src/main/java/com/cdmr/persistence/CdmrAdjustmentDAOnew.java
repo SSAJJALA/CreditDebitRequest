@@ -120,7 +120,7 @@ public class CdmrAdjustmentDAOnew extends GenericDAO {
         List<CdmrAdjustments> cdmrAdjs = null;
         List<Filter> filters = (List<Filter>) obj;
         AddRestrictions addRestrictions = new AddRestrictions();
-        c= new GetUpdatedCriteria().getUpdatedCriteria(c, filters);
+        c= new GetUpdatedCriteria().getUpdatedCriteria(c, filters, "CDMR_ADJUSTMENTS");
         cdmrAdjs = c.list();
         session.close();
         return cdmrAdjs;

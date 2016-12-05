@@ -116,7 +116,7 @@ public class InvoiceDetailDAOnew extends GenericDAO{
         Criteria c = session.createCriteria(InvoiceDetail.class);
         List<InvoiceDetail> invoiceDetails = null;
         List<Filter> filters = (List<Filter>) obj;
-        c= new GetUpdatedCriteria().getUpdatedCriteria(c, filters);
+        c= new GetUpdatedCriteria().getUpdatedCriteria(c, filters, "INVOICE_DETAIL");
         /**
         AddRestrictions addRestrictions = new AddRestrictions();
 
