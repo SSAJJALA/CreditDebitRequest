@@ -200,7 +200,8 @@ public class GetRequisition {
      */
     public void prepareCDMRAdjs() {
         List<CDMRAdjustments> adjsData = new ArrayList<CDMRAdjustments>();
-        CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
+        //CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
+        CdmrAdjustmentDAOnew adjDao = new CdmrAdjustmentDAOnew();
 
         List<Filter> reqFilter = new ArrayList<Filter>();
         Filter reqTempFilter = new Filter();
@@ -208,7 +209,8 @@ public class GetRequisition {
         reqTempFilter.setOperand("=");
         reqTempFilter.setSearchValue(String.valueOf(this.getRequisitionID()));
         reqFilter.add(reqTempFilter);
-        List<CdmrAdjustments> adjEntitys = adjDao.getCdmrAdjs(reqFilter);
+        //List<CdmrAdjustments> adjEntitys = adjDao.getCdmrAdjs(reqFilter);
+        List<CdmrAdjustments> adjEntitys = (List<CdmrAdjustments>) adjDao.getWithFilterObjects(reqFilter);
 
         for (CdmrAdjustments adjEntity : adjEntitys) {
             CDMRAdjustments adjData = new CDMRAdjustments();

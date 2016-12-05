@@ -161,7 +161,8 @@ public class SaveRequisition {
             cdmrAdj.setTaxAdj(adj.getTaxAdjAmnt());
 
 
-            CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
+            //CdmrAdjustmentsDao adjDao = new CdmrAdjustmentsDao();
+            CdmrAdjustmentDAOnew adjDao = new CdmrAdjustmentDAOnew();
             adjDao.addCdmrAdj(cdmrAdj);
             this.insertComments(adj.getComments());
 
