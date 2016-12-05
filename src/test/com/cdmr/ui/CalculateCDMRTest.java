@@ -8,7 +8,8 @@ import com.cdmr.entity.InvoiceHeader;
 import com.cdmr.entity.InvoiceHeaderPK;
 import com.cdmr.persistence.InvoiceDetailDAOnew;
 //import com.cdmr.persistence.InvoiceDetailDao;
-import com.cdmr.persistence.InvoiceHeaderDao;
+import com.cdmr.persistence.InvoiceHeaderDAOnew;
+//import com.cdmr.persistence.InvoiceHeaderDao;
 import com.cdmr.util.ConvertToLocalDate;
 import com.cdmr.webservices.Customer;
 import org.apache.log4j.Logger;
@@ -59,7 +60,8 @@ public class CalculateCDMRTest {
 
         headerPK.setCustNum(1000);
         headerPK.setInvoiceNum(2345);
-        InvoiceHeaderDao invoiceHeaderDao = new InvoiceHeaderDao();
+        //InvoiceHeaderDao invoiceHeaderDao = new InvoiceHeaderDao();
+        InvoiceHeaderDAOnew invoiceHeaderDao = new InvoiceHeaderDAOnew();
         header = invoiceHeaderDao.getInvoiceHeader(headerPK);
 
         //InvoiceDetailDao invoiceDetailDao = new InvoiceDetailDao();

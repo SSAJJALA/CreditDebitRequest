@@ -180,7 +180,8 @@ public class GetRequisition {
      * Prepares the cdmr invoice information
      */
     public void prepareInvoiceInfo() {
-        InvoiceHeaderDao invHeaderDao = new InvoiceHeaderDao();
+        //InvoiceHeaderDao invHeaderDao = new InvoiceHeaderDao();
+        InvoiceHeaderDAOnew invHeaderDao = new InvoiceHeaderDAOnew();
         InvoiceHeaderPK invCust = new InvoiceHeaderPK(invNum, customerNum);
         InvoiceHeader invHeaderEntity = invHeaderDao.getInvoiceHeader(invCust);
         com.cdmr.Data.InvoiceHeader  invHeaderData = new com.cdmr.Data.InvoiceHeader();

@@ -3,7 +3,8 @@ package com.cdmr.webservices;
 import com.cdmr.entity.*;
 import com.cdmr.persistence.InvoiceDetailDAOnew;
 //import com.cdmr.persistence.InvoiceDetailDao;
-import com.cdmr.persistence.InvoiceHeaderDao;
+import com.cdmr.persistence.InvoiceHeaderDAOnew;
+//import com.cdmr.persistence.InvoiceHeaderDao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +64,8 @@ public class InvoiceLookup {
         InvoiceHeaderPK invCust = new InvoiceHeaderPK();
         invCust.setCustNum(custNum);
         invCust.setInvoiceNum(invNum);
-        InvoiceHeaderDao invoiceHeaderDao = new InvoiceHeaderDao();
+        //InvoiceHeaderDao invoiceHeaderDao = new InvoiceHeaderDao();
+        InvoiceHeaderDAOnew invoiceHeaderDao = new InvoiceHeaderDAOnew();
         InvoiceHeader invoice = invoiceHeaderDao.getInvoiceHeader(invCust);
         return invoice;
     }
