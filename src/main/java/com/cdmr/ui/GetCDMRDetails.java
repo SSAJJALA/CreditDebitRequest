@@ -6,7 +6,8 @@ import com.cdmr.entity.TaskAssignment;
 import com.cdmr.entity.TaskAssignmentPK;
 import com.cdmr.persistence.TaskAssignmentDAOnew;
 //import com.cdmr.persistence.TaskAssignmentDao;
-import com.cdmr.persistence.TaskDao;
+import com.cdmr.persistence.TaskDAOnew;
+//import com.cdmr.persistence.TaskDao;
 import com.cdmr.requisition.GetRequisition;
 import org.apache.log4j.Logger;
 
@@ -143,8 +144,10 @@ public class GetCDMRDetails {
      */
     public Task getTaskDetails() {
         Task task = null;
-        TaskDao taskdao = new TaskDao();
-        task = taskdao.getTask(taskID);
+        //TaskDao taskdao = new TaskDao();
+        TaskDAOnew taskdao = new TaskDAOnew();
+        //task = taskdao.getTask(taskID);
+        task = (Task) taskdao.getOne(taskID);
         return task;
     }
 }

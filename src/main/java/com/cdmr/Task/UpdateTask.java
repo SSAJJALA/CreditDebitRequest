@@ -1,7 +1,8 @@
 package com.cdmr.Task;
 
 import com.cdmr.entity.Task;
-import com.cdmr.persistence.TaskDao;
+import com.cdmr.persistence.TaskDAOnew;
+//import com.cdmr.persistence.TaskDao;
 
 /**
  * UpdateTask updates the task status
@@ -70,9 +71,12 @@ public class UpdateTask {
     public void updateTask() {
 
         //Update the task status
-        TaskDao taskDao = new TaskDao();
-        Task task = taskDao.getTask(this.taskID);
+        //TaskDao taskDao = new TaskDao();
+        TaskDAOnew taskDao = new TaskDAOnew();
+        //Task task = taskDao.getTask(this.taskID);
+        Task task = (Task) taskDao.getOne(this.taskID);
         task.setTaskStatus(this.taskStatus);
-        taskDao.updateTask(task);
+        //taskDao.updateTask(task);
+        taskDao.update(task);
     }
 }

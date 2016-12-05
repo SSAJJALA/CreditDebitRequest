@@ -5,7 +5,8 @@ import com.cdmr.entity.TaskAssignment;
 import com.cdmr.entity.TaskAssignmentPK;
 import com.cdmr.persistence.TaskAssignmentDAOnew;
 //import com.cdmr.persistence.TaskAssignmentDao;
-import com.cdmr.persistence.TaskDao;
+import com.cdmr.persistence.TaskDAOnew;
+//import com.cdmr.persistence.TaskDao;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -98,14 +99,16 @@ public class QueueTask {
     public int createTask() {
 
         //create a new task
-        TaskDao taskDao = new TaskDao();
+        //TaskDao taskDao = new TaskDao();
+        TaskDAOnew taskDao = new TaskDAOnew();
         Task taskEntity = new Task();
         taskEntity.setTaskName(this.taskName);
         taskEntity.setTaskStatus("Active");
 
         taskEntity.setCreatedDate(LocalDateTime.now());
         taskEntity.setUpdatedDate(LocalDateTime.now());
-        int taskID = taskDao.addTask(taskEntity);
+        //int taskID = taskDao.addTask(taskEntity);
+        int taskID = taskDao.add(taskEntity);
 
         //insert task assignments
         //TaskAssignmentDao taskAssignDao = new TaskAssignmentDao();
