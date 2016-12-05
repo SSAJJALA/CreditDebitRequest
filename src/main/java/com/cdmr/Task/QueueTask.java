@@ -3,7 +3,8 @@ package com.cdmr.Task;
 import com.cdmr.entity.Task;
 import com.cdmr.entity.TaskAssignment;
 import com.cdmr.entity.TaskAssignmentPK;
-import com.cdmr.persistence.TaskAssignmentDao;
+import com.cdmr.persistence.TaskAssignmentDAOnew;
+//import com.cdmr.persistence.TaskAssignmentDao;
 import com.cdmr.persistence.TaskDao;
 
 import java.text.SimpleDateFormat;
@@ -107,7 +108,8 @@ public class QueueTask {
         int taskID = taskDao.addTask(taskEntity);
 
         //insert task assignments
-        TaskAssignmentDao taskAssignDao = new TaskAssignmentDao();
+        //TaskAssignmentDao taskAssignDao = new TaskAssignmentDao();
+        TaskAssignmentDAOnew taskAssignDao = new TaskAssignmentDAOnew();
         TaskAssignment taskAssignEnt = new TaskAssignment();
         taskAssignEnt.setRequisitionID(this.reqID);
         TaskAssignmentPK taskAssignmentPK = new TaskAssignmentPK();
