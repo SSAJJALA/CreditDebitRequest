@@ -3,33 +3,38 @@
   <ID>DATABASE</ID>
   <OriginalElement>13347100-7a19-4686-be4e-b581d92c7501</OriginalElement>
   <nodes>
-    <node x="1075.0" y="940.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.TASK</node>
-    <node x="751.0" y="940.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_USERS</node>
-    <node x="465.0" y="646.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_COMMENTS</node>
-    <node x="267.25" y="0.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.REQUISITION</node>
+    <node x="751.0" y="940.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.TASK</node>
+    <node x="1042.0" y="940.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_USERS</node>
+    <node x="465.0" y="634.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_COMMENTS</node>
+    <node x="272.25" y="0.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.REQUISITION</node>
     <node x="393.0" y="1251.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.INVOICE_HEADER</node>
     <node x="205.5" y="940.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CUSTOMER</node>
-    <node x="197.25" y="203.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR</node>
+    <node x="202.25" y="203.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR</node>
     <node x="0.0" y="574.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_ADJUSTMENTS</node>
+    <node x="1072.0" y="1143.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_USERS_ROLES</node>
     <node x="0.0" y="1215.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.INVOICE_DETAIL</node>
-    <node x="0.0" y="1557.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.TASK_ASSIGNMENT</node>
+    <node x="771.0" y="1143.0">13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.TASK_ASSIGNMENT</node>
   </nodes>
   <notes />
   <edges>
     <edge source="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_COMMENTS" target="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR">
-      <point x="0.0" y="-88.5" />
-      <point x="617.0" y="549.0" />
-      <point x="531.0" y="549.0" />
+      <point x="0.0" y="-100.5" />
+      <point x="627.0" y="549.0" />
+      <point x="536.0" y="549.0" />
       <point x="111.25" y="160.5" />
     </edge>
     <edge source="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_ADJUSTMENTS" target="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR">
       <point x="0.0" y="-160.5" />
       <point x="222.5" y="549.0" />
-      <point x="308.5" y="549.0" />
+      <point x="313.5" y="549.0" />
       <point x="-111.25" y="160.5" />
     </edge>
     <edge source="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR" target="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.REQUISITION">
       <point x="0.0" y="-160.5" />
+      <point x="0.0" y="76.5" />
+    </edge>
+    <edge source="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.TASK_ASSIGNMENT" target="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.TASK">
+      <point x="0.0" y="-52.5" />
       <point x="0.0" y="76.5" />
     </edge>
     <edge source="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.INVOICE_HEADER" target="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CUSTOMER">
@@ -44,10 +49,14 @@
       <point x="286.75" y="1190.0" />
       <point x="-81.25" y="112.5" />
     </edge>
+    <edge source="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_USERS_ROLES" target="13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.CDMR_USERS">
+      <point x="0.0" y="-40.0" />
+      <point x="0.0" y="76.5" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.267538644470868" x="660.5" y="831.0" />
+  <settings layout="Hierarchic Group" zoom="0.3943864229765013" x="661.624296590533" y="635.7742469381" />
   <SelectedNodes>
-    <node>13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.TASK_ASSIGNMENT</node>
+    <node>13347100-7a19-4686-be4e-b581d92c7501.TABLE:APPSPROD.REQUISITION</node>
   </SelectedNodes>
   <Categories>
     <Category>Key columns</Category>

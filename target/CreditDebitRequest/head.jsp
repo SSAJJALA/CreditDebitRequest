@@ -58,6 +58,8 @@
                         text-align: left;
                         list-style-type: none;
                         padding: 0;
+                        font-size:16px;
+                        color: greenyellow;
                 }
 
                 nav ul a {
