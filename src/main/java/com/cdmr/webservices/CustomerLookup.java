@@ -1,7 +1,8 @@
 package com.cdmr.webservices;
 
 import com.cdmr.entity.Customer;
-import com.cdmr.persistence.CustomerDao;
+import com.cdmr.persistence.CustomerDAOnew;
+//import com.cdmr.persistence.CustomerDao;
 import org.apache.log4j.Logger;
 
 import javax.ws.rs.*;
@@ -38,8 +39,10 @@ public class CustomerLookup {
             int custNo = custNum;
             Customer cust;
             try {
-                CustomerDao custDao = new CustomerDao();
-                cust = custDao.getCustomer(custNo);
+                //CustomerDao custDao = new CustomerDao();
+                CustomerDAOnew custDao = new CustomerDAOnew();
+                //cust = custDao.getCustomer(custNo);
+                cust = (Customer) custDao.getOne(custNo);
             } catch (Exception e){
                 throw new CustomerLookupUnhandledException();
             }

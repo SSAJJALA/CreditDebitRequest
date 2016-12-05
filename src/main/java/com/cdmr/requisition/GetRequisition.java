@@ -159,8 +159,10 @@ public class GetRequisition {
      * Prepares the customer information
      */
     public void prepareCustomerInfo() {
-        CustomerDao customerDao = new CustomerDao() ;
-        Customer custEntity = customerDao.getCustomer(this.getCustomerNum());
+        //CustomerDao customerDao = new CustomerDao() ;
+        CustomerDAOnew customerDao = new CustomerDAOnew() ;
+        //Customer custEntity = customerDao.getCustomer(this.getCustomerNum());
+        Customer custEntity = (Customer) customerDao.getOne(this.getCustomerNum());
         com.cdmr.Data.Customer custData = new com.cdmr.Data.Customer();
         custData.setAddress1(custEntity.getAdd1());
         custData.setAddress2(custEntity.getAdd2());
