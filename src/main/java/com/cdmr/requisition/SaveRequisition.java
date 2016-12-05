@@ -86,8 +86,10 @@ public class SaveRequisition {
         req.setAppName("CDMR");
         req.setCreatedDate(LocalDateTime.now());
         req.setUpdatedDate(LocalDateTime.now());
-        RequisitionDao reqDao = new RequisitionDao();
-        int reqID = reqDao.addRequisition(req);
+        //RequisitionDao reqDao = new RequisitionDao();
+        RequisitionDAOnew reqDao = new RequisitionDAOnew();
+        //int reqID = reqDao.addRequisition(req);
+        int reqID = reqDao.add(req);
         cdmr.setRequisitionID(reqID);
         return reqID;
     }
