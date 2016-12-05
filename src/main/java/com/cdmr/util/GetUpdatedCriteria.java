@@ -105,6 +105,29 @@ public class GetUpdatedCriteria {
 
             }
         }
+
+        if (table.equals("TASK")) {
+            for (Filter filter : filters) {
+                String option = filter.getSearchOption();
+                String operand = filter.getOperand();
+                String value = filter.getSearchValue();
+
+                Object searchValue = null;
+
+                switch (option) {
+                    case "taskID":
+                        searchValue = Integer.parseInt(value);
+                        break;
+                    case "createdDate":
+                        searchValue = new ConvertToLocalDate().formatDate(value);
+                        break;
+                    default:
+                        searchValue = value;
+                }
+                c = addRestrictions.addRestrictions(c, option, operand, searchValue);
+
+            }
+        }
         return c;
     }
 }

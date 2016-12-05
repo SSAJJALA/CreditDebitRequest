@@ -126,7 +126,7 @@ public class TaskDAOnew extends GenericDAO{
         List<Task> tasks = null;
         List<Filter> filters = (List<Filter>) obj;
         AddRestrictions addRestrictions = new AddRestrictions();
-        c= new GetUpdatedCriteria().getUpdatedCriteria(c, filters);
+        c= new GetUpdatedCriteria().getUpdatedCriteria(c, filters, "TASK");
         tasks = c.list();
         session.close();
         return tasks;
