@@ -89,11 +89,29 @@ public class CreateCDMRScript {
 
         Thread.sleep(2000);
 
+        //Calculate
         driver.findElement(By.id("btn_calculate")).click();
         Thread.sleep(3000);
 
+        //Submit
         driver.findElement(By.id("btn_submit")).click();
         Thread.sleep(3000);
+
+        driver.findElement(By.id("btn_message")).click();
+        Thread.sleep(1000);
+
+
+        //click on request search link on index (main menu) page
+        driver.findElement(By.linkText("Requests Search")).click();
+        Thread.sleep(2000);
+
+        //Search for a requisition
+        Select dropdown = new Select(driver.findElement(By.id("SearchOption")));
+        dropdown.selectByVisibleText("All");
+        Thread.sleep(500);
+
+        driver.findElement(By.id("btn_search")).click();
+        Thread.sleep(2000);
 
 
 
