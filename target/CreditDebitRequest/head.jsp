@@ -58,8 +58,7 @@
                         text-align: left;
                         list-style-type: none;
                         padding: 0;
-                        font-size:16px;
-                        color: greenyellow;
+                        font-size:18px;
                 }
 
                 nav ul a {

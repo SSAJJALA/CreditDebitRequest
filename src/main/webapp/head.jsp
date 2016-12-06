@@ -58,7 +58,7 @@
                         text-align: left;
                         list-style-type: none;
                         padding: 0;
-                        font-size:18px;
+                        font-size:14px;
                 }
 
                 nav ul a {
