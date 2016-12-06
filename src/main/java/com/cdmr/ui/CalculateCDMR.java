@@ -14,7 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * CalculateCDMR calculates the cdmr amount based on the adjustment qty and unit price of the item.
+ * CalculateCDMR calculates the cdmr amount based on the adjustment qty and unit price of the item. This is the main service
+ * before a CDMR gets created. User hits the ‘Calculate’ button on UI and that action invokes this service call.
+ * Based on the invoice and adjustment details, it calculates the CDMR net adjustment amount including tax, allowance and
+ * charges.
  *
  * @author  Siva Sajjala
  * @version 1.0
