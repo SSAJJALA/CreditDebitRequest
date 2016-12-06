@@ -78,11 +78,11 @@ public class CreateCDMRScript {
         // And iterate over them, getting the cells
         for (WebElement row : allRows) {
             List<WebElement> cells = row.findElements(By.tagName("td"));
-            cells.get(4).findElement(By.id("adjQty")).sendKeys("1");
-            Select rc = new Select(cells.get(5).findElement(By.id("reasonCode")));
+            cells.get(3).findElement(By.id("adjQty")).sendKeys("1");
+            Select rc = new Select(cells.get(4).findElement(By.id("reasonCode")));
             rc.selectByValue("1-Defective");
 
-            Select cd = new Select(cells.get(11).findElement(By.id("creditDebit")));
+            Select cd = new Select(cells.get(9).findElement(By.id("creditDebit")));
             cd.selectByValue("Credit");
 
         }
@@ -94,6 +94,8 @@ public class CreateCDMRScript {
 
         driver.findElement(By.id("btn_submit")).click();
         Thread.sleep(3000);
+
+
 
 
 

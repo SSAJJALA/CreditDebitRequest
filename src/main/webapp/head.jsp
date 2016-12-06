@@ -85,11 +85,11 @@
                 }
 
                 #pop {
-                        height: 50px;
-                        width: 500px;
+                        height: 60px;
+                        width: 550px;
                         position: fixed;
-                        bottom: 50%;
-                        right: 50%;
+                        bottom: 40%;
+                        right: 60%;
                         border: 2px solid;
                         padding: 10px;
                         background: #d5d3cc;
@@ -97,7 +97,7 @@
                 }
                 p.thick {
                         font-weight: bold;
-                        font-size: 10px;
+                        font-size: 16px;
                 }
 
                 .topcorner{
