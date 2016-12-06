@@ -27,7 +27,7 @@
         <span style="padding-left:60px"></span>
 
 
-        <select name="searchoptions">
+        <select name="searchoptions" id = "SearchOption">
             <option value="searchBy">Search By</option>
             <option value="requisitionID">Req ID</option>
             <option value="customerName">Customer Name</option>
@@ -35,7 +35,7 @@
             <option value="all">All</option>
         </select>
         <span style="padding-left:50px"></span>
-        <select name="operands">
+        <select name="operands" id = "Operand">
             <option value="operand">Operand</option>
             <option value="=">=</option>
             <option value="!=">!=</option>

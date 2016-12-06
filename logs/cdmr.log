@@ -5194,3 +5194,6 @@ The last packet successfully received from the server was 37,800,341 millisecond
 2016-12-05 22:11:16,162 5408117 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - customr number:1000
 2016-12-05 22:11:16,162 5408117 [http-nio-8080-exec-6] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
 2016-12-05 22:11:47,025 5438980 [http-nio-8080-exec-9] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
+2016-12-05 22:16:09,969 5701924 [http-nio-8080-exec-3] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
+2016-12-06 06:49:07,400 0    [http-nio-8080-exec-3] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
+2016-12-06 06:50:50,053 102653 [http-nio-8080-exec-5] INFO  com.cdmr.controller.LogoutServlet  - logout servlet context:
