@@ -3,6 +3,7 @@
 <%@ page import="com.cdmr.entity.InvoiceDetail" %>
 <%@ page import="com.cdmr.Data.CDMRAdjustments" %>
 <%--
+  This page allows the users to create a new CDMR requisition and submit for approvals.
   Created by IntelliJ IDEA.
   User: Siva Sajjala
   Date: 9/21/16
