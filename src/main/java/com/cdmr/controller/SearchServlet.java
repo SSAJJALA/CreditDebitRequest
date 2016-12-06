@@ -15,7 +15,7 @@ import java.util.List;
 import com.cdmr.ui.Search;
 
 /**
- * SearchServlet controller servlet for search.jsp. Gets the cdmr details for a requisition id (on click) and directs to details page.
+ * SearchServlet is the controller servlet for search.jsp. Gets the cdmr details for a requisition id (on click) and directs to details page.
  *
  * @author  Siva Sajjala
  * @version 1.0
