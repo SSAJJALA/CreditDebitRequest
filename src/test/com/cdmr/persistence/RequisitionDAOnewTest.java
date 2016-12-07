@@ -34,19 +34,8 @@ public class RequisitionDAOnewTest {
     }
 
     @Test
-    public void add() throws Exception {
-
-    }
-
-    @Test
-    public void getLastReqID() throws Exception {
-        int reqID = requisitionDAOnew.getLastReqID();
-        assertEquals("unable to get latest req id", reqID, 67);
-    }
-
-    @Test
     public void delete() throws Exception {
-        requisitionDAOnew.delete(2);
+        requisitionDAOnew.delete(4);
         Requisition  req = (Requisition) requisitionDAOnew.getOne(2);
         assertNull("Unable to delete requisition", req);
 
