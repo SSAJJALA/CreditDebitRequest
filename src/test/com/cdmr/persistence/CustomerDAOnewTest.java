@@ -53,7 +53,7 @@ public class CustomerDAOnewTest {
 
     @Test
     public void delete() throws Exception {
-        customerDAOnew.delete(1030);
+        customerDAOnew.delete(1003);
         Customer  cust = (Customer) customerDAOnew.getOne(1030);
         assertNull("Unable to remove customer 1030", cust);
 
