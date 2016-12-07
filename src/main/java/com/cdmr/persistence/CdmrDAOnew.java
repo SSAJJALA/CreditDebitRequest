@@ -81,19 +81,19 @@ public class CdmrDAOnew extends GenericDAO {
 
     /**
      * Delete a CDMR
-     * @param custID
+     * @param t requisition id
      * @throws HibernateException
      */
     @Override
-    public void delete(int custID) throws HibernateException {
+    public void delete(int t) throws HibernateException {
         Session session = getSession();
         Transaction tx = session.beginTransaction();
-        Cdmr cdmr = (Cdmr) session.load(Cdmr.class,custID);
+        Cdmr cdmr = (Cdmr) session.load(Cdmr.class,t);
         log.info("CDMR:" + cdmr.toString());
         session.delete(cdmr);
         tx.commit();
         session.close();
-        log.info("CDMR" + custID + "deleted.");
+        log.info("CDMR" + t + "deleted.");
     }
 
     /**

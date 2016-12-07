@@ -40,14 +40,10 @@ public class CdmrDAOnewTest {
     }
 
     @Test
-    public void add() throws Exception {
-
-    }
-
-    @Test
     public void delete() throws Exception {
-        cdmrDaoNew.delete(54);
-
+        cdmrDaoNew.delete(52);
+        Cdmr cdmr = (Cdmr) cdmrDaoNew.getOne(52);
+        assertNull("Delete failed", cdmr);
     }
 
     @Test

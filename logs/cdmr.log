@@ -5262,3 +5262,254 @@ The last packet successfully received from the server was 37,800,341 millisecond
 2016-12-06 21:51:11,127 39041 [http-nio-8080-exec-5] INFO  com.cdmr.ui.SubmitCDMR  - Requisition 70 submitted successfully
 2016-12-06 21:51:11,200 39114 [http-nio-8080-exec-5] INFO  com.cdmr.ui.SubmitCDMR  - DSM Task: 69 created successfully
 2016-12-06 21:51:11,255 39169 [http-nio-8080-exec-5] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-06 21:54:19,446 227360 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-12-06 21:54:19,446 227360 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-06 21:54:19,446 227360 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - directing to index page
+2016-12-06 21:54:19,446 227360 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-06 21:54:23,957 231871 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-12-06 21:54:23,958 231872 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - User id:VYU6026
+2016-12-06 21:54:24,056 231970 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - inbox servlet context:
+2016-12-06 21:54:34,672 242586 [http-nio-8080-exec-10] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-12-06 21:54:34,673 242587 [http-nio-8080-exec-10] INFO  com.cdmr.controller.InboxServlet  - directing to index page
+2016-12-06 21:54:34,673 242587 [http-nio-8080-exec-10] INFO  com.cdmr.controller.InboxServlet  - inbox servlet context:
+2016-12-06 21:54:36,571 244485 [http-nio-8080-exec-3] INFO  com.cdmr.controller.DirectToSearch  - direct to search servlet context:
+2016-12-06 21:54:39,809 247723 [http-nio-8080-exec-4] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-06 21:54:39,810 247724 [http-nio-8080-exec-4] INFO  com.cdmr.controller.SearchServlet  - searchFilter: all
+2016-12-06 21:54:39,810 247724 [http-nio-8080-exec-4] INFO  com.cdmr.controller.SearchServlet  - operand: operand
+2016-12-06 21:54:39,810 247724 [http-nio-8080-exec-4] INFO  com.cdmr.controller.SearchServlet  - term: 
+2016-12-06 21:54:39,811 247725 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDAOnew  - searchOption: 
+2016-12-06 21:54:39,811 247725 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDAOnew  - operand: operand
+2016-12-06 21:54:39,811 247725 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDAOnew  - searchValue: 
+2016-12-06 21:54:39,846 247760 [http-nio-8080-exec-4] INFO  com.cdmr.persistence.CdmrDAOnew  - cdmrs: [Cdmr{requisitionID=52, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=53, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=55, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=57, status='Rejected', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=0.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-04, type='C'}, Cdmr{requisitionID=58, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=0.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-04, type='C'}, Cdmr{requisitionID=59, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-06, type='C'}, Cdmr{requisitionID=60, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=61, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=62, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=63, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-11-30, type='D'}, Cdmr{requisitionID=64, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-12-01, type='D'}, Cdmr{requisitionID=65, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-12-01, type='D'}, Cdmr{requisitionID=66, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-02, type='C'}, Cdmr{requisitionID=67, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-03, type='C'}, Cdmr{requisitionID=68, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-04, type='C'}, Cdmr{requisitionID=69, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-05, type='C'}, Cdmr{requisitionID=70, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-06, type='C'}]
+2016-12-06 21:54:39,847 247761 [http-nio-8080-exec-4] INFO  com.cdmr.controller.SearchServlet  - search servlet context:
+2016-12-06 21:54:54,503 262417 [http-nio-8080-exec-5] INFO  com.cdmr.controller.DirectToDetails  - direct to details servlet context:
+2016-12-06 21:55:18,202 286116 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ post
+2016-12-06 21:55:18,202 286116 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-12-06 21:55:18,202 286116 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CDMRDetailsServlet  - Exiting cdmr request
+2016-12-06 21:55:18,202 286116 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CDMRDetailsServlet  - Details servlet context:
+2016-12-06 21:55:21,516 289430 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-12-06 21:55:21,516 289430 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - User id:VYU6026
+2016-12-06 21:55:21,531 289445 [http-nio-8080-exec-9] INFO  com.cdmr.controller.InboxServlet  - inbox servlet context:
+2016-12-06 21:55:22,967 290881 [http-nio-8080-exec-1] INFO  com.cdmr.controller.DirectToDetails  - direct to details servlet context:
+2016-12-06 21:55:26,619 294533 [http-nio-8080-exec-10] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ post
+2016-12-06 21:55:26,620 294534 [http-nio-8080-exec-10] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-12-06 21:55:26,620 294534 [http-nio-8080-exec-10] INFO  com.cdmr.controller.CDMRDetailsServlet  - Exiting cdmr request
+2016-12-06 21:55:26,620 294534 [http-nio-8080-exec-10] INFO  com.cdmr.controller.CDMRDetailsServlet  - Details servlet context:
+2016-12-06 21:56:48,522 0    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-06 21:56:48,534 12   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-06 21:56:48,540 18   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-12-06 21:56:48,541 19   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-12-06 21:56:48,583 61   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-12-06 21:56:48,583 61   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-12-06 21:56:48,844 322  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-12-06 21:56:48,997 475  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-12-06 21:56:49,008 486  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD?useSSL=false]
+2016-12-06 21:56:49,019 497  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-12-06 21:56:49,019 497  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-12-06 21:56:49,021 499  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-12-06 21:56:49,300 778  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-06 21:56:49,482 960  [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-06 21:56:49,482 960  [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-06 21:56:49,482 960  [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-12-06 21:56:49,482 960  [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-12-06 21:56:49,483 961  [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-06 21:56:49,483 961  [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-06 21:56:49,483 961  [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-12-06 21:56:49,483 961  [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-12-06 21:56:49,483 961  [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-06 21:56:49,483 961  [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-06 21:56:49,490 968  [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-12-06 21:56:49,493 971  [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-12-06 21:56:50,374 1852 [main] INFO  com.cdmr.approval.RouteCDMR  - FM Task created. Task ID is 70
+2016-12-06 21:56:50,465 1943 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-12-06 21:56:50,466 1944 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - Approving the cdmr request
+2016-12-06 21:56:50,466 1944 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside completeTaskAction from cdmr details servlet
+2016-12-06 21:56:50,466 1944 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - Task object from cdmr details servlet:Task{taskID=53, taskName='DSM Approval', taskStatus='Active', createdDate=2016-11-30T17:35:30, updatedDate=2016-11-30T17:35:30}
+2016-12-06 21:56:50,466 1944 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - task id from cdmr details servlet:53
+2016-12-06 21:56:50,514 1992 [main] INFO  com.cdmr.approval.RouteCDMR  - FM Task created. Task ID is 71
+2016-12-06 21:56:50,515 1993 [main] INFO  com.cdmr.controller.CDMRDetailsServlet  - Details servlet context:
+2016-12-06 21:56:50,527 2005 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-06 21:56:50,545 2023 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-12-06 21:56:51,120 2598 [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - JSON output:{"add1":"100","add2":"Manpower Place","city":"Milwaukee","custName":"Experis","custNum":1000,"phone":"414-961-1000","state":"WI","zip":"53212"}
+2016-12-06 21:56:51,499 2977 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - customr number:1000
+2016-12-06 21:56:51,499 2977 [main] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-06 21:56:51,526 3004 [main] INFO  com.cdmr.controller.DirectToDetails  - direct to details servlet context:
+2016-12-06 21:56:51,527 3005 [main] INFO  com.cdmr.controller.InboxServletTest  - logged in user:VYU6026
+2016-12-06 21:56:51,527 3005 [main] INFO  com.cdmr.controller.InboxServlet  - In doPost() method on inbox servlet
+2016-12-06 21:56:51,527 3005 [main] INFO  com.cdmr.controller.InboxServlet  - User id:VYU6026
+2016-12-06 21:56:51,565 3043 [main] INFO  com.cdmr.controller.InboxServlet  - inbox servlet context:
+2016-12-06 21:56:51,566 3044 [main] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-06 21:56:51,566 3044 [main] INFO  com.cdmr.controller.SearchServlet  - searchFilter: requisitionID
+2016-12-06 21:56:51,566 3044 [main] INFO  com.cdmr.controller.SearchServlet  - operand: =
+2016-12-06 21:56:51,566 3044 [main] INFO  com.cdmr.controller.SearchServlet  - term: 60
+2016-12-06 21:56:51,566 3044 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - searchOption: requisitionID
+2016-12-06 21:56:51,567 3045 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - operand: =
+2016-12-06 21:56:51,567 3045 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - searchValue: 60
+2016-12-06 21:56:51,578 3056 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - cdmrs: [Cdmr{requisitionID=60, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}]
+2016-12-06 21:56:51,578 3056 [main] INFO  com.cdmr.controller.SearchServlet  - search servlet context:
+2016-12-06 21:56:51,579 3057 [main] INFO  com.cdmr.controller.SearchServletTest  - Requisition:60
+2016-12-06 21:56:51,693 3171 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 52
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 53
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 55
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 57
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 58
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 59
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 60
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 61
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 62
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 63
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 64
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 65
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 66
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 67
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 68
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 69
+2016-12-06 21:56:51,696 3174 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 70
+2016-12-06 21:56:51,719 3197 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - searchOption: requisitionID
+2016-12-06 21:56:51,719 3197 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - operand: =
+2016-12-06 21:56:51,719 3197 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - searchValue: 61
+2016-12-06 21:56:51,729 3207 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - cdmrs: [Cdmr{requisitionID=61, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}]
+2016-12-06 21:56:51,731 3209 [main] INFO  com.cdmr.persistence.CdmrDAOnewTest  - 61
+2016-12-06 21:57:09,591 397505 [http-nio-8080-exec-2] INFO  com.cdmr.controller.DirectToCreate  - direct to create servlet context:
+2016-12-06 21:57:14,733 402647 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-12-06 21:57:14,734 402648 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-06 21:57:14,734 402648 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting customer details.
+2016-12-06 21:57:14,856 402770 [http-nio-8080-exec-4] INFO  com.cdmr.webservices.CustomerLookupConsumer  - JSON output:{"add1":"100","add2":"Manpower Place","city":"Milwaukee","custName":"Experis","custNum":1000,"phone":"414-961-1000","state":"WI","zip":"53212"}
+2016-12-06 21:57:14,858 402772 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - customr number:1000
+2016-12-06 21:57:14,858 402772 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-06 21:57:19,883 407797 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-12-06 21:57:19,884 407798 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-06 21:57:19,884 407798 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - gettting invoice details.
+2016-12-06 21:57:19,884 407798 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - customer details inside cdmr create servlet:1000
+2016-12-06 21:57:19,892 407806 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice header:InvoiceHeader{invCustomer=InvoiceHeaderPK{invoiceNum=2345, custNum=1000}, invDate=2016-10-01, grossAmnt=5050.0, allowance=0.0, charges=0.0, tax=0.0, netAmnt=5050.0}
+2016-12-06 21:57:19,892 407806 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - invoice details:[com.cdmr.entity.InvoiceDetail@21349b9, com.cdmr.entity.InvoiceDetail@3a3dad26]
+2016-12-06 21:57:19,892 407806 [http-nio-8080-exec-7] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-06 21:57:35,043 422957 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-12-06 21:57:35,044 422958 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment items: [Ljava.lang.String;@40040872
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment qtys: [Ljava.lang.String;@1933e232
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment reason codes: [Ljava.lang.String;@77a6294e
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment credit/debit: [Ljava.lang.String;@348f7a6c
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - List of adjustment items: [Ljava.lang.String;@54a8a317
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - Adj Qty:1
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - After validation Adj Qty:1
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - Reason Code:1-Defective
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - After validation Reason Code:1-Defective
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - Comments:
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - Credit/Debit:Credit
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - After validation Credit/Debit:Credit
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - Adj Item:2350
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr gross:-100.0
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr allowance:0.0
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr charges:0.0
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr taxes:0.0
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - cdmr net:-100.0
+2016-12-06 21:57:35,045 422959 [http-nio-8080-exec-8] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-06 21:57:38,125 426039 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-12-06 21:57:38,125 426039 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-06 21:57:38,168 426082 [http-nio-8080-exec-9] INFO  com.cdmr.ui.SubmitCDMR  - Requisition 71 submitted successfully
+2016-12-06 21:57:38,185 426099 [http-nio-8080-exec-9] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 1062, SQLState: 23000
+2016-12-06 21:57:38,185 426099 [http-nio-8080-exec-9] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry '70' for key 'PRIMARY'
+2016-12-06 21:57:38,197 426111 [http-nio-8080-exec-9] INFO  org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2016-12-06 21:57:38,198 426112 [http-nio-8080-exec-9] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 1062, SQLState: 23000
+2016-12-06 21:57:38,198 426112 [http-nio-8080-exec-9] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Duplicate entry '70' for key 'PRIMARY'
+2016-12-06 21:57:38,198 426112 [http-nio-8080-exec-9] INFO  com.cdmr.ui.SubmitCDMR  - Unable to submit the requisition. Please contact the help desk
+2016-12-06 21:57:38,198 426112 [http-nio-8080-exec-9] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-06 21:57:41,200 429114 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ post
+2016-12-06 21:57:41,200 429114 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - inside create cdmr servlet @ get
+2016-12-06 21:57:41,200 429114 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - directing to index page
+2016-12-06 21:57:41,200 429114 [http-nio-8080-exec-1] INFO  com.cdmr.controller.CreateCDMRServlet  - create servlet context:
+2016-12-06 21:57:42,265 430179 [http-nio-8080-exec-2] INFO  com.cdmr.controller.DirectToSearch  - direct to search servlet context:
+2016-12-06 21:57:44,919 432833 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-06 21:57:44,920 432834 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - searchFilter: all
+2016-12-06 21:57:44,920 432834 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - operand: operand
+2016-12-06 21:57:44,920 432834 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - term: 
+2016-12-06 21:57:44,920 432834 [http-nio-8080-exec-3] INFO  com.cdmr.persistence.CdmrDAOnew  - searchOption: 
+2016-12-06 21:57:44,920 432834 [http-nio-8080-exec-3] INFO  com.cdmr.persistence.CdmrDAOnew  - operand: operand
+2016-12-06 21:57:44,920 432834 [http-nio-8080-exec-3] INFO  com.cdmr.persistence.CdmrDAOnew  - searchValue: 
+2016-12-06 21:57:44,933 432847 [http-nio-8080-exec-3] INFO  com.cdmr.persistence.CdmrDAOnew  - cdmrs: [Cdmr{requisitionID=52, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=53, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=55, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=57, status='Rejected', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=0.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-04, type='C'}, Cdmr{requisitionID=58, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=0.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-04, type='C'}, Cdmr{requisitionID=59, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-06, type='C'}, Cdmr{requisitionID=60, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=61, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=62, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=63, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-11-30, type='D'}, Cdmr{requisitionID=64, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-12-01, type='D'}, Cdmr{requisitionID=65, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-12-01, type='D'}, Cdmr{requisitionID=66, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-02, type='C'}, Cdmr{requisitionID=67, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-03, type='C'}, Cdmr{requisitionID=68, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-04, type='C'}, Cdmr{requisitionID=69, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-05, type='C'}, Cdmr{requisitionID=70, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-06, type='C'}, Cdmr{requisitionID=71, status='New', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-06, type='C'}]
+2016-12-06 21:57:44,934 432848 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - search servlet context:
+2016-12-06 21:57:48,336 59814 [main] INFO  com.cdmr.ui.CalculateCDMRTest  - cdmr CDMR{requisitionID=0, customer=Customer{custNum=1000, custName='Experis', address1='100', address2='Manpower Place', city='Milwaukee', state='WI', zip='53212', phone='414-961-1000'}, status='New', invHeader=InvoiceHeader{invNum=2345, custNum=1000, invDate=2016-10-01, grossAmnt=5050.0, allowanceAmnt=0.0, chargesAmnt=0.0, taxAmnt=0.0, netAmnt=5050.0}, salesRepID='null', salesRepName='null', adjAmnt=-500.0, adjGross=-500.0, adjAllowance=0.0, adjCharges=0.0, adjTax=0.0, cdmrDate=2016-12-06, type='Credit', adjustments=[CDMRAdjustments{itemNum=2350, itemDesc='COAT STAND', reasonCode='1-Defective', originalPrice=100.0, originalQty=54, adjQty=5, originalInvLineTotal=5400.0, creditDebitFlg='Credit', allowanceAdjAmnt=0.0, chargeAdjAmnt=0.0, taxAdjAmnt=0.0, lineAdjAmnt=-500.0, newInvLineTotal=5900.0, comments=[CDMRComment{userID='VYU6026', requisitionID=0, itemNum=2350, createdDate=2016-12-06T21:57:48.336, comment='defective', seqID=1}]}]}
+2016-12-06 21:57:48,375 59853 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - searchOption: requisitionID
+2016-12-06 21:57:48,375 59853 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - operand: =
+2016-12-06 21:57:48,375 59853 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - searchValue: 10
+2016-12-06 21:57:48,404 59882 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - cdmrs: []
+2016-12-06 21:57:48,404 59882 [main] INFO  com.cdmr.ui.SearchTest  - Search results:[]
+2016-12-06 21:57:48,463 59941 [main] INFO  com.cdmr.ui.SubmitCDMR  - Requisition 72 submitted successfully
+2016-12-06 21:57:48,496 59974 [main] INFO  com.cdmr.ui.SubmitCDMR  - DSM Task: 72 created successfully
+2016-12-06 21:57:48,514 59992 [main] INFO  com.cdmr.ui.SubmitCDMRTest  - Requisition 72 submitted successfully
+2016-12-06 21:57:48,752 60230 [main] INFO  com.cdmr.webservices.CustomerLookupConsumer  - JSON output:{"add1":"100","add2":"Manpower Place","city":"Milwaukee","custName":"Experis","custNum":1000,"phone":"414-961-1000","state":"WI","zip":"53212"}
+2016-12-06 21:57:48,754 60232 [main] INFO  com.cdmr.webservices.CustomerLookupConsumerTest  - Customer number: 1000
+2016-12-06 21:57:48,781 60259 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Invoice not found
+2016-12-06 21:57:48,794 60272 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2350
+2016-12-06 21:57:48,794 60272 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:COAT STAND
+2016-12-06 21:57:48,795 60273 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item Num:2357
+2016-12-06 21:57:48,795 60273 [main] INFO  com.cdmr.webservices.InvoiceLookupTest  - Item desc:ALARM CLOCK
+2016-12-06 22:02:12,115 700029 [http-nio-8080-exec-7] INFO  com.cdmr.controller.DirectToSearch  - direct to search servlet context:
+2016-12-06 22:02:18,652 706566 [http-nio-8080-exec-8] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-06 22:02:18,653 706567 [http-nio-8080-exec-8] INFO  com.cdmr.controller.SearchServlet  - searchFilter: all
+2016-12-06 22:02:18,653 706567 [http-nio-8080-exec-8] INFO  com.cdmr.controller.SearchServlet  - operand: operand
+2016-12-06 22:02:18,653 706567 [http-nio-8080-exec-8] INFO  com.cdmr.controller.SearchServlet  - term: 
+2016-12-06 22:02:18,654 706568 [http-nio-8080-exec-8] INFO  com.cdmr.persistence.CdmrDAOnew  - searchOption: 
+2016-12-06 22:02:18,654 706568 [http-nio-8080-exec-8] INFO  com.cdmr.persistence.CdmrDAOnew  - operand: operand
+2016-12-06 22:02:18,654 706568 [http-nio-8080-exec-8] INFO  com.cdmr.persistence.CdmrDAOnew  - searchValue: 
+2016-12-06 22:02:18,667 706581 [http-nio-8080-exec-8] INFO  com.cdmr.persistence.CdmrDAOnew  - cdmrs: [Cdmr{requisitionID=52, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=53, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=55, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=57, status='Rejected', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=0.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-04, type='C'}, Cdmr{requisitionID=58, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=0.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-04, type='C'}, Cdmr{requisitionID=59, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-06, type='C'}, Cdmr{requisitionID=60, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=61, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=62, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=63, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-11-30, type='D'}, Cdmr{requisitionID=64, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-12-01, type='D'}, Cdmr{requisitionID=65, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-12-01, type='D'}, Cdmr{requisitionID=66, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-02, type='C'}, Cdmr{requisitionID=67, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-03, type='C'}, Cdmr{requisitionID=68, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-04, type='C'}, Cdmr{requisitionID=69, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-05, type='C'}, Cdmr{requisitionID=70, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-06, type='C'}, Cdmr{requisitionID=71, status='New', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-06, type='C'}]
+2016-12-06 22:02:18,667 706581 [http-nio-8080-exec-8] INFO  com.cdmr.controller.SearchServlet  - search servlet context:
+2016-12-06 22:02:37,420 1    [main] INFO  org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-06 22:02:37,441 22   [main] INFO  org.hibernate.Version  - HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-06 22:02:37,446 27   [main] INFO  org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2016-12-06 22:02:37,448 29   [main] INFO  org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2016-12-06 22:02:37,488 69   [main] INFO  org.hibernate.cfg.Configuration  - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-12-06 22:02:37,488 69   [main] INFO  org.hibernate.cfg.Configuration  - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-12-06 22:02:37,718 299  [main] INFO  org.hibernate.cfg.Configuration  - HHH000041: Configured SessionFactory: null
+2016-12-06 22:02:37,828 409  [main] WARN  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-12-06 22:02:37,832 413  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/APPSPROD?useSSL=false]
+2016-12-06 22:02:37,833 414  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000046: Connection properties: {user=root, password=****}
+2016-12-06 22:02:37,833 414  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000006: Autocommit mode: false
+2016-12-06 22:02:37,834 415  [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl  - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-12-06 22:02:38,298 879  [main] INFO  org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-12-06 22:02:38,631 1212 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-06 22:02:38,631 1212 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrAdjustmentsPK
+2016-12-06 22:02:38,633 1214 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceDetailPK
+2016-12-06 22:02:38,641 1222 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceDetailPK
+2016-12-06 22:02:38,642 1223 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-06 22:02:38,643 1224 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.InvoiceHeaderPK
+2016-12-06 22:02:38,643 1224 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.TaskAssignmentPK
+2016-12-06 22:02:38,643 1224 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.TaskAssignmentPK
+2016-12-06 22:02:38,644 1225 [main] WARN  org.hibernate.mapping.RootClass  - HHH000038: Composite-id class does not override equals(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-06 22:02:38,652 1233 [main] WARN  org.hibernate.mapping.RootClass  - HHH000039: Composite-id class does not override hashCode(): com.cdmr.entity.CdmrUserRolesPK
+2016-12-06 22:02:38,674 1255 [main] INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator  - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-12-06 22:02:38,684 1265 [main] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory  - HHH000397: Using ASTQueryTranslatorFactory
+2016-12-06 22:02:39,497 2078 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - CDMR:Cdmr{requisitionID=52, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}
+2016-12-06 22:02:39,526 2107 [main] INFO  com.cdmr.persistence.CdmrDAOnew  - CDMR52deleted.
+2016-12-06 22:02:56,765 744679 [http-nio-8080-exec-1] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-06 22:02:56,766 744680 [http-nio-8080-exec-1] INFO  com.cdmr.controller.SearchServlet  - searchFilter: searchBy
+2016-12-06 22:02:56,766 744680 [http-nio-8080-exec-1] INFO  com.cdmr.controller.SearchServlet  - operand: operand
+2016-12-06 22:02:56,766 744680 [http-nio-8080-exec-1] INFO  com.cdmr.controller.SearchServlet  - term: 
+2016-12-06 22:03:01,367 749281 [http-nio-8080-exec-10] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-06 22:03:01,367 749281 [http-nio-8080-exec-10] INFO  com.cdmr.controller.SearchServlet  - searchFilter: all
+2016-12-06 22:03:01,367 749281 [http-nio-8080-exec-10] INFO  com.cdmr.controller.SearchServlet  - operand: operand
+2016-12-06 22:03:01,367 749281 [http-nio-8080-exec-10] INFO  com.cdmr.controller.SearchServlet  - term: 
+2016-12-06 22:03:01,367 749281 [http-nio-8080-exec-10] INFO  com.cdmr.persistence.CdmrDAOnew  - searchOption: 
+2016-12-06 22:03:01,367 749281 [http-nio-8080-exec-10] INFO  com.cdmr.persistence.CdmrDAOnew  - operand: operand
+2016-12-06 22:03:01,367 749281 [http-nio-8080-exec-10] INFO  com.cdmr.persistence.CdmrDAOnew  - searchValue: 
+2016-12-06 22:03:01,376 749290 [http-nio-8080-exec-10] INFO  com.cdmr.persistence.CdmrDAOnew  - cdmrs: [Cdmr{requisitionID=52, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=53, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=55, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}, Cdmr{requisitionID=57, status='Rejected', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=0.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-04, type='C'}, Cdmr{requisitionID=58, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=0.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-04, type='C'}, Cdmr{requisitionID=59, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-06, type='C'}, Cdmr{requisitionID=60, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=61, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=62, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-11-30, type='C'}, Cdmr{requisitionID=63, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-11-30, type='D'}, Cdmr{requisitionID=64, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-12-01, type='D'}, Cdmr{requisitionID=65, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-12-01, type='D'}, Cdmr{requisitionID=66, status='Approved', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-02, type='C'}, Cdmr{requisitionID=67, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-03, type='C'}, Cdmr{requisitionID=68, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-04, type='C'}, Cdmr{requisitionID=69, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-05, type='C'}, Cdmr{requisitionID=70, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-50.0, cdmrDate=2016-12-06, type='C'}, Cdmr{requisitionID=71, status='New', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=5050.0, salesRepID='null', salesRepName='null', adjAmnt=-100.0, cdmrDate=2016-12-06, type='C'}]
+2016-12-06 22:03:01,376 749290 [http-nio-8080-exec-10] INFO  com.cdmr.controller.SearchServlet  - search servlet context:
+2016-12-06 22:03:04,601 752515 [http-nio-8080-exec-2] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-06 22:03:04,602 752516 [http-nio-8080-exec-2] INFO  com.cdmr.controller.SearchServlet  - searchFilter: searchBy
+2016-12-06 22:03:04,602 752516 [http-nio-8080-exec-2] INFO  com.cdmr.controller.SearchServlet  - operand: operand
+2016-12-06 22:03:04,602 752516 [http-nio-8080-exec-2] INFO  com.cdmr.controller.SearchServlet  - term: 
+2016-12-06 22:03:15,467 763381 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - In doPost() method
+2016-12-06 22:03:15,467 763381 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - searchFilter: requisitionID
+2016-12-06 22:03:15,467 763381 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - operand: =
+2016-12-06 22:03:15,467 763381 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - term: 52
+2016-12-06 22:03:15,467 763381 [http-nio-8080-exec-3] INFO  com.cdmr.persistence.CdmrDAOnew  - searchOption: requisitionID
+2016-12-06 22:03:15,467 763381 [http-nio-8080-exec-3] INFO  com.cdmr.persistence.CdmrDAOnew  - operand: =
+2016-12-06 22:03:15,467 763381 [http-nio-8080-exec-3] INFO  com.cdmr.persistence.CdmrDAOnew  - searchValue: 52
+2016-12-06 22:03:15,470 763384 [http-nio-8080-exec-3] INFO  com.cdmr.persistence.CdmrDAOnew  - cdmrs: [Cdmr{requisitionID=52, status='In Progress', custNum=1000, custName='Experis', invNum=2345, invDate=2016-10-01, invAmount=700.0, salesRepID='FD31103', salesRepName='Mike Helman', adjAmnt=-100.0, cdmrDate=2016-10-19, type='C'}]
+2016-12-06 22:03:15,470 763384 [http-nio-8080-exec-3] INFO  com.cdmr.controller.SearchServlet  - search servlet context:
+2016-12-06 22:03:17,128 765042 [http-nio-8080-exec-5] INFO  com.cdmr.controller.DirectToDetails  - direct to details servlet context:
+2016-12-06 22:03:19,459 767373 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ post
+2016-12-06 22:03:19,459 767373 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CDMRDetailsServlet  - inside create cdmr details servlet @ get
+2016-12-06 22:03:19,459 767373 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CDMRDetailsServlet  - Exiting cdmr request
+2016-12-06 22:03:19,459 767373 [http-nio-8080-exec-4] INFO  com.cdmr.controller.CDMRDetailsServlet  - Details servlet context:
