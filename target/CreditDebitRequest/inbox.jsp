@@ -1,4 +1,5 @@
 <%--
+  Allows approvers to check the list of tasks waiting for their action. Navigates to CDMR details page upon clicking the task id.
   Created by IntelliJ IDEA.
   User: Siva Sajjala
   Date: 9/17/16

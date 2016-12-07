@@ -1,4 +1,5 @@
 <%--
+  This is the main landing page for CDMR application after authorised user logs in to the application. Displays all navigation links
   Created by IntelliJ IDEA.
   User: Siva Sajjala
   Date: 9/16/16

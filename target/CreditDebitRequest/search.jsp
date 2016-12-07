@@ -1,4 +1,6 @@
 <%--
+  This gives the users to search for CDMRs based on 4 search fields. Filter by Requisition id or status or customer name or all.
+  Searches the CDMR database with the specified criteria and display them along with status.
   Created by IntelliJ IDEA.
   User: Siva Sajjala
   Date: 9/17/16

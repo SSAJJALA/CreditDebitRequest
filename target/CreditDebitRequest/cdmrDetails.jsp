@@ -1,4 +1,6 @@
 <%--
+  UI page allows the CDMR users to display the details of a requisition. Approvers can either approve or reject the cdmr. Other users can
+  just view the details of a requisition.
   Created by IntelliJ IDEA.
   User: student
   Date: 10/28/16
