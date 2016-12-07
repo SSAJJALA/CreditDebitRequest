@@ -89,7 +89,7 @@
                         width: 550px;
                         position: fixed;
                         bottom: 40%;
-                        right: 60%;
+                        right: 50%;
                         border: 2px solid;
                         padding: 10px;
                         background: #d5d3cc;
