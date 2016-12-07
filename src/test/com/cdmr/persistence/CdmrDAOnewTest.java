@@ -41,8 +41,8 @@ public class CdmrDAOnewTest {
 
     @Test
     public void delete() throws Exception {
-        cdmrDaoNew.delete(52);
-        Cdmr cdmr = (Cdmr) cdmrDaoNew.getOne(52);
+        cdmrDaoNew.delete(53);
+        Cdmr cdmr = (Cdmr) cdmrDaoNew.getOne(55);
         assertNull("Delete failed", cdmr);
     }
 
